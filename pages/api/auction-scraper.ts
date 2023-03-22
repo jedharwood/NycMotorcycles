@@ -6,22 +6,6 @@ type Prices = {
     promptDecisionPrice?: string
 }
 
-type TimeRemaining = {
-    time: number | undefined;
-    unit: 'days' | 'hours' | 'minutes';
-}
-
-type ActiveAuction = {
-    title?: string;
-    url?: string;
-    imageSrc?: string;
-    imageAlt?: string;
-    bidders?: string;
-    timeRemaining?: TimeRemaining;
-    currentPrice?: string;
-    promptDecisionPrice?: string;
-}
-
 const yahooAuctionScraper = async (
     req: NextApiRequest,
     res: NextApiResponse
@@ -46,7 +30,7 @@ const yahooAuctionScraper = async (
         if (error instanceof Error) {
             res.status(500).send({ message: `Internal server error: ${error.message}` });
         } else {
-            res.status(500).send({ message: 'Unknown error occurred.' });
+            res.status(500).send({ message: 'Unknown error occurred.' }); // Perhaps just return empty array?
         }
     }
 }

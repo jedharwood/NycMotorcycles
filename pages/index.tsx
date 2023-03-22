@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react'
@@ -7,16 +7,27 @@ import { useEffect, useState } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [auctions, setAuctions] = useState<Response | undefined>();
+  const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('http://localhost:3000/api/auction-scraper');
       const data = await response.json();
-      setAuctions(data.auctions);
+      console.log
+      setActiveAuctions(data.activeAuctions);
     };
     fetchData();
   }, []);
+
+  const auctionDisplay = (): JSX.Element => {
+    console.log(activeAuctions)
+    return !activeAuctions ? <p>No auctions</p> 
+    : <ul>
+      {activeAuctions.map(a => {
+        return <li key={a.title}>{a.title}</li>
+      })}
+    </ul> 
+  };
 
   return (
     <>
@@ -27,6 +38,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        {auctionDisplay()}
+      </main>
+      {/* <main className={styles.main}>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
@@ -129,7 +143,7 @@ export default function Home() {
             </p>
           </a>
         </div>
-      </main>
+      </main> */}
     </>
   )
 }
