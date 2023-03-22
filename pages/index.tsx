@@ -7,39 +7,41 @@ import { useEffect, useState } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([]);
+  const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost:3000/api/auction-scraper');
-      const data = await response.json();
-      console.log
-      setActiveAuctions(data.activeAuctions);
-    };
-    fetchData();
-  }, []);
+      const response = await fetch('http://localhost:3000/api/auction-scraper')
+      const data = await response.json()
+      setActiveAuctions(data.activeAuctions)
+    }
+    fetchData()
+  }, [])
 
   const auctionDisplay = (): JSX.Element => {
-    console.log(activeAuctions)
-    return !activeAuctions ? <p>No auctions</p> 
-    : <ul>
-      {activeAuctions.map(a => {
-        return <li key={a.title}>{a.title}</li>
-      })}
-    </ul> 
-  };
+    return !activeAuctions ? (
+      <p>No auctions</p>
+    ) : (
+      <ul>
+        {activeAuctions.map((a) => {
+          return <li key={a.title}>{a.title}</li>
+        })}
+      </ul>
+    )
+  }
 
   return (
     <>
       <Head>
         <title>New York City Motorcycles</title>
-        <meta name="description" content="The website for New York City Motorcycles" />
+        <meta
+          name="description"
+          content="The website for New York City Motorcycles"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        {auctionDisplay()}
-      </main>
+      <main className={styles.main}>{auctionDisplay()}</main>
       {/* <main className={styles.main}>
         <div className={styles.description}>
           <p>
