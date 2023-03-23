@@ -21,9 +21,11 @@ export const Header = (): JSX.Element => {
     { href: '/active-auctions', text: 'ACTIVE AUCTIONS' },
     { href: '/sold-archive', text: 'SOLD ARCHIVE' },
     { href: '/history', text: 'HISTORY' },
-    { href: '/sell-in-japan', text: 'SELL YOUR MOTORCYCLE IN JAPAN' },
+    // { href: '/sell-in-japan', text: 'SELL YOUR MOTORCYCLE IN JAPAN' },
     { href: '/racing', text: 'RACING' },
     { href: '/contact', text: 'CONTACT' },
+    { href: '/consign', text: 'CONSIGN' },
+    { href: '/invest', text: 'INVEST' },
   ]
 
   useEffect(() => {

@@ -1,5 +1,6 @@
 import { Header } from '../header'
 import { ReactNode } from 'react'
+import { Footer } from '../footer'
 
 type LayoutProps = {
   children: ReactNode
@@ -11,6 +12,7 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
       <div className="p-6 max-w-6xl mx-auto bg-stone-600 bg-opacity-60">
         <Header />
         {children}
+        <Footer />
       </div>
     </div>
   )
