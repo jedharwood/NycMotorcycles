@@ -1,39 +1,58 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import nycmcLogo from '../../assets/svgs/nycmc-logo.svg'
 import burgerIcon from '../../assets/svgs/burger-icon.svg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+import { NavLink } from '../nav-link'
+
+type NavLinkDetails = {
+  href: string
+  text: string
+}
 
 export const Header = (): JSX.Element => {
   const [showMobileNav, setShowMobileNav] = useState<boolean>(false)
+  const [activeIdx, setActiveIdx] = useState<number>(-1)
 
-  const toggleMobilenav = () => {
+  const currentPage: string = useRouter().route
+
+  const navLinks: NavLinkDetails[] = [
+    { href: '/', text: 'HOME' },
+    { href: '/active-auctions', text: 'ACTIVE AUCTIONS' },
+    { href: '/sold-archive', text: 'SOLD ARCHIVE' },
+    { href: '/history', text: 'HISTORY' },
+    { href: '/sell-in-japan', text: 'SELL YOUR MOTORCYCLE IN JAPAN' },
+    { href: '/racing', text: 'RACING' },
+    { href: '/contact', text: 'CONTACT' },
+  ]
+
+  useEffect(() => {
+    const currentPageIndex: number = navLinks.findIndex(
+      (link) => link.href === currentPage,
+    )
+    setActiveIdx(currentPageIndex)
+  }, [])
+
+  const toggleMobilenav = (): void => {
     setShowMobileNav(!showMobileNav)
   }
 
-  const linkItem = (href: string, text: string): JSX.Element => {
-    return (
-      <li className="flex justify-center">
-        <Link
-          href={`/${href}`}
-          className="block opacity-80 md:hover:underline md:hover:opacity-100"
-        >
-          {text}
-        </Link>
+  const mapNavLinks = (): JSX.Element[] => {
+    return navLinks.map((link, idx) => (
+      <li
+        className="flex justify-center"
+        onClick={() => setActiveIdx(idx)}
+        key={idx}
+      >
+        <NavLink href={link.href} text={link.text} active={activeIdx === idx} />
       </li>
-    )
+    ))
   }
 
   const navMenu = (): JSX.Element => {
     return (
       <ul className="flex flex-col md:flex-row md:space-x-8 md:text-sm md:font-medium">
-        {linkItem('', 'HOME')}
-        {linkItem('active-auctions', 'ACTIVE AUCTIONS')}
-        {linkItem('sold-archive', 'SOLD ARCHIVE')}
-        {linkItem('history', 'HISTORY')}
-        {linkItem('sell-in-japan', 'SELL YOUR MOTORCYCLE IN JAPAN')}
-        {linkItem('racing', 'RACING')}
-        {linkItem('contact', 'CONTACT')}
+        {mapNavLinks()}
       </ul>
     )
   }
@@ -43,13 +62,7 @@ export const Header = (): JSX.Element => {
       <></>
     ) : (
       <ul className="grid space-y-2 mt-4 mb-2" onClick={toggleMobilenav}>
-        {linkItem('', 'HOME')}
-        {linkItem('active-auctions', 'ACTIVE AUCTIONS')}
-        {linkItem('sold-archive', 'SOLD ARCHIVE')}
-        {linkItem('history', 'HISTORY')}
-        {linkItem('sell-in-japan', 'SELL YOUR MOTORCYCLE IN JAPAN')}
-        {linkItem('racing', 'RACING')}
-        {linkItem('contact', 'CONTACT')}
+        {mapNavLinks()}
       </ul>
     )
   }
