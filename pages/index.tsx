@@ -1,35 +1,11 @@
 import Head from 'next/head'
 // import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import { useEffect, useState } from 'react'
+// import { Inter } from 'next/font/google'
+// import styles from '@/styles/Home.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([])
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch('http://localhost:3000/api/auction-scraper')
-      const data = await response.json()
-      setActiveAuctions(data.activeAuctions)
-    }
-    fetchData()
-  }, [])
-
-  const auctionDisplay = (): JSX.Element => {
-    return !activeAuctions ? (
-      <p>No auctions</p>
-    ) : (
-      <ul>
-        {activeAuctions.map((a) => {
-          return <li key={a.title}>{a.title}</li>
-        })}
-      </ul>
-    )
-  }
-
   return (
     <>
       <Head>
@@ -41,7 +17,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>{auctionDisplay()}</main>
+      <main className="h-screen">
+        <p>Home page</p>
+      </main>
       {/* <main className={styles.main}>
         <div className={styles.description}>
           <p>
