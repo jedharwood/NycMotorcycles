@@ -4,7 +4,6 @@ import burgerIcon from '../../assets/svgs/burger-icon.svg'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { NavLink } from '../nav-link'
-
 import { FormattedMessage, useIntl } from 'react-intl'
 
 type NavLinkDetails = {
@@ -97,18 +96,18 @@ export const Header = (): JSX.Element => {
   return (
     <header className="text-stone-50">
       <div className="flex justify-center pb-6">
-        <Image
-          src={nycmcLogo}
-          alt="New york city motorcycles logo"
-          width={111}
-          height={111}
-          priority
-        />
+          <Image
+            src={nycmcLogo}
+            alt={intl.formatMessage({ id: 'component.header.alt.nycmc-logo' })}
+            width={111}
+            height={111}
+            priority
+          />
       </div>
       <div className="flex justify-center">
-        <h1 className="text-lg tracking-widest">
-          <FormattedMessage id="component.header.title" />
-        </h1>
+          <h1 className="text-lg tracking-widest">
+            <FormattedMessage id="component.header.title" />
+          </h1>
       </div>
       <nav className="py-2 px-6 bg-stone-600 bg-opacity-80 mt-2 mb-6">
         <div className="container flex flex-wrap justify-center mx-auto">
@@ -124,7 +123,7 @@ export const Header = (): JSX.Element => {
             </span>
             <Image
               src={burgerIcon}
-              alt="Burger menu icon"
+              alt={intl.formatMessage({ id: 'component.header.alt.burger-menu' })}
               width={40}
               height={40}
               priority

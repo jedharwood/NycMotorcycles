@@ -1,7 +1,10 @@
 import instagramIcon from 'assets/svgs/instagram-icon.svg'
+import chevronUp from 'assets/svgs/chevron-up.svg'
 import Image from 'next/image'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 export const Footer = (): JSX.Element => {
+  const intl = useIntl()
   const scrollToTop = (): void => {
     if (typeof window === 'undefined') return
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -14,7 +17,16 @@ export const Footer = (): JSX.Element => {
         onClick={scrollToTop}
         className="opacity-80 hover:opacity-100 hover:underline"
       >
-        Scroll to top?
+        <div className='flex justify-center'>
+        <Image
+          src={chevronUp}
+          alt={intl.formatMessage({ id: 'component.footer.text.scroll-to-top' })}
+          width={40}
+          height={40}
+          priority
+        />
+        </div>
+        <FormattedMessage id="component.footer.text.scroll-to-top" />
       </button>
       <a
         href="https://www.instagram.com/newyorkcitymotorcycles/"
@@ -22,17 +34,17 @@ export const Footer = (): JSX.Element => {
       >
         <Image
           src={instagramIcon}
-          alt="Instagram logo"
+          alt={intl.formatMessage({ id: 'component.footer.alt.instagram-logo' })}
           width={50}
           height={50}
           priority
         />
       </a>
       <h3 className="flex justify-center text-sm md:text-md">
-        SHONAN COAST, JAPAN | LOS ANGELES
+        <FormattedMessage id="component.footer.text.address" />
       </h3>
       <h4 className="flex justify-center text-xs md:text-sm">
-        Vintage Motorcycles, Inc | All Rights Reserved
+        <FormattedMessage id="component.footer.text.disclaimer" />
       </h4>
     </footer>
   )
