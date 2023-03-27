@@ -1,0 +1,13 @@
+{
+  "component.header.title": "NEW YORK CITY MOTORCYCLES",
+  "component.header.sr.open-main-menu": "Open main menu",
+  "component.header.nav.home": "HOME",
+  "component.header.nav.active-auctions": "ACTIVE AUCTIONS",
+  "component.header.nav.sold-archive": "SOLD ARCHIVE",
+  "component.header.nav.history": "HISTORY",
+  "component.header.nav.racing": "RACING",
+  "component.header.nav.contact": "CONTACT",
+  "component.header.nav.consign": "CONSIGN",
+  "component.header.nav.invest": "INVEST",
+  "component.footer.sr.back-to-top": "Scroll back to the top"
+}
