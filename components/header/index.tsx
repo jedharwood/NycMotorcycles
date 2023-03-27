@@ -5,32 +5,57 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { NavLink } from '../nav-link'
 
+import { FormattedMessage, useIntl } from 'react-intl'
+
 type NavLinkDetails = {
   href: string
   text: string
 }
 
 export const Header = (): JSX.Element => {
+  const intl = useIntl()
   const [showMobileNav, setShowMobileNav] = useState<boolean>(false)
   const [activeIdx, setActiveIdx] = useState<number>(-1)
-
-  const currentPage: string = useRouter().route
+  const { route } = useRouter()
 
   const navLinks: NavLinkDetails[] = [
-    { href: '/', text: 'HOME' },
-    { href: '/active-auctions', text: 'ACTIVE AUCTIONS' },
-    { href: '/sold-archive', text: 'SOLD ARCHIVE' },
-    { href: '/history', text: 'HISTORY' },
-    // { href: '/sell-in-japan', text: 'SELL YOUR MOTORCYCLE IN JAPAN' },
-    { href: '/racing', text: 'RACING' },
-    { href: '/contact', text: 'CONTACT' },
-    { href: '/consign', text: 'CONSIGN' },
-    { href: '/invest', text: 'INVEST' },
+    {
+      href: '/',
+      text: intl.formatMessage({ id: 'component.header.nav.home' }),
+    },
+    {
+      href: '/active-auctions',
+      text: intl.formatMessage({ id: 'component.header.nav.active-auctions' }),
+    },
+    {
+      href: '/sold-archive',
+      text: intl.formatMessage({ id: 'component.header.nav.sold-archive' }),
+    },
+    {
+      href: '/history',
+      text: intl.formatMessage({ id: 'component.header.nav.history' }),
+    },
+    {
+      href: '/racing',
+      text: intl.formatMessage({ id: 'component.header.nav.racing' }),
+    },
+    {
+      href: '/contact',
+      text: intl.formatMessage({ id: 'component.header.nav.contact' }),
+    },
+    {
+      href: '/consign',
+      text: intl.formatMessage({ id: 'component.header.nav.consign' }),
+    },
+    {
+      href: '/invest',
+      text: intl.formatMessage({ id: 'component.header.nav.invest' }),
+    },
   ]
 
   useEffect(() => {
     const currentPageIndex: number = navLinks.findIndex(
-      (link) => link.href === currentPage,
+      (link) => link.href === route,
     )
     setActiveIdx(currentPageIndex)
   }, [])
@@ -81,7 +106,9 @@ export const Header = (): JSX.Element => {
         />
       </div>
       <div className="flex justify-center">
-        <h1 className="text-lg tracking-widest">NEW YORK CITY MOTORCYCLES</h1>
+        <h1 className="text-lg tracking-widest">
+          <FormattedMessage id="component.header.title" />
+        </h1>
       </div>
       <nav className="py-2 px-6 bg-stone-600 bg-opacity-80 mt-2 mb-6">
         <div className="container flex flex-wrap justify-center mx-auto">
@@ -92,7 +119,9 @@ export const Header = (): JSX.Element => {
             aria-expanded="false"
             onClick={toggleMobilenav}
           >
-            <span className="sr-only">Open main menu</span>
+            <span className="sr-only">
+              <FormattedMessage id="component.header.sr.open-main-menu" />
+            </span>
             <Image
               src={burgerIcon}
               alt="Burger menu icon"

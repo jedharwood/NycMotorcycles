@@ -8,10 +8,10 @@ interface NavLinkProps {
 
 export const NavLink = ({ href, text, active }: NavLinkProps): JSX.Element => {
   const classes: string =
-    'block opacity-80 md:hover:underline md:hover:opacity-100'
+    'block md:hover:underline md:hover:opacity-100'
   const activeClasses: string = active
     ? classes + ' underline opacity-100'
-    : classes
+    : classes + ' opacity-80'
 
   return (
     <Link href={href} className={activeClasses}>
