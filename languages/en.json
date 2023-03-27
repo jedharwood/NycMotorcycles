@@ -1,6 +1,8 @@
 {
   "component.header.title": "NEW YORK CITY MOTORCYCLES",
   "component.header.sr.open-main-menu": "Open main menu",
+  "component.header.alt.nycmc-logo": "New york city motorcycles logo",
+  "component.header.alt.burger-menu": "Burger menu icon",
   "component.header.nav.home": "HOME",
   "component.header.nav.active-auctions": "ACTIVE AUCTIONS",
   "component.header.nav.sold-archive": "SOLD ARCHIVE",
@@ -9,5 +11,8 @@
   "component.header.nav.contact": "CONTACT",
   "component.header.nav.consign": "CONSIGN",
   "component.header.nav.invest": "INVEST",
-  "component.footer.sr.back-to-top": "Scroll back to the top"
+  "component.footer.alt.instagram-logo": "Instagram logo",
+  "component.footer.text.scroll-to-top": "Scroll to top",
+  "component.footer.text.address": "SHONAN COAST, JAPAN | LOS ANGELES",
+  "component.footer.text.disclaimer": "Vintage Motorcycles, Inc | All Rights Reserved"
 }

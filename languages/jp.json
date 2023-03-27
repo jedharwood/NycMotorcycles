@@ -1,6 +1,8 @@
 {
   "component.header.title": "NEW YORK CITY MOTORCYCLES",
   "component.header.sr.open-main-menu": "placeholder",
+  "component.header.alt.nycmc-logo": "placeholder",
+  "component.header.alt.burger-menu": "placeholder",
   "component.header.nav.home": "placeholder",
   "component.header.nav.active-auctions": "placeholder",
   "component.header.nav.sold-archive": "placeholder",
@@ -9,5 +11,8 @@
   "component.header.nav.contact": "placeholder",
   "component.header.nav.consign": "placeholder",
   "component.header.nav.invest": "placeholder",
-  "component.header.sr.back-to-top": "placeholder"
+  "component.footer.alt.instagram-logo": "placeholder",
+  "component.header.text.scroll-to-top": "placeholder",
+  "component.footer.text.address": "placeholder",
+  "component.footer.text.disclaimer": "placeholder"
 }
