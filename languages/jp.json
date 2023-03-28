@@ -1,6 +1,17 @@
 {
-  "component.header.title": "NEW YORK CITY MOTORCYCLES",
-  "component.header.sr.open-main-menu": "placeholder",
+  "common.title": "NEW YORK CITY MOTORCYCLES",
+  "component.auction-card.alt.placeholder-image": "placeholder",
+  "component.auction-card.table-label.current-price": "placeholder",
+  "component.auction-card.table-label.prompt-price": "placeholder",
+  "component.auction-card.table-label.time-remaining": "placeholder",
+  "component.auction-card.table-label.bidders": "placeholder",
+  "component.auction-card.time-unit.days": "日",
+  "component.auction-card.time-unit.hours": "時間",
+  "component.auction-card.time-unit.minutes": "分",
+  "component.footer.alt.instagram-logo": "placeholder",
+  "component.header.text.scroll-to-top": "placeholder",
+  "component.footer.text.address": "placeholder",
+  "component.footer.text.disclaimer": "placeholder",
   "component.header.alt.nycmc-logo": "placeholder",
   "component.header.alt.burger-menu": "placeholder",
   "component.header.nav.home": "placeholder",
@@ -11,8 +22,5 @@
   "component.header.nav.contact": "placeholder",
   "component.header.nav.consign": "placeholder",
   "component.header.nav.invest": "placeholder",
-  "component.footer.alt.instagram-logo": "placeholder",
-  "component.header.text.scroll-to-top": "placeholder",
-  "component.footer.text.address": "placeholder",
-  "component.footer.text.disclaimer": "placeholder"
+  "component.header.sr.open-main-menu": "placeholder"
 }

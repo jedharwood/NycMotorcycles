@@ -1,6 +1,19 @@
 {
-  "component.header.title": "NEW YORK CITY MOTORCYCLES",
-  "component.header.sr.open-main-menu": "Open main menu",
+  "common.title": "NEW YORK CITY MOTORCYCLES",
+  "component.auction-card.alt.placeholder-image": "Placeholder image",
+  "component.auction-card.table-label.current-price": "Current price",
+  "component.auction-card.table-label.prompt-price": "Prompt decision price",
+  "component.auction-card.table-label.time-remaining": "Time remaining",
+  "component.auction-card.table-label.bidders": "Bidders",
+  "component.auction-card.time-unit.days": "days",
+  "component.auction-card.time-unit.hours": "hours",
+  "component.auction-card.time-unit.minutes": "minutes",
+  "component.footer.alt.instagram-logo": "Instagram logo",
+  "component.footer.text.scroll-to-top": "Scroll to top",
+  "component.footer.text.address": "SHONAN COAST, JAPAN | LOS ANGELES",
+  "component.footer.text.disclaimer": "Vintage Motorcycles, Inc | All Rights Reserved",
+  "component.head.meta.name": "",
+  "component.head.meta.content": "",
   "component.header.alt.nycmc-logo": "New york city motorcycles logo",
   "component.header.alt.burger-menu": "Burger menu icon",
   "component.header.nav.home": "HOME",
@@ -11,8 +24,5 @@
   "component.header.nav.contact": "CONTACT",
   "component.header.nav.consign": "CONSIGN",
   "component.header.nav.invest": "INVEST",
-  "component.footer.alt.instagram-logo": "Instagram logo",
-  "component.footer.text.scroll-to-top": "Scroll to top",
-  "component.footer.text.address": "SHONAN COAST, JAPAN | LOS ANGELES",
-  "component.footer.text.disclaimer": "Vintage Motorcycles, Inc | All Rights Reserved"
+  "component.header.sr.open-main-menu": "Open main menu"
 }

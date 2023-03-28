@@ -1,3 +1,4 @@
+import { AuctionCard } from '@/components/auction-card'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 
@@ -17,11 +18,11 @@ export default function Home() {
     return !activeAuctions ? (
       <p>No auctions</p>
     ) : (
-      <ul>
-        {activeAuctions.map((a) => {
+      <ul className="space-y-6">
+        {activeAuctions.map((auction) => {
           return (
-            <li className="text-3xl font-bold underline" key={a.title}>
-              {a.title}
+            <li key={auction.title}>
+              <AuctionCard {...auction}/>
             </li>
           )
         })}
@@ -40,23 +41,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        {auctionDisplay()}
-        {auctionDisplay()}
-        {auctionDisplay()}
-        {auctionDisplay()}
-        {auctionDisplay()}
-        {auctionDisplay()}
-        {auctionDisplay()}
-        {auctionDisplay()}
-        {auctionDisplay()}
-        {auctionDisplay()}
-        {auctionDisplay()}
-        {auctionDisplay()}
-        {auctionDisplay()}
-        {auctionDisplay()}
-        {auctionDisplay()}
-      </main>
+      <main>{auctionDisplay()}</main>
     </>
   )
 }

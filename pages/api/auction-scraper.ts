@@ -99,13 +99,13 @@ const formatRemainingTime = (
     const time: number = parseInt(
       timeRemaining.substring(0, timeRemaining.length - 2),
     )
-    return { time: time, unit: 'days' }
+    return { time: time, unit: 'hours' }
   }
 
   const time: number = parseInt(
     timeRemaining.substring(0, timeRemaining.length - 1),
   )
   return timeRemaining.includes(days)
-    ? { time: time, unit: 'hours' }
+    ? { time: time, unit: 'days' }
     : { time: time, unit: 'minutes' }
 }
