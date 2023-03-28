@@ -24,5 +24,9 @@
   "component.header.nav.contact": "CONTACT",
   "component.header.nav.consign": "CONSIGN",
   "component.header.nav.invest": "INVEST",
-  "component.header.sr.open-main-menu": "Open main menu"
+  "component.header.sr.open-main-menu": "Open main menu",
+  "component.spinner.sr.loading": "Loading...",
+  "page.active-auctions.no-auctions.title": "There are currently no active auctions",
+  "page.active-auctions.no-auctions.body": "Click the button below to visit out Yahoo auction page. Follow the Yahoo auction account for updates when new items are listed.",
+  "page.active-auctions.yahoo-auctions-button": "Yahoo auction page" 
 }

@@ -12,6 +12,8 @@
   "component.header.text.scroll-to-top": "placeholder",
   "component.footer.text.address": "placeholder",
   "component.footer.text.disclaimer": "placeholder",
+  "component.head.meta.name": "",
+  "component.head.meta.content": "",
   "component.header.alt.nycmc-logo": "placeholder",
   "component.header.alt.burger-menu": "placeholder",
   "component.header.nav.home": "placeholder",
@@ -22,5 +24,9 @@
   "component.header.nav.contact": "placeholder",
   "component.header.nav.consign": "placeholder",
   "component.header.nav.invest": "placeholder",
-  "component.header.sr.open-main-menu": "placeholder"
+  "component.header.sr.open-main-menu": "placeholder",
+  "component.spinner.sr.loading": "placeholder",
+  "page.active-auctions.no-auctions.title": "placeholder",
+  "page.active-auctions.no-auctions.body": "placeholder",
+  "page.active-auctions.yahoo-auctions-button": "placeholder" 
 }

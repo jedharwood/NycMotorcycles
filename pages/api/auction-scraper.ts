@@ -1,5 +1,6 @@
 import { JSDOM } from 'jsdom'
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { yahooAuctionProfilePage } from '../../utilities/resource-utilities'
 
 type Prices = {
   currentPrice?: string
@@ -10,20 +11,17 @@ const yahooAuctionScraper = async (
   req: NextApiRequest,
   res: NextApiResponse,
 ): Promise<void> => {
+  const activeAuctions: ActiveAuction[] = []
+
   try {
-    const profilePage: Response = await fetch(
-      'https://auctions.yahoo.co.jp/seller/lazzamoto?',
-      {
-        mode: 'no-cors',
-      },
-    )
+    const profilePage: Response = await fetch(yahooAuctionProfilePage, {
+      mode: 'no-cors',
+    })
     const html: string = await profilePage.text()
     const dom: JSDOM = new JSDOM(html)
     const document: Document = dom.window.document
     const auctionListings: NodeListOf<Element> =
       document.querySelectorAll('.bd.cf')
-
-    const activeAuctions: ActiveAuction[] = []
 
     auctionListings.forEach((listing) => {
       activeAuctions.push(mapAuctionListing(listing))
@@ -31,13 +29,7 @@ const yahooAuctionScraper = async (
 
     res.status(200).json({ activeAuctions })
   } catch (error) {
-    if (error instanceof Error) {
-      res
-        .status(500)
-        .send({ message: `Internal server error: ${error.message}` })
-    } else {
-      res.status(500).send({ message: 'Unknown error occurred.' }) // Perhaps just return empty array?
-    }
+    res.status(500).json({ activeAuctions })
   }
 }
 
