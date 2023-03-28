@@ -17,24 +17,30 @@ export const Footer = (): JSX.Element => {
         onClick={scrollToTop}
         className="opacity-80 hover:opacity-100 hover:underline"
       >
-        <div className='flex justify-center'>
-        <Image
-          src={chevronUp}
-          alt={intl.formatMessage({ id: 'component.footer.text.scroll-to-top' })}
-          width={40}
-          height={40}
-          priority
-        />
+        <div className="flex justify-center">
+          <Image
+            src={chevronUp}
+            alt={intl.formatMessage({
+              id: 'component.footer.text.scroll-to-top',
+            })}
+            width={40}
+            height={40}
+            priority
+          />
         </div>
         <FormattedMessage id="component.footer.text.scroll-to-top" />
       </button>
       <a
         href="https://www.instagram.com/newyorkcitymotorcycles/"
+        target="_blank"
+        rel="noopener noreferrer"
         className="flex justify-center opacity-80 hover:opacity-100"
       >
         <Image
           src={instagramIcon}
-          alt={intl.formatMessage({ id: 'component.footer.alt.instagram-logo' })}
+          alt={intl.formatMessage({
+            id: 'component.footer.alt.instagram-logo',
+          })}
           width={50}
           height={50}
           priority
