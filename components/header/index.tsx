@@ -77,7 +77,7 @@ export const Header = (): JSX.Element => {
 
   const navMenu = (): JSX.Element => {
     return (
-      <ul className="flex flex-col md:flex-row md:space-x-8 md:text-sm md:font-medium">
+      <ul className="flex flex-col md:flex-row md:space-x-6 md:text-sm md:font-medium">
         {mapNavLinks()}
       </ul>
     )
@@ -96,20 +96,20 @@ export const Header = (): JSX.Element => {
   return (
     <header className="text-stone-50">
       <div className="flex justify-center pb-6">
-          <Image
-            src={nycmcLogo}
-            alt={intl.formatMessage({ id: 'component.header.alt.nycmc-logo' })}
-            width={111}
-            height={111}
-            priority
-          />
+        <Image
+          src={nycmcLogo}
+          alt={intl.formatMessage({ id: 'component.header.alt.nycmc-logo' })}
+          width={111}
+          height={111}
+          priority
+        />
       </div>
       <div className="flex justify-center">
-          <h1 className="text-lg tracking-widest">
-            <FormattedMessage id="component.header.title" />
-          </h1>
+        <h1 className="text-lg tracking-widest">
+          <FormattedMessage id="common.title" />
+        </h1>
       </div>
-      <nav className="py-2 px-6 bg-stone-600 bg-opacity-80 mt-2 mb-6">
+      <nav className="py-2 px-6 bg-stone-600 bg-opacity-90 mt-2 mb-6 rounded-md shadow-lg">
         <div className="container flex flex-wrap justify-center mx-auto">
           <button
             type="button"
@@ -123,7 +123,9 @@ export const Header = (): JSX.Element => {
             </span>
             <Image
               src={burgerIcon}
-              alt={intl.formatMessage({ id: 'component.header.alt.burger-menu' })}
+              alt={intl.formatMessage({
+                id: 'component.header.alt.burger-menu',
+              })}
               width={40}
               height={40}
               priority
