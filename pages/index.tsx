@@ -42,16 +42,16 @@ export default function Home() {
     'page.home.section-two.list-three',
     'page.home.section-two.list-four',
     'page.home.section-two.list-five',
-    'page.home.section-two.list-six'
+    'page.home.section-two.list-six',
   ]
 
-  const soldExampleList: string[] =[
+  const soldExampleList: string[] = [
     'page.home.section-six.list-one',
     'page.home.section-six.list-two',
     'page.home.section-six.list-three',
     'page.home.section-six.list-four',
     'page.home.section-six.list-five',
-    'page.home.section-six.list-six'
+    'page.home.section-six.list-six',
   ]
 
   const buildList = (listItems: string[]): JSX.Element => {
@@ -81,131 +81,58 @@ export default function Home() {
       </Head>
       <main className="space-y-6">
         <TextDisplay
-          title={intl.formatMessage({
-            id: 'page.home.section-one.title',
-          })}
+          title="page.home.section-one.title"
           childElement={quoteContactButton}
         />
         <TextDisplay
-          title={intl.formatMessage({
-            id: 'page.home.section-two.title',
-          })}
-          textContent={[
-            intl.formatMessage({
-              id: 'page.home.section-two.text-one',
-            }),
-            intl.formatMessage({
-              id: 'page.home.section-two.text-two',
-            }),
-          ]}
+          title="page.home.section-two.title"
+          textContent={['page.home.section-two.text-one', 'page.home.section-two.text-two']}
           childElement={buildList(desirableModelList)}
         />
         <TextDisplay
-          title={intl.formatMessage({
-            id: 'page.home.section-three.title',
-          })}
-          textContent={[
-            intl.formatMessage({
-              id: 'page.home.section-three.text-one',
-            }),
-          ]}
+          title="page.home.section-three.title"
+          textContent={['page.home.section-three.text-one']}
         />
         <TextDisplay
-          title={intl.formatMessage({
-            id: 'page.home.section-four.title',
-          })}
-          textContent={[
-            intl.formatMessage({
-              id: 'page.home.section-four.text-one',
-            }),
-            intl.formatMessage({
-              id: 'page.home.section-four.text-two',
-            }),
-            intl.formatMessage({
-              id: 'page.home.section-four.text-three',
-            }),
-          ]}
+          title="page.home.section-four.title"
+          textContent={['page.home.section-four.text-one', 'page.home.section-four.text-two', 'page.home.section-four.text-three']}
           childElement={downloadDocumentsButton}
         />
         <TextDisplay
-          title={intl.formatMessage({
-            id: 'page.home.section-five.title',
-          })}
-          textContent={[
-            intl.formatMessage({
-              id: 'page.home.section-five.text-one',
-            }),
-          ]}
+          title="page.home.section-five.title"
+          textContent={['page.home.section-five.text-one']}
         />
         <TextDisplay
-          title={intl.formatMessage({
-            id: 'page.home.section-six.title',
-          })}
+          title="page.home.section-six.title"
           childElement={buildList(soldExampleList)}
         />
         <TextDisplay
-          title={intl.formatMessage({
-            id: 'page.home.section-seven.title',
-          })}
-          textContent={[intl.formatMessage({
-            id: 'page.home.section-seven.text-one',
-          }), intl.formatMessage({
-            id: 'page.home.section-seven.text-two',
-          }), intl.formatMessage({
-            id: 'page.home.section-seven.text-three',
-          })]}
+          title="page.home.section-seven.title"
+          textContent={['page.home.section-seven.text-one', 'page.home.section-seven.text-two', 'page.home.section-seven.text-three']}
         />
         <TextDisplay
-          title={intl.formatMessage({
-            id: 'page.home.section-eight.title',
-          })}
-          textContent={[intl.formatMessage({
-            id: 'page.home.section-eight.text-one',
-          })]}
+          title="page.home.section-eight.title"
+          textContent={['page.home.section-eight.text-one']}
         />
         <TextDisplay
-          title={intl.formatMessage({
-            id: 'page.home.section-nine.title',
-          })}
-          textContent={[intl.formatMessage({
-            id: 'page.home.section-nine.text-one',
-          })]}
+          title="page.home.section-nine.title"
+          textContent={['page.home.section-nine.text-one']}
         />
         <TextDisplay
-          title={intl.formatMessage({
-            id: 'page.home.section-ten.title',
-          })}
-          textContent={[intl.formatMessage({
-            id: 'page.home.section-ten.text-one',
-          }), intl.formatMessage({
-            id: 'page.home.section-ten.text-two',
-          })]}
+          title="page.home.section-ten.title"
+          textContent={['page.home.section-ten.text-one', 'page.home.section-ten.text-two']}
         />
         <TextDisplay
-          title={intl.formatMessage({
-            id: 'page.home.section-eleven.title',
-          })}
-          textContent={[intl.formatMessage({
-            id: 'page.home.section-eleven.text-one',
-          })]}
+          title="page.home.section-eleven.title"
+          textContent={['page.home.section-eleven.text-one']}
         />
         <TextDisplay
-          title={intl.formatMessage({
-            id: 'page.home.section-twelve.title',
-          })}
-          textContent={[intl.formatMessage({
-            id: 'page.home.section-twelve.text-one',
-          }), intl.formatMessage({
-            id: 'page.home.section-twelve.text-two',
-          })]}
+          title="page.home.section-twelve.title"
+          textContent={['page.home.section-twelve.text-one', 'page.home.section-twelve.text-two']}
         />
         <TextDisplay
-          title={intl.formatMessage({
-            id: 'page.home.section-thirteen.title',
-          })}
-          textContent={[intl.formatMessage({
-            id: 'page.home.section-thirteen.text-one',
-          })]}
+          title="page.home.section-thirteen.title"
+          textContent={['page.home.section-thirteen.text-one']}
           childElement={contactButton}
         />
       </main>

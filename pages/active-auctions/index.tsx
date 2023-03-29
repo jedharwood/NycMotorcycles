@@ -37,12 +37,8 @@ export default function Home() {
 
     return !activeAuctions.length ? (
       <TextDisplay
-        title={intl.formatMessage({
-          id: 'page.active-auctions.no-auctions.title',
-        })}
-        textContent={[
-          intl.formatMessage({ id: 'page.active-auctions.no-auctions.body' }),
-        ]}
+        title="page.active-auctions.no-auctions.title"
+        textContent={['page.active-auctions.no-auctions.body']}
         childElement={yahooAuctionLinkButton}
       />
     ) : (
