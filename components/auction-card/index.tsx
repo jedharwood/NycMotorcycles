@@ -56,7 +56,7 @@ export const AuctionCard = ({
   }
 
   return (
-    <article className="bg-stone-600 bg-opacity-90 w-full py-2 px-6 rounded-md text-stone-50 grid sm:grid-cols-3 gap-4 shadow-lg">
+    <article className="bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 grid sm:grid-cols-3 gap-4 shadow-lg">
       <a
         href={url}
         target="_blank"
