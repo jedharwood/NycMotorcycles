@@ -1,11 +1,73 @@
 import Head from 'next/head'
-// import Image from 'next/image'
-// import { Inter } from 'next/font/google'
-// import styles from '@/styles/Home.module.css'
-
-// const inter = Inter({ subsets: ['latin'] })
+import { TextDisplay } from '@/components/text-display'
+import { useIntl } from 'react-intl'
+import { LinkButton } from '@/components/link-button'
 
 export default function Home() {
+  const intl = useIntl()
+
+  const quoteContactButton: JSX.Element = (
+    <LinkButton
+      text={intl.formatMessage({
+        id: 'page.home.section-one.button',
+      })}
+      href="/contact"
+      type="router-link"
+    />
+  )
+
+  const downloadDocumentsButton: JSX.Element = (
+    <LinkButton
+      text={intl.formatMessage({
+        id: 'page.home.section-four.button',
+      })}
+      href="/download"
+      type="router-link"
+    />
+  )
+
+  const contactButton: JSX.Element = (
+    <LinkButton
+      text={intl.formatMessage({
+        id: 'page.home.section-thirteen.button',
+      })}
+      href="/contact"
+      type="router-link"
+    />
+  )
+
+  const desirableModelList: string[] = [
+    'page.home.section-two.list-one',
+    'page.home.section-two.list-two',
+    'page.home.section-two.list-three',
+    'page.home.section-two.list-four',
+    'page.home.section-two.list-five',
+    'page.home.section-two.list-six'
+  ]
+
+  const soldExampleList: string[] =[
+    'page.home.section-six.list-one',
+    'page.home.section-six.list-two',
+    'page.home.section-six.list-three',
+    'page.home.section-six.list-four',
+    'page.home.section-six.list-five',
+    'page.home.section-six.list-six'
+  ]
+
+  const buildList = (listItems: string[]): JSX.Element => {
+    return (
+      <ul className="pl-4 list-disc">
+        {listItems.map((listItem, idx) => (
+          <li key={idx}>
+            {intl.formatMessage({
+              id: listItem,
+            })}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
   return (
     <>
       <Head>
@@ -17,113 +79,136 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-screen">
-        <p>Home page</p>
+      <main className="space-y-6">
+        <TextDisplay
+          title={intl.formatMessage({
+            id: 'page.home.section-one.title',
+          })}
+          childElement={quoteContactButton}
+        />
+        <TextDisplay
+          title={intl.formatMessage({
+            id: 'page.home.section-two.title',
+          })}
+          textContent={[
+            intl.formatMessage({
+              id: 'page.home.section-two.text-one',
+            }),
+            intl.formatMessage({
+              id: 'page.home.section-two.text-two',
+            }),
+          ]}
+          childElement={buildList(desirableModelList)}
+        />
+        <TextDisplay
+          title={intl.formatMessage({
+            id: 'page.home.section-three.title',
+          })}
+          textContent={[
+            intl.formatMessage({
+              id: 'page.home.section-three.text-one',
+            }),
+          ]}
+        />
+        <TextDisplay
+          title={intl.formatMessage({
+            id: 'page.home.section-four.title',
+          })}
+          textContent={[
+            intl.formatMessage({
+              id: 'page.home.section-four.text-one',
+            }),
+            intl.formatMessage({
+              id: 'page.home.section-four.text-two',
+            }),
+            intl.formatMessage({
+              id: 'page.home.section-four.text-three',
+            }),
+          ]}
+          childElement={downloadDocumentsButton}
+        />
+        <TextDisplay
+          title={intl.formatMessage({
+            id: 'page.home.section-five.title',
+          })}
+          textContent={[
+            intl.formatMessage({
+              id: 'page.home.section-five.text-one',
+            }),
+          ]}
+        />
+        <TextDisplay
+          title={intl.formatMessage({
+            id: 'page.home.section-six.title',
+          })}
+          childElement={buildList(soldExampleList)}
+        />
+        <TextDisplay
+          title={intl.formatMessage({
+            id: 'page.home.section-seven.title',
+          })}
+          textContent={[intl.formatMessage({
+            id: 'page.home.section-seven.text-one',
+          }), intl.formatMessage({
+            id: 'page.home.section-seven.text-two',
+          }), intl.formatMessage({
+            id: 'page.home.section-seven.text-three',
+          })]}
+        />
+        <TextDisplay
+          title={intl.formatMessage({
+            id: 'page.home.section-eight.title',
+          })}
+          textContent={[intl.formatMessage({
+            id: 'page.home.section-eight.text-one',
+          })]}
+        />
+        <TextDisplay
+          title={intl.formatMessage({
+            id: 'page.home.section-nine.title',
+          })}
+          textContent={[intl.formatMessage({
+            id: 'page.home.section-nine.text-one',
+          })]}
+        />
+        <TextDisplay
+          title={intl.formatMessage({
+            id: 'page.home.section-ten.title',
+          })}
+          textContent={[intl.formatMessage({
+            id: 'page.home.section-ten.text-one',
+          }), intl.formatMessage({
+            id: 'page.home.section-ten.text-two',
+          })]}
+        />
+        <TextDisplay
+          title={intl.formatMessage({
+            id: 'page.home.section-eleven.title',
+          })}
+          textContent={[intl.formatMessage({
+            id: 'page.home.section-eleven.text-one',
+          })]}
+        />
+        <TextDisplay
+          title={intl.formatMessage({
+            id: 'page.home.section-twelve.title',
+          })}
+          textContent={[intl.formatMessage({
+            id: 'page.home.section-twelve.text-one',
+          }), intl.formatMessage({
+            id: 'page.home.section-twelve.text-two',
+          })]}
+        />
+        <TextDisplay
+          title={intl.formatMessage({
+            id: 'page.home.section-thirteen.title',
+          })}
+          textContent={[intl.formatMessage({
+            id: 'page.home.section-thirteen.text-one',
+          })]}
+          childElement={contactButton}
+        />
       </main>
-      {/* <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main> */}
     </>
   )
 }

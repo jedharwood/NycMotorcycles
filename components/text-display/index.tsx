@@ -40,7 +40,7 @@ export const TextDisplay = ({
   }
 
   return (
-    <section className="bg-stone-600 bg-opacity-90 w-full py-2 px-6 rounded-md text-stone-50 shadow-lg">
+    <section className="bg-stone-600 bg-opacity-90 w-full pt-2 pb-4 px-6 rounded-md text-stone-50 shadow-lg">
       {renderTitle()}
       {mapTextContent()}
       {renderChildElement()}
