@@ -1,12 +1,16 @@
 import Link from 'next/link'
 
-type ButtonProps = {
+export type LinkButtonProps = {
   text: string
   href: string
   type: 'anchor' | 'router-link'
 }
 
-export const LinkButton = ({ text, href, type }: ButtonProps): JSX.Element => {
+export const LinkButton = ({
+  text,
+  href,
+  type,
+}: LinkButtonProps): JSX.Element => {
   const button: JSX.Element = (
     <button
       type="button"

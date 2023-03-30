@@ -31,9 +31,11 @@ export const TextDisplay = ({
     ) : (
       <div className="space-y-4">
         {textContent.map((text, idx) => (
-          <p key={idx}>{intl.formatMessage({
-            id: text,
-          })}</p>
+          <p key={idx}>
+            {intl.formatMessage({
+              id: text,
+            })}
+          </p>
         ))}
       </div>
     )
