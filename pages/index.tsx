@@ -2,6 +2,7 @@ import { TextDisplay } from '@/components/text-display'
 import { useIntl } from 'react-intl'
 import { LinkButton, LinkButtonProps } from '@/components/link-button'
 import { HeadElement } from '@/components/head-element'
+import { routes } from '@/utilities/resource-utilities'
 
 export default function Home() {
   const intl = useIntl()
@@ -57,7 +58,7 @@ export default function Home() {
           title="page.home.section-1.title"
           childElement={buildLinkButton({
             text: 'page.home.section-1.button',
-            href: '/contact',
+            href: routes.contact,
             type: 'router-link',
           })}
         />
@@ -82,7 +83,7 @@ export default function Home() {
           ]}
           childElement={buildLinkButton({
             text: 'page.home.section-4.button',
-            href: '/download',
+            href: routes.download,
             type: 'router-link',
           })}
         />
@@ -133,7 +134,7 @@ export default function Home() {
           textContent={['page.home.section-13.text-1']}
           childElement={buildLinkButton({
             text: 'page.home.section-13.button',
-            href: '/contact',
+            href: routes.contact,
             type: 'router-link',
           })}
         />

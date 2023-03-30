@@ -2,6 +2,7 @@ import instagramIcon from 'public/svgs/instagram-icon.svg'
 import chevronUp from 'public/svgs/chevron-up.svg'
 import Image from 'next/image'
 import { FormattedMessage, useIntl } from 'react-intl'
+import { instagramProfilePage } from '@/utilities/resource-utilities'
 
 export const Footer = (): JSX.Element => {
   const intl = useIntl()
@@ -31,7 +32,7 @@ export const Footer = (): JSX.Element => {
         <FormattedMessage id="component.footer.text.scroll-to-top" />
       </button>
       <a
-        href="https://www.instagram.com/newyorkcitymotorcycles/"
+        href={instagramProfilePage}
         target="_blank"
         rel="noopener noreferrer"
         className="flex justify-center opacity-80 hover:opacity-100"

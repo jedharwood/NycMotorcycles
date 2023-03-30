@@ -18,7 +18,7 @@ export default function Invest() {
       />
       <main>
         <TwoColumnGridPage
-          imageSrc="/images/silver-motorbike.jpeg"
+          imageSrc="/images/invest/silver-motorbike.jpeg"
           imageAlt="page.invest.alt.silver-motorbike"
           title="page.invest.section-1.title"
           textContent={[
