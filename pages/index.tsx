@@ -1,57 +1,27 @@
 import Head from 'next/head'
 import { TextDisplay } from '@/components/text-display'
 import { useIntl } from 'react-intl'
-import { LinkButton } from '@/components/link-button'
+import { LinkButton, LinkButtonProps } from '@/components/link-button'
 
 export default function Home() {
   const intl = useIntl()
 
-  const quoteContactButton: JSX.Element = (
-    <LinkButton
-      text={intl.formatMessage({
-        id: 'page.home.section-one.button',
-      })}
-      href="/contact"
-      type="router-link"
-    />
-  )
-
-  const downloadDocumentsButton: JSX.Element = (
-    <LinkButton
-      text={intl.formatMessage({
-        id: 'page.home.section-four.button',
-      })}
-      href="/download"
-      type="router-link"
-    />
-  )
-
-  const contactButton: JSX.Element = (
-    <LinkButton
-      text={intl.formatMessage({
-        id: 'page.home.section-thirteen.button',
-      })}
-      href="/contact"
-      type="router-link"
-    />
-  )
-
   const desirableModelList: string[] = [
-    'page.home.section-two.list-one',
-    'page.home.section-two.list-two',
-    'page.home.section-two.list-three',
-    'page.home.section-two.list-four',
-    'page.home.section-two.list-five',
-    'page.home.section-two.list-six',
+    'page.home.section-2.list-1',
+    'page.home.section-2.list-2',
+    'page.home.section-2.list-3',
+    'page.home.section-2.list-4',
+    'page.home.section-2.list-5',
+    'page.home.section-2.list-6',
   ]
 
   const soldExampleList: string[] = [
-    'page.home.section-six.list-one',
-    'page.home.section-six.list-two',
-    'page.home.section-six.list-three',
-    'page.home.section-six.list-four',
-    'page.home.section-six.list-five',
-    'page.home.section-six.list-six',
+    'page.home.section-6.list-1',
+    'page.home.section-6.list-2',
+    'page.home.section-6.list-3',
+    'page.home.section-6.list-4',
+    'page.home.section-6.list-5',
+    'page.home.section-6.list-6',
   ]
 
   const buildList = (listItems: string[]): JSX.Element => {
@@ -68,6 +38,22 @@ export default function Home() {
     )
   }
 
+  const buildLinkButton = ({
+    text,
+    href,
+    type,
+  }: LinkButtonProps): JSX.Element => {
+    return (
+      <LinkButton
+        text={intl.formatMessage({
+          id: text,
+        })}
+        href={href}
+        type={type}
+      />
+    )
+  }
+
   return (
     <>
       <Head>
@@ -81,59 +67,88 @@ export default function Home() {
       </Head>
       <main className="space-y-6">
         <TextDisplay
-          title="page.home.section-one.title"
-          childElement={quoteContactButton}
+          title="page.home.section-1.title"
+          childElement={buildLinkButton({
+            text: 'page.home.section-1.button',
+            href: '/contact',
+            type: 'router-link',
+          })}
         />
         <TextDisplay
-          title="page.home.section-two.title"
-          textContent={['page.home.section-two.text-one', 'page.home.section-two.text-two']}
+          title="page.home.section-2.title"
+          textContent={[
+            'page.home.section-2.text-1',
+            'page.home.section-2.text-2',
+          ]}
           childElement={buildList(desirableModelList)}
         />
         <TextDisplay
-          title="page.home.section-three.title"
-          textContent={['page.home.section-three.text-one']}
+          title="page.home.section-3.title"
+          textContent={['page.home.section-3.text-1']}
         />
         <TextDisplay
-          title="page.home.section-four.title"
-          textContent={['page.home.section-four.text-one', 'page.home.section-four.text-two', 'page.home.section-four.text-three']}
-          childElement={downloadDocumentsButton}
+          title="page.home.section-4.title"
+          textContent={[
+            'page.home.section-4.text-1',
+            'page.home.section-4.text-2',
+            'page.home.section-4.text-3',
+          ]}
+          childElement={buildLinkButton({
+            text: 'page.home.section-4.button',
+            href: '/download',
+            type: 'router-link',
+          })}
         />
         <TextDisplay
-          title="page.home.section-five.title"
-          textContent={['page.home.section-five.text-one']}
+          title="page.home.section-5.title"
+          textContent={['page.home.section-5.text-1']}
         />
         <TextDisplay
-          title="page.home.section-six.title"
+          title="page.home.section-6.title"
           childElement={buildList(soldExampleList)}
         />
         <TextDisplay
-          title="page.home.section-seven.title"
-          textContent={['page.home.section-seven.text-one', 'page.home.section-seven.text-two', 'page.home.section-seven.text-three']}
+          title="page.home.section-7.title"
+          textContent={[
+            'page.home.section-7.text-1',
+            'page.home.section-7.text-2',
+            'page.home.section-7.text-3',
+          ]}
         />
         <TextDisplay
-          title="page.home.section-eight.title"
-          textContent={['page.home.section-eight.text-one']}
+          title="page.home.section-8.title"
+          textContent={['page.home.section-8.text-1']}
         />
         <TextDisplay
-          title="page.home.section-nine.title"
-          textContent={['page.home.section-nine.text-one']}
+          title="page.home.section-9.title"
+          textContent={['page.home.section-9.text-1']}
         />
         <TextDisplay
-          title="page.home.section-ten.title"
-          textContent={['page.home.section-ten.text-one', 'page.home.section-ten.text-two']}
+          title="page.home.section-10.title"
+          textContent={[
+            'page.home.section-10.text-1',
+            'page.home.section-10.text-2',
+          ]}
         />
         <TextDisplay
-          title="page.home.section-eleven.title"
-          textContent={['page.home.section-eleven.text-one']}
+          title="page.home.section-11.title"
+          textContent={['page.home.section-11.text-1']}
         />
         <TextDisplay
-          title="page.home.section-twelve.title"
-          textContent={['page.home.section-twelve.text-one', 'page.home.section-twelve.text-two']}
+          title="page.home.section-12.title"
+          textContent={[
+            'page.home.section-12.text-1',
+            'page.home.section-12.text-2',
+          ]}
         />
         <TextDisplay
-          title="page.home.section-thirteen.title"
-          textContent={['page.home.section-thirteen.text-one']}
-          childElement={contactButton}
+          title="page.home.section-13.title"
+          textContent={['page.home.section-13.text-1']}
+          childElement={buildLinkButton({
+            text: 'page.home.section-13.button',
+            href: '/contact',
+            type: 'router-link',
+          })}
         />
       </main>
     </>
