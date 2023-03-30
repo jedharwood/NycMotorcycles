@@ -1,4 +1,4 @@
-import nycmcLogo from '../../assets/svgs/nycmc-logo.svg'
+import nycmcLogo from 'public/svgs/nycmc-logo.svg'
 import { useIntl } from 'react-intl'
 
 export const AuctionCard = ({

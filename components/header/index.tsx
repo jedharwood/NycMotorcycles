@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import nycmcLogo from '../../assets/svgs/nycmc-logo.svg'
-import burgerIcon from '../../assets/svgs/burger-icon.svg'
+import nycmcLogo from 'public/svgs/nycmc-logo.svg'
+import burgerIcon from 'public/svgs/burger-icon.svg'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { NavLink } from '../nav-link'
