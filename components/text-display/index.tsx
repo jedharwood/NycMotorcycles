@@ -1,6 +1,6 @@
 import { useIntl } from 'react-intl'
 
-type TextDisplayProps = {
+export type TextDisplayProps = {
   title?: string
   textContent?: string[]
   childElement?: JSX.Element

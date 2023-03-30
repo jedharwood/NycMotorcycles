@@ -8,9 +8,9 @@ type HeadElementProps = {
 
 export const HeadElement = ({ pageTitle, content }: HeadElementProps) => {
   const intl = useIntl()
-  const metaContent: string = intl.formatMessage({ id: content }) 
+  const metaContent: string = intl.formatMessage({ id: content })
   const metaBrandList: string = intl.formatMessage({ id: 'common.meta.brands' })
-  
+
   return (
     <Head>
       <title>{intl.formatMessage({ id: pageTitle })}</title>
