@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { NavLink } from '../nav-link'
 import { FormattedMessage, useIntl } from 'react-intl'
+import { routes } from '@/utilities/resource-utilities'
 
 type NavLinkDetails = {
   href: string
@@ -19,37 +20,38 @@ export const Header = (): JSX.Element => {
 
   const navLinks: NavLinkDetails[] = [
     {
-      href: '/',
-      text: intl.formatMessage({ id: 'component.header.nav.home' }),
+      href: routes.home,
+      text: 'component.header.nav.home',
     },
     {
-      href: '/active-auctions',
-      text: intl.formatMessage({ id: 'component.header.nav.active-auctions' }),
+      href: routes.activeAuctions,
+      text: 'component.header.nav.active-auctions',
     },
     {
-      href: '/sold-archive',
-      text: intl.formatMessage({ id: 'component.header.nav.sold-archive' }),
+      href: routes.soldArchive,
+      text: 'component.header.nav.sold-archive',
     },
     {
-      href: '/history',
-      text: intl.formatMessage({ id: 'component.header.nav.history' }),
+      href: routes.history,
+      text: 'component.header.nav.history',
     },
     {
-      href: '/racing',
-      text: intl.formatMessage({ id: 'component.header.nav.racing' }),
+      href: routes.racing,
+      text: 'component.header.nav.racing',
     },
     {
-      href: '/contact',
-      text: intl.formatMessage({ id: 'component.header.nav.contact' }),
+      href: routes.contact,
+      text: 'component.header.nav.contact',
     },
     {
-      href: '/consign',
-      text: intl.formatMessage({ id: 'component.header.nav.consign' }),
+      href: routes.consign,
+      text: 'component.header.nav.consign',
     },
     {
-      href: '/invest',
-      text: intl.formatMessage({ id: 'component.header.nav.invest' }),
+      href: routes.invest,
+      text: 'component.header.nav.invest',
     },
+    // Maybe I'll add download in here once I have the page up...
   ]
 
   useEffect(() => {
