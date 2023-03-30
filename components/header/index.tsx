@@ -105,7 +105,7 @@ export const Header = (): JSX.Element => {
         />
       </div>
       <div className="flex justify-center">
-        <h1 className="text-lg tracking-widest">
+        <h1 className="text-lg md:text-xl tracking-widest">
           <FormattedMessage id="common.title" />
         </h1>
       </div>
