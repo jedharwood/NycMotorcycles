@@ -49,7 +49,7 @@ export const Footer = (): JSX.Element => {
       <h3 className="flex justify-center text-sm md:text-md">
         <FormattedMessage id="component.footer.text.address" />
       </h3>
-      <h4 className="flex justify-center text-xs md:text-sm">
+      <h4 className="flex justify-center text-xs md:text-sm px-1">
         <FormattedMessage id="component.footer.text.disclaimer" />
       </h4>
     </footer>
