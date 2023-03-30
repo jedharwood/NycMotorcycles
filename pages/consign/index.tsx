@@ -10,7 +10,7 @@ export default function Consign() {
       />
       <main>
         <TwoColumnGridPage
-          imageSrc="/images/orange-motorbike.jpeg"
+          imageSrc="/images/consign/orange-motorbike.jpeg"
           imageAlt="page.consign.alt.orange-motorbike"
           title="page.consign.section-1.title"
           textContent={[
