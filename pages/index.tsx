@@ -1,129 +1,143 @@
-import Head from 'next/head'
-// import Image from 'next/image'
-// import { Inter } from 'next/font/google'
-// import styles from '@/styles/Home.module.css'
-
-// const inter = Inter({ subsets: ['latin'] })
+import { TextDisplay } from '@/components/text-display'
+import { useIntl } from 'react-intl'
+import { LinkButton, LinkButtonProps } from '@/components/link-button'
+import { HeadElement } from '@/components/head-element'
 
 export default function Home() {
+  const intl = useIntl()
+
+  const desirableModelList: string[] = [
+    'page.home.section-2.list-1',
+    'page.home.section-2.list-2',
+    'page.home.section-2.list-3',
+    'page.home.section-2.list-4',
+    'page.home.section-2.list-5',
+    'page.home.section-2.list-6',
+  ]
+
+  const soldExampleList: string[] = [
+    'page.home.section-6.list-1',
+    'page.home.section-6.list-2',
+    'page.home.section-6.list-3',
+    'page.home.section-6.list-4',
+    'page.home.section-6.list-5',
+    'page.home.section-6.list-6',
+  ]
+
+  const buildList = (listItems: string[]): JSX.Element => {
+    return (
+      <ul className="pl-4 list-disc">
+        {listItems.map((listItem, idx) => (
+          <li key={idx}>
+            {intl.formatMessage({
+              id: listItem,
+            })}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  const buildLinkButton = (props: LinkButtonProps): JSX.Element => {
+    const linkButtonProps: LinkButtonProps = {
+      ...props,
+      text: props.text,
+    }
+    return <LinkButton {...linkButtonProps} />
+  }
+
   return (
     <>
-      <Head>
-        <title>New York City Motorcycles</title>
-        <meta
-          name="description"
-          content="The website for New York City Motorcycles"
+      <HeadElement
+        pageTitle="page.home.head.meta.title"
+        content="page.home.head.meta.content"
+      />
+      <main className="space-y-6">
+        <TextDisplay
+          title="page.home.section-1.title"
+          childElement={buildLinkButton({
+            text: 'page.home.section-1.button',
+            href: '/contact',
+            type: 'router-link',
+          })}
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className="h-screen">
-        <p>Home page</p>
+        <TextDisplay
+          title="page.home.section-2.title"
+          textContent={[
+            'page.home.section-2.text-1',
+            'page.home.section-2.text-2',
+          ]}
+          childElement={buildList(desirableModelList)}
+        />
+        <TextDisplay
+          title="page.home.section-3.title"
+          textContent={['page.home.section-3.text-1']}
+        />
+        <TextDisplay
+          title="page.home.section-4.title"
+          textContent={[
+            'page.home.section-4.text-1',
+            'page.home.section-4.text-2',
+            'page.home.section-4.text-3',
+          ]}
+          childElement={buildLinkButton({
+            text: 'page.home.section-4.button',
+            href: '/download',
+            type: 'router-link',
+          })}
+        />
+        <TextDisplay
+          title="page.home.section-5.title"
+          textContent={['page.home.section-5.text-1']}
+        />
+        <TextDisplay
+          title="page.home.section-6.title"
+          childElement={buildList(soldExampleList)}
+        />
+        <TextDisplay
+          title="page.home.section-7.title"
+          textContent={[
+            'page.home.section-7.text-1',
+            'page.home.section-7.text-2',
+            'page.home.section-7.text-3',
+          ]}
+        />
+        <TextDisplay
+          title="page.home.section-8.title"
+          textContent={['page.home.section-8.text-1']}
+        />
+        <TextDisplay
+          title="page.home.section-9.title"
+          textContent={['page.home.section-9.text-1']}
+        />
+        <TextDisplay
+          title="page.home.section-10.title"
+          textContent={[
+            'page.home.section-10.text-1',
+            'page.home.section-10.text-2',
+          ]}
+        />
+        <TextDisplay
+          title="page.home.section-11.title"
+          textContent={['page.home.section-11.text-1']}
+        />
+        <TextDisplay
+          title="page.home.section-12.title"
+          textContent={[
+            'page.home.section-12.text-1',
+            'page.home.section-12.text-2',
+          ]}
+        />
+        <TextDisplay
+          title="page.home.section-13.title"
+          textContent={['page.home.section-13.text-1']}
+          childElement={buildLinkButton({
+            text: 'page.home.section-13.button',
+            href: '/contact',
+            type: 'router-link',
+          })}
+        />
       </main>
-      {/* <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main> */}
     </>
   )
 }

@@ -1,7 +1,7 @@
 import { FormattedMessage } from 'react-intl'
 
 type SpinnerProps = {
-    loading: boolean;
+  loading: boolean
 }
 
 export const Spinner = ({ loading }: SpinnerProps): JSX.Element => {
@@ -26,7 +26,9 @@ export const Spinner = ({ loading }: SpinnerProps): JSX.Element => {
             fill="currentFill"
           />
         </svg>
-        <span className="sr-only"><FormattedMessage id="component.spinner.sr.loading" /></span>
+        <span className="sr-only">
+          <FormattedMessage id="component.spinner.sr.loading" />
+        </span>
       </div>
     </div>
   )

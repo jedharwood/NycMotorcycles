@@ -1,3 +1,5 @@
+import { useIntl } from 'react-intl'
+
 type TextDisplayProps = {
   title?: string
   textContent?: string[]
@@ -9,12 +11,16 @@ export const TextDisplay = ({
   textContent,
   childElement,
 }: TextDisplayProps): JSX.Element => {
+  const intl = useIntl()
+
   const renderTitle = () => {
     return title === undefined ? (
       <></>
     ) : (
       <h2 className="flex justify-center font-medium text-xl mb-4 opacity-80">
-        {title}
+        {intl.formatMessage({
+          id: title,
+        })}
       </h2>
     )
   }
@@ -25,7 +31,11 @@ export const TextDisplay = ({
     ) : (
       <div className="space-y-4">
         {textContent.map((text, idx) => (
-          <p key={idx}>{text}</p>
+          <p key={idx}>
+            {intl.formatMessage({
+              id: text,
+            })}
+          </p>
         ))}
       </div>
     )
@@ -40,7 +50,7 @@ export const TextDisplay = ({
   }
 
   return (
-    <section className="bg-stone-600 bg-opacity-90 w-full py-2 px-6 rounded-md text-stone-50 shadow-lg">
+    <section className="bg-stone-600 bg-opacity-90 w-full pt-2 pb-4 px-6 rounded-md text-stone-50 shadow-lg">
       {renderTitle()}
       {mapTextContent()}
       {renderChildElement()}

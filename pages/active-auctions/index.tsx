@@ -1,13 +1,12 @@
 import { AuctionCard } from '@/components/auction-card'
-import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { yahooAuctionProfilePage } from '../../utilities/resource-utilities'
 import { TextDisplay } from '@/components/text-display'
 import { Spinner } from '@/components/spinner'
-import { FormattedMessage, useIntl } from 'react-intl'
+import { LinkButton } from '@/components/link-button'
+import { HeadElement } from '@/components/head-element'
 
 export default function Home() {
-  const intl = useIntl()
   const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(true)
 
@@ -25,26 +24,17 @@ export default function Home() {
     if (isLoading) return <></>
 
     const yahooAuctionLinkButton: JSX.Element = (
-      <div className="flex justify-center">
-        <a
-          href={yahooAuctionProfilePage}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button
-            type="button"
-            className="rounded-md px-6 py-2 bg-teal-700 hover:bg-teal-500 text-lg"
-          >
-            <FormattedMessage id="page.active-auctions.yahoo-auctions-button" />
-          </button>
-        </a>
-      </div>
+      <LinkButton
+        text="page.active-auctions.yahoo-auctions-button"
+        href={yahooAuctionProfilePage}
+        type="anchor"
+      />
     )
 
     return !activeAuctions.length ? (
       <TextDisplay
-        title={intl.formatMessage({ id: 'page.active-auctions.no-auctions.title' })}
-        textContent={[intl.formatMessage({ id: 'page.active-auctions.no-auctions.body' })]}
+        title="page.active-auctions.no-auctions.title"
+        textContent={['page.active-auctions.no-auctions.body']}
         childElement={yahooAuctionLinkButton}
       />
     ) : (
@@ -62,18 +52,14 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>New York City Motorcycles</title>
-        <meta
-          name="description"
-          content="The website for New York City Motorcycles"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadElement
+        pageTitle="page.active-auctions.head.meta.title"
+        content="page.active-auctions.head.meta.content"
+      />
       <main>
-        <Spinner loading={isLoading} />        
-        {auctionDisplay()}</main>
+        <Spinner loading={isLoading} />
+        {auctionDisplay()}
+      </main>
     </>
   )
 }
