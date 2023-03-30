@@ -1,7 +1,7 @@
-import Head from 'next/head'
 import { TextDisplay } from '@/components/text-display'
 import { useIntl } from 'react-intl'
 import { LinkButton, LinkButtonProps } from '@/components/link-button'
+import { HeadElement } from '@/components/head-element'
 
 export default function Home() {
   const intl = useIntl()
@@ -48,15 +48,10 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>New York City Motorcycles</title>
-        <meta
-          name="description"
-          content="The website for New York City Motorcycles"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadElement
+        pageTitle="page.home.head.meta.title"
+        content="page.home.head.meta.content"
+      />
       <main className="space-y-6">
         <TextDisplay
           title="page.home.section-1.title"

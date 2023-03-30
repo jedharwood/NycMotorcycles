@@ -1,10 +1,10 @@
 import { AuctionCard } from '@/components/auction-card'
-import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { yahooAuctionProfilePage } from '../../utilities/resource-utilities'
 import { TextDisplay } from '@/components/text-display'
 import { Spinner } from '@/components/spinner'
 import { LinkButton } from '@/components/link-button'
+import { HeadElement } from '@/components/head-element'
 
 export default function Home() {
   const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([])
@@ -52,15 +52,10 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>New York City Motorcycles</title>
-        <meta
-          name="description"
-          content="The website for New York City Motorcycles"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadElement
+        pageTitle="page.active-auctions.head.meta.title"
+        content="page.active-auctions.head.meta.content"
+      />
       <main>
         <Spinner loading={isLoading} />
         {auctionDisplay()}
