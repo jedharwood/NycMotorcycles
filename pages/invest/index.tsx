@@ -1,7 +1,15 @@
 import { HeadElement } from '@/components/head-element'
+import { LinkButton } from '@/components/link-button'
 import { TwoColumnGridPage } from '@/components/two-column-grid-page'
 
 export default function Invest() {
+  const contactButton: JSX.Element = (
+    <LinkButton
+      text="page.invest.section-1.button"
+      href="/contact"
+      type="router-link"
+    />
+  )
   return (
     <>
       <HeadElement
@@ -20,6 +28,7 @@ export default function Invest() {
             'page.invest.section-1.text-4',
             'page.invest.section-1.text-5',
           ]}
+          childElement={contactButton}
         />
       </main>
     </>

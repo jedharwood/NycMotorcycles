@@ -6,6 +6,7 @@ type TwoColumnGridPageProps = {
   imageAlt: string
   title: string
   textContent: string[]
+  childElement?: JSX.Element
 }
 
 export const TwoColumnGridPage = ({
@@ -13,12 +14,14 @@ export const TwoColumnGridPage = ({
   imageAlt,
   title,
   textContent,
+  childElement,
 }: TwoColumnGridPageProps) => {
   const intl = useIntl()
 
   const textDisplayProps: TextDisplayProps = {
     title,
-    textContent
+    textContent,
+    childElement,
   }
 
   return (
@@ -28,8 +31,7 @@ export const TwoColumnGridPage = ({
         alt={intl.formatMessage({ id: imageAlt })}
         className="w-full rounded-md"
       />
-      <TextDisplay {...textDisplayProps }
-      />
+      <TextDisplay {...textDisplayProps} />
     </div>
   )
 }
