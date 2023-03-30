@@ -1,5 +1,5 @@
-import instagramIcon from 'assets/svgs/instagram-icon.svg'
-import chevronUp from 'assets/svgs/chevron-up.svg'
+import instagramIcon from 'public/svgs/instagram-icon.svg'
+import chevronUp from 'public/svgs/chevron-up.svg'
 import Image from 'next/image'
 import { FormattedMessage, useIntl } from 'react-intl'
 
