@@ -6,7 +6,7 @@ import { Spinner } from '@/components/spinner'
 import { LinkButton } from '@/components/link-button'
 import { HeadElement } from '@/components/head-element'
 
-export default function Home() {
+export default function ActiveAuctions() {
   const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(true)
 
