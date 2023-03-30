@@ -4,11 +4,9 @@ import { useEffect, useState } from 'react'
 import { yahooAuctionProfilePage } from '../../utilities/resource-utilities'
 import { TextDisplay } from '@/components/text-display'
 import { Spinner } from '@/components/spinner'
-import { useIntl } from 'react-intl'
 import { LinkButton } from '@/components/link-button'
 
 export default function Home() {
-  const intl = useIntl()
   const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(true)
 
@@ -27,9 +25,7 @@ export default function Home() {
 
     const yahooAuctionLinkButton: JSX.Element = (
       <LinkButton
-        text={intl.formatMessage({
-          id: 'page.active-auctions.yahoo-auctions-button',
-        })}
+        text="page.active-auctions.yahoo-auctions-button"
         href={yahooAuctionProfilePage}
         type="anchor"
       />

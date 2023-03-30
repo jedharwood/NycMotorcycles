@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useIntl } from 'react-intl'
 
 export type LinkButtonProps = {
   text: string
@@ -11,12 +12,16 @@ export const LinkButton = ({
   href,
   type,
 }: LinkButtonProps): JSX.Element => {
+  const intl = useIntl()
+
   const button: JSX.Element = (
     <button
       type="button"
       className="rounded-md px-6 py-2 bg-teal-700 hover:bg-teal-500 text-lg"
     >
-      {text}
+      {intl.formatMessage({
+        id: text,
+      })}
     </button>
   )
 

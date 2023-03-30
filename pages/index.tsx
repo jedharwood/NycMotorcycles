@@ -38,20 +38,12 @@ export default function Home() {
     )
   }
 
-  const buildLinkButton = ({
-    text,
-    href,
-    type,
-  }: LinkButtonProps): JSX.Element => {
-    return (
-      <LinkButton
-        text={intl.formatMessage({
-          id: text,
-        })}
-        href={href}
-        type={type}
-      />
-    )
+  const buildLinkButton = (props: LinkButtonProps): JSX.Element => {
+    const linkButtonProps: LinkButtonProps = {
+      ...props,
+      text: props.text,
+    }
+    return <LinkButton {...linkButtonProps} />
   }
 
   return (
