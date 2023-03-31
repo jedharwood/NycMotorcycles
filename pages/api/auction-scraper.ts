@@ -45,10 +45,12 @@ const mapAuctionListing = (listing: Element): ActiveAuction => {
   return {
     title: listing.querySelector('h3')?.textContent ?? undefined,
     url: listing.querySelector('a')?.href ?? undefined,
-    imageSrc:
-      listing.querySelector('a > img')?.getAttribute('src') ?? undefined,
-    imageAlt:
-      listing.querySelector('a > img')?.getAttribute('alt') ?? undefined,
+    image: {
+      imageSrc:
+        listing.querySelector('a > img')?.getAttribute('src') ?? undefined,
+      imageAlt:
+        listing.querySelector('a > img')?.getAttribute('alt') ?? undefined,
+    },
     bidders: listing.querySelector('dt.bi + dd')?.textContent ?? undefined,
     timeRemaining: timeRemaining,
     currentPrice: prices.currentPrice,

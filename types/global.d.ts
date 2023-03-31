@@ -4,15 +4,14 @@ type TimeRemaining = {
 }
 
 type ImageSrcAndAlt = {
-  imageSrc: string
-  imageAlt: string
+  imageSrc?: string
+  imageAlt?: string
 }
 
 type ActiveAuction = {
   title?: string
   url?: string
-  imageSrc?: string
-  imageAlt?: string
+  image: ImageSrcAndAlt
   bidders?: string
   timeRemaining?: TimeRemaining
   currentPrice?: string
