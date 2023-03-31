@@ -1,11 +1,5 @@
 import { useIntl } from 'react-intl'
-
-export type GridImageProps = {
-  image: ImageSrcAndAlt
-  width?: number
-  height?: number
-  onImageClick: () => void
-}
+import Image from 'next/image'
 
 type ImageGridProps = {
   images: GridImageProps[]
@@ -22,9 +16,14 @@ export const ImageGrid = ({ images }: ImageGridProps): JSX.Element => {
           key={idx}
           onClick={image.onImageClick}
         >
-          <img
+          <Image
             src={image.image.imageSrc}
-            alt={intl.formatMessage({ id: image.image.imageAlt })}
+            alt={intl.formatMessage({
+              id: image.image.imageAlt,
+            })}
+            width={image.width}
+            height={image.height}
+            priority
             className="rounded-md h-full object-cover hover:opacity-70"
           />
         </div>

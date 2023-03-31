@@ -11,8 +11,8 @@ export const AuctionCard = ({
   promptDecisionPrice,
 }: ActiveAuction): JSX.Element => {
   const intl = useIntl()
-  const imageSource = image.imageSrc ? image.imageSrc : nycmcLogo
-  const imageAltText = image.imageAlt
+  const imageSource = image.imageSrc.length ? image.imageSrc : nycmcLogo
+  const imageAltText = image.imageAlt.length
     ? image.imageAlt
     : intl.formatMessage({ id: 'component.auction-card.alt.placeholder-image' })
 

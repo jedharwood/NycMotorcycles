@@ -1,16 +1,16 @@
 import { HeadElement } from '@/components/head-element'
-import { GridImageProps, ImageGrid } from '@/components/image-grid'
+import { ImageGrid } from '@/components/image-grid'
 import { TextDisplay } from '@/components/text-display'
 import { useState } from 'react'
 import { useIntl } from 'react-intl'
 import { ImageModal } from '@/components/image-modal'
+import Image from 'next/image'
 
 export default function Racing() {
   const intl = useIntl()
   const [showModal, setShowModal] = useState<boolean>(false)
-  const [selectedImage, setSelectedImage] = useState<ImageSrcAndAlt>({
-    imageSrc: '',
-    imageAlt: '',
+  const [selectedImage, setSelectedImage] = useState<GridImageProps>({
+    image: { imageSrc: '', imageAlt: '' },
   })
 
   const toggleModal = (): void => {
@@ -18,13 +18,20 @@ export default function Racing() {
   }
 
   const buildGridImage = ({
-    imageSrc,
-    imageAlt,
-  }: ImageSrcAndAlt): GridImageProps => {
+    image,
+    width,
+    height,
+  }: GridImageProps): GridImageProps => {
     return {
-      image: { imageSrc, imageAlt },
+      image: { imageSrc: image.imageSrc, imageAlt: image.imageAlt },
+      width,
+      height,
       onImageClick: () => {
-        setSelectedImage({ imageSrc, imageAlt })
+        setSelectedImage({
+          image: { imageSrc: image.imageSrc, imageAlt: image.imageAlt },
+          width,
+          height,
+        })
         toggleModal()
       },
     }
@@ -33,38 +40,62 @@ export default function Racing() {
   const gridImages: GridImageProps[] = [
     {
       ...buildGridImage({
-        imageSrc: '/images/racing/harley-number-7.jpeg',
-        imageAlt: 'page.racing.alt.harley-number-7',
+        image: {
+          imageSrc: '/images/racing/harley-number-7.jpeg',
+          imageAlt: 'page.racing.alt.harley-number-7',
+        },
+        width: 864,
+        height: 576,
       }),
     },
     {
       ...buildGridImage({
-        imageSrc: '/images/racing/larry-racing-667.jpeg',
-        imageAlt: 'page.racing.alt.larry-racing-667',
+        image: {
+          imageSrc: '/images/racing/larry-racing-667.jpeg',
+          imageAlt: 'page.racing.alt.larry-racing-667',
+        },
+        width: 2500,
+        height: 1932,
       }),
     },
     {
       ...buildGridImage({
-        imageSrc: '/images/racing/roper-vanson.jpeg',
-        imageAlt: 'page.racing.alt.roper-vanson',
+        image: {
+          imageSrc: '/images/racing/roper-vanson.jpeg',
+          imageAlt: 'page.racing.alt.roper-vanson',
+        },
+        width: 1000,
+        height: 667,
       }),
     },
     {
       ...buildGridImage({
-        imageSrc: '/images/racing/larry-racing-667-laverda.jpeg',
-        imageAlt: 'page.racing.alt.larry-racing-667-laverda',
+        image: {
+          imageSrc: '/images/racing/larry-racing-667-laverda.jpeg',
+          imageAlt: 'page.racing.alt.larry-racing-667-laverda',
+        },
+        width: 2500,
+        height: 1932,
       }),
     },
     {
       ...buildGridImage({
-        imageSrc: '/images/racing/orange-helmets.jpeg',
-        imageAlt: 'page.racing.alt.orange-helmets',
+        image: {
+          imageSrc: '/images/racing/orange-helmets.jpeg',
+          imageAlt: 'page.racing.alt.orange-helmets',
+        },
+        width: 1080,
+        height: 1080,
       }),
     },
     {
       ...buildGridImage({
-        imageSrc: '/images/racing/willow-springs-honda.jpeg',
-        imageAlt: 'page.racing.alt.willow-springs-honda',
+        image: {
+          imageSrc: '/images/racing/willow-springs-honda.jpeg',
+          imageAlt: 'page.racing.alt.willow-springs-honda',
+        },
+        width: 1080,
+        height: 1080,
       }),
     },
   ]
@@ -77,9 +108,12 @@ export default function Racing() {
       />
       <main>
         <div className="space-y-6">
-          <img
+          <Image
             src="/images/racing/laverda-lowside.jpeg"
             alt={intl.formatMessage({ id: 'page.racing.alt.laverda-lowside' })}
+            width={2500}
+            height={1932}
+            priority
             className="rounded-md shadow-lg"
           />
           <TextDisplay
@@ -91,7 +125,6 @@ export default function Racing() {
           />
           <ImageGrid images={gridImages} />
         </div>
-
         <ImageModal
           isVisible={showModal}
           onCloseClick={toggleModal}

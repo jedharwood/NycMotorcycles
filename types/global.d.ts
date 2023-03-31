@@ -4,8 +4,8 @@ type TimeRemaining = {
 }
 
 type ImageSrcAndAlt = {
-  imageSrc?: string
-  imageAlt?: string
+  imageSrc: string
+  imageAlt: string
 }
 
 type ActiveAuction = {
@@ -16,4 +16,11 @@ type ActiveAuction = {
   timeRemaining?: TimeRemaining
   currentPrice?: string
   promptDecisionPrice?: string
+}
+
+type GridImageProps = {
+  image: ImageSrcAndAlt
+  width?: number
+  height?: number
+  onImageClick?: () => void
 }
