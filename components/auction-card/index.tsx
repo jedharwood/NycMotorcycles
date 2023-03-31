@@ -49,7 +49,9 @@ export const AuctionCard = ({
       <></>
     ) : (
       <tr className="hover:underline text-sm sm:text-lg">
-        <td className="pr-4 sm:opacity-80">{label}</td>
+        <td className="pr-4 sm:opacity-80">{intl.formatMessage({
+                id: label,
+              })}</td>
         <td>{value}</td>
       </tr>
     )
@@ -80,28 +82,16 @@ export const AuctionCard = ({
         </a>
         <table className="mt-4 w-full table-auto">
           <tbody>
-            {tableRow(
-              intl.formatMessage({
-                id: 'component.auction-card.table-label.current-price',
-              }),
+            {tableRow('component.auction-card.table-label.current-price',
               currentPrice,
             )}
-            {tableRow(
-              intl.formatMessage({
-                id: 'component.auction-card.table-label.prompt-price',
-              }),
+            {tableRow('component.auction-card.table-label.prompt-price',
               promptDecisionPrice,
             )}
-            {tableRow(
-              intl.formatMessage({
-                id: 'component.auction-card.table-label.time-remaining',
-              }),
+            {tableRow('component.auction-card.table-label.time-remaining',
               timeRemainingValue(),
             )}
-            {tableRow(
-              intl.formatMessage({
-                id: 'component.auction-card.table-label.bidders',
-              }),
+            {tableRow('component.auction-card.table-label.bidders',
               bidders,
             )}
           </tbody>
