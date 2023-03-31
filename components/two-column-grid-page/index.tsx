@@ -29,7 +29,7 @@ export const TwoColumnGridPage = ({
       <img
         src={imageSrc}
         alt={intl.formatMessage({ id: imageAlt })}
-        className="w-full rounded-md"
+        className="w-full rounded-md shadow-lg"
       />
       <TextDisplay {...textDisplayProps} />
     </div>
