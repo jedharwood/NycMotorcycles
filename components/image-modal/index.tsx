@@ -5,15 +5,13 @@ import { useIntl, FormattedMessage } from 'react-intl'
 type ImageModalProps = {
   isVisible: boolean
   onCloseClick: () => void
-  imageSrc: string
-  imageAlt: string
+  image: ImageSrcAndAlt
 }
 
 export const ImageModal = ({
   isVisible,
   onCloseClick,
-  imageSrc,
-  imageAlt,
+  image,
 }: ImageModalProps): JSX.Element => {
   const intl = useIntl()
 
@@ -42,9 +40,9 @@ export const ImageModal = ({
             </span>
           </button>
           <img
-            src={imageSrc}
-            alt={imageAlt}
-            className="rounded-md shadow-lg border-2 border-stone-50"
+            src={image.imageSrc}
+            alt={intl.formatMessage({ id: image.imageAlt })}
+            className="rounded-md shadow-lg border-2 border-stone-50 max-h-screen"
           />
         </div>
       </div>

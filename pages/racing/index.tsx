@@ -8,9 +8,10 @@ import { ImageModal } from '@/components/image-modal'
 export default function Racing() {
   const intl = useIntl()
   const [showModal, setShowModal] = useState<boolean>(false)
-  const [selectedImageSrc, setSelectedImageSrc] = useState<string>('')
-  const [selectedImageAlt, setSelectedImageAlt] = useState<string>('')
-  // make/use combined type to condense these two hooks down
+  const [selectedImage, setSelectedImage] = useState<ImageSrcAndAlt>({
+    imageSrc: '',
+    imageAlt: '',
+  })
 
   const toggleModal = (): void => {
     setShowModal(!showModal)
@@ -24,8 +25,7 @@ export default function Racing() {
       imageSrc,
       imageAlt,
       onImageClick: () => {
-        setSelectedImageSrc(imageSrc)
-        setSelectedImageAlt(imageAlt)
+        setSelectedImage({ imageSrc, imageAlt })
         toggleModal()
       },
     }
@@ -64,7 +64,7 @@ export default function Racing() {
     },
     {
       ...buildGridImage(
-        '/images/racing/orange-helmets.jpeg',
+        '/images/racing/willow-springs-honda.jpeg',
         'page.racing.alt.willow-springs-honda',
       ),
     },
@@ -76,7 +76,8 @@ export default function Racing() {
         pageTitle="page.racing.head.meta.title"
         content="page.racing.head.meta.content"
       />
-      <main className="space-y-6">
+      <main>
+        <div className="space-y-6">
         <img
           src="/images/racing/laverda-lowside.jpeg"
           alt={intl.formatMessage({ id: 'page.racing.alt.laverda-lowside' })}
@@ -90,11 +91,12 @@ export default function Racing() {
           ]}
         />
         <ImageGrid images={gridImages} />
+        </div>
+        
         <ImageModal
           isVisible={showModal}
           onCloseClick={toggleModal}
-          imageSrc={selectedImageSrc}
-          imageAlt={selectedImageAlt}
+          image={selectedImage}
         />
       </main>
     </>

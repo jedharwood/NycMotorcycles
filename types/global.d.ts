@@ -3,6 +3,11 @@ type TimeRemaining = {
   unit: 'days' | 'hours' | 'minutes'
 }
 
+type ImageSrcAndAlt = {
+  imageSrc: string
+  imageAlt: string
+}
+
 type ActiveAuction = {
   title?: string
   url?: string
