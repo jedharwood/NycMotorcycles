@@ -24,6 +24,8 @@
   "component.header.nav.consign": "CONSIGN",
   "component.header.nav.invest": "INVEST",
   "component.header.sr.open-main-menu": "Open main menu",
+  "component.image-modal.alt.close": "Close button",
+  "component.image-modal.sr.close": "Close button",
   "component.spinner.sr.loading": "Loading...",
   "page.active-auctions.head.meta.title": "Vintage motorcycles for sale on Yahoo auctions in Japan",
   "page.active-auctions.head.meta.content": "Vintage motorcycles currently offered for sale on Yahoo auctions in Japan by New York City Motorcycles. New York City Motorcycles imports vintage motorcycles from around the world to sell by auction in Japan",
@@ -101,5 +103,17 @@
   "page.invest.section-1.text-3": "Two reasons: Social media = envy. That drives those with the means to step up their game. In the past trophies were kept inside a cabinet or on the mantle. Now its on your instagram and twitter.",
   "page.invest.section-1.text-4": "The second reason is the art market. Investment art has also consistently outperformed many financial markets. In the past 10 years, art buyers - not just car and motorcycle collectors have been responsible for driving prices ever higher. Think about it. Why spend (invest) $100K for a static sculpture. The symphony of hundreds, thousands of moving parts...motion, contours, aesthetics. Moving scupture. Like collectible cars, motorcycles as sound investment are getting the respect - and promotion - from unlikely places. Art dealers, writers and critics.",
   "page.invest.section-1.text-5": "New York City Motorcycles acts as a buyer's agent. As an independent third party with deep knowledge and contacts in the vintage motorcycle world, we never accept what is claimed to be a motorcycle's history and provenance. We prove it. We make sure that prices defend value. These are motorcycles that are intended to be liquid, desirable and offer conisistent high growth at the lowest possible risk. Call or email for further guidance.",
-  "page.invest.section-1.button": "Contact"
+  "page.invest.section-1.button": "Contact",
+  "page.racing.alt.harley-number-7": "An image of a cool looking vintage Harley Davidson motorcycle with an orange colour fairing and the number seven on the front.",
+  "page.racing.alt.larry-racing-667-laverda": "An image of Larry from New York City Motorcycles racing on a vintage Laverda motorcycle. He's leaning low into a corner.",
+  "page.racing.alt.larry-racing-667": "An image of Larry from New York City Motorcycles racing on a white coloured vintage motorcycle with the race number 667 on the front. He's leaning low into a corner.",
+  "page.racing.alt.laverda-lowside": "An image of Larry from New York City Motorcycles racing an orange, vintage Laverda motorcycle on a track.",
+  "page.racing.alt.orange-helmets": "An image of two riders on vintage motorcycles lining up for the start of a race wearing full leathers and orange helmets under a dramatic sky.",
+  "page.racing.alt.roper-vanson": "A black and white image a rider in full leathers on a vintage motorcycle. The leathers have the words 'Roper' and 'Vanson' on the back.",
+  "page.racing.alt.willow-springs-honda": "An image of Larry from New York City Motorcycles racing a vintage Honda motorbike. He's riding at Willow Springs - the fastest road in the west.",
+  "page.racing.head.meta.title": "Racing vintage motorcycles with New York City Motorcycles",
+  "page.racing.head.meta.content": "This page details Larry from New York City's career racing vintage motorcycles in the USA. Larry raced at the Barber Vintage Festival and at the AHRMA National Championship at Roebling Road Raceway, in Savannah, GA. He rode a heavily-modified ex-Tim Joyce T-100 unit Triumph and a Laverda 750SFC clone.",
+  "page.racing.section-1.title": "Racing",
+  "page.racing.section-1.text-1": "After attending the Barber Vintage Festival at the end of the 2013 race season as a spectator/collector/enthusiast, I boldly announced that 2013 would be the last year that I didn't race. And so it was.",
+  "page.racing.section-1.text-2": "The first race in the 2014 AHRMA National Championship was at Roebling Road Raceway, in Savannah, GA.  After completing the AHRMA race school on the Friday, I was on the starting grid the following two days. By the end of the 2014 season I raced at 7 of the 10 weekend events, campaigning a heavily-modified ex-Tim Joyce T-100 unit Triumph in Sportsman 500 class and toward the end of the season, in addition, a Laverda 750SFC clone."
 }
