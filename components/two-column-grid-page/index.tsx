@@ -2,16 +2,14 @@ import { TextDisplay, TextDisplayProps } from '../text-display'
 import { useIntl } from 'react-intl'
 
 type TwoColumnGridPageProps = {
-  imageSrc: string
-  imageAlt: string
+  image: ImageSrcAndAlt
   title: string
   textContent: string[]
   childElement?: JSX.Element
 }
 
 export const TwoColumnGridPage = ({
-  imageSrc,
-  imageAlt,
+  image,
   title,
   textContent,
   childElement,
@@ -27,8 +25,8 @@ export const TwoColumnGridPage = ({
   return (
     <div className="grid md:grid-cols-2 gap-4">
       <img
-        src={imageSrc}
-        alt={intl.formatMessage({ id: imageAlt })}
+        src={image.imageSrc}
+        alt={intl.formatMessage({ id: image.imageAlt })}
         className="w-full rounded-md shadow-lg"
       />
       <TextDisplay {...textDisplayProps} />

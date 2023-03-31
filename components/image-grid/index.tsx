@@ -1,8 +1,7 @@
 import { useIntl } from 'react-intl'
 
 export type GridImageProps = {
-  imageSrc: string
-  imageAlt: string
+  image: ImageSrcAndAlt
   width?: number
   height?: number
   onImageClick: () => void
@@ -24,8 +23,8 @@ export const ImageGrid = ({ images }: ImageGridProps): JSX.Element => {
           onClick={image.onImageClick}
         >
           <img
-            src={image.imageSrc}
-            alt={intl.formatMessage({ id: image.imageAlt })}
+            src={image.image.imageSrc}
+            alt={intl.formatMessage({ id: image.image.imageAlt })}
             className="rounded-md h-full object-cover hover:opacity-70"
           />
         </div>

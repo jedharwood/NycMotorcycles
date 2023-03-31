@@ -17,13 +17,12 @@ export default function Racing() {
     setShowModal(!showModal)
   }
 
-  const buildGridImage = (
-    imageSrc: string,
-    imageAlt: string,
-  ): GridImageProps => {
+  const buildGridImage = ({
+    imageSrc,
+    imageAlt,
+  }: ImageSrcAndAlt): GridImageProps => {
     return {
-      imageSrc,
-      imageAlt,
+      image: { imageSrc, imageAlt },
       onImageClick: () => {
         setSelectedImage({ imageSrc, imageAlt })
         toggleModal()
@@ -33,40 +32,40 @@ export default function Racing() {
 
   const gridImages: GridImageProps[] = [
     {
-      ...buildGridImage(
-        '/images/racing/harley-number-7.jpeg',
-        'page.racing.alt.harley-number-7',
-      ),
+      ...buildGridImage({
+        imageSrc: '/images/racing/harley-number-7.jpeg',
+        imageAlt: 'page.racing.alt.harley-number-7',
+      }),
     },
     {
-      ...buildGridImage(
-        '/images/racing/larry-racing-667.jpeg',
-        'page.racing.alt.larry-racing-667',
-      ),
+      ...buildGridImage({
+        imageSrc: '/images/racing/larry-racing-667.jpeg',
+        imageAlt: 'page.racing.alt.larry-racing-667',
+      }),
     },
     {
-      ...buildGridImage(
-        '/images/racing/roper-vanson.jpeg',
-        'page.racing.alt.roper-vanson',
-      ),
+      ...buildGridImage({
+        imageSrc: '/images/racing/roper-vanson.jpeg',
+        imageAlt: 'page.racing.alt.roper-vanson',
+      }),
     },
     {
-      ...buildGridImage(
-        '/images/racing/larry-racing-667-laverda.jpeg',
-        'page.racing.alt.larry-racing-667-laverda',
-      ),
+      ...buildGridImage({
+        imageSrc: '/images/racing/larry-racing-667-laverda.jpeg',
+        imageAlt: 'page.racing.alt.larry-racing-667-laverda',
+      }),
     },
     {
-      ...buildGridImage(
-        '/images/racing/orange-helmets.jpeg',
-        'page.racing.alt.orange-helmets',
-      ),
+      ...buildGridImage({
+        imageSrc: '/images/racing/orange-helmets.jpeg',
+        imageAlt: 'page.racing.alt.orange-helmets',
+      }),
     },
     {
-      ...buildGridImage(
-        '/images/racing/willow-springs-honda.jpeg',
-        'page.racing.alt.willow-springs-honda',
-      ),
+      ...buildGridImage({
+        imageSrc: '/images/racing/willow-springs-honda.jpeg',
+        imageAlt: 'page.racing.alt.willow-springs-honda',
+      }),
     },
   ]
 
@@ -78,21 +77,21 @@ export default function Racing() {
       />
       <main>
         <div className="space-y-6">
-        <img
-          src="/images/racing/laverda-lowside.jpeg"
-          alt={intl.formatMessage({ id: 'page.racing.alt.laverda-lowside' })}
-          className="rounded-md shadow-lg"
-        />
-        <TextDisplay
-          title="page.racing.section-1.title"
-          textContent={[
-            'page.racing.section-1.text-1',
-            'page.racing.section-1.text-2',
-          ]}
-        />
-        <ImageGrid images={gridImages} />
+          <img
+            src="/images/racing/laverda-lowside.jpeg"
+            alt={intl.formatMessage({ id: 'page.racing.alt.laverda-lowside' })}
+            className="rounded-md shadow-lg"
+          />
+          <TextDisplay
+            title="page.racing.section-1.title"
+            textContent={[
+              'page.racing.section-1.text-1',
+              'page.racing.section-1.text-2',
+            ]}
+          />
+          <ImageGrid images={gridImages} />
         </div>
-        
+
         <ImageModal
           isVisible={showModal}
           onCloseClick={toggleModal}
