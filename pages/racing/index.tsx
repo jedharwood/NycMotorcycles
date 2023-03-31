@@ -9,26 +9,24 @@ import Image from 'next/image'
 export default function Racing() {
   const intl = useIntl()
   const [showModal, setShowModal] = useState<boolean>(false)
-  const [selectedImage, setSelectedImage] = useState<GridImageProps>({
-    image: { imageSrc: '', imageAlt: '' },
+  const [selectedImage, setSelectedImage] = useState<GridImage>({
+    imageSrc: '', imageAlt: '',
   })
 
   const toggleModal = (): void => {
     setShowModal(!showModal)
   }
 
-  const buildGridImage = ({
-    image,
-    width,
-    height,
-  }: GridImageProps): GridImageProps => {
+  const buildGridImage = ({ imageSrc, imageAlt, width, height }: GridImage): GridImage => {
     return {
-      image: { imageSrc: image.imageSrc, imageAlt: image.imageAlt },
+      imageSrc, 
+      imageAlt,
       width,
       height,
       onImageClick: () => {
         setSelectedImage({
-          image: { imageSrc: image.imageSrc, imageAlt: image.imageAlt },
+          imageSrc, 
+          imageAlt,
           width,
           height,
         })
@@ -37,63 +35,51 @@ export default function Racing() {
     }
   }
 
-  const gridImages: GridImageProps[] = [
+  const gridImages: GridImage[] = [
     {
       ...buildGridImage({
-        image: {
-          imageSrc: '/images/racing/harley-number-7.jpeg',
-          imageAlt: 'page.racing.alt.harley-number-7',
-        },
+        imageSrc: '/images/racing/harley-number-7.jpeg',
+        imageAlt: 'page.racing.alt.harley-number-7',
         width: 864,
         height: 576,
       }),
     },
     {
       ...buildGridImage({
-        image: {
-          imageSrc: '/images/racing/larry-racing-667.jpeg',
-          imageAlt: 'page.racing.alt.larry-racing-667',
-        },
+        imageSrc: '/images/racing/larry-racing-667.jpeg',
+        imageAlt: 'page.racing.alt.larry-racing-667',
         width: 2500,
         height: 1932,
       }),
     },
     {
       ...buildGridImage({
-        image: {
-          imageSrc: '/images/racing/roper-vanson.jpeg',
-          imageAlt: 'page.racing.alt.roper-vanson',
-        },
+        imageSrc: '/images/racing/roper-vanson.jpeg',
+        imageAlt: 'page.racing.alt.roper-vanson',
         width: 1000,
         height: 667,
       }),
     },
     {
       ...buildGridImage({
-        image: {
-          imageSrc: '/images/racing/larry-racing-667-laverda.jpeg',
-          imageAlt: 'page.racing.alt.larry-racing-667-laverda',
-        },
+        imageSrc: '/images/racing/larry-racing-667-laverda.jpeg',
+        imageAlt: 'page.racing.alt.larry-racing-667-laverda',
         width: 2500,
         height: 1932,
       }),
     },
     {
       ...buildGridImage({
-        image: {
-          imageSrc: '/images/racing/orange-helmets.jpeg',
-          imageAlt: 'page.racing.alt.orange-helmets',
-        },
+        imageSrc: '/images/racing/orange-helmets.jpeg',
+        imageAlt: 'page.racing.alt.orange-helmets',
         width: 1080,
         height: 1080,
       }),
     },
     {
       ...buildGridImage({
-        image: {
-          imageSrc: '/images/racing/willow-springs-honda.jpeg',
-          imageAlt: 'page.racing.alt.willow-springs-honda',
-        },
+        imageSrc: '/images/racing/willow-springs-honda.jpeg',
+        imageAlt: 'page.racing.alt.willow-springs-honda',
         width: 1080,
         height: 1080,
       }),

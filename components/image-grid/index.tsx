@@ -2,7 +2,7 @@ import { useIntl } from 'react-intl'
 import Image from 'next/image'
 
 type ImageGridProps = {
-  images: GridImageProps[]
+  images: GridImage[]
 }
 
 export const ImageGrid = ({ images }: ImageGridProps): JSX.Element => {
@@ -17,9 +17,9 @@ export const ImageGrid = ({ images }: ImageGridProps): JSX.Element => {
           onClick={image.onImageClick}
         >
           <Image
-            src={image.image.imageSrc}
+            src={image.imageSrc}
             alt={intl.formatMessage({
-              id: image.image.imageAlt,
+              id: image.imageAlt,
             })}
             width={image.width}
             height={image.height}

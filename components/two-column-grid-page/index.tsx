@@ -3,7 +3,7 @@ import { useIntl } from 'react-intl'
 import Image from 'next/image'
 
 type TwoColumnGridPageProps = {
-  image: GridImageProps
+  image: GridImage
   title: string
   textContent: string[]
   childElement?: JSX.Element
@@ -26,9 +26,9 @@ export const TwoColumnGridPage = ({
   return (
     <div className="grid md:grid-cols-2 gap-4">
       <Image
-        src={image.image.imageSrc}
+        src={image.imageSrc}
         alt={intl.formatMessage({
-          id: image.image.imageAlt,
+          id: image.imageAlt,
         })}
         width={image.width}
         height={image.height}

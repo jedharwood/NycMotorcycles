@@ -5,7 +5,7 @@ import { useIntl, FormattedMessage } from 'react-intl'
 type ImageModalProps = {
   isVisible: boolean
   onCloseClick: () => void
-  image: GridImageProps
+  image: GridImage
 }
 
 export const ImageModal = ({
@@ -40,9 +40,9 @@ export const ImageModal = ({
             </span>
           </button>
           <Image
-            src={image.image.imageSrc}
+            src={image.imageSrc}
             alt={intl.formatMessage({
-              id: image.image.imageAlt,
+              id: image.imageAlt,
             })}
             width={image.width}
             height={image.height}
