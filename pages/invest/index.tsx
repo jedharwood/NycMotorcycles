@@ -2,17 +2,9 @@ import { HeadElement } from '@/components/head-element'
 import { LinkButton } from '@/components/link-button'
 import { TwoColumnGridPage } from '@/components/two-column-grid-page'
 import { routes } from '@/utilities/resource-utilities'
+import { images as img } from '@/public/images/invest/image-catalog'
 
 export default function Invest() {
-  const image: GridImageProps = {
-    image: {
-      imageSrc: '/images/invest/silver-motorbike.jpeg',
-      imageAlt: 'page.invest.alt.silver-motorbike',
-    },
-    width: 1500,
-    height: 1125,
-  }
-
   const contactButton: JSX.Element = (
     <LinkButton
       text="page.invest.section-1.button"
@@ -28,7 +20,7 @@ export default function Invest() {
       />
       <main>
         <TwoColumnGridPage
-          image={image}
+          image={img.silverMotorbike}
           title="page.invest.section-1.title"
           textContent={[
             'page.invest.section-1.text-1',

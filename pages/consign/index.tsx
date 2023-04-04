@@ -1,16 +1,8 @@
 import { HeadElement } from '@/components/head-element'
 import { TwoColumnGridPage } from '@/components/two-column-grid-page'
+import { images as img } from '@/public/images/consign/image-catalog'
 
 export default function Consign() {
-  const image: GridImageProps = {
-    image: {
-      imageSrc: '/images/consign/orange-laverda.jpeg',
-      imageAlt: 'page.consign.alt.orange-laverda',
-    },
-    width: 1024,
-    height: 768,
-  }
-
   return (
     <>
       <HeadElement
@@ -19,7 +11,7 @@ export default function Consign() {
       />
       <main>
         <TwoColumnGridPage
-          image={image}
+          image={img.orangeLaverda}
           title="page.consign.section-1.title"
           textContent={[
             'page.consign.section-1.text-1',
