@@ -5,30 +5,31 @@ import { useState } from 'react'
 import { useIntl } from 'react-intl'
 import { ImageModal } from '@/components/image-modal'
 import Image from 'next/image'
+import { images as img } from '@/public/images/racing/image-catalog'
 
 export default function Racing() {
   const intl = useIntl()
   const [showModal, setShowModal] = useState<boolean>(false)
   const [selectedImage, setSelectedImage] = useState<GridImage>({
-    imageSrc: '', imageAlt: '',
+    imageSrc: '',
+    imageAlt: '',
   })
 
   const toggleModal = (): void => {
     setShowModal(!showModal)
   }
 
-  const buildGridImage = ({ imageSrc, imageAlt, width, height }: GridImage): GridImage => {
+  const buildGridImage = ({
+    imageSrc,
+    imageAlt,
+    width,
+    height,
+  }: GridImage): GridImage => {
     return {
-      imageSrc, 
-      imageAlt,
-      width,
-      height,
+      ...{ imageSrc, imageAlt, width, height },
       onImageClick: () => {
         setSelectedImage({
-          imageSrc, 
-          imageAlt,
-          width,
-          height,
+          ...{ imageSrc, imageAlt, width, height },
         })
         toggleModal()
       },
@@ -38,50 +39,32 @@ export default function Racing() {
   const gridImages: GridImage[] = [
     {
       ...buildGridImage({
-        imageSrc: '/images/racing/harley-number-7.jpeg',
-        imageAlt: 'page.racing.alt.harley-number-7',
-        width: 864,
-        height: 576,
+        ...img.harleyNumber7,
       }),
     },
     {
       ...buildGridImage({
-        imageSrc: '/images/racing/larry-racing-667.jpeg',
-        imageAlt: 'page.racing.alt.larry-racing-667',
-        width: 2500,
-        height: 1932,
+        ...img.larryRacing667,
       }),
     },
     {
       ...buildGridImage({
-        imageSrc: '/images/racing/roper-vanson.jpeg',
-        imageAlt: 'page.racing.alt.roper-vanson',
-        width: 1000,
-        height: 667,
+        ...img.roperVanson,
       }),
     },
     {
       ...buildGridImage({
-        imageSrc: '/images/racing/larry-racing-667-laverda.jpeg',
-        imageAlt: 'page.racing.alt.larry-racing-667-laverda',
-        width: 2500,
-        height: 1932,
+        ...img.larryRacing667Laverda,
       }),
     },
     {
       ...buildGridImage({
-        imageSrc: '/images/racing/orange-helmets.jpeg',
-        imageAlt: 'page.racing.alt.orange-helmets',
-        width: 1080,
-        height: 1080,
+        ...img.orangeHelmets,
       }),
     },
     {
       ...buildGridImage({
-        imageSrc: '/images/racing/willow-springs-honda.jpeg',
-        imageAlt: 'page.racing.alt.willow-springs-honda',
-        width: 1080,
-        height: 1080,
+        ...img.willowSpringsHonda,
       }),
     },
   ]
@@ -95,10 +78,10 @@ export default function Racing() {
       <main>
         <div className="space-y-6">
           <Image
-            src="/images/racing/laverda-lowside.jpeg"
-            alt={intl.formatMessage({ id: 'page.racing.alt.laverda-lowside' })}
-            width={2500}
-            height={1932}
+            src={img.laverdaLowside.imageSrc}
+            alt={intl.formatMessage({ id: img.laverdaLowside.imageAlt })}
+            width={img.laverdaLowside.width}
+            height={img.laverdaLowside.height}
             priority
             className="rounded-md shadow-lg"
           />
@@ -120,3 +103,6 @@ export default function Racing() {
     </>
   )
 }
+
+// sort out modal stretching issue
+// add maxColumn attribute to modal, eventually
