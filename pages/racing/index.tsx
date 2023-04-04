@@ -92,7 +92,7 @@ export default function Racing() {
               'page.racing.section-1.text-2',
             ]}
           />
-          <ImageGrid images={gridImages} />
+          <ImageGrid images={gridImages} maxColumns={3} />
         </div>
         <ImageModal
           isVisible={showModal}
