@@ -20,3 +20,7 @@ type GridImage = {
   height?: number
   onImageClick?: () => void
 }
+
+type ImageCatalog = {
+  [key: string]: GridImage
+}
