@@ -130,7 +130,6 @@ export const Header = (): JSX.Element => {
               })}
               width={40}
               height={40}
-              priority
             />
           </button>
           <div className="hidden w-full md:block md:w-auto">{navMenu()}</div>

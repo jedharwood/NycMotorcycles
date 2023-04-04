@@ -33,7 +33,6 @@ export const ImageModal = ({
               })}
               width={40}
               height={40}
-              priority
             />
             <span className="sr-only">
               <FormattedMessage id="component.image-modal.sr.close" />
@@ -46,8 +45,7 @@ export const ImageModal = ({
             })}
             width={image.width}
             height={image.height}
-            priority
-            className="rounded-md shadow-lg border-2 border-stone-50 max-h-screen"
+            className="rounded-md shadow-lg border-2 border-stone-50 max-h-screen           max-w-max"
           />
         </div>
       </div>

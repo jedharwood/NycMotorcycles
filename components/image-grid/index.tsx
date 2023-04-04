@@ -23,7 +23,6 @@ export const ImageGrid = ({ images }: ImageGridProps): JSX.Element => {
             })}
             width={image.width}
             height={image.height}
-            priority
             className="rounded-md h-full object-cover hover:opacity-70"
           />
         </div>
