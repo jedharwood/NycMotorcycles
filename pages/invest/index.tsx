@@ -1,12 +1,14 @@
 import { HeadElement } from '@/components/head-element'
 import { LinkButton } from '@/components/link-button'
 import { TwoColumnGridPage } from '@/components/two-column-grid-page'
+import { routes } from '@/utilities/resource-utilities'
+import { images as img } from '@/public/images/invest/image-catalog'
 
 export default function Invest() {
   const contactButton: JSX.Element = (
     <LinkButton
       text="page.invest.section-1.button"
-      href="/contact"
+      href={routes.contact}
       type="router-link"
     />
   )
@@ -18,8 +20,7 @@ export default function Invest() {
       />
       <main>
         <TwoColumnGridPage
-          imageSrc="/images/invest/silver-motorbike.jpeg"
-          imageAlt="page.invest.alt.silver-motorbike"
+          image={img.silverMotorbike}
           title="page.invest.section-1.title"
           textContent={[
             'page.invest.section-1.text-1',

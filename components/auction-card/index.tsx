@@ -4,44 +4,37 @@ import { useIntl } from 'react-intl'
 export const AuctionCard = ({
   title,
   url,
-  imageSrc,
-  imageAlt,
+  image,
   bidders,
   timeRemaining,
   currentPrice,
   promptDecisionPrice,
 }: ActiveAuction): JSX.Element => {
   const intl = useIntl()
-  const imageSource = imageSrc ? imageSrc : nycmcLogo
-  const imageAltText = imageAlt
-    ? imageAlt
+  const imageSource = image.imageSrc.length ? image.imageSrc : nycmcLogo
+  const imageAltText = image.imageAlt.length
+    ? image.imageAlt
     : intl.formatMessage({ id: 'component.auction-card.alt.placeholder-image' })
 
   const timeRemainingValue = (): string | undefined => {
     if (!timeRemaining?.time) return undefined
 
-    let timeRemainingUnit: string
+    let unit: string
     switch (timeRemaining.unit) {
       case 'days':
-        timeRemainingUnit = intl.formatMessage({
-          id: 'component.auction-card.time-unit.days',
-        })
+        unit = 'component.auction-card.time-unit.days'
         break
       case 'hours':
-        timeRemainingUnit = intl.formatMessage({
-          id: 'component.auction-card.time-unit.hours',
-        })
+        unit = 'component.auction-card.time-unit.hours'
         break
       case 'minutes':
-        timeRemainingUnit = intl.formatMessage({
-          id: 'component.auction-card.time-unit.minutes',
-        })
+        unit = 'component.auction-card.time-unit.minutes'
         break
       default:
-        timeRemainingUnit = ''
+        unit = ''
     }
 
-    return `${timeRemaining.time} ${timeRemainingUnit}`
+    return `${timeRemaining.time} ${intl.formatMessage({ id: unit })}`
   }
 
   const tableRow = (label: string, value: string | undefined): JSX.Element => {
@@ -49,7 +42,11 @@ export const AuctionCard = ({
       <></>
     ) : (
       <tr className="hover:underline text-sm sm:text-lg">
-        <td className="pr-4 sm:opacity-80">{label}</td>
+        <td className="pr-4 sm:opacity-80">
+          {intl.formatMessage({
+            id: label,
+          })}
+        </td>
         <td>{value}</td>
       </tr>
     )
@@ -81,29 +78,18 @@ export const AuctionCard = ({
         <table className="mt-4 w-full table-auto">
           <tbody>
             {tableRow(
-              intl.formatMessage({
-                id: 'component.auction-card.table-label.current-price',
-              }),
+              'component.auction-card.table-label.current-price',
               currentPrice,
             )}
             {tableRow(
-              intl.formatMessage({
-                id: 'component.auction-card.table-label.prompt-price',
-              }),
+              'component.auction-card.table-label.prompt-price',
               promptDecisionPrice,
             )}
             {tableRow(
-              intl.formatMessage({
-                id: 'component.auction-card.table-label.time-remaining',
-              }),
+              'component.auction-card.table-label.time-remaining',
               timeRemainingValue(),
             )}
-            {tableRow(
-              intl.formatMessage({
-                id: 'component.auction-card.table-label.bidders',
-              }),
-              bidders,
-            )}
+            {tableRow('component.auction-card.table-label.bidders', bidders)}
           </tbody>
         </table>
       </div>

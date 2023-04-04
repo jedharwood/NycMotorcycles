@@ -6,10 +6,21 @@ type TimeRemaining = {
 type ActiveAuction = {
   title?: string
   url?: string
-  imageSrc?: string
-  imageAlt?: string
+  image: GridImage
   bidders?: string
   timeRemaining?: TimeRemaining
   currentPrice?: string
   promptDecisionPrice?: string
+}
+
+type GridImage = {
+  imageSrc: string
+  imageAlt: string
+  width?: number
+  height?: number
+  onImageClick?: () => void
+}
+
+type ImageCatalog = {
+  [key: string]: GridImage
 }

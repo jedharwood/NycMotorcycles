@@ -26,7 +26,6 @@ export const Footer = (): JSX.Element => {
             })}
             width={40}
             height={40}
-            priority
           />
         </div>
         <FormattedMessage id="component.footer.text.scroll-to-top" />
@@ -44,7 +43,6 @@ export const Footer = (): JSX.Element => {
           })}
           width={50}
           height={50}
-          priority
         />
       </a>
       <h3 className="flex justify-center text-sm md:text-md">
