@@ -103,6 +103,3 @@ export default function Racing() {
     </>
   )
 }
-
-// sort out modal stretching issue
-// add maxColumn attribute to modal, eventually
