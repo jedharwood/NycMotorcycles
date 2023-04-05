@@ -3,8 +3,9 @@ import { LinkButton } from '@/components/link-button'
 import { TwoColumnGridPage } from '@/components/two-column-grid-page'
 import { routes } from '@/utilities/resource-utilities'
 import { images as img } from '@/public/images/invest/image-catalog'
+import { FC } from 'react'
 
-export default function Invest() {
+const InvestPage: FC = (): JSX.Element => {
   const contactButton: JSX.Element = (
     <LinkButton
       text="page.invest.section-1.button"
@@ -35,3 +36,5 @@ export default function Invest() {
     </>
   )
 }
+
+export default InvestPage

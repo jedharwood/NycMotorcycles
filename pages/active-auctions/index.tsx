@@ -1,12 +1,12 @@
 import { AuctionCard } from '@/components/auction-card'
-import { useEffect, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { yahooAuctionProfilePage } from '../../utilities/resource-utilities'
 import { TextDisplay } from '@/components/text-display'
 import { Spinner } from '@/components/spinner'
 import { LinkButton } from '@/components/link-button'
 import { HeadElement } from '@/components/head-element'
 
-export default function ActiveAuctions() {
+const ActiveAuctionPage: FC = (): JSX.Element => {
   const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(true)
 
@@ -63,3 +63,5 @@ export default function ActiveAuctions() {
     </>
   )
 }
+
+export default ActiveAuctionPage

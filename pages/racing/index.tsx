@@ -6,8 +6,9 @@ import { ImageModal } from '@/components/image-modal'
 import Image from 'next/image'
 import { images as img } from '@/public/images/racing/image-catalog'
 import { BuildGridImages } from '@/helpers/build-grid-images'
+import { FC } from 'react'
 
-export default function Racing() {
+const RacingPage: FC = (): JSX.Element => {
   const intl = useIntl()
 
   const gridImages: GridImage[] = BuildGridImages([
@@ -49,3 +50,5 @@ export default function Racing() {
     </>
   )
 }
+
+export default RacingPage
