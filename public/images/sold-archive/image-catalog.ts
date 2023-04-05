@@ -53,4 +53,10 @@ export const images: ImageCatalog = {
     width: 640,
     height: 451,
   },
+  harleyXr750Replica: {
+    imageSrc: '/images/sold-archive/harley-xr750-replica.jpeg',
+    imageAlt: 'pg.sold-archive.alt.harley-xr750-replica',
+    width: 816,
+    height: 605,
+  },
 }

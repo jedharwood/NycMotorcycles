@@ -1,17 +1,22 @@
 import { FC } from 'react'
 import { TitleBlock } from '@/components/title-block'
 import { HeadElement } from '@/components/head-element'
-import { SoldCard } from '@/components/sold-card'
+import { SoldCard, SoldOrCall } from '@/components/sold-card'
 import { images as img } from '../../public/images/sold-archive/image-catalog'
 import { galleryRoutes as routes } from '@/utilities/resource-utilities'
 
 const SoldArchivePage: FC = () => {
-  const buildSoldCard = (imageName: string, routeName: string): JSX.Element => {
+  const buildSoldCard = (
+    imageName: string,
+    routeName: string,
+    soldOrCall: SoldOrCall = 'sold',
+  ): JSX.Element => {
     return (
       <SoldCard
         image={img[imageName]}
         text={`pg.sold-archive.card.${routeName}`}
         galleryLink={routes[imageName]}
+        soldOrCall={soldOrCall}
       />
     )
   }
@@ -38,6 +43,7 @@ const SoldArchivePage: FC = () => {
         {buildSoldCard('suzukiStinger', 'suzuki-stinger')}
         {buildSoldCard('bsaStarfire', 'bsa-starfire')}
         {buildSoldCard('kawasakiH1', 'kawasaki-h1')}
+        {buildSoldCard('harleyXr750Replica', 'harley-xr750-replica', 'call')}
       </main>
     </>
   )

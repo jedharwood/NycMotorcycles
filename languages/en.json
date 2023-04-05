@@ -168,12 +168,15 @@
   "pg.sold-archive.alt.suzuki-stinger": "An image of a green 1971 Suzuki T125 Stinger",
   "pg.sold-archive.alt.bsa-starfire": "An image of an indigo coloured 1970 BSA B25 Starfire",
   "pg.sold-archive.alt.kawasaki-h1": "An image of a 1970 Monotrack Engineering Kawasaki H1 painted silver with green trim",
+  "pg.sold-archive.alt.harley-xr750-replica": "An image of a Harley Davidson Streettracker XR750 replica in orange",
   "pg.sold-archive.alt": "",
+  "pg.sold-archive.contact-button": "Contact",
   "pg.sold-archive.gallery-link-button": "Gallery",
   "pg.sold-archive.head.meta.title": "",
   "pg.sold-archive.head.meta.content": "",
   "pg.sold-archive.sect-1.title-1": "!! Select motorcycles sold - this list is not updated often !!",
   "pg.sold-archive.sect-1.title-2": "!! Call or email for recently sold or current availability !!",
+  "pg.sold-archive.card.common.call": "-- CALL --",
   "pg.sold-archive.card.common.sold": "-- SOLD --",
   "pg.sold-archive.card.honda-rc30": "1988 Honda RC30 VFR750",
   "pg.sold-archive.card.suzuki-rg400": "1985 Suzuki WW RG400",
@@ -183,6 +186,6 @@
   "pg.sold-archive.card.kawasaki-h2": "1975 Kawasaki H2",
   "pg.sold-archive.card.suzuki-stinger": "1971 Suzuki T125 Stinger",
   "pg.sold-archive.card.bsa-starfire": "1970 BSA B25 Starfire",
-  "pg.sold-archive.card.kawasaki-h1": "1970 Monotrack Engineering Kawasaki H1"
+  "pg.sold-archive.card.kawasaki-h1": "1970 Monotrack Engineering Kawasaki H1",
+  "pg.sold-archive.card.harley-xr750-replica": "Streettracker XR750 replica"
 }
-

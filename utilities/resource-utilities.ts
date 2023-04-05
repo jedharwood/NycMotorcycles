@@ -27,4 +27,5 @@ export const galleryRoutes: { [key: string]: string } = {
   suzukiStinger: `${gallery}suzuki-stinger`,
   bsaStarfire: `${gallery}bsa-starfire`,
   kawasakiH1: `${gallery}kawasaki-h1`,
+  harleyXr750Replica: `${gallery}harley-xr750-replica`,
 }
