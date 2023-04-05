@@ -17,4 +17,16 @@ export const images: ImageCatalog = {
     width: 1500,
     height: 1125,
   },
+  laverda750Sfc: {
+    imageSrc: '/images/sold-archive/laverda-750-sfc.jpeg',
+    imageAlt: 'page.sold-archive.alt.laverda-750-sfc',
+    width: 1500,
+    height: 836,
+  },
+  harleyXr750: {
+    imageSrc: '/images/sold-archive/harley-xr750.jpeg',
+    imageAlt: 'page.sold-archive.alt.harley-xr750',
+    width: 1080,
+    height: 720,
+  },
 }

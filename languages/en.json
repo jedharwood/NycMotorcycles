@@ -162,6 +162,8 @@
   "page.sold-archive.alt.honda-rc30": "An image of a 1988 Honda RC30 VFR750 parked at Zushi marina in Japan.",
   "page.sold-archive.alt.suzuki-rg400": "An image of a 1985 Suzuki WW RG400 awaiting collection from customs in Japan.",
   "page.sold-archive.alt.shovelhead-chopper": "An image of a 1969 Harley Davidson Shovelhead Chopper awaiting collection from the port in Japan.",
+  "page.sold-archive.alt.laverda-750-sfc": "An image of an orange coloured 1972 Laverda 750 SFC",
+  "page.sold-archive.alt.harley-xr750": "An image of an orange coloured 1970 Harley Davidson XR750",
   "page.sold-archive.alt": "",
   "page.sold-archive.gallery-link-button": "Gallery",
   "page.sold-archive.head.meta.title": "",
@@ -171,5 +173,7 @@
   "page.sold-archive.sold-card.common.sold": "-- SOLD --",
   "page.sold-archive.sold-card.honda-rc30": "1988 Honda RC30 VFR750",
   "page.sold-archive.sold-card.suzuki-rg400": "1985 Suzuki WW RG400",
-  "page.sold-archive.sold-card.shovelhead-chopper": "1969 Harley Davidson Shovelhead Chopper"
+  "page.sold-archive.sold-card.shovelhead-chopper": "1969 Harley Davidson Shovelhead Chopper",
+  "page.sold-archive.sold-card.laverda-750-sfc": "1972 Laverda 750 SFC",
+  "page.sold-archive.sold-card.harley-xr750": "1970 Harley Davidson XR750"
 }
