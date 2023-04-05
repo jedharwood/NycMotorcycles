@@ -2,17 +2,22 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useIntl } from 'react-intl'
 import { LinkButton } from '../link-button'
+import { routes } from '@/utilities/resource-utilities'
+
+export type SoldOrCall = 'sold' | 'call'
 
 type SoldCardProps = {
   image: GridImage
   text: string
   galleryLink?: string
+  soldOrCall: SoldOrCall
 }
 
 export const SoldCard = ({
   image,
   text,
   galleryLink,
+  soldOrCall,
 }: SoldCardProps): JSX.Element => {
   const intl = useIntl()
 
@@ -60,6 +65,23 @@ export const SoldCard = ({
     )
   }
 
+  const renderContactButton = (): JSX.Element => {
+    return soldOrCall === 'sold' ? (
+      <></>
+    ) : (
+      <LinkButton
+        text="pg.sold-archive.contact-button"
+        href={routes.contact}
+        type="router-link"
+      />
+    )
+  }
+
+  const isSoldOrCall: string =
+    soldOrCall === 'sold'
+      ? 'pg.sold-archive.card.common.sold'
+      : 'pg.sold-archive.card.common.call'
+
   return (
     <article className="bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 grid sm:grid-cols-2 gap-4 shadow-lg">
       {renderImage()}
@@ -69,8 +91,9 @@ export const SoldCard = ({
             {intl.formatMessage({ id: text })}
           </h3>
           <h4 className="flex justify-center">
-            {intl.formatMessage({ id: 'pg.sold-archive.card.common.sold' })}
+            {intl.formatMessage({ id: isSoldOrCall })}
           </h4>
+          {renderContactButton()}
           {rendergalleryLink()}
         </div>
       </div>
