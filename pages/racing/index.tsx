@@ -6,18 +6,14 @@ import { useIntl } from 'react-intl'
 import { ImageModal } from '@/components/image-modal'
 import Image from 'next/image'
 import { images as img } from '@/public/images/racing/image-catalog'
+import React, { useContext } from 'react';
+import { AppContext } from '../../context/app-context';
 
 export default function Racing() {
   const intl = useIntl()
-  const [showModal, setShowModal] = useState<boolean>(false)
-  const [selectedImage, setSelectedImage] = useState<GridImage>({
-    imageSrc: '',
-    imageAlt: '',
-  })
-
-  const toggleModal = (): void => {
-    setShowModal(!showModal)
-  }
+  const {
+    openImageModal, imageModalImage
+  } = useContext(AppContext);
 
   const buildGridImage = ({
     imageSrc,
@@ -28,10 +24,7 @@ export default function Racing() {
     return {
       ...{ imageSrc, imageAlt, width, height },
       onImageClick: () => {
-        setSelectedImage({
-          ...{ imageSrc, imageAlt, width, height },
-        })
-        toggleModal()
+        openImageModal({ imageSrc, imageAlt, width, height })
       },
     }
   }
@@ -95,9 +88,7 @@ export default function Racing() {
           <ImageGrid images={gridImages} maxColumns={3} />
         </div>
         <ImageModal
-          isVisible={showModal}
-          onCloseClick={toggleModal}
-          image={selectedImage}
+          image={imageModalImage}
         />
       </main>
     </>

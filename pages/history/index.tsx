@@ -8,18 +8,14 @@ import { ImageModal } from '@/components/image-modal'
 import { ImageGrid } from '@/components/image-grid'
 import { LinkButton } from '@/components/link-button'
 import { routes } from '@/utilities/resource-utilities'
+import React, { useContext } from 'react';
+import { AppContext } from '../../context/app-context';
 
 export default function History() {
+  const {
+    openImageModal, imageModalImage
+  } = useContext(AppContext);
   const intl = useIntl()
-  const [showModal, setShowModal] = useState<boolean>(false)
-  const [selectedImage, setSelectedImage] = useState<GridImage>({
-    imageSrc: '',
-    imageAlt: '',
-  })
-
-  const toggleModal = (): void => {
-    setShowModal(!showModal)
-  }
 
   const buildGridImage = ({
     imageSrc,
@@ -30,10 +26,7 @@ export default function History() {
     return {
       ...{ imageSrc, imageAlt, width, height },
       onImageClick: () => {
-        setSelectedImage({
-          ...{ imageSrc, imageAlt, width, height },
-        })
-        toggleModal()
+        openImageModal({ imageSrc, imageAlt, width, height })
       },
     }
   }
@@ -215,9 +208,7 @@ export default function History() {
           </div>
         </div>
         <ImageModal
-          isVisible={showModal}
-          onCloseClick={toggleModal}
-          image={selectedImage}
+          image={imageModalImage}
         />
       </main>
     </>

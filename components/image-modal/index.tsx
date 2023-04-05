@@ -1,21 +1,22 @@
 import Image from 'next/image'
 import closeIcon from 'public/svgs/close-icon.svg'
 import { useIntl, FormattedMessage } from 'react-intl'
+import React, { useContext } from 'react';
+import { AppContext } from '../../context/app-context';
 
 type ImageModalProps = {
-  isVisible: boolean
-  onCloseClick: () => void
   image: GridImage
 }
 
 export const ImageModal = ({
-  isVisible,
-  onCloseClick,
   image,
 }: ImageModalProps): JSX.Element => {
+  const {
+    showImageModal, closeImageModal
+  } = useContext(AppContext);
   const intl = useIntl()
 
-  return !isVisible ? (
+  return !showImageModal ? (
     <></>
   ) : (
     <>
@@ -24,7 +25,7 @@ export const ImageModal = ({
           <button
             type="button"
             className="flex flex-row-reverse p-2 w-full absolute md:right-8 z-60 hover:opacity-80"
-            onClick={onCloseClick}
+            onClick={closeImageModal}
           >
             <Image
               src={closeIcon}
