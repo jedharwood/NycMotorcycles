@@ -7,106 +7,27 @@ import { ImageModal } from '@/components/image-modal'
 import { ImageGrid } from '@/components/image-grid'
 import { LinkButton } from '@/components/link-button'
 import { routes } from '@/utilities/resource-utilities'
-import { BuildGridImage } from '@/helpers/build-grid-image'
+import { BuildGridImages } from '@/helpers/build-grid-images'
 
 export default function History() {
   const intl = useIntl()
 
-  const gridImagesUpper: GridImage[] = [
-    {
-      ...BuildGridImage({
-        ...img.larryOrangeLaverda,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.bikeLineup,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.nortonAndHarley,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.raceTraining,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.showroom,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.showroomPurple,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.showroomGig,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.showroomOrange,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.larryTuneup,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.laverdaDucati,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.laverdaRace,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.forklift,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.bsaWorkshop,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.externalWorkshop,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.zushiHq,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.container,
-      }),
-    },
-  ]
-
-  const gridImagesLower: GridImage[] = [
-    {
-      ...BuildGridImage({
-        ...img.customs,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.ferrisWheel,
-      }),
-    },
-  ]
+  const gridImagesUpper: GridImage[] = BuildGridImages([
+    img.showroomGig,
+    img.showroomOrange,
+    img.larryTuneup,
+    img.laverdaDucati,
+    img.laverdaRace,
+    img.forklift,
+    img.bsaWorkshop,
+    img.externalWorkshop,
+    img.zushiHq,
+    img.container,
+  ])
+  const gridImagesLower: GridImage[] = BuildGridImages([
+    img.customs,
+    img.ferrisWheel,
+  ])
 
   const homeButton: JSX.Element = (
     <LinkButton

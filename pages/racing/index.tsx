@@ -5,43 +5,19 @@ import { useIntl } from 'react-intl'
 import { ImageModal } from '@/components/image-modal'
 import Image from 'next/image'
 import { images as img } from '@/public/images/racing/image-catalog'
-import { BuildGridImage } from '@/helpers/build-grid-image'
+import { BuildGridImages } from '@/helpers/build-grid-images'
 
 export default function Racing() {
   const intl = useIntl()
 
-  const gridImages: GridImage[] = [
-    {
-      ...BuildGridImage({
-        ...img.harleyNumber7,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.larryRacing667,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.roperVanson,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.larryRacing667Laverda,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.orangeHelmets,
-      }),
-    },
-    {
-      ...BuildGridImage({
-        ...img.willowSpringsHonda,
-      }),
-    },
-  ]
+  const gridImages: GridImage[] = BuildGridImages([
+    img.harleyNumber7,
+    img.larryRacing667,
+    img.roperVanson,
+    img.larryRacing667Laverda,
+    img.orangeHelmets,
+    img.willowSpringsHonda,
+  ])
 
   return (
     <>
