@@ -3,6 +3,7 @@ import { TitleBlock } from '@/components/title-block'
 import { HeadElement } from '@/components/head-element'
 import { SoldCard } from '@/components/sold-card'
 import { images as img } from '../../public/images/sold-archive/image-catalog'
+import { galleryRoutes as routes } from '@/utilities/resource-utilities'
 
 const SoldArchivePage: FC = () => {
   return (
@@ -21,27 +22,27 @@ const SoldArchivePage: FC = () => {
         <SoldCard
           image={img.hondaRc30}
           text="pg.sold-archive.card.honda-rc30"
-          galleryLink="placeholder"
+          galleryLink={routes.hondaRc30}
         />
         <SoldCard
           image={img.suzukiRg400}
           text="pg.sold-archive.card.suzuki-rg400"
-          galleryLink="placeholder"
+          galleryLink={routes.suzukiRg400}
         />
         <SoldCard
           image={img.shovelheadChopper}
           text="pg.sold-archive.card.shovelhead-chopper"
-          galleryLink="placeholder"
+          galleryLink={routes.shovelheadChopper}
         />
         <SoldCard
           image={img.laverda750Sfc}
           text="pg.sold-archive.card.laverda-750-sfc"
-          galleryLink="placeholder"
+          galleryLink={routes.laverda750Sfc}
         />
         <SoldCard
           image={img.harleyXr750}
           text="pg.sold-archive.card.harley-xr750"
-          galleryLink="placeholder"
+          galleryLink={routes.harleyXr750}
         />
       </main>
     </>

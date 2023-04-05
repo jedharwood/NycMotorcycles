@@ -15,3 +15,12 @@ export const routes: { [key: string]: string } = {
   invest: '/invest',
   download: '/download',
 }
+
+const gallery: string = '/sold-archive/gallery/'
+export const galleryRoutes: { [key: string]: string } = {
+  hondaRc30: `${gallery}honda-rc30`,
+  suzukiRg400: `${gallery}suzuki-rg400`,
+  shovelheadChopper: `${gallery}shovelhead-chopper`,
+  laverda750Sfc: `${gallery}laverda-750-sfc`,
+  harleyXr750: `${gallery}harley-xr750`
+}
