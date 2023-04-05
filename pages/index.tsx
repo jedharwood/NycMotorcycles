@@ -3,8 +3,9 @@ import { useIntl } from 'react-intl'
 import { LinkButton, LinkButtonProps } from '@/components/link-button'
 import { HeadElement } from '@/components/head-element'
 import { routes } from '@/utilities/resource-utilities'
+import { FC } from 'react'
 
-export default function Home() {
+const HomePage: FC = (): JSX.Element => {
   const intl = useIntl()
 
   const desirableModelList: string[] = [
@@ -142,3 +143,5 @@ export default function Home() {
     </>
   )
 }
+
+export default HomePage

@@ -8,8 +8,9 @@ import { ImageGrid } from '@/components/image-grid'
 import { LinkButton } from '@/components/link-button'
 import { routes } from '@/utilities/resource-utilities'
 import { BuildGridImages } from '@/helpers/build-grid-images'
+import { FC } from 'react'
 
-export default function History() {
+const HistoryPage: FC = (): JSX.Element => {
   const intl = useIntl()
 
   const gridImagesUpper: GridImage[] = BuildGridImages([
@@ -114,3 +115,5 @@ export default function History() {
     </>
   )
 }
+
+export default HistoryPage
