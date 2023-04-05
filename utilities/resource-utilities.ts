@@ -22,5 +22,6 @@ export const galleryRoutes: { [key: string]: string } = {
   suzukiRg400: `${gallery}suzuki-rg400`,
   shovelheadChopper: `${gallery}shovelhead-chopper`,
   laverda750Sfc: `${gallery}laverda-750-sfc`,
-  harleyXr750: `${gallery}harley-xr750`
+  harleyXr750: `${gallery}harley-xr750`,
+  kawasakiH2: `${gallery}kawasaki-h2`
 }

@@ -44,6 +44,11 @@ const SoldArchivePage: FC = () => {
           text="pg.sold-archive.card.harley-xr750"
           galleryLink={routes.harleyXr750}
         />
+        <SoldCard
+          image={img.kawasakiH2}
+          text="pg.sold-archive.card.kawasaki-h2"
+          galleryLink={routes.kawasakiH2}
+        />
       </main>
     </>
   )
