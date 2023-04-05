@@ -3,7 +3,6 @@ import { TextDisplay } from '@/components/text-display'
 import Image from 'next/image'
 import { images as img } from '@/public/images/history/image-catalog'
 import { useIntl } from 'react-intl'
-import { useState } from 'react'
 import { ImageModal } from '@/components/image-modal'
 import { ImageGrid } from '@/components/image-grid'
 import { LinkButton } from '@/components/link-button'
@@ -12,7 +11,7 @@ import React, { useContext } from 'react'
 import { AppContext } from '../../context/app-context'
 
 export default function History() {
-  const { openImageModal, imageModalImage } = useContext(AppContext)
+  const { openImageModal } = useContext(AppContext)
   const intl = useIntl()
 
   const buildGridImage = ({
@@ -205,7 +204,7 @@ export default function History() {
             </div>
           </div>
         </div>
-        <ImageModal image={imageModalImage} />
+        <ImageModal />
       </main>
     </>
   )

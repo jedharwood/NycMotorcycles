@@ -1,7 +1,6 @@
 import { HeadElement } from '@/components/head-element'
 import { ImageGrid } from '@/components/image-grid'
 import { TextDisplay } from '@/components/text-display'
-import { useState } from 'react'
 import { useIntl } from 'react-intl'
 import { ImageModal } from '@/components/image-modal'
 import Image from 'next/image'
@@ -11,7 +10,7 @@ import { AppContext } from '../../context/app-context'
 
 export default function Racing() {
   const intl = useIntl()
-  const { openImageModal, imageModalImage } = useContext(AppContext)
+  const { openImageModal } = useContext(AppContext)
 
   const buildGridImage = ({
     imageSrc,
@@ -85,7 +84,7 @@ export default function Racing() {
           />
           <ImageGrid images={gridImages} maxColumns={3} />
         </div>
-        <ImageModal image={imageModalImage} />
+        <ImageModal />
       </main>
     </>
   )

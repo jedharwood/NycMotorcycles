@@ -4,12 +4,9 @@ import { useIntl, FormattedMessage } from 'react-intl'
 import React, { useContext } from 'react'
 import { AppContext } from '../../context/app-context'
 
-type ImageModalProps = {
-  image: GridImage
-}
-
-export const ImageModal = ({ image }: ImageModalProps): JSX.Element => {
-  const { showImageModal, closeImageModal } = useContext(AppContext)
+export const ImageModal = (): JSX.Element => {
+  const { showImageModal, imageModalImage, closeImageModal } =
+    useContext(AppContext)
   const intl = useIntl()
 
   return !showImageModal ? (
@@ -36,12 +33,12 @@ export const ImageModal = ({ image }: ImageModalProps): JSX.Element => {
             </span>
           </button>
           <Image
-            src={image.imageSrc}
+            src={imageModalImage.imageSrc}
             alt={intl.formatMessage({
-              id: image.imageAlt,
+              id: imageModalImage.imageAlt,
             })}
-            width={image.width}
-            height={image.height}
+            width={imageModalImage.width}
+            height={imageModalImage.height}
             className="rounded-md shadow-lg border-2 border-stone-50 max-h-screen           max-w-max"
           />
         </div>
