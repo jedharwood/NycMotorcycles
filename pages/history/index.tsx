@@ -9,6 +9,7 @@ import { LinkButton } from '@/components/link-button'
 import { routes } from '@/utilities/resource-utilities'
 import { BuildGridImages } from '@/helpers/build-grid-images'
 import { FC } from 'react'
+import { TitleBlock } from '@/components/title-block'
 
 const HistoryPage: FC = (): JSX.Element => {
   const intl = useIntl()
@@ -61,13 +62,7 @@ const HistoryPage: FC = (): JSX.Element => {
               <ImageGrid images={gridImagesUpper} maxColumns={2} />
             </div>
             <div className="space-y-6 md:col-span-2">
-              <section className="bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg">
-                <h2 className="flex justify-center font-medium text-xl md:text-2xl opacity-80">
-                  {intl.formatMessage({
-                    id: 'page.history.section-1.title',
-                  })}
-                </h2>
-              </section>
+              <TitleBlock titles={['page.history.section-1.title']} />
               <TextDisplay
                 title={'page.history.section-2.title'}
                 textContent={['page.history.section-2.text-1']}
