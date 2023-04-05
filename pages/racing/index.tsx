@@ -38,10 +38,7 @@ const RacingPage: FC = (): JSX.Element => {
           />
           <TextDisplay
             title="pg.racing.sect-1.title"
-            textContent={[
-              'pg.racing.sect-1.text-1',
-              'pg.racing.sect-1.text-2',
-            ]}
+            textContent={['pg.racing.sect-1.text-1', 'pg.racing.sect-1.text-2']}
           />
           <ImageGrid images={gridImages} maxColumns={3} />
         </div>

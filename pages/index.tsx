@@ -65,10 +65,7 @@ const HomePage: FC = (): JSX.Element => {
         />
         <TextDisplay
           title="pg.home.sect-2.title"
-          textContent={[
-            'pg.home.sect-2.text-1',
-            'pg.home.sect-2.text-2',
-          ]}
+          textContent={['pg.home.sect-2.text-1', 'pg.home.sect-2.text-2']}
           childElement={buildList(desirableModelList)}
         />
         <TextDisplay
@@ -114,10 +111,7 @@ const HomePage: FC = (): JSX.Element => {
         />
         <TextDisplay
           title="pg.home.sect-10.title"
-          textContent={[
-            'pg.home.sect-10.text-1',
-            'pg.home.sect-10.text-2',
-          ]}
+          textContent={['pg.home.sect-10.text-1', 'pg.home.sect-10.text-2']}
         />
         <TextDisplay
           title="pg.home.sect-11.title"
@@ -125,10 +119,7 @@ const HomePage: FC = (): JSX.Element => {
         />
         <TextDisplay
           title="pg.home.sect-12.title"
-          textContent={[
-            'pg.home.sect-12.text-1',
-            'pg.home.sect-12.text-2',
-          ]}
+          textContent={['pg.home.sect-12.text-1', 'pg.home.sect-12.text-2']}
         />
         <TextDisplay
           title="pg.home.sect-13.title"

@@ -20,27 +20,27 @@ const SoldArchivePage: FC = () => {
         />
         <SoldCard
           image={img.hondaRc30}
-          text="pg.sold-archive.sold-card.honda-rc30"
+          text="pg.sold-archive.card.honda-rc30"
           galleryLink="placeholder"
         />
         <SoldCard
           image={img.suzukiRg400}
-          text="pg.sold-archive.sold-card.suzuki-rg400"
+          text="pg.sold-archive.card.suzuki-rg400"
           galleryLink="placeholder"
         />
         <SoldCard
           image={img.shovelheadChopper}
-          text="pg.sold-archive.sold-card.shovelhead-chopper"
+          text="pg.sold-archive.card.shovelhead-chopper"
           galleryLink="placeholder"
         />
         <SoldCard
           image={img.laverda750Sfc}
-          text="pg.sold-archive.sold-card.laverda-750-sfc"
+          text="pg.sold-archive.card.laverda-750-sfc"
           galleryLink="placeholder"
         />
         <SoldCard
           image={img.harleyXr750}
-          text="pg.sold-archive.sold-card.harley-xr750"
+          text="pg.sold-archive.card.harley-xr750"
           galleryLink="placeholder"
         />
       </main>

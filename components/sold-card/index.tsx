@@ -17,9 +17,12 @@ export const SoldCard = ({
   const intl = useIntl()
 
   const buildImageWithClasses = (isGalleryLink: boolean) => {
-    const classes: string = isGalleryLink ? 'w-full rounded-md hover:opacity-70' : 'w-full rounded-md'
+    const classes: string = isGalleryLink
+      ? 'w-full rounded-md hover:opacity-70'
+      : 'w-full rounded-md'
 
-    return (<Image
+    return (
+      <Image
         src={image.imageSrc}
         alt={intl.formatMessage({
           id: image.imageAlt,
@@ -28,12 +31,13 @@ export const SoldCard = ({
         height={image.height}
         priority
         className={classes}
-      />)
+      />
+    )
   }
 
   const renderImage = (): JSX.Element => {
     return galleryLink === undefined ? (
-    buildImageWithClasses(false)
+      buildImageWithClasses(false)
     ) : (
       <Link
         href={galleryLink}
@@ -64,11 +68,12 @@ export const SoldCard = ({
           <h3 className="flex justify-center">
             {intl.formatMessage({ id: text })}
           </h3>
-          <h4 className="flex justify-center">{intl.formatMessage({ id: 'pg.sold-archive.sold-card.common.sold' })}</h4>
+          <h4 className="flex justify-center">
+            {intl.formatMessage({ id: 'pg.sold-archive.card.common.sold' })}
+          </h4>
           {rendergalleryLink()}
         </div>
       </div>
     </article>
   )
 }
-
