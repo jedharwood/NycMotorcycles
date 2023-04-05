@@ -41,4 +41,10 @@ export const images: ImageCatalog = {
     width: 1500,
     height: 986,
   },
+  bsaStarfire: {
+    imageSrc: '/images/sold-archive/bsa-starfire.jpeg',
+    imageAlt: 'pg.sold-archive.alt.bsa-starfire',
+    width: 1500,
+    height: 1125,
+  },
 }

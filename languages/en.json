@@ -166,6 +166,7 @@
   "pg.sold-archive.alt.harley-xr750": "An image of an orange coloured 1970 Harley Davidson XR750",
   "pg.sold-archive.alt.kawasaki-h2": "An image of a purple 1975 Kawasaki H2",
   "pg.sold-archive.alt.suzuki-stinger": "An image of a green 1971 Suzuki T125 Stinger",
+  "pg.sold-archive.alt.bsa-starfire": "An image of an indigo coloured 1970 BSA B25 Starfire",
   "pg.sold-archive.alt": "",
   "pg.sold-archive.gallery-link-button": "Gallery",
   "pg.sold-archive.head.meta.title": "",
@@ -179,5 +180,6 @@
   "pg.sold-archive.card.laverda-750-sfc": "1972 Laverda 750 SFC",
   "pg.sold-archive.card.harley-xr750": "1970 Harley Davidson XR750",
   "pg.sold-archive.card.kawasaki-h2": "1975 Kawasaki H2",
-  "pg.sold-archive.card.suzuki-stinger": "1971 Suzuki T125 Stinger"
+  "pg.sold-archive.card.suzuki-stinger": "1971 Suzuki T125 Stinger",
+  "pg.sold-archive.card.bsa-starfire": "1970 BSA B25 Starfire"
 }
