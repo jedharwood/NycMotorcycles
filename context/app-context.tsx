@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext } from 'react'
 
 interface IAppContext {
   showImageModal: boolean
@@ -9,9 +9,14 @@ interface IAppContext {
 
 const defaultState: IAppContext = {
   showImageModal: false,
-  imageModalImage: { imageSrc: '', imageAlt: '', width: undefined, height: undefined },
+  imageModalImage: {
+    imageSrc: '',
+    imageAlt: '',
+    width: undefined,
+    height: undefined,
+  },
   openImageModal: (): void => {},
   closeImageModal: (): void => {},
-};
+}
 
-export const AppContext = createContext<IAppContext>(defaultState);
+export const AppContext = createContext<IAppContext>(defaultState)

@@ -8,13 +8,11 @@ import { ImageModal } from '@/components/image-modal'
 import { ImageGrid } from '@/components/image-grid'
 import { LinkButton } from '@/components/link-button'
 import { routes } from '@/utilities/resource-utilities'
-import React, { useContext } from 'react';
-import { AppContext } from '../../context/app-context';
+import React, { useContext } from 'react'
+import { AppContext } from '../../context/app-context'
 
 export default function History() {
-  const {
-    openImageModal, imageModalImage
-  } = useContext(AppContext);
+  const { openImageModal, imageModalImage } = useContext(AppContext)
   const intl = useIntl()
 
   const buildGridImage = ({
@@ -207,9 +205,7 @@ export default function History() {
             </div>
           </div>
         </div>
-        <ImageModal
-          image={imageModalImage}
-        />
+        <ImageModal image={imageModalImage} />
       </main>
     </>
   )

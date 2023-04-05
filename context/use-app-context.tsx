@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 interface IAppContextState {
   showImageModal: boolean
@@ -11,9 +11,15 @@ interface IAppContextActions {
 }
 
 export const useAppContext = (): [IAppContextState, IAppContextActions] => {
-  const defaultGridImage: GridImage = { imageSrc: '', imageAlt: '', width: undefined, height: undefined }
-  const [showImageModal, setShowImageModal] = useState<boolean>(false);
-  const [imageModalImage, setImageModalImage] = useState<GridImage>(defaultGridImage)
+  const defaultGridImage: GridImage = {
+    imageSrc: '',
+    imageAlt: '',
+    width: undefined,
+    height: undefined,
+  }
+  const [showImageModal, setShowImageModal] = useState<boolean>(false)
+  const [imageModalImage, setImageModalImage] =
+    useState<GridImage>(defaultGridImage)
 
   const closeImageModal = (): void => {
     setShowImageModal(false)
@@ -27,13 +33,13 @@ export const useAppContext = (): [IAppContextState, IAppContextActions] => {
 
   const state: IAppContextState = {
     showImageModal,
-    imageModalImage
-  };
+    imageModalImage,
+  }
 
   const actions: IAppContextActions = {
     openImageModal,
-    closeImageModal
-  };
+    closeImageModal,
+  }
 
-  return [state, actions];
-};
+  return [state, actions]
+}
