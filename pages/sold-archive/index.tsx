@@ -14,8 +14,8 @@ const SoldArchivePage: FC = () => {
       <main className="space-y-6">
         <TitleBlock
           titles={[
-            'pg.sold-archive.section-1.title-1',
-            'pg.sold-archive.section-1.title-2',
+            'pg.sold-archive.sect-1.title-1',
+            'pg.sold-archive.sect-1.title-2',
           ]}
         />
         <SoldCard

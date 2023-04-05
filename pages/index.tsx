@@ -9,21 +9,21 @@ const HomePage: FC = (): JSX.Element => {
   const intl = useIntl()
 
   const desirableModelList: string[] = [
-    'pg.home.section-2.list-1',
-    'pg.home.section-2.list-2',
-    'pg.home.section-2.list-3',
-    'pg.home.section-2.list-4',
-    'pg.home.section-2.list-5',
-    'pg.home.section-2.list-6',
+    'pg.home.sect-2.list-1',
+    'pg.home.sect-2.list-2',
+    'pg.home.sect-2.list-3',
+    'pg.home.sect-2.list-4',
+    'pg.home.sect-2.list-5',
+    'pg.home.sect-2.list-6',
   ]
 
   const soldExampleList: string[] = [
-    'pg.home.section-6.list-1',
-    'pg.home.section-6.list-2',
-    'pg.home.section-6.list-3',
-    'pg.home.section-6.list-4',
-    'pg.home.section-6.list-5',
-    'pg.home.section-6.list-6',
+    'pg.home.sect-6.list-1',
+    'pg.home.sect-6.list-2',
+    'pg.home.sect-6.list-3',
+    'pg.home.sect-6.list-4',
+    'pg.home.sect-6.list-5',
+    'pg.home.sect-6.list-6',
   ]
 
   const buildList = (listItems: string[]): JSX.Element => {
@@ -56,85 +56,85 @@ const HomePage: FC = (): JSX.Element => {
       />
       <main className="space-y-6">
         <TextDisplay
-          title="pg.home.section-1.title"
+          title="pg.home.sect-1.title"
           childElement={buildLinkButton({
-            text: 'pg.home.section-1.button',
+            text: 'pg.home.sect-1.button',
             href: routes.contact,
             type: 'router-link',
           })}
         />
         <TextDisplay
-          title="pg.home.section-2.title"
+          title="pg.home.sect-2.title"
           textContent={[
-            'pg.home.section-2.text-1',
-            'pg.home.section-2.text-2',
+            'pg.home.sect-2.text-1',
+            'pg.home.sect-2.text-2',
           ]}
           childElement={buildList(desirableModelList)}
         />
         <TextDisplay
-          title="pg.home.section-3.title"
-          textContent={['pg.home.section-3.text-1']}
+          title="pg.home.sect-3.title"
+          textContent={['pg.home.sect-3.text-1']}
         />
         <TextDisplay
-          title="pg.home.section-4.title"
+          title="pg.home.sect-4.title"
           textContent={[
-            'pg.home.section-4.text-1',
-            'pg.home.section-4.text-2',
-            'pg.home.section-4.text-3',
+            'pg.home.sect-4.text-1',
+            'pg.home.sect-4.text-2',
+            'pg.home.sect-4.text-3',
           ]}
           childElement={buildLinkButton({
-            text: 'pg.home.section-4.button',
+            text: 'pg.home.sect-4.button',
             href: routes.download,
             type: 'router-link',
           })}
         />
         <TextDisplay
-          title="pg.home.section-5.title"
-          textContent={['pg.home.section-5.text-1']}
+          title="pg.home.sect-5.title"
+          textContent={['pg.home.sect-5.text-1']}
         />
         <TextDisplay
-          title="pg.home.section-6.title"
+          title="pg.home.sect-6.title"
           childElement={buildList(soldExampleList)}
         />
         <TextDisplay
-          title="pg.home.section-7.title"
+          title="pg.home.sect-7.title"
           textContent={[
-            'pg.home.section-7.text-1',
-            'pg.home.section-7.text-2',
-            'pg.home.section-7.text-3',
+            'pg.home.sect-7.text-1',
+            'pg.home.sect-7.text-2',
+            'pg.home.sect-7.text-3',
           ]}
         />
         <TextDisplay
-          title="pg.home.section-8.title"
-          textContent={['pg.home.section-8.text-1']}
+          title="pg.home.sect-8.title"
+          textContent={['pg.home.sect-8.text-1']}
         />
         <TextDisplay
-          title="pg.home.section-9.title"
-          textContent={['pg.home.section-9.text-1']}
+          title="pg.home.sect-9.title"
+          textContent={['pg.home.sect-9.text-1']}
         />
         <TextDisplay
-          title="pg.home.section-10.title"
+          title="pg.home.sect-10.title"
           textContent={[
-            'pg.home.section-10.text-1',
-            'pg.home.section-10.text-2',
+            'pg.home.sect-10.text-1',
+            'pg.home.sect-10.text-2',
           ]}
         />
         <TextDisplay
-          title="pg.home.section-11.title"
-          textContent={['pg.home.section-11.text-1']}
+          title="pg.home.sect-11.title"
+          textContent={['pg.home.sect-11.text-1']}
         />
         <TextDisplay
-          title="pg.home.section-12.title"
+          title="pg.home.sect-12.title"
           textContent={[
-            'pg.home.section-12.text-1',
-            'pg.home.section-12.text-2',
+            'pg.home.sect-12.text-1',
+            'pg.home.sect-12.text-2',
           ]}
         />
         <TextDisplay
-          title="pg.home.section-13.title"
-          textContent={['pg.home.section-13.text-1']}
+          title="pg.home.sect-13.title"
+          textContent={['pg.home.sect-13.text-1']}
           childElement={buildLinkButton({
-            text: 'pg.home.section-13.button',
+            text: 'pg.home.sect-13.button',
             href: routes.contact,
             type: 'router-link',
           })}

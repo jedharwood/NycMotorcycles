@@ -37,10 +37,10 @@ const RacingPage: FC = (): JSX.Element => {
             className="rounded-md shadow-lg"
           />
           <TextDisplay
-            title="pg.racing.section-1.title"
+            title="pg.racing.sect-1.title"
             textContent={[
-              'pg.racing.section-1.text-1',
-              'pg.racing.section-1.text-2',
+              'pg.racing.sect-1.text-1',
+              'pg.racing.sect-1.text-2',
             ]}
           />
           <ImageGrid images={gridImages} maxColumns={3} />

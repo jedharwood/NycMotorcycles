@@ -8,7 +8,7 @@ import { FC } from 'react'
 const InvestPage: FC = (): JSX.Element => {
   const contactButton: JSX.Element = (
     <LinkButton
-      text="pg.invest.section-1.button"
+      text="pg.invest.sect-1.button"
       href={routes.contact}
       type="router-link"
     />
@@ -22,13 +22,13 @@ const InvestPage: FC = (): JSX.Element => {
       <main>
         <TwoColumnGridPage
           image={img.silverMotorbike}
-          title="pg.invest.section-1.title"
+          title="pg.invest.sect-1.title"
           textContent={[
-            'pg.invest.section-1.text-1',
-            'pg.invest.section-1.text-2',
-            'pg.invest.section-1.text-3',
-            'pg.invest.section-1.text-4',
-            'pg.invest.section-1.text-5',
+            'pg.invest.sect-1.text-1',
+            'pg.invest.sect-1.text-2',
+            'pg.invest.sect-1.text-3',
+            'pg.invest.sect-1.text-4',
+            'pg.invest.sect-1.text-5',
           ]}
           childElement={contactButton}
         />
