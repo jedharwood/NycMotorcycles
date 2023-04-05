@@ -35,6 +35,7 @@ const SoldArchivePage: FC = () => {
         {buildSoldCard('laverda750Sfc', 'laverda-750-sfc')}
         {buildSoldCard('harleyXr750', 'harley-xr750')}
         {buildSoldCard('kawasakiH2', 'kawasaki-h2')}
+        {buildSoldCard('suzukiStinger', 'suzuki-stinger')}
       </main>
     </>
   )

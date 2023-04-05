@@ -35,4 +35,10 @@ export const images: ImageCatalog = {
     width: 747,
     height: 748,
   },
+  suzukiStinger: {
+    imageSrc: '/images/sold-archive/suzuki-stinger.jpeg',
+    imageAlt: 'pg.sold-archive.alt.suzuki-stinger',
+    width: 1500,
+    height: 986,
+  },
 }
