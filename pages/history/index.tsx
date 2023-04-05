@@ -3,136 +3,31 @@ import { TextDisplay } from '@/components/text-display'
 import Image from 'next/image'
 import { images as img } from '@/public/images/history/image-catalog'
 import { useIntl } from 'react-intl'
-import { useState } from 'react'
 import { ImageModal } from '@/components/image-modal'
 import { ImageGrid } from '@/components/image-grid'
 import { LinkButton } from '@/components/link-button'
 import { routes } from '@/utilities/resource-utilities'
+import { BuildGridImages } from '@/helpers/build-grid-images'
 
 export default function History() {
   const intl = useIntl()
-  const [showModal, setShowModal] = useState<boolean>(false)
-  const [selectedImage, setSelectedImage] = useState<GridImage>({
-    imageSrc: '',
-    imageAlt: '',
-  })
 
-  const toggleModal = (): void => {
-    setShowModal(!showModal)
-  }
-
-  const buildGridImage = ({
-    imageSrc,
-    imageAlt,
-    width,
-    height,
-  }: GridImage): GridImage => {
-    return {
-      ...{ imageSrc, imageAlt, width, height },
-      onImageClick: () => {
-        setSelectedImage({
-          ...{ imageSrc, imageAlt, width, height },
-        })
-        toggleModal()
-      },
-    }
-  }
-
-  const gridImagesUpper: GridImage[] = [
-    {
-      ...buildGridImage({
-        ...img.larryOrangeLaverda,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.bikeLineup,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.nortonAndHarley,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.raceTraining,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.showroom,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.showroomPurple,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.showroomGig,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.showroomOrange,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.larryTuneup,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.laverdaDucati,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.laverdaRace,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.forklift,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.bsaWorkshop,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.externalWorkshop,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.zushiHq,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.container,
-      }),
-    },
-  ]
-
-  const gridImagesLower: GridImage[] = [
-    {
-      ...buildGridImage({
-        ...img.customs,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.ferrisWheel,
-      }),
-    },
-  ]
+  const gridImagesUpper: GridImage[] = BuildGridImages([
+    img.showroomGig,
+    img.showroomOrange,
+    img.larryTuneup,
+    img.laverdaDucati,
+    img.laverdaRace,
+    img.forklift,
+    img.bsaWorkshop,
+    img.externalWorkshop,
+    img.zushiHq,
+    img.container,
+  ])
+  const gridImagesLower: GridImage[] = BuildGridImages([
+    img.customs,
+    img.ferrisWheel,
+  ])
 
   const homeButton: JSX.Element = (
     <LinkButton
@@ -209,16 +104,12 @@ export default function History() {
                 childElement={homeButton}
               />
             </div>
-            <div className="md:col-span-3">
+            <div className="md:col-span-5">
               <ImageGrid images={gridImagesLower} maxColumns={2} />
             </div>
           </div>
         </div>
-        <ImageModal
-          isVisible={showModal}
-          onCloseClick={toggleModal}
-          image={selectedImage}
-        />
+        <ImageModal />
       </main>
     </>
   )

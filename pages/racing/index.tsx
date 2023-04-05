@@ -1,73 +1,23 @@
 import { HeadElement } from '@/components/head-element'
 import { ImageGrid } from '@/components/image-grid'
 import { TextDisplay } from '@/components/text-display'
-import { useState } from 'react'
 import { useIntl } from 'react-intl'
 import { ImageModal } from '@/components/image-modal'
 import Image from 'next/image'
 import { images as img } from '@/public/images/racing/image-catalog'
+import { BuildGridImages } from '@/helpers/build-grid-images'
 
 export default function Racing() {
   const intl = useIntl()
-  const [showModal, setShowModal] = useState<boolean>(false)
-  const [selectedImage, setSelectedImage] = useState<GridImage>({
-    imageSrc: '',
-    imageAlt: '',
-  })
 
-  const toggleModal = (): void => {
-    setShowModal(!showModal)
-  }
-
-  const buildGridImage = ({
-    imageSrc,
-    imageAlt,
-    width,
-    height,
-  }: GridImage): GridImage => {
-    return {
-      ...{ imageSrc, imageAlt, width, height },
-      onImageClick: () => {
-        setSelectedImage({
-          ...{ imageSrc, imageAlt, width, height },
-        })
-        toggleModal()
-      },
-    }
-  }
-
-  const gridImages: GridImage[] = [
-    {
-      ...buildGridImage({
-        ...img.harleyNumber7,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.larryRacing667,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.roperVanson,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.larryRacing667Laverda,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.orangeHelmets,
-      }),
-    },
-    {
-      ...buildGridImage({
-        ...img.willowSpringsHonda,
-      }),
-    },
-  ]
+  const gridImages: GridImage[] = BuildGridImages([
+    img.harleyNumber7,
+    img.larryRacing667,
+    img.roperVanson,
+    img.larryRacing667Laverda,
+    img.orangeHelmets,
+    img.willowSpringsHonda,
+  ])
 
   return (
     <>
@@ -94,11 +44,7 @@ export default function Racing() {
           />
           <ImageGrid images={gridImages} maxColumns={3} />
         </div>
-        <ImageModal
-          isVisible={showModal}
-          onCloseClick={toggleModal}
-          image={selectedImage}
-        />
+        <ImageModal />
       </main>
     </>
   )
