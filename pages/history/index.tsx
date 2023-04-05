@@ -104,7 +104,7 @@ export default function History() {
                 childElement={homeButton}
               />
             </div>
-            <div className="md:col-span-3">
+            <div className="md:col-span-5">
               <ImageGrid images={gridImagesLower} maxColumns={2} />
             </div>
           </div>
