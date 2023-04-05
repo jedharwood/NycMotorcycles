@@ -33,7 +33,7 @@ const HistoryPage: FC = (): JSX.Element => {
 
   const homeButton: JSX.Element = (
     <LinkButton
-      text="page.history.section-10.button"
+      text="pg.history.section-10.button"
       href={routes.home}
       type="router-link"
     />
@@ -42,8 +42,8 @@ const HistoryPage: FC = (): JSX.Element => {
   return (
     <>
       <HeadElement
-        pageTitle="page.history.head.meta.title"
-        content="page.history.head.meta.content"
+        pageTitle="pg.history.head.meta.title"
+        content="pg.history.head.meta.content"
       />
       <main>
         <div className="space-y-6">
@@ -62,41 +62,41 @@ const HistoryPage: FC = (): JSX.Element => {
               <ImageGrid images={gridImagesUpper} maxColumns={2} />
             </div>
             <div className="space-y-6 md:col-span-2">
-              <TitleBlock titles={['page.history.section-1.title']} />
+              <TitleBlock titles={['pg.history.section-1.title']} />
               <TextDisplay
-                title={'page.history.section-2.title'}
-                textContent={['page.history.section-2.text-1']}
+                title={'pg.history.section-2.title'}
+                textContent={['pg.history.section-2.text-1']}
               />
               <TextDisplay
-                title={'page.history.section-3.title'}
-                textContent={['page.history.section-3.text-1']}
+                title={'pg.history.section-3.title'}
+                textContent={['pg.history.section-3.text-1']}
               />
               <TextDisplay
-                title={'page.history.section-4.title'}
+                title={'pg.history.section-4.title'}
                 textContent={[
-                  'page.history.section-4.text-1',
-                  'page.history.section-4.text-2',
+                  'pg.history.section-4.text-1',
+                  'pg.history.section-4.text-2',
                 ]}
               />
               <TextDisplay
-                title={'page.history.section-5.title'}
-                textContent={['page.history.section-5.text-1']}
+                title={'pg.history.section-5.title'}
+                textContent={['pg.history.section-5.text-1']}
               />
               <TextDisplay
-                title={'page.history.section-6.title'}
-                textContent={['page.history.section-6.text-1']}
+                title={'pg.history.section-6.title'}
+                textContent={['pg.history.section-6.text-1']}
               />
               <TextDisplay
-                title={'page.history.section-7.title'}
-                textContent={['page.history.section-7.text-1']}
+                title={'pg.history.section-7.title'}
+                textContent={['pg.history.section-7.text-1']}
               />
               <TextDisplay
-                title={'page.history.section-8.title'}
-                textContent={['page.history.section-8.text-1']}
+                title={'pg.history.section-8.title'}
+                textContent={['pg.history.section-8.text-1']}
               />
               <TextDisplay
-                title={'page.history.section-9.title'}
-                textContent={['page.history.section-9.text-1']}
+                title={'pg.history.section-9.title'}
+                textContent={['pg.history.section-9.text-1']}
                 childElement={homeButton}
               />
             </div>

@@ -8,39 +8,39 @@ const SoldArchivePage: FC = () => {
   return (
     <>
       <HeadElement
-        pageTitle="page.sold-archive.head.meta.title"
-        content="page.sold-archive.head.meta.content"
+        pageTitle="pg.sold-archive.head.meta.title"
+        content="pg.sold-archive.head.meta.content"
       />
       <main className="space-y-6">
         <TitleBlock
           titles={[
-            'page.sold-archive.section-1.title-1',
-            'page.sold-archive.section-1.title-2',
+            'pg.sold-archive.section-1.title-1',
+            'pg.sold-archive.section-1.title-2',
           ]}
         />
         <SoldCard
           image={img.hondaRc30}
-          text="page.sold-archive.sold-card.honda-rc30"
+          text="pg.sold-archive.sold-card.honda-rc30"
           galleryLink="placeholder"
         />
         <SoldCard
           image={img.suzukiRg400}
-          text="page.sold-archive.sold-card.suzuki-rg400"
+          text="pg.sold-archive.sold-card.suzuki-rg400"
           galleryLink="placeholder"
         />
         <SoldCard
           image={img.shovelheadChopper}
-          text="page.sold-archive.sold-card.shovelhead-chopper"
+          text="pg.sold-archive.sold-card.shovelhead-chopper"
           galleryLink="placeholder"
         />
         <SoldCard
           image={img.laverda750Sfc}
-          text="page.sold-archive.sold-card.laverda-750-sfc"
+          text="pg.sold-archive.sold-card.laverda-750-sfc"
           galleryLink="placeholder"
         />
         <SoldCard
           image={img.harleyXr750}
-          text="page.sold-archive.sold-card.harley-xr750"
+          text="pg.sold-archive.sold-card.harley-xr750"
           galleryLink="placeholder"
         />
       </main>

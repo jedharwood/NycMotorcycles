@@ -49,7 +49,7 @@ export const SoldCard = ({
       <></>
     ) : (
       <LinkButton
-        text="page.sold-archive.gallery-link-button"
+        text="pg.sold-archive.gallery-link-button"
         href={galleryLink}
         type="router-link"
       />
@@ -64,7 +64,7 @@ export const SoldCard = ({
           <h3 className="flex justify-center">
             {intl.formatMessage({ id: text })}
           </h3>
-          <h4 className="flex justify-center">{intl.formatMessage({ id: 'page.sold-archive.sold-card.common.sold' })}</h4>
+          <h4 className="flex justify-center">{intl.formatMessage({ id: 'pg.sold-archive.sold-card.common.sold' })}</h4>
           {rendergalleryLink()}
         </div>
       </div>
