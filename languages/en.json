@@ -167,6 +167,7 @@
   "pg.sold-archive.alt.kawasaki-h2": "An image of a purple 1975 Kawasaki H2",
   "pg.sold-archive.alt.suzuki-stinger": "An image of a green 1971 Suzuki T125 Stinger",
   "pg.sold-archive.alt.bsa-starfire": "An image of an indigo coloured 1970 BSA B25 Starfire",
+  "pg.sold-archive.alt.kawasaki-h1": "An image of a 1970 Monotrack Engineering Kawasaki H1 painted silver with green trim",
   "pg.sold-archive.alt": "",
   "pg.sold-archive.gallery-link-button": "Gallery",
   "pg.sold-archive.head.meta.title": "",
@@ -181,5 +182,7 @@
   "pg.sold-archive.card.harley-xr750": "1970 Harley Davidson XR750",
   "pg.sold-archive.card.kawasaki-h2": "1975 Kawasaki H2",
   "pg.sold-archive.card.suzuki-stinger": "1971 Suzuki T125 Stinger",
-  "pg.sold-archive.card.bsa-starfire": "1970 BSA B25 Starfire"
+  "pg.sold-archive.card.bsa-starfire": "1970 BSA B25 Starfire",
+  "pg.sold-archive.card.kawasaki-h1": "1970 Monotrack Engineering Kawasaki H1"
 }
+

@@ -47,4 +47,10 @@ export const images: ImageCatalog = {
     width: 1500,
     height: 1125,
   },
+  kawasakiH1: {
+    imageSrc: '/images/sold-archive/kawasaki-h1.jpeg',
+    imageAlt: 'pg.sold-archive.alt.kawasaki-h1',
+    width: 640,
+    height: 451,
+  },
 }
