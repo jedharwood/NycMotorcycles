@@ -7,105 +7,89 @@ import { ImageModal } from '@/components/image-modal'
 import { ImageGrid } from '@/components/image-grid'
 import { LinkButton } from '@/components/link-button'
 import { routes } from '@/utilities/resource-utilities'
-import React, { useContext } from 'react'
-import { AppContext } from '../../context/app-context'
+import { BuildGridImage } from '@/helpers/build-grid-image'
 
 export default function History() {
-  const { openImageModal } = useContext(AppContext)
   const intl = useIntl()
-
-  const buildGridImage = ({
-    imageSrc,
-    imageAlt,
-    width,
-    height,
-  }: GridImage): GridImage => {
-    return {
-      ...{ imageSrc, imageAlt, width, height },
-      onImageClick: () => {
-        openImageModal({ imageSrc, imageAlt, width, height })
-      },
-    }
-  }
 
   const gridImagesUpper: GridImage[] = [
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.larryOrangeLaverda,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.bikeLineup,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.nortonAndHarley,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.raceTraining,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.showroom,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.showroomPurple,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.showroomGig,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.showroomOrange,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.larryTuneup,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.laverdaDucati,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.laverdaRace,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.forklift,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.bsaWorkshop,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.externalWorkshop,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.zushiHq,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.container,
       }),
     },
@@ -113,12 +97,12 @@ export default function History() {
 
   const gridImagesLower: GridImage[] = [
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.customs,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.ferrisWheel,
       }),
     },

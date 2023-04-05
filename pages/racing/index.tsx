@@ -5,55 +5,39 @@ import { useIntl } from 'react-intl'
 import { ImageModal } from '@/components/image-modal'
 import Image from 'next/image'
 import { images as img } from '@/public/images/racing/image-catalog'
-import React, { useContext } from 'react'
-import { AppContext } from '../../context/app-context'
+import { BuildGridImage } from '@/helpers/build-grid-image'
 
 export default function Racing() {
   const intl = useIntl()
-  const { openImageModal } = useContext(AppContext)
-
-  const buildGridImage = ({
-    imageSrc,
-    imageAlt,
-    width,
-    height,
-  }: GridImage): GridImage => {
-    return {
-      ...{ imageSrc, imageAlt, width, height },
-      onImageClick: () => {
-        openImageModal({ imageSrc, imageAlt, width, height })
-      },
-    }
-  }
 
   const gridImages: GridImage[] = [
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.harleyNumber7,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.larryRacing667,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.roperVanson,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.larryRacing667Laverda,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.orangeHelmets,
       }),
     },
     {
-      ...buildGridImage({
+      ...BuildGridImage({
         ...img.willowSpringsHonda,
       }),
     },
