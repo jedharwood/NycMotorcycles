@@ -172,8 +172,8 @@
   "pg.sold-archive.alt": "",
   "pg.sold-archive.contact-button": "Contact",
   "pg.sold-archive.gallery-link-button": "Gallery",
-  "pg.sold-archive.head.meta.title": "",
-  "pg.sold-archive.head.meta.content": "",
+  "pg.sold-archive.head.meta.title": "An archive of vintage bikes sold by New York City Motorcycles",
+  "pg.sold-archive.head.meta.content": "This page displays a selection of vintage motorcycles that have been sold to collectors by New York City Motorcycles over the years. Many of the listings on this page also have subsequent gallery pages to explore ",
   "pg.sold-archive.sect-1.title-1": "!! Select motorcycles sold - this list is not updated often !!",
   "pg.sold-archive.sect-1.title-2": "!! Call or email for recently sold or current availability !!",
   "pg.sold-archive.card.common.call": "-- CALL --",
@@ -187,5 +187,7 @@
   "pg.sold-archive.card.suzuki-stinger": "1971 Suzuki T125 Stinger",
   "pg.sold-archive.card.bsa-starfire": "1970 BSA B25 Starfire",
   "pg.sold-archive.card.kawasaki-h1": "1970 Monotrack Engineering Kawasaki H1",
-  "pg.sold-archive.card.harley-xr750-replica": "Streettracker XR750 replica"
+  "pg.sold-archive.card.harley-xr750-replica": "Streettracker XR750 replica",
+  "pg.gallery.head.meta.title": "{bike} gallery",
+  "pg.gallery.head.meta.content": "A gallery of images for the {bike} sold by New York City Motorcycles "
 }
