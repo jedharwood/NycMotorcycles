@@ -3,7 +3,7 @@ import { TitleBlock } from '@/components/title-block'
 import { HeadElement } from '@/components/head-element'
 import { SoldCard, SoldOrCall } from '@/components/sold-card'
 import { images as img } from '../../public/images/sold-archive/image-catalog'
-import { galleryRoutes as routes } from '@/utilities/resource-utilities'
+import { routes } from '@/utilities/resource-utilities'
 
 const SoldArchivePage: FC = () => {
   const buildSoldCard = (
@@ -15,7 +15,7 @@ const SoldArchivePage: FC = () => {
       <SoldCard
         image={img[imageName]}
         text={`pg.sold-archive.card.${routeName}`}
-        galleryLink={routes[imageName]}
+        galleryLink={`${routes.gallery}/${routeName}`}
         soldOrCall={soldOrCall}
       />
     )
