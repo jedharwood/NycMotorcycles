@@ -10,6 +10,7 @@ import { routes } from '@/utilities/resource-utilities'
 import { BuildGridImages } from '@/helpers/build-grid-images'
 import { FC } from 'react'
 import { TitleBlock } from '@/components/title-block'
+import { Jumbotron } from '@/components/jumbotron'
 
 const HistoryPage: FC = (): JSX.Element => {
   const intl = useIntl()
@@ -47,16 +48,7 @@ const HistoryPage: FC = (): JSX.Element => {
       />
       <main>
         <div className="space-y-6">
-          <Image
-            src={img.larryGoggles.imageSrc}
-            alt={intl.formatMessage({
-              id: img.larryGoggles.imageAlt,
-            })}
-            width={img.larryGoggles.width}
-            height={img.larryGoggles.height}
-            priority
-            className="rounded-md shadow-lg w-full"
-          />
+          <Jumbotron image={img.larryGoggles} legend="pg.history.jumbotron" />
           <div className="grid gap-4 md:grid-cols-5">
             <div className="md:col-span-3">
               <ImageGrid images={gridImagesUpper} maxColumns={2} />

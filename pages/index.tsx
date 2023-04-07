@@ -4,6 +4,8 @@ import { LinkButton, LinkButtonProps } from '@/components/link-button'
 import { HeadElement } from '@/components/head-element'
 import { routes } from '@/utilities/resource-utilities'
 import { FC } from 'react'
+import { Jumbotron } from '@/components/jumbotron'
+import { images as img } from '../public/images/home/image-catalog'
 
 const HomePage: FC = (): JSX.Element => {
   const intl = useIntl()
@@ -55,6 +57,7 @@ const HomePage: FC = (): JSX.Element => {
         content="pg.home.head.meta.content"
       />
       <main className="space-y-6">
+        <Jumbotron image={img.racing} legend="pg.home.jumbotron" />
         <TextDisplay
           title="pg.home.sect-1.title"
           childElement={buildLinkButton({
