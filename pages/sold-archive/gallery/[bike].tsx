@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 const GalleryPage: FC = () => {
   const router = useRouter()
   const { bike } = router.query
-  const bikeName = Array.isArray(bike) ? bike.join(',') : bike;
+  const bikeName = Array.isArray(bike) ? bike.join(',') : bike
 
   // use bikename property to extract useful data to display
   return (
