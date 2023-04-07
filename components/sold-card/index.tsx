@@ -58,7 +58,7 @@ export const SoldCard = ({
       <></>
     ) : (
       <LinkButton
-        text="pg.sold-archive.gallery-link-button"
+        text="component.sold-card.gallery-link-button"
         href={galleryLink}
         type="router-link"
       />
@@ -70,7 +70,7 @@ export const SoldCard = ({
       <></>
     ) : (
       <LinkButton
-        text="pg.sold-archive.contact-button"
+        text="component.sold-card.contact-button"
         href={routes.contact}
         type="router-link"
       />
@@ -79,8 +79,8 @@ export const SoldCard = ({
 
   const isSoldOrCall: string =
     soldOrCall === 'sold'
-      ? 'pg.sold-archive.card.common.sold'
-      : 'pg.sold-archive.card.common.call'
+      ? 'component.sold-card.sold'
+      : 'component.sold-card.call'
 
   return (
     <article className="bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 grid sm:grid-cols-2 gap-4 shadow-lg">

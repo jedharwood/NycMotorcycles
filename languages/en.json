@@ -171,14 +171,10 @@
   "pg.sold-archive.alt.harley-xr750-replica": "An image of a Harley Davidson Streettracker XR750 replica in orange",
   "pg.sold-archive.alt.kawasaki-s3": "An image of a lime green 1974 Kawasaki S3 race replica",
   "pg.sold-archive.alt": "",
-  "pg.sold-archive.contact-button": "Contact",
-  "pg.sold-archive.gallery-link-button": "Gallery",
   "pg.sold-archive.head.meta.title": "An archive of vintage bikes sold by New York City Motorcycles",
   "pg.sold-archive.head.meta.content": "This page displays a selection of vintage motorcycles that have been sold to collectors by New York City Motorcycles over the years. Many of the listings on this page also have subsequent gallery pages to explore ",
   "pg.sold-archive.sect-1.title-1": "!! Select motorcycles sold - this list is not updated often !!",
   "pg.sold-archive.sect-1.title-2": "!! Call or email for recently sold or current availability !!",
-  "pg.sold-archive.card.common.call": "-- CALL --",
-  "pg.sold-archive.card.common.sold": "-- SOLD --",
   "pg.sold-archive.card.honda-rc30": "1988 Honda RC30 VFR750",
   "pg.sold-archive.card.suzuki-rg400": "1985 Suzuki WW RG400",
   "pg.sold-archive.card.shovelhead-chopper": "1969 Harley Davidson Shovelhead Chopper",
@@ -191,5 +187,9 @@
   "pg.sold-archive.card.harley-xr750-replica": "Streettracker XR750 replica",
   "pg.sold-archive.card.kawasaki-s3": "1974 Kawasaki S3 race replica",
   "pg.gallery.head.meta.title": "{bike} gallery",
-  "pg.gallery.head.meta.content": "A gallery of images for the {bike} sold by New York City Motorcycles "
+  "pg.gallery.head.meta.content": "A gallery of images for the {bike} sold by New York City Motorcycles ",
+  "component.sold-card.contact-button": "Contact",
+  "component.sold-card.gallery-link-button": "Gallery",
+  "component.sold-card.call": "-- CALL --",
+  "component.sold-card.sold": "-- SOLD --"
 }
