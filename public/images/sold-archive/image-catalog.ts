@@ -65,4 +65,83 @@ export const images: ImageCatalog = {
     width: 1500,
     height: 885,
   },
+  kawasakiG7s: {
+    imageSrc: '/images/sold-archive/kawasaki-g7s.jpeg',
+    imageAlt: 'pg.sold-archive.alt.kawasaki-g7s',
+    width: 1500,
+    height: 976,
+  },
+  nortonCommando: {
+    imageSrc: '/images/sold-archive/norton-commando.jpeg',
+    imageAlt: 'pg.sold-archive.alt.norton-commando',
+    width: 1500,
+    height: 1125,
+  },
+  hondaDream: {
+    imageSrc: '/images/sold-archive/honda-dream.jpeg',
+    imageAlt: 'pg.sold-archive.alt.honda-dream',
+    width: 750,
+    height: 851,
+  },
+  hondaSs: {
+    imageSrc: '/images/sold-archive/honda-ss.jpeg',
+    imageAlt: 'pg.sold-archive.alt.honda-ss',
+    width: 1500,
+    height: 1500,
+  },
+  laverda500: {
+    imageSrc: '/images/sold-archive/laverda-500.jpeg',
+    imageAlt: 'pg.sold-archive.alt.laverda-500',
+    width: 558,
+    height: 423,
+  },
+  benelli250: {
+    imageSrc: '/images/sold-archive/benelli-250.jpeg',
+    imageAlt: 'pg.sold-archive.alt.benelli-250',
+    width: 640,
+    height: 433,
+  },
+  matchless61: {
+    imageSrc: '/images/sold-archive/matchless-61.jpeg',
+    imageAlt: 'pg.sold-archive.alt.matchless-61',
+    width: 1500,
+    height: 882,
+  },
+  matchless59: {
+    imageSrc: '/images/sold-archive/matchless-59.jpeg',
+    imageAlt: 'pg.sold-archive.alt.matchless-59',
+    width: 1500,
+    height: 1262,
+  },
+  ducati250: {
+    imageSrc: '/images/sold-archive/ducati-250.jpeg',
+    imageAlt: 'pg.sold-archive.alt.ducati-250',
+    width: 1500,
+    height: 853,
+  },
+  harleyXr75075: {
+    imageSrc: '/images/sold-archive/harley-xr750-75.jpeg',
+    imageAlt: 'pg.sold-archive.alt.harley-xr750-75',
+    width: 1500,
+    height: 1500,
+  },
+  laverdaFormula500: {
+    imageSrc: '/images/sold-archive/laverda-formula-500.jpeg',
+    imageAlt: 'pg.sold-archive.alt.laverda-formula-500',
+    width: 705,
+    height: 705,
+  },
+  laverda750Racer: {
+    imageSrc: '/images/sold-archive/laverda-750-racer.jpeg',
+    imageAlt: 'pg.sold-archive.alt.laverda-750-racer',
+    width: 1500,
+    height: 1158,
+  },
+  kawasakiH1ra: {
+    imageSrc: '/images/sold-archive/kawasaki-h1ra.jpeg',
+    imageAlt: 'pg.sold-archive.alt.kawasaki-h1ra',
+    width: 934,
+    height: 540,
+  },
 }
+

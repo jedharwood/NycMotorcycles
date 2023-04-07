@@ -45,6 +45,19 @@ const SoldArchivePage: FC = () => {
         {buildSoldCard('kawasakiH1', 'kawasaki-h1')}
         {buildSoldCard('harleyXr750Replica', 'harley-xr750-replica', 'call')}
         {buildSoldCard('kawasakiS3', 'kawasaki-s3')}
+        {buildSoldCard('kawasakiG7s', 'kawasaki-g7s')}
+        {buildSoldCard('nortonCommando', 'norton-commando')}
+        {buildSoldCard('hondaDream', 'honda-dream')}
+        {buildSoldCard('hondaSs', 'honda-ss')}
+        {buildSoldCard('laverda500', 'laverda-500')}
+        {buildSoldCard('benelli250', 'benelli-250')}
+        {buildSoldCard('matchless61', 'matchless-61')}
+        {buildSoldCard('matchless59', 'matchless-59')}
+        {buildSoldCard('ducati250', 'ducati-250')}
+        {buildSoldCard('harleyXr75075', 'harley-xr750-75')}
+        {buildSoldCard('laverdaFormula500', 'laverda-formula-500')}
+        {buildSoldCard('laverda750Racer', 'laverda-750-racer')}
+        {buildSoldCard('kawasakiH1ra', 'kawasaki-h1ra')}
       </main>
     </>
   )
