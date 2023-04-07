@@ -9,6 +9,7 @@ import { LinkButton } from '@/components/link-button'
 import { routes } from '@/utilities/resource-utilities'
 import { BuildGridImages } from '@/helpers/build-grid-images'
 import { FC } from 'react'
+import { TitleBlock } from '@/components/title-block'
 
 const HistoryPage: FC = (): JSX.Element => {
   const intl = useIntl()
@@ -32,7 +33,7 @@ const HistoryPage: FC = (): JSX.Element => {
 
   const homeButton: JSX.Element = (
     <LinkButton
-      text="page.history.section-10.button"
+      text="pg.history.sect-10.button"
       href={routes.home}
       type="router-link"
     />
@@ -41,8 +42,8 @@ const HistoryPage: FC = (): JSX.Element => {
   return (
     <>
       <HeadElement
-        pageTitle="page.history.head.meta.title"
-        content="page.history.head.meta.content"
+        pageTitle="pg.history.head.meta.title"
+        content="pg.history.head.meta.content"
       />
       <main>
         <div className="space-y-6">
@@ -61,47 +62,41 @@ const HistoryPage: FC = (): JSX.Element => {
               <ImageGrid images={gridImagesUpper} maxColumns={2} />
             </div>
             <div className="space-y-6 md:col-span-2">
-              <section className="bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg">
-                <h2 className="flex justify-center font-medium text-xl md:text-2xl opacity-80">
-                  {intl.formatMessage({
-                    id: 'page.history.section-1.title',
-                  })}
-                </h2>
-              </section>
+              <TitleBlock titles={['pg.history.sect-1.title']} />
               <TextDisplay
-                title={'page.history.section-2.title'}
-                textContent={['page.history.section-2.text-1']}
+                title={'pg.history.sect-2.title'}
+                textContent={['pg.history.sect-2.text-1']}
               />
               <TextDisplay
-                title={'page.history.section-3.title'}
-                textContent={['page.history.section-3.text-1']}
+                title={'pg.history.sect-3.title'}
+                textContent={['pg.history.sect-3.text-1']}
               />
               <TextDisplay
-                title={'page.history.section-4.title'}
+                title={'pg.history.sect-4.title'}
                 textContent={[
-                  'page.history.section-4.text-1',
-                  'page.history.section-4.text-2',
+                  'pg.history.sect-4.text-1',
+                  'pg.history.sect-4.text-2',
                 ]}
               />
               <TextDisplay
-                title={'page.history.section-5.title'}
-                textContent={['page.history.section-5.text-1']}
+                title={'pg.history.sect-5.title'}
+                textContent={['pg.history.sect-5.text-1']}
               />
               <TextDisplay
-                title={'page.history.section-6.title'}
-                textContent={['page.history.section-6.text-1']}
+                title={'pg.history.sect-6.title'}
+                textContent={['pg.history.sect-6.text-1']}
               />
               <TextDisplay
-                title={'page.history.section-7.title'}
-                textContent={['page.history.section-7.text-1']}
+                title={'pg.history.sect-7.title'}
+                textContent={['pg.history.sect-7.text-1']}
               />
               <TextDisplay
-                title={'page.history.section-8.title'}
-                textContent={['page.history.section-8.text-1']}
+                title={'pg.history.sect-8.title'}
+                textContent={['pg.history.sect-8.text-1']}
               />
               <TextDisplay
-                title={'page.history.section-9.title'}
-                textContent={['page.history.section-9.text-1']}
+                title={'pg.history.sect-9.title'}
+                textContent={['pg.history.sect-9.text-1']}
                 childElement={homeButton}
               />
             </div>

@@ -14,4 +14,5 @@ export const routes: { [key: string]: string } = {
   consign: '/consign',
   invest: '/invest',
   download: '/download',
+  gallery: '/sold-archive/gallery',
 }

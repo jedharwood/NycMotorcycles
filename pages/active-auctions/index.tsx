@@ -25,7 +25,7 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
 
     const yahooAuctionLinkButton: JSX.Element = (
       <LinkButton
-        text="page.active-auctions.yahoo-auctions-button"
+        text="pg.active-auctions.yahoo-auctions-button"
         href={yahooAuctionProfilePage}
         type="anchor"
       />
@@ -33,8 +33,8 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
 
     return !activeAuctions.length ? (
       <TextDisplay
-        title="page.active-auctions.no-auctions.title"
-        textContent={['page.active-auctions.no-auctions.body']}
+        title="pg.active-auctions.no-auctions.title"
+        textContent={['pg.active-auctions.no-auctions.body']}
         childElement={yahooAuctionLinkButton}
       />
     ) : (
@@ -53,8 +53,8 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
   return (
     <>
       <HeadElement
-        pageTitle="page.active-auctions.head.meta.title"
-        content="page.active-auctions.head.meta.content"
+        pageTitle="pg.active-auctions.head.meta.title"
+        content="pg.active-auctions.head.meta.content"
       />
       <main>
         <Spinner loading={isLoading} />

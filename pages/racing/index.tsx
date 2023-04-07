@@ -23,8 +23,8 @@ const RacingPage: FC = (): JSX.Element => {
   return (
     <>
       <HeadElement
-        pageTitle="page.racing.head.meta.title"
-        content="page.racing.head.meta.content"
+        pageTitle="pg.racing.head.meta.title"
+        content="pg.racing.head.meta.content"
       />
       <main>
         <div className="space-y-6">
@@ -37,11 +37,8 @@ const RacingPage: FC = (): JSX.Element => {
             className="rounded-md shadow-lg"
           />
           <TextDisplay
-            title="page.racing.section-1.title"
-            textContent={[
-              'page.racing.section-1.text-1',
-              'page.racing.section-1.text-2',
-            ]}
+            title="pg.racing.sect-1.title"
+            textContent={['pg.racing.sect-1.text-1', 'pg.racing.sect-1.text-2']}
           />
           <ImageGrid images={gridImages} maxColumns={3} />
         </div>

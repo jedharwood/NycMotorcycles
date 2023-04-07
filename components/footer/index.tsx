@@ -22,13 +22,13 @@ export const Footer = (): JSX.Element => {
           <Image
             src={chevronUp}
             alt={intl.formatMessage({
-              id: 'component.footer.text.scroll-to-top',
+              id: 'comp.footer.text.scroll-to-top',
             })}
             width={40}
             height={40}
           />
         </div>
-        <FormattedMessage id="component.footer.text.scroll-to-top" />
+        <FormattedMessage id="comp.footer.text.scroll-to-top" />
       </button>
       <a
         href={instagramProfilePage}
@@ -39,17 +39,17 @@ export const Footer = (): JSX.Element => {
         <Image
           src={instagramIcon}
           alt={intl.formatMessage({
-            id: 'component.footer.alt.instagram-logo',
+            id: 'comp.footer.alt.instagram-logo',
           })}
           width={50}
           height={50}
         />
       </a>
       <h3 className="flex justify-center text-sm md:text-md">
-        <FormattedMessage id="component.footer.text.address" />
+        <FormattedMessage id="comp.footer.text.address" />
       </h3>
       <h4 className="flex justify-center text-xs md:text-sm px-1">
-        <FormattedMessage id="component.footer.text.disclaimer" />
+        <FormattedMessage id="comp.footer.text.disclaimer" />
       </h4>
     </footer>
   )

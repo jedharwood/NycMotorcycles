@@ -14,7 +14,7 @@ export const AuctionCard = ({
   const imageSource = image.imageSrc.length ? image.imageSrc : nycmcLogo
   const imageAltText = image.imageAlt.length
     ? image.imageAlt
-    : intl.formatMessage({ id: 'component.auction-card.alt.placeholder-image' })
+    : intl.formatMessage({ id: 'comp.auction-card.alt.placeholder-image' })
 
   const timeRemainingValue = (): string | undefined => {
     if (!timeRemaining?.time) return undefined
@@ -22,13 +22,13 @@ export const AuctionCard = ({
     let unit: string
     switch (timeRemaining.unit) {
       case 'days':
-        unit = 'component.auction-card.time-unit.days'
+        unit = 'comp.auction-card.time-unit.days'
         break
       case 'hours':
-        unit = 'component.auction-card.time-unit.hours'
+        unit = 'comp.auction-card.time-unit.hours'
         break
       case 'minutes':
-        unit = 'component.auction-card.time-unit.minutes'
+        unit = 'comp.auction-card.time-unit.minutes'
         break
       default:
         unit = ''
@@ -78,18 +78,18 @@ export const AuctionCard = ({
         <table className="mt-4 w-full table-auto">
           <tbody>
             {tableRow(
-              'component.auction-card.table-label.current-price',
+              'comp.auction-card.table-label.current-price',
               currentPrice,
             )}
             {tableRow(
-              'component.auction-card.table-label.prompt-price',
+              'comp.auction-card.table-label.prompt-price',
               promptDecisionPrice,
             )}
             {tableRow(
-              'component.auction-card.table-label.time-remaining',
+              'comp.auction-card.table-label.time-remaining',
               timeRemainingValue(),
             )}
-            {tableRow('component.auction-card.table-label.bidders', bidders)}
+            {tableRow('comp.auction-card.table-label.bidders', bidders)}
           </tbody>
         </table>
       </div>

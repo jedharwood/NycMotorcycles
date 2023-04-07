@@ -21,35 +21,35 @@ export const Header = (): JSX.Element => {
   const navLinks: NavLinkDetails[] = [
     {
       href: routes.home,
-      text: 'component.header.nav.home',
+      text: 'comp.header.nav.home',
     },
     {
       href: routes.activeAuctions,
-      text: 'component.header.nav.active-auctions',
+      text: 'comp.header.nav.active-auctions',
     },
     {
       href: routes.soldArchive,
-      text: 'component.header.nav.sold-archive',
+      text: 'comp.header.nav.sold-archive',
     },
     {
       href: routes.history,
-      text: 'component.header.nav.history',
+      text: 'comp.header.nav.history',
     },
     {
       href: routes.racing,
-      text: 'component.header.nav.racing',
+      text: 'comp.header.nav.racing',
     },
     {
       href: routes.contact,
-      text: 'component.header.nav.contact',
+      text: 'comp.header.nav.contact',
     },
     {
       href: routes.consign,
-      text: 'component.header.nav.consign',
+      text: 'comp.header.nav.consign',
     },
     {
       href: routes.invest,
-      text: 'component.header.nav.invest',
+      text: 'comp.header.nav.invest',
     },
     // Maybe I'll add download in here once I have the page up...
   ]
@@ -100,7 +100,7 @@ export const Header = (): JSX.Element => {
       <div className="flex justify-center pb-6">
         <Image
           src={nycmcLogo}
-          alt={intl.formatMessage({ id: 'component.header.alt.nycmc-logo' })}
+          alt={intl.formatMessage({ id: 'comp.header.alt.nycmc-logo' })}
           width={111}
           height={111}
           priority
@@ -121,12 +121,12 @@ export const Header = (): JSX.Element => {
             onClick={toggleMobilenav}
           >
             <span className="sr-only">
-              <FormattedMessage id="component.header.sr.open-main-menu" />
+              <FormattedMessage id="comp.header.sr.open-main-menu" />
             </span>
             <Image
               src={burgerIcon}
               alt={intl.formatMessage({
-                id: 'component.header.alt.burger-menu',
+                id: 'comp.header.alt.burger-menu',
               })}
               width={40}
               height={40}
