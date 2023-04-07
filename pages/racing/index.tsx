@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { images as img } from '@/public/images/racing/image-catalog'
 import { BuildGridImages } from '@/helpers/build-grid-images'
 import { FC } from 'react'
+import { Jumbotron } from '@/components/jumbotron'
 
 const RacingPage: FC = (): JSX.Element => {
   const intl = useIntl()
@@ -28,14 +29,7 @@ const RacingPage: FC = (): JSX.Element => {
       />
       <main>
         <div className="space-y-6">
-          <Image
-            src={img.laverdaLowside.imageSrc}
-            alt={intl.formatMessage({ id: img.laverdaLowside.imageAlt })}
-            width={img.laverdaLowside.width}
-            height={img.laverdaLowside.height}
-            priority
-            className="rounded-md shadow-lg"
-          />
+          <Jumbotron image={img.laverdaLowside} legend="pg.racing.jumbotron" />
           <TextDisplay
             title="pg.racing.sect-1.title"
             textContent={['pg.racing.sect-1.text-1', 'pg.racing.sect-1.text-2']}
