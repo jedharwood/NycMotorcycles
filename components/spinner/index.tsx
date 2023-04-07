@@ -27,7 +27,7 @@ export const Spinner = ({ loading }: SpinnerProps): JSX.Element => {
           />
         </svg>
         <span className="sr-only">
-          <FormattedMessage id="component.spinner.sr.loading" />
+          <FormattedMessage id="comp.spinner.sr.loading" />
         </span>
       </div>
     </div>

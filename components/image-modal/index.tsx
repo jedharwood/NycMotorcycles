@@ -23,13 +23,13 @@ export const ImageModal = (): JSX.Element => {
             <Image
               src={closeIcon}
               alt={intl.formatMessage({
-                id: 'component.image-modal.alt.close',
+                id: 'comp.image-modal.alt.close',
               })}
               width={40}
               height={40}
             />
             <span className="sr-only">
-              <FormattedMessage id="component.image-modal.sr.close" />
+              <FormattedMessage id="comp.image-modal.sr.close" />
             </span>
           </button>
           <Image
