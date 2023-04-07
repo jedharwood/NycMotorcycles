@@ -169,6 +169,7 @@
   "pg.sold-archive.alt.bsa-starfire": "An image of an indigo coloured 1970 BSA B25 Starfire",
   "pg.sold-archive.alt.kawasaki-h1": "An image of a 1970 Monotrack Engineering Kawasaki H1 painted silver with green trim",
   "pg.sold-archive.alt.harley-xr750-replica": "An image of a Harley Davidson Streettracker XR750 replica in orange",
+  "pg.sold-archive.alt.kawasaki-s3": "An image of a lime green 1974 Kawasaki S3 race replica",
   "pg.sold-archive.alt": "",
   "pg.sold-archive.contact-button": "Contact",
   "pg.sold-archive.gallery-link-button": "Gallery",
@@ -188,6 +189,7 @@
   "pg.sold-archive.card.bsa-starfire": "1970 BSA B25 Starfire",
   "pg.sold-archive.card.kawasaki-h1": "1970 Monotrack Engineering Kawasaki H1",
   "pg.sold-archive.card.harley-xr750-replica": "Streettracker XR750 replica",
+  "pg.sold-archive.card.kawasaki-s3": "1974 Kawasaki S3 race replica",
   "pg.gallery.head.meta.title": "{bike} gallery",
   "pg.gallery.head.meta.content": "A gallery of images for the {bike} sold by New York City Motorcycles "
 }

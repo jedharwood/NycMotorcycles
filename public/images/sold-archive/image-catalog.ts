@@ -59,4 +59,10 @@ export const images: ImageCatalog = {
     width: 816,
     height: 605,
   },
+  kawasakiS3: {
+    imageSrc: '/images/sold-archive/kawasaki-s3.jpeg',
+    imageAlt: 'pg.sold-archive.alt.kawasaki-s3',
+    width: 1500,
+    height: 885,
+  },
 }
