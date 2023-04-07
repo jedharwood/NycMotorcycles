@@ -144,4 +144,3 @@ export const images: ImageCatalog = {
     height: 540,
   },
 }
-

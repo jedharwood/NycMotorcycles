@@ -10,12 +10,17 @@ const SoldArchivePage: FC = () => {
     imageName: string,
     routeName: string,
     soldOrCall: SoldOrCall = 'sold',
+    isGalleryLink: boolean = true,
   ): JSX.Element => {
+    const galleryLink = isGalleryLink
+      ? `${routes.gallery}/${routeName}`
+      : undefined
+
     return (
       <SoldCard
         image={img[imageName]}
         text={`pg.sold-archive.card.${routeName}`}
-        galleryLink={`${routes.gallery}/${routeName}`}
+        galleryLink={galleryLink}
         soldOrCall={soldOrCall}
       />
     )
@@ -55,8 +60,13 @@ const SoldArchivePage: FC = () => {
         {buildSoldCard('matchless59', 'matchless-59')}
         {buildSoldCard('ducati250', 'ducati-250')}
         {buildSoldCard('harleyXr75075', 'harley-xr750-75')}
-        {buildSoldCard('laverdaFormula500', 'laverda-formula-500')}
-        {buildSoldCard('laverda750Racer', 'laverda-750-racer')}
+        {buildSoldCard(
+          'laverdaFormula500',
+          'laverda-formula-500',
+          'sold',
+          false,
+        )}
+        {buildSoldCard('laverda750Racer', 'laverda-750-racer', 'sold', false)}
         {buildSoldCard('kawasakiH1ra', 'kawasaki-h1ra')}
       </main>
     </>
