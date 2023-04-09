@@ -1,20 +1,15 @@
 import { HeadElement } from '@/components/head-element'
 import { TextDisplay } from '@/components/text-display'
-import Image from 'next/image'
 import { images as img } from '@/public/images/history/image-catalog'
-import { useIntl } from 'react-intl'
 import { ImageModal } from '@/components/image-modal'
 import { ImageGrid } from '@/components/image-grid'
 import { LinkButton } from '@/components/link-button'
 import { routes } from '@/utilities/resource-utilities'
 import { BuildGridImages } from '@/helpers/build-grid-images'
 import { FC } from 'react'
-import { TitleBlock } from '@/components/title-block'
 import { Jumbotron } from '@/components/jumbotron'
 
 const HistoryPage: FC = (): JSX.Element => {
-  const intl = useIntl()
-
   const gridImagesUpper: GridImage[] = BuildGridImages([
     img.showroomGig,
     img.showroomOrange,
@@ -54,7 +49,6 @@ const HistoryPage: FC = (): JSX.Element => {
               <ImageGrid images={gridImagesUpper} maxColumns={2} />
             </div>
             <div className="space-y-6 md:col-span-2">
-              <TitleBlock titles={['pg.history.sect-1.title']} />
               <TextDisplay
                 title={'pg.history.sect-2.title'}
                 textContent={['pg.history.sect-2.text-1']}
