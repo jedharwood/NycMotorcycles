@@ -4,10 +4,18 @@ import { TextDisplay } from '@/components/text-display'
 import { ImageModal } from '@/components/image-modal'
 import { images as img } from '@/public/images/racing/image-catalog'
 import { BuildGridImages } from '@/helpers/build-grid-images'
-import { FC } from 'react'
+import { FC, useContext, useEffect } from 'react'
 import { Jumbotron } from '@/components/jumbotron'
+import { AppContext } from '../../context/app-context'
 
 const RacingPage: FC = (): JSX.Element => {
+  const { closeImageModal } =
+    useContext(AppContext)
+    
+  useEffect(() => {
+    closeImageModal()
+  }, [])
+  
   const gridImages: GridImage[] = BuildGridImages([
     img.harleyNumber7,
     img.larryRacing667,

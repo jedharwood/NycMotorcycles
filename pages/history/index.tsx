@@ -6,10 +6,18 @@ import { ImageGrid } from '@/components/image-grid'
 import { LinkButton } from '@/components/link-button'
 import { routes } from '@/utilities/resource-utilities'
 import { BuildGridImages } from '@/helpers/build-grid-images'
-import { FC } from 'react'
+import { FC, useContext, useEffect } from 'react'
 import { Jumbotron } from '@/components/jumbotron'
+import { AppContext } from '@/context/app-context'
 
 const HistoryPage: FC = (): JSX.Element => {
+  const { closeImageModal } =
+    useContext(AppContext)
+    
+  useEffect(() => {
+    closeImageModal()
+  }, [])
+  
   const gridImagesUpper: GridImage[] = BuildGridImages([
     img.showroomGig,
     img.showroomOrange,

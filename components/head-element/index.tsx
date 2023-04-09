@@ -23,7 +23,6 @@ export const HeadElement = ({
       ? intl.formatMessage({ id: content })
       : intl.formatMessage({ id: content }, { bike: bikeName })
 
-  console.log(bikeName)
   return (
     <Head>
       <title>{metaTitle}</title>
