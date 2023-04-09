@@ -22,7 +22,7 @@ export const Jumbotron = ({ image, legend }: JumbotronProps) => {
         className="rounded-md shadow-lg"
       />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-stone-600 opacity-90 rounded-md shadow-lg w-max">
-        <h2 className="text-2xl sm:text-4xl md:text-5xl px-2 sm:px-8 py-2 text-stone-50 inline-block">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl px-2 sm:px-8 py-2 text-stone-50 inline-block">
           {intl.formatMessage({
             id: legend,
           })}
