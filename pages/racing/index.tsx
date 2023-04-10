@@ -9,13 +9,12 @@ import { Jumbotron } from '@/components/jumbotron'
 import { AppContext } from '../../context/app-context'
 
 const RacingPage: FC = (): JSX.Element => {
-  const { closeImageModal } =
-    useContext(AppContext)
-    
+  const { closeImageModal } = useContext(AppContext)
+
   useEffect(() => {
     closeImageModal()
   }, [])
-  
+
   const gridImages: GridImage[] = BuildGridImages([
     img.harleyNumber7,
     img.larryRacing667,

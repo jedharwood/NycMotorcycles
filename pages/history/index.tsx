@@ -11,13 +11,12 @@ import { Jumbotron } from '@/components/jumbotron'
 import { AppContext } from '@/context/app-context'
 
 const HistoryPage: FC = (): JSX.Element => {
-  const { closeImageModal } =
-    useContext(AppContext)
-    
+  const { closeImageModal } = useContext(AppContext)
+
   useEffect(() => {
     closeImageModal()
   }, [])
-  
+
   const gridImagesUpper: GridImage[] = BuildGridImages([
     img.showroomGig,
     img.showroomOrange,
