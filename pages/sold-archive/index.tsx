@@ -38,11 +38,11 @@ const SoldArchivePage: FC = () => {
   const intl = useIntl()
 
   const buildSoldCard = (
-    bikeImageName: string,
-    routeName: string,
+    bikeImageName: keyof typeof archiveBikes,
     soldOrCall: SoldOrCall = 'sold',
     isGalleryLink: boolean = true,
   ): JSX.Element => {
+    const routeName = archiveBikes[bikeImageName]
     const galleryLink = isGalleryLink
       ? `${routes.gallery}/${routeName}`
       : undefined
@@ -76,35 +76,30 @@ const SoldArchivePage: FC = () => {
             })}
           </h2>
         </section>
-        {buildSoldCard('hondaRc30', 'honda-rc30')}
-        {buildSoldCard('suzukiRg400', 'suzuki-rg400')}
-        {buildSoldCard('shovelheadChopper', 'shovelhead-chopper')}
-        {buildSoldCard('laverda750Sfc', 'laverda-750-sfc')}
-        {buildSoldCard('harleyXr750', 'harley-xr750')}
-        {buildSoldCard('kawasakiH2', 'kawasaki-h2')}
-        {buildSoldCard('suzukiStinger', 'suzuki-stinger')}
-        {buildSoldCard('bsaStarfire', 'bsa-starfire')}
-        {buildSoldCard('kawasakiH1', 'kawasaki-h1')}
-        {buildSoldCard('harleyXr750Replica', 'harley-xr750-replica', 'call')}
-        {buildSoldCard('kawasakiS3', 'kawasaki-s3')}
-        {buildSoldCard('kawasakiG7s', 'kawasaki-g7s')}
-        {buildSoldCard('nortonCommando', 'norton-commando')}
-        {buildSoldCard('hondaDream', 'honda-dream')}
-        {buildSoldCard('hondaSs', 'honda-ss')}
-        {buildSoldCard('laverda500', 'laverda-500')}
-        {buildSoldCard('benelli250', 'benelli-250')}
-        {buildSoldCard('matchless61', 'matchless-61')}
-        {buildSoldCard('matchless59', 'matchless-59')}
-        {buildSoldCard('ducati250', 'ducati-250')}
-        {buildSoldCard('harleyXr75075', 'harley-xr750-75')}
-        {buildSoldCard(
-          'laverdaFormula500',
-          'laverda-formula-500',
-          'sold',
-          false,
-        )}
-        {buildSoldCard('laverda750Racer', 'laverda-750-racer', 'sold', false)}
-        {buildSoldCard('kawasakiH1ra', 'kawasaki-h1ra')}
+        {buildSoldCard('hondaRc30')}
+        {buildSoldCard('suzukiRg400')}
+        {buildSoldCard('shovelheadChopper')}
+        {buildSoldCard('laverda750Sfc')}
+        {buildSoldCard('harleyXr750')}
+        {buildSoldCard('kawasakiH2')}
+        {buildSoldCard('suzukiStinger')}
+        {buildSoldCard('bsaStarfire')}
+        {buildSoldCard('kawasakiH1')}
+        {buildSoldCard('harleyXr750Replica', 'call')}
+        {buildSoldCard('kawasakiS3')}
+        {buildSoldCard('kawasakiG7s')}
+        {buildSoldCard('nortonCommando')}
+        {buildSoldCard('hondaDream')}
+        {buildSoldCard('hondaSs')}
+        {buildSoldCard('laverda500')}
+        {buildSoldCard('benelli250')}
+        {buildSoldCard('matchless61')}
+        {buildSoldCard('matchless59')}
+        {buildSoldCard('ducati250')}
+        {buildSoldCard('harleyXr75075')}
+        {buildSoldCard('laverdaFormula500', 'sold', false)}
+        {buildSoldCard('laverda750Racer', 'sold', false)}
+        {buildSoldCard('kawasakiH1ra')}
       </main>
     </>
   )
