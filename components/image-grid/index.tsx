@@ -33,7 +33,7 @@ export const ImageGrid = ({
             })}
             width={image.width}
             height={image.height}
-            className="rounded-md h-full object-cover hover:opacity-70"
+            className="rounded-md object-cover hover:opacity-70 h-full w-full"
           />
         </div>
       ))}
