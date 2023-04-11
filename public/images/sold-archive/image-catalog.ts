@@ -1,146 +1,41 @@
-export const images: ImageCatalog = {
-  hondaRc30: {
-    imageSrc: '/images/sold-archive/honda-rc30.jpeg',
-    imageAlt: 'pg.sold-archive.alt.honda-rc30',
-    width: 1500,
-    height: 1000,
-  },
-  suzukiRg400: {
-    imageSrc: '/images/sold-archive/suzuki-rg400.jpeg',
-    imageAlt: 'pg.sold-archive.alt.suzuki-rg400',
-    width: 1500,
-    height: 1125,
-  },
-  shovelheadChopper: {
-    imageSrc: '/images/sold-archive/shovelhead-chopper.jpeg',
-    imageAlt: 'pg.sold-archive.alt.shovelhead-chopper',
-    width: 1500,
-    height: 1125,
-  },
-  laverda750Sfc: {
-    imageSrc: '/images/sold-archive/laverda-750-sfc.jpeg',
-    imageAlt: 'pg.sold-archive.alt.laverda-750-sfc',
-    width: 1500,
-    height: 836,
-  },
-  harleyXr750: {
-    imageSrc: '/images/sold-archive/harley-xr750.jpeg',
-    imageAlt: 'pg.sold-archive.alt.harley-xr750',
-    width: 1080,
-    height: 720,
-  },
-  kawasakiH2: {
-    imageSrc: '/images/sold-archive/kawasaki-h2.jpeg',
-    imageAlt: 'pg.sold-archive.alt.kawasaki-h2',
-    width: 747,
-    height: 748,
-  },
-  suzukiStinger: {
-    imageSrc: '/images/sold-archive/suzuki-stinger.jpeg',
-    imageAlt: 'pg.sold-archive.alt.suzuki-stinger',
-    width: 1500,
-    height: 986,
-  },
-  bsaStarfire: {
-    imageSrc: '/images/sold-archive/bsa-starfire.jpeg',
-    imageAlt: 'pg.sold-archive.alt.bsa-starfire',
-    width: 1500,
-    height: 1125,
-  },
-  kawasakiH1: {
-    imageSrc: '/images/sold-archive/kawasaki-h1.jpeg',
-    imageAlt: 'pg.sold-archive.alt.kawasaki-h1',
-    width: 640,
-    height: 451,
-  },
-  harleyXr750Replica: {
-    imageSrc: '/images/sold-archive/harley-xr750-replica.jpeg',
-    imageAlt: 'pg.sold-archive.alt.harley-xr750-replica',
-    width: 816,
-    height: 605,
-  },
-  kawasakiS3: {
-    imageSrc: '/images/sold-archive/kawasaki-s3.jpeg',
-    imageAlt: 'pg.sold-archive.alt.kawasaki-s3',
-    width: 1500,
-    height: 885,
-  },
-  kawasakiG7s: {
-    imageSrc: '/images/sold-archive/kawasaki-g7s.jpeg',
-    imageAlt: 'pg.sold-archive.alt.kawasaki-g7s',
-    width: 1500,
-    height: 976,
-  },
-  nortonCommando: {
-    imageSrc: '/images/sold-archive/norton-commando.jpeg',
-    imageAlt: 'pg.sold-archive.alt.norton-commando',
-    width: 1500,
-    height: 1125,
-  },
-  hondaDream: {
-    imageSrc: '/images/sold-archive/honda-dream.jpeg',
-    imageAlt: 'pg.sold-archive.alt.honda-dream',
-    width: 750,
-    height: 851,
-  },
-  hondaSs: {
-    imageSrc: '/images/sold-archive/honda-ss.jpeg',
-    imageAlt: 'pg.sold-archive.alt.honda-ss',
-    width: 1500,
-    height: 1500,
-  },
-  laverda500: {
-    imageSrc: '/images/sold-archive/laverda-500.jpeg',
-    imageAlt: 'pg.sold-archive.alt.laverda-500',
-    width: 558,
-    height: 423,
-  },
-  benelli250: {
-    imageSrc: '/images/sold-archive/benelli-250.jpeg',
-    imageAlt: 'pg.sold-archive.alt.benelli-250',
-    width: 640,
-    height: 433,
-  },
-  matchless61: {
-    imageSrc: '/images/sold-archive/matchless-61.jpeg',
-    imageAlt: 'pg.sold-archive.alt.matchless-61',
-    width: 1500,
-    height: 882,
-  },
-  matchless59: {
-    imageSrc: '/images/sold-archive/matchless-59.jpeg',
-    imageAlt: 'pg.sold-archive.alt.matchless-59',
-    width: 1500,
-    height: 1262,
-  },
-  ducati250: {
-    imageSrc: '/images/sold-archive/ducati-250.jpeg',
-    imageAlt: 'pg.sold-archive.alt.ducati-250',
-    width: 1500,
-    height: 853,
-  },
-  harleyXr75075: {
-    imageSrc: '/images/sold-archive/harley-xr750-75.jpeg',
-    imageAlt: 'pg.sold-archive.alt.harley-xr750-75',
-    width: 1500,
-    height: 1500,
-  },
-  laverdaFormula500: {
-    imageSrc: '/images/sold-archive/laverda-formula-500.jpeg',
-    imageAlt: 'pg.sold-archive.alt.laverda-formula-500',
-    width: 705,
-    height: 705,
-  },
-  laverda750Racer: {
-    imageSrc: '/images/sold-archive/laverda-750-racer.jpeg',
-    imageAlt: 'pg.sold-archive.alt.laverda-750-racer',
-    width: 1500,
-    height: 1158,
-  },
-  kawasakiH1ra: {
-    imageSrc: '/images/sold-archive/kawasaki-h1ra.jpeg',
-    imageAlt: 'pg.sold-archive.alt.kawasaki-h1ra',
-    width: 934,
-    height: 540,
-  },
+import { archiveBikes as archive } from "@/modules/archive-bikes"
+
+type ArchiveCatalog = {
+  [key in ArchiveBikeKey]: GridImage
+}
+
+const buildGridImage = (bikeName: string, width: number, height: number): GridImage => {
+  return {
+    imageSrc: `/images/sold-archive/${bikeName}.jpeg`,
+    imageAlt: `pg.sold-archive.alt.${bikeName}`,
+    width,
+    height
+  }
+}
+
+export const images: ArchiveCatalog = {
+  hondaRc30: buildGridImage(archive.hondaRc30, 1500, 1000),
+  suzukiRg400: buildGridImage(archive.suzukiRg400, 1500, 1125),
+  shovelheadChopper: buildGridImage(archive.shovelheadChopper, 1500, 1125),
+  laverda750Sfc: buildGridImage(archive.laverda750Sfc, 1500, 836),
+  harleyXr750: buildGridImage(archive.harleyXr750, 1080, 720),
+  kawasakiH2: buildGridImage(archive.kawasakiH2, 747, 748),
+  suzukiStinger: buildGridImage(archive.suzukiStinger, 1500, 986),
+  bsaStarfire: buildGridImage(archive.bsaStarfire, 1500, 1125),
+  kawasakiH1: buildGridImage(archive.kawasakiH1, 640, 451),
+  harleyXr750Replica: buildGridImage(archive.harleyXr750Replica, 816, 605),
+  kawasakiS3: buildGridImage(archive.kawasakiS3, 1500, 885),
+  kawasakiG7s: buildGridImage(archive.kawasakiG7s, 1500, 976),
+  nortonCommando: buildGridImage(archive.nortonCommando, 1500, 1125),
+  hondaDream: buildGridImage(archive.hondaDream, 750, 851),
+  hondaSs: buildGridImage(archive.hondaSs, 1500, 1500),
+  laverda500: buildGridImage(archive.laverda500, 558, 423),
+  benelli250: buildGridImage(archive.benelli250, 640, 433),
+  matchless61: buildGridImage(archive.matchless61, 1500, 882),
+  matchless59: buildGridImage(archive.matchless59, 1500, 1262),
+  ducati250: buildGridImage(archive.ducati250, 1500, 853),
+  harleyXr75075: buildGridImage(archive.harleyXr75075, 1500, 1500),
+  laverdaFormula500: buildGridImage(archive.laverdaFormula500, 705, 705),
+  laverda750Racer: buildGridImage(archive.laverda750Racer, 1500, 1158),
+  kawasakiH1ra: buildGridImage(archive.kawasakiH1ra, 934, 540)
 }
