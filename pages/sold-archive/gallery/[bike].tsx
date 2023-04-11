@@ -35,9 +35,11 @@ const GalleryPage: FC = () => {
         content="pg.gallery.head.meta.content"
         bikeName={intl.formatMessage({ id: bikeNameVerbose })}
       />
-      <main className="space-y-6">
-        <Jumbotron legend={bikeNameVerbose} image={img[bikeImageName]} />
-        <ImageGrid images={galleryImages} maxColumns={4} />
+      <main>
+        <div className="space-y-6">
+          <Jumbotron legend={bikeNameVerbose} image={img[bikeImageName]} />
+          <ImageGrid images={galleryImages} maxColumns={4} />
+        </div>
         <ImageModal />
       </main>
     </>

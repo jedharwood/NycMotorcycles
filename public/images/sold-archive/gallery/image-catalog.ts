@@ -126,5 +126,37 @@ export const images: GalleryCatalog = {
       width: 533,
       height: 396,
     }, 
+  ],
+  laverda750Sfc: [
+    {
+      imageSrc: `${gallery}/${archive.laverda750Sfc}/left-side.jpeg`,
+      imageAlt: `pg.gallery.${archive.laverda750Sfc}.alt.left-side`,
+      width: 1500,
+      height: 1125,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.laverda750Sfc}/front-wheel.jpeg`,
+      imageAlt: `pg.gallery.${archive.laverda750Sfc}.alt.front-wheel`,
+      width: 1500,
+      height: 1125,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.laverda750Sfc}/muhammad-ali.jpeg`,
+      imageAlt: `pg.gallery.${archive.laverda750Sfc}.alt.muhammad-ali`,
+      width: 1500,
+      height: 1125,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.laverda750Sfc}/exterior.jpeg`,
+      imageAlt: `pg.gallery.${archive.laverda750Sfc}.alt.exterior`,
+      width: 1500,
+      height: 1125,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.laverda750Sfc}/interior.jpeg`,
+      imageAlt: `pg.gallery.${archive.laverda750Sfc}.alt.interior`,
+      width: 1500,
+      height: 1125,
+    }, 
   ]
 }
