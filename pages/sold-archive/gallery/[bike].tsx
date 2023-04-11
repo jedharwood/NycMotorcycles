@@ -8,6 +8,8 @@ import { archiveBikes } from '..'
 import { useIntl } from 'react-intl'
 import { images as gallery } from '../../../public/images/sold-archive/gallery/image-catalog'
 import { ImageGrid } from '@/components/image-grid'
+import { ImageModal } from '@/components/image-modal'
+import { BuildGridImages } from '@/helpers/build-grid-images'
 
 const GalleryPage: FC = () => {
   const intl = useIntl()
@@ -23,8 +25,8 @@ const GalleryPage: FC = () => {
   const bikeImageName =
     Object.keys(archiveBikes).find((key) => archiveBikes[key] === routeName) ||
     ''
-  const galleryImages: GridImage[] = gallery[bikeImageName]
   const bikeNameVerbose = `pg.gallery.${routeName}.name`
+  const galleryImages: GridImage[] = BuildGridImages(gallery[bikeImageName])
 
   return (
     <>
@@ -36,6 +38,7 @@ const GalleryPage: FC = () => {
       <main className="space-y-6">
         <Jumbotron legend={bikeNameVerbose} image={img[bikeImageName]} />
         <ImageGrid images={galleryImages} maxColumns={4} />
+        <ImageModal />
       </main>
     </>
   )
