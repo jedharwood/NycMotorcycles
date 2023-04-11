@@ -8,7 +8,7 @@ type JumbotronProps = {
 
 const defaultImage: GridImage = {
   imageSrc: '',
-  imageAlt: 'comp.jumbotron.placeholder-image'
+  imageAlt: 'comp.jumbotron.placeholder-image',
 }
 
 export const Jumbotron = ({ image = defaultImage, legend }: JumbotronProps) => {
