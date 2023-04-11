@@ -4,12 +4,12 @@ import { useRouter } from 'next/router'
 import { AppContext } from '@/context/app-context'
 import { Jumbotron } from '@/components/jumbotron'
 import { images as img } from '../../../public/images/sold-archive/image-catalog'
-import { archiveBikes } from '..'
 import { useIntl } from 'react-intl'
 import { images as gallery } from '../../../public/images/sold-archive/gallery/image-catalog'
 import { ImageGrid } from '@/components/image-grid'
 import { ImageModal } from '@/components/image-modal'
 import { BuildGridImages } from '@/helpers/build-grid-images'
+import { archiveBikes as archive } from '@/modules/archive-bikes'
 
 const GalleryPage: FC = () => {
   const intl = useIntl()
@@ -23,7 +23,7 @@ const GalleryPage: FC = () => {
   const { bike } = router.query
   const routeName = Array.isArray(bike) ? bike.join(',') : bike
   const bikeImageName =
-    Object.keys(archiveBikes).find((key) => archiveBikes[key] === routeName) ||
+    Object.keys(archive).find((key) => archive[key] === routeName) ||
     ''
   const bikeNameVerbose = `pg.gallery.${routeName}.name`
   const galleryImages: GridImage[] = BuildGridImages(gallery[bikeImageName])
