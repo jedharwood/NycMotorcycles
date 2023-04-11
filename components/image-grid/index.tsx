@@ -3,17 +3,23 @@ import Image from 'next/image'
 
 type ImageGridProps = {
   images: GridImage[]
-  maxColumns: 3 | 2
+  maxColumns: 4 | 3 | 2
 }
 
+const defaultImages: GridImage[] = []
+
 export const ImageGrid = ({
-  images,
+  images = defaultImages,
   maxColumns,
 }: ImageGridProps): JSX.Element => {
   const intl = useIntl()
+  const classes =
+    maxColumns === 2 || maxColumns === 3
+      ? `grid gap-4 sm:grid-cols-2 md:grid-cols-${maxColumns.toString()}`
+      : `grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4`
 
   return (
-    <section className={`grid gap-4 sm:grid-cols-2 md:grid-cols-${maxColumns}`}>
+    <section className={classes}>
       {images.map((image, idx) => (
         <div
           className="rounded-md shadow-lg bg-gray-500 cursor-pointer"
