@@ -82,5 +82,49 @@ export const images: GalleryCatalog = {
       width: 1000,
       height: 750,
     }, 
+  ],
+  shovelheadChopper: [
+    {
+      imageSrc: `${gallery}/${archive.shovelheadChopper}/right-side.png`,
+      imageAlt: `pg.gallery.${archive.shovelheadChopper}.alt.right-side`,
+      width: 547,
+      height: 401,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.shovelheadChopper}/ferris-wheel.jpeg`,
+      imageAlt: `pg.gallery.${archive.shovelheadChopper}.alt.ferris-wheel`,
+      width: 1500,
+      height: 1125,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.shovelheadChopper}/speedo.png`,
+      imageAlt: `pg.gallery.${archive.shovelheadChopper}.alt.speedo`,
+      width: 533,
+      height: 400,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.shovelheadChopper}/left-side.png`,
+      imageAlt: `pg.gallery.${archive.shovelheadChopper}.alt.left-side`,
+      width: 533,
+      height: 396,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.shovelheadChopper}/tank-angle.png`,
+      imageAlt: `pg.gallery.${archive.shovelheadChopper}.alt.tank-angle`,
+      width: 533,
+      height: 400,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.shovelheadChopper}/tank-straight.png`,
+      imageAlt: `pg.gallery.${archive.shovelheadChopper}.alt.tank-straight`,
+      width: 532,
+      height: 396,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.shovelheadChopper}/saddle.png`,
+      imageAlt: `pg.gallery.${archive.shovelheadChopper}.alt.saddle`,
+      width: 533,
+      height: 396,
+    }, 
   ]
 }
