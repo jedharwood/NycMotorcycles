@@ -45,4 +45,42 @@ export const images: GalleryCatalog = {
       height: 771,
     }, 
   ],
+  suzukiRg400: [
+    {
+      imageSrc: `${gallery}/${archive.suzukiRg400}/decal.jpeg`,
+      imageAlt: `pg.gallery.${archive.suzukiRg400}.alt.decal`,
+      width: 828,
+      height: 1472,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.suzukiRg400}/enoshima.jpeg`,
+      imageAlt: `pg.gallery.${archive.suzukiRg400}.alt.enoshima`,
+      width: 1000,
+      height: 1000,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.suzukiRg400}/zushi-marina.jpeg`,
+      imageAlt: `pg.gallery.${archive.suzukiRg400}.alt.zushi-marina`,
+      width: 1000,
+      height: 1333,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.suzukiRg400}/rear.jpeg`,
+      imageAlt: `pg.gallery.${archive.suzukiRg400}.alt.rear`,
+      width: 828,
+      height: 1408,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.suzukiRg400}/side-view.jpeg`,
+      imageAlt: `pg.gallery.${archive.suzukiRg400}.alt.side-view`,
+      width: 2500,
+      height: 1875,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.suzukiRg400}/truck.jpeg`,
+      imageAlt: `pg.gallery.${archive.suzukiRg400}.alt.truck`,
+      width: 1000,
+      height: 750,
+    }, 
+  ]
 }
