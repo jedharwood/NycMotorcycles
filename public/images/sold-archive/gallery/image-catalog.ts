@@ -158,5 +158,43 @@ export const images: GalleryCatalog = {
       width: 1500,
       height: 1125,
     }, 
+  ],
+  harleyXr750: [
+    {
+      imageSrc: `${gallery}/${archive.harleyXr750}/with-rider.jpeg`,
+      imageAlt: `pg.gallery.${archive.harleyXr750}.alt.with-rider`,
+      width: 1357,
+      height: 1357,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.harleyXr750}/on-stand.jpeg`,
+      imageAlt: `pg.gallery.${archive.harleyXr750}.alt.on-stand`,
+      width: 1789,
+      height: 1273,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.harleyXr750}/right-side.jpeg`,
+      imageAlt: `pg.gallery.${archive.harleyXr750}.alt.right-side`,
+      width: 1000,
+      height: 667,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.harleyXr750}/engine.jpeg`,
+      imageAlt: `pg.gallery.${archive.harleyXr750}.alt.engine`,
+      width: 1000,
+      height: 667,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.harleyXr750}/racing.jpeg`,
+      imageAlt: `pg.gallery.${archive.harleyXr750}.alt.racing`,
+      width: 1000,
+      height: 750,
+    }, 
+    {
+      imageSrc: `${gallery}/${archive.harleyXr750}/back-tyre.jpeg`,
+      imageAlt: `pg.gallery.${archive.harleyXr750}.alt.back-tyre`,
+      width: 720,
+      height: 1080,
+    }, 
   ]
 }
