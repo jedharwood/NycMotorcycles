@@ -23,8 +23,7 @@ const GalleryPage: FC = () => {
   const { bike } = router.query
   const routeName = Array.isArray(bike) ? bike.join(',') : bike
   const bikeImageName =
-    Object.keys(archive).find((key) => archive[key] === routeName) ||
-    ''
+    Object.keys(archive).find((key) => archive[key] === routeName) || ''
   const bikeNameVerbose = `pg.gallery.${routeName}.name`
   const galleryImages: GridImage[] = BuildGridImages(gallery[bikeImageName])
 

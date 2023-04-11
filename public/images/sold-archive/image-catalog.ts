@@ -1,15 +1,19 @@
-import { archiveBikes as archive } from "@/modules/archive-bikes"
+import { archiveBikes as archive } from '@/modules/archive-bikes'
 
 type ArchiveCatalog = {
   [key in ArchiveBikeKey]: GridImage
 }
 
-const buildGridImage = (bikeName: string, width: number, height: number): GridImage => {
+const buildGridImage = (
+  bikeName: string,
+  width: number,
+  height: number,
+): GridImage => {
   return {
     imageSrc: `/images/sold-archive/${bikeName}.jpeg`,
     imageAlt: `pg.sold-archive.alt.${bikeName}`,
     width,
-    height
+    height,
   }
 }
 
@@ -37,5 +41,5 @@ export const images: ArchiveCatalog = {
   harleyXr75075: buildGridImage(archive.harleyXr75075, 1500, 1500),
   laverdaFormula500: buildGridImage(archive.laverdaFormula500, 705, 705),
   laverda750Racer: buildGridImage(archive.laverda750Racer, 1500, 1158),
-  kawasakiH1ra: buildGridImage(archive.kawasakiH1ra, 934, 540)
+  kawasakiH1ra: buildGridImage(archive.kawasakiH1ra, 934, 540),
 }

@@ -13,12 +13,8 @@ type SoldCardProps = {
   soldOrCall: SoldOrCall
 }
 
-export const SoldCard = ({
-  image,
-  text,
-  galleryLink,
-  soldOrCall,
-}: SoldCardProps): JSX.Element => {
+export const SoldCard = (props: SoldCardProps): JSX.Element => {
+  const { image, text, galleryLink, soldOrCall } = props
   const intl = useIntl()
 
   const buildImageWithClasses = (isGalleryLink: boolean) => {
@@ -81,7 +77,7 @@ export const SoldCard = ({
     soldOrCall === 'sold' ? 'comp.sold-card.sold' : 'comp.sold-card.call'
 
   return (
-    <article className="bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 grid sm:grid-cols-2 gap-4 shadow-lg">
+    <article className="bg-stone-600 bg-opacity-90 w-full pb-4 sm:py-4 sm:px-4 md:px-6 rounded-md text-stone-50 grid sm:grid-cols-2 gap-4 shadow-lg">
       {renderImage()}
       <div className="font-medium sm:opacity-80 text-xl flex items-center justify-center">
         <div className="space-y-4">
