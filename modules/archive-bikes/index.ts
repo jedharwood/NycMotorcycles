@@ -1,0 +1,28 @@
+export type ArchiveBikes = { [key: string]: string }
+
+export const archiveBikes: ArchiveBikes = {
+  hondaRc30: 'honda-rc30',
+  suzukiRg400: 'suzuki-rg400',
+  shovelheadChopper: 'shovelhead-chopper',
+  laverda750Sfc: 'laverda-750-sfc',
+  harleyXr750: 'harley-xr750',
+  kawasakiH2: 'kawasaki-h2',
+  suzukiStinger: 'suzuki-stinger',
+  bsaStarfire: 'bsa-starfire',
+  kawasakiH1: 'kawasaki-h1',
+  harleyXr750Replica: 'harley-xr750-replica',
+  kawasakiS3: 'kawasaki-s3',
+  kawasakiG7s: 'kawasaki-g7s',
+  nortonCommando: 'norton-commando',
+  hondaDream: 'honda-dream',
+  hondaSs: 'honda-ss',
+  laverda500: 'laverda-500',
+  benelli250: 'benelli-250',
+  matchless61: 'matchless-61',
+  matchless59: 'matchless-59',
+  ducati250: 'ducati-250',
+  harleyXr75075: 'harley-xr750-75',
+  laverdaFormula500: 'laverda-formula-500',
+  laverda750Racer: 'laverda-750-racer',
+  kawasakiH1ra: 'kawasaki-h1ra',
+}

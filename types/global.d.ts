@@ -21,6 +21,8 @@ type GridImage = {
   onImageClick?: () => void
 }
 
+type ArchiveBikeKey = keyof typeof archive
+
 type ImageCatalog = {
   [key: string]: GridImage
 }
