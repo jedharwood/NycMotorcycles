@@ -6,25 +6,11 @@ import { FC } from 'react'
 import { Jumbotron } from '@/components/jumbotron'
 import { images as img } from '../public/images/home/image-catalog'
 import { BuildList } from '@/helpers/build-list'
+import { BuildI18nKeyArray } from '@/helpers/build-i18n-key-array'
 
 const HomePage: FC = (): JSX.Element => {
-  const desirableModelList: string[] = [
-    'pg.home.sect-2.list-1',
-    'pg.home.sect-2.list-2',
-    'pg.home.sect-2.list-3',
-    'pg.home.sect-2.list-4',
-    'pg.home.sect-2.list-5',
-    'pg.home.sect-2.list-6',
-  ]
-
-  const soldExampleList: string[] = [
-    'pg.home.sect-6.list-1',
-    'pg.home.sect-6.list-2',
-    'pg.home.sect-6.list-3',
-    'pg.home.sect-6.list-4',
-    'pg.home.sect-6.list-5',
-    'pg.home.sect-6.list-6',
-  ]
+  const desirableModelList = BuildI18nKeyArray('pg.home.sect-2.list-')
+  const soldExampleList = BuildI18nKeyArray('pg.home.sect-6.list-')
 
   const buildLinkButton = (props: LinkButtonProps): JSX.Element => {
     const linkButtonProps: LinkButtonProps = {

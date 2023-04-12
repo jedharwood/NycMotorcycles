@@ -12,6 +12,7 @@ import { BuildGridImages } from '@/helpers/build-grid-images'
 import { archiveBikes as archive } from '@/modules/archive-bikes'
 import { BuildList } from '@/helpers/build-list'
 import { TextDisplay } from '@/components/text-display'
+import { BuildI18nKeyArray } from '@/helpers/build-i18n-key-array'
 
 const GalleryPage: FC = () => {
   const { closeImageModal } = useContext(AppContext)
@@ -32,16 +33,11 @@ const GalleryPage: FC = () => {
   const sectionTitle = intl.formatMessage({ id: sectionOneTitleId })
   const bikeNameVerbose = `pg.gallery.${routeName}.name`
 
-  const textDisplayList: string[] = []
-  const textContent: string[] = []
+  let textDisplayList: string[] = []
+  let textContent: string[] = []
   if (sectionTitle !== sectionOneTitleId) {
-    Object.keys(intl.messages).forEach((key) => {
-      if (key.startsWith(`pg.gallery.${routeName}.sect-1.list-`)) {
-        textDisplayList.push(key)
-      } else if (key.startsWith(`pg.gallery.${routeName}.sect-1.text-`)) {
-        textContent.push(key)
-      }
-    })
+    textDisplayList = BuildI18nKeyArray(`pg.gallery.${routeName}.sect-1.list-`)
+    textContent = BuildI18nKeyArray(`pg.gallery.${routeName}.sect-1.text-`)
   }
 
   const renderPageContent = () => {
