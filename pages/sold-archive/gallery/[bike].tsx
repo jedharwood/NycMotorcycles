@@ -10,22 +10,55 @@ import { ImageGrid } from '@/components/image-grid'
 import { ImageModal } from '@/components/image-modal'
 import { BuildGridImages } from '@/helpers/build-grid-images'
 import { archiveBikes as archive } from '@/modules/archive-bikes'
+import { BuildList } from '@/helpers/build-list'
+import { TextDisplay } from '@/components/text-display'
 
 const GalleryPage: FC = () => {
-  const intl = useIntl()
   const { closeImageModal } = useContext(AppContext)
 
   useEffect(() => {
     closeImageModal()
   }, [])
 
+  const intl = useIntl()
   const router = useRouter()
   const { bike } = router.query
   const routeName = Array.isArray(bike) ? bike.join(',') : bike
   const bikeImageName =
     Object.keys(archive).find((key) => archive[key] === routeName) || ''
-  const bikeNameVerbose = `pg.gallery.${routeName}.name`
+
   const galleryImages: GridImage[] = BuildGridImages(gallery[bikeImageName])
+  const sectionOneTitleId = `pg.gallery.${routeName}.sect-1.title`
+  const sectionTitle = intl.formatMessage({ id: sectionOneTitleId })
+  const bikeNameVerbose = `pg.gallery.${routeName}.name`
+
+  const textDisplayList: string[] = []
+  const textContent: string[] = []
+  if (sectionTitle !== sectionOneTitleId) {
+    Object.keys(intl.messages).forEach((key) => {
+      if (key.startsWith(`pg.gallery.${routeName}.sect-1.list-`)) {
+        textDisplayList.push(key)
+      } else if (key.startsWith(`pg.gallery.${routeName}.sect-1.text-`)) {
+        textContent.push(key)
+      }
+    })
+  }
+
+  const renderPageContent = () => {
+    return sectionTitle !== sectionOneTitleId ? (
+      <>
+        <TextDisplay
+          title={sectionTitle}
+          textContent={textContent}
+          childElement={BuildList(textDisplayList)}
+          order="title-child-text"
+        />
+        <ImageGrid images={galleryImages} maxColumns={4} />
+      </>
+    ) : (
+      <ImageGrid images={galleryImages} maxColumns={4} />
+    )
+  }
 
   return (
     <>
@@ -37,7 +70,7 @@ const GalleryPage: FC = () => {
       <main>
         <div className="space-y-6">
           <Jumbotron legend={bikeNameVerbose} image={img[bikeImageName]} />
-          <ImageGrid images={galleryImages} maxColumns={4} />
+          {renderPageContent()}
         </div>
         <ImageModal />
       </main>
