@@ -12,7 +12,7 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost:3000/api/auction-scraper')
+      const response = await fetch(`${process.env.API_BASE_URL}/auction-scraper`)
       const data = await response.json()
       setActiveAuctions(data.activeAuctions)
       setIsLoading(false)
@@ -22,7 +22,7 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
 
   const auctionDisplay = (): JSX.Element => {
     if (isLoading) return <></>
-
+console.log("APIURL", process.env.API_BASE_URL)
     const yahooAuctionLinkButton: JSX.Element = (
       <LinkButton
         text="pg.active-auctions.yahoo-auctions-button"
