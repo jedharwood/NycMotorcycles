@@ -1,6 +1,6 @@
 import { AuctionCard } from '@/components/auction-card'
 import { FC, useEffect, useState } from 'react'
-import { yahooAuctionProfilePage } from '../../utilities/resource-utilities'
+import { routes, yahooAuctionProfilePageUrl } from '../../utilities/resource-utilities'
 import { TextDisplay } from '@/components/text-display'
 import { Spinner } from '@/components/spinner'
 import { LinkButton } from '@/components/link-button'
@@ -9,11 +9,14 @@ import { HeadElement } from '@/components/head-element'
 const ActiveAuctionPage: FC = (): JSX.Element => {
   const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [status, setStatus] = useState<number>()
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(`${process.env.API_BASE_URL}/auction-scraper`)
       const data = await response.json()
+      console.log('status', response.status)
+      setStatus(response.status)
       setActiveAuctions(data.activeAuctions)
       setIsLoading(false)
     }
@@ -22,14 +25,34 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
 
   const auctionDisplay = (): JSX.Element => {
     if (isLoading) return <></>
-console.log("APIURL", process.env.API_BASE_URL)
+
     const yahooAuctionLinkButton: JSX.Element = (
       <LinkButton
         text="pg.active-auctions.yahoo-auctions-button"
-        href={yahooAuctionProfilePage}
+        href={yahooAuctionProfilePageUrl}
         type="anchor"
       />
     )
+
+    if (status === 403) {
+      return (<TextDisplay
+        title="pg.active-auctions.error.title"
+        textContent={['pg.active-auctions.unauthorised.body']}
+        childElement={yahooAuctionLinkButton}
+      />)
+    }
+
+    if (status === 500) {
+      return (<TextDisplay
+        title="pg.active-auctions.error.title"
+        textContent={['pg.active-auctions.error.body']}
+        childElement={<LinkButton
+          text="pg.active-auctions.contact-button"
+          href={routes.contact}
+          type="router-link"
+        />}
+      />)
+    }
 
     return !activeAuctions.length ? (
       <TextDisplay

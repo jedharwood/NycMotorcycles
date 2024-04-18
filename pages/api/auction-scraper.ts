@@ -1,6 +1,6 @@
 import { JSDOM } from 'jsdom'
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { yahooAuctionProfilePage } from '../../utilities/resource-utilities'
+import { yahooAuctionProfilePageUrl } from '../../utilities/resource-utilities'
 
 type Prices = {
   currentPrice?: string
@@ -14,10 +14,11 @@ const yahooAuctionScraper = async (
   const activeAuctions: ActiveAuction[] = []
 
   try {
-    const profilePage: Response = await fetch(yahooAuctionProfilePage, {
+    const profilePageRequest: Response = await fetch(yahooAuctionProfilePageUrl, {
       mode: 'no-cors',
     })
-    const html: string = await profilePage.text()
+
+    const html: string = await profilePageRequest.text()
     const dom: JSDOM = new JSDOM(html)
     const document: Document = dom.window.document
     const auctionListings: NodeListOf<Element> =
@@ -27,7 +28,9 @@ const yahooAuctionScraper = async (
       activeAuctions.push(mapAuctionListing(listing))
     })
 
-    res.status(200).json({ activeAuctions })
+    const status = profilePageRequest.status === 403 ? 403 : 200
+
+    res.status(status).json({ activeAuctions })
   } catch (error) {
     res.status(500).json({ activeAuctions })
   }

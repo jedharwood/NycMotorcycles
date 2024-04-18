@@ -1,4 +1,4 @@
-export const yahooAuctionProfilePage: string =
+export const yahooAuctionProfilePageUrl: string =
   'https://auctions.yahoo.co.jp/seller/lazzamoto?'
 
 export const instagramProfilePage: string =
