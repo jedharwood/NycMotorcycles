@@ -8,6 +8,12 @@ import jp from '../languages/jp.json'
 import { AppContext } from '../context/app-context'
 import { useAppContext } from '../context/use-app-context'
 
+if (process.env.NEXT_PUBLIC_API_MOCKING === 'true') {
+  import('../mocks').then(({ setupMocks }) => {
+    setupMocks()
+  })
+}
+
 type Messages = {
   [key: string]: {
     [key: string]: string
