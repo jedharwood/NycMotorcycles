@@ -79,19 +79,21 @@ export const Header = (): JSX.Element => {
 
   const navMenu = (): JSX.Element => {
     return (
-      <ul className="flex flex-col md:flex-row md:space-x-6 md:text-sm md:font-medium">
-        {mapNavLinks()}
-      </ul>
+      <div className="hidden w-full md:block md:w-auto">
+        <ul className="flex flex-col md:flex-row md:space-x-6 md:text-sm md:font-medium">
+          {mapNavLinks()}
+        </ul>
+      </div>
     )
   }
 
   const mobileNavMenu = (): JSX.Element => {
-    return !showMobileNav ? (
-      <></>
-    ) : (
-      <ul className="grid space-y-2 mt-4 mb-2" onClick={toggleMobilenav}>
-        {mapNavLinks()}
-      </ul>
+    return (
+      <div className={`${showMobileNav ? 'h-72' : 'h-0 invisible'} md:hidden duration-300 transition[height] ease-in-out overflow-hidden`}>
+        <ul className="grid space-y-2 mt-4 mb-2" onClick={toggleMobilenav}>
+          {mapNavLinks()}
+        </ul>
+      </div>
     )
   }
 
@@ -132,9 +134,9 @@ export const Header = (): JSX.Element => {
               height={40}
             />
           </button>
-          <div className="hidden w-full md:block md:w-auto">{navMenu()}</div>
+          {navMenu()}
         </div>
-        <div className="md:hidden">{mobileNavMenu()}</div>
+        {mobileNavMenu()}
       </nav>
     </header>
   )
