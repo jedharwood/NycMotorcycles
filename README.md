@@ -9,7 +9,13 @@ CORS issue
 Update target classes for scraper
 Tidy up mocks for scaper
 Investigate 3rd party api solutions for Yahoo
+Tests
+Run tests on GH
 Remove unused env vars
+Accessibility audit and refactor semantic structure/styling
+Revisit page naming convention
+Remove mswWorker if unused
+Address code style inconsistences and overlapping css rules
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
