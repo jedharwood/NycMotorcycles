@@ -13,9 +13,10 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`${process.env.API_BASE_URL}/auction-scraper`)
+      const response = await fetch(`${process.env.API_BASE_URL}/auction-scraper`, {
+        mode: 'no-cors',
+      })
       const data = await response.json()
-      console.log('status', response.status)
       setStatus(response.status)
       setActiveAuctions(data.activeAuctions)
       setIsLoading(false)
