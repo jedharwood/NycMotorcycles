@@ -1,3 +1,17 @@
+TO DO
+
+Contact form
+SMPTE server and mocks
+Download page
+Finish page content
+General refactor page content logic (CDN?)
+CORS issue 
+Update target classes for scraper
+Tidy up mocks for scaper
+Investigate 3rd party api solutions for Yahoo
+Remove unused env vars
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
