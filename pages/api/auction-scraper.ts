@@ -22,7 +22,7 @@ const yahooAuctionScraper = async (
     const dom: JSDOM = new JSDOM(html)
     const document: Document = dom.window.document
     const auctionListings: NodeListOf<Element> =
-      document.querySelectorAll('.bd.cf')
+      document.querySelectorAll('.Product')
 
     auctionListings.forEach((listing) => {
       activeAuctions.push(mapAuctionListing(listing))
@@ -39,20 +39,20 @@ const yahooAuctionScraper = async (
 export default yahooAuctionScraper
 
 const mapAuctionListing = (listing: Element): ActiveAuction => {
-  const priceElements: NodeListOf<Element> = listing.querySelectorAll('.pri1')
+  const priceElements: NodeListOf<Element> = listing.querySelectorAll('.Product__price')
   const prices: Prices = mapPrices(priceElements)
   const timeRemaining: TimeRemaining = formatRemainingTime(
-    listing.querySelector('dt.rem + dd')?.textContent ?? undefined,
+    listing.querySelector('.Product__time')?.textContent ?? undefined,
   )
 
   return {
-    title: listing.querySelector('h3')?.textContent ?? undefined,
-    url: listing.querySelector('a')?.href ?? undefined,
+    title: listing.querySelector('.Product__title')?.textContent ?? undefined,
+    url: listing.querySelector('.Product__title > a')?.getAttribute('href') ?? undefined,
     image: {
       imageSrc: listing.querySelector('a > img')?.getAttribute('src') ?? '',
       imageAlt: listing.querySelector('a > img')?.getAttribute('alt') ?? '',
     },
-    bidders: listing.querySelector('dt.bi + dd')?.textContent ?? undefined,
+    bidders: listing.querySelector('.Product__bid')?.textContent ?? undefined,
     timeRemaining: timeRemaining,
     currentPrice: prices.currentPrice,
     promptDecisionPrice: prices.promptDecisionPrice,
