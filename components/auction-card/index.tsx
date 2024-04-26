@@ -79,11 +79,11 @@ export const AuctionCard = ({
           <tbody>
             {tableRow(
               'comp.auction-card.table-label.current-price',
-              `¥${currentPrice}`,
+              currentPrice,
             )}
             {tableRow(
               'comp.auction-card.table-label.prompt-price',
-              `¥${[promptDecisionPrice]}`,
+              promptDecisionPrice,
             )}
             {tableRow(
               'comp.auction-card.table-label.time-remaining',

@@ -13,8 +13,8 @@ const activeAuctions: ActiveAuction[] = [
             unit: 'minutes'
         },
         bidders: '3',
-        currentPrice: '100',
-        promptDecisionPrice: '200'
+        currentPrice: '10,000円',
+        promptDecisionPrice: '15,000円'
     },
     {
         title: 'Another Vincent Black Shadow',
@@ -28,7 +28,7 @@ const activeAuctions: ActiveAuction[] = [
             unit: 'hours'
         },
         bidders: '3',
-        currentPrice: '100',
+        currentPrice: '98,560円',
     },
     {
         title: 'Yet Another Vincent Black Shadow',
@@ -42,8 +42,8 @@ const activeAuctions: ActiveAuction[] = [
             unit: 'days'
         },
         bidders: '0',
-        currentPrice: '100',
-        promptDecisionPrice: '200'
+        currentPrice: '33,000円',
+        promptDecisionPrice: '35,000円'
     }
 ]
 
