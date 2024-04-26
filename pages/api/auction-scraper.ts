@@ -1,11 +1,12 @@
 import { JSDOM } from 'jsdom'
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { yahooAuctionProfilePageUrl } from '../../utilities/resource-utilities'
 
 type Prices = {
   currentPrice?: string
   promptDecisionPrice?: string
 }
+
+const pE = process.env;
 
 const yahooAuctionScraper = async (
   req: NextApiRequest,
@@ -14,7 +15,7 @@ const yahooAuctionScraper = async (
   const activeAuctions: ActiveAuction[] = []
 
   try {
-    const profilePageRequest: Response = await fetch(yahooAuctionProfilePageUrl, {
+    const profilePageRequest: Response = await fetch(pE.YAHOO_AUCTION_PROFILE_PAGE_URL, {
       mode: 'no-cors',
     })
 
@@ -22,7 +23,7 @@ const yahooAuctionScraper = async (
     const dom: JSDOM = new JSDOM(html)
     const document: Document = dom.window.document
     const auctionListings: NodeListOf<Element> =
-      document.querySelectorAll('.bd.cf')
+      document.querySelectorAll(pE.SELECTOR_PRODUCT)
 
     auctionListings.forEach((listing) => {
       activeAuctions.push(mapAuctionListing(listing))
@@ -39,20 +40,20 @@ const yahooAuctionScraper = async (
 export default yahooAuctionScraper
 
 const mapAuctionListing = (listing: Element): ActiveAuction => {
-  const priceElements: NodeListOf<Element> = listing.querySelectorAll('.pri1')
+  const priceElements: NodeListOf<Element> = listing.querySelectorAll(pE.SELECTOR_PRODUCT_PRICE)
   const prices: Prices = mapPrices(priceElements)
   const timeRemaining: TimeRemaining = formatRemainingTime(
-    listing.querySelector('dt.rem + dd')?.textContent ?? undefined,
+    listing.querySelector(process.env.SELECTOR_PRODUCT_TIME)?.textContent ?? undefined,
   )
 
   return {
-    title: listing.querySelector('h3')?.textContent ?? undefined,
-    url: listing.querySelector('a')?.href ?? undefined,
+    title: listing.querySelector(pE.SELECTOR_PRODUCT_TITLE)?.textContent ?? undefined,
+    url: listing.querySelector(`${pE.SELECTOR_PRODUCT_TITLE} > a`)?.getAttribute('href') ?? undefined,
     image: {
       imageSrc: listing.querySelector('a > img')?.getAttribute('src') ?? '',
       imageAlt: listing.querySelector('a > img')?.getAttribute('alt') ?? '',
     },
-    bidders: listing.querySelector('dt.bi + dd')?.textContent ?? undefined,
+    bidders: listing.querySelector(pE.SELECTOR_PRODUCT_BID)?.textContent ?? undefined,
     timeRemaining: timeRemaining,
     currentPrice: prices.currentPrice,
     promptDecisionPrice: prices.promptDecisionPrice,

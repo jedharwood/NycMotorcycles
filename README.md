@@ -5,17 +5,20 @@ SMPTE server and mocks
 Download page
 Finish page content
 General refactor page content logic (CDN?)
-CORS issue 
-Update target classes for scraper
-Tidy up mocks for scaper
+Tidy up mocks for scraper (add server side mock)
 Investigate 3rd party api solutions for Yahoo
 Tests
 Run tests on GH
-Remove unused env vars
 Accessibility audit and refactor semantic structure/styling
 Revisit page naming convention
 Remove mswWorker if unused
 Address code style inconsistences and overlapping css rules
+Add Translations, refactor out undnecessary resx
+Ensure language routing working properly
+Tests to language display
+Bring in ReactQuery
+Refactor resource-utilities to routes
+Find a solution for server side image fetching to bypass 403 issue
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
