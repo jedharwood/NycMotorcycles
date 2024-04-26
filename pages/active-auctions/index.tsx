@@ -1,6 +1,6 @@
 import { AuctionCard } from '@/components/auction-card'
 import { FC, useEffect, useState } from 'react'
-import { routes, yahooAuctionProfilePageUrl } from '../../utilities/resource-utilities'
+import { routes } from '../../utilities/resource-utilities'
 import { TextDisplay } from '@/components/text-display'
 import { Spinner } from '@/components/spinner'
 import { LinkButton } from '@/components/link-button'
@@ -29,7 +29,7 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
     const yahooAuctionLinkButton: JSX.Element = (
       <LinkButton
         text="pg.active-auctions.yahoo-auctions-button"
-        href={yahooAuctionProfilePageUrl}
+        href={'https://auctions.yahoo.co.jp/seller/lazzamoto?'}
         type="anchor"
       />
     )
