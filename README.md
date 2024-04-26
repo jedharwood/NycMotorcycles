@@ -18,6 +18,7 @@ Ensure language routing working properly
 Tests to language display
 Bring in ReactQuery
 Refactor resource-utilities to routes
+Find a solution for server side image fetching to bypass 403 issue
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
