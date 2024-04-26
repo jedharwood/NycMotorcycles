@@ -1,7 +1,7 @@
 declare global {
     namespace NodeJS {
       interface ProcessEnv {
-        NEXT_PUBLIC_API_MOCKING: boolean;
+        NEXT_PUBLIC_API_MOCKING: string;
         SELECTOR_PRODUCT: string;
         SELECTOR_PRODUCT_PRICE: string;
         SELECTOR_PRODUCT_TIME: string;
