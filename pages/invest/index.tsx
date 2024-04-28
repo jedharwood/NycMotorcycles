@@ -1,6 +1,6 @@
 import { HeadElement } from '@/components/head-element'
 import { LinkButton } from '@/components/link-button'
-import { TwoColumnGridPage } from '@/components/two-column-grid-page'
+import { TwoColumnGridPage } from '@/components/two-column-grid-page/two-column-grid-page'
 import { routes } from '@/utilities/resource-utilities'
 import { images as img } from '@/public/images/invest/image-catalog'
 import { FC } from 'react'
@@ -21,7 +21,7 @@ const InvestPage: FC = (): JSX.Element => {
       />
       <main>
         <TwoColumnGridPage
-          image={img.silverMotorbike}
+          images={[img.silverMotorbike]}
           title="pg.invest.sect-1.title"
           textContent={[
             'pg.invest.sect-1.text-1',
