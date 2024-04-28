@@ -1,4 +1,4 @@
-import { AuctionCard } from '@/components/auction-card'
+import { AuctionCard } from '@/components/auction-card/auction-card'
 import { FC, useEffect, useState } from 'react'
 import { routes } from '../../utilities/resource-utilities'
 import { TextDisplay } from '@/components/text-display/text-display'
