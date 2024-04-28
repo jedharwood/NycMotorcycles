@@ -21,7 +21,7 @@ const InvestPage: FC = (): JSX.Element => {
       />
       <main>
         <TwoColumnGridPage
-          image={img.silverMotorbike}
+          images={[img.silverMotorbike]}
           title="pg.invest.sect-1.title"
           textContent={[
             'pg.invest.sect-1.text-1',

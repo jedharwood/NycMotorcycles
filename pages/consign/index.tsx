@@ -11,8 +11,8 @@ const ConsignPage: FC = (): JSX.Element => {
         content="pg.consign.head.meta.content"
       />
       <main>
-        <TwoColumnGridPage
-          image={img.orangeLaverda}
+        <TwoColumnGridPage 
+          images={[img.orangeLaverda]}
           title="pg.consign.sect-1.title"
           textContent={[
             'pg.consign.sect-1.text-1',
