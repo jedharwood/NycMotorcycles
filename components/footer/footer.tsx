@@ -12,13 +12,13 @@ export const Footer = (): JSX.Element => {
   }
 
   return (
-    <footer className="grid text-stone-50 tracking-widest font-light space-y-4 mt-6">
+    <footer className='grid text-stone-50 tracking-widest font-light space-y-4 mt-6'>
       <button
-        type="button"
+        type='button'
         onClick={scrollToTop}
-        className="opacity-80 hover:opacity-100 hover:underline"
+        className='opacity-80 hover:opacity-100 hover:underline'
       >
-        <div className="flex justify-center">
+        <div className='flex justify-center'>
           <Image
             src={chevronUp}
             alt={intl.formatMessage({
@@ -28,13 +28,13 @@ export const Footer = (): JSX.Element => {
             height={40}
           />
         </div>
-        <FormattedMessage id="comp.footer.text.scroll-to-top" />
+        <FormattedMessage id='comp.footer.text.scroll-to-top' />
       </button>
       <a
         href={instagramProfilePage}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex justify-center opacity-80 hover:opacity-100"
+        target='_blank'
+        rel='noopener noreferrer'
+        className='flex justify-center opacity-80 hover:opacity-100'
       >
         <Image
           src={instagramIcon}
@@ -45,11 +45,11 @@ export const Footer = (): JSX.Element => {
           height={50}
         />
       </a>
-      <h3 className="flex justify-center text-sm md:text-md">
-        <FormattedMessage id="comp.footer.text.address" />
+      <h3 className='flex justify-center text-sm md:text-md'>
+        <FormattedMessage id='comp.footer.text.address' />
       </h3>
-      <h4 className="flex justify-center text-xs md:text-sm px-1">
-        <FormattedMessage id="comp.footer.text.disclaimer" />
+      <h4 className='flex justify-center text-xs md:text-sm px-1'>
+        <FormattedMessage id='comp.footer.text.disclaimer' />
       </h4>
     </footer>
   )
