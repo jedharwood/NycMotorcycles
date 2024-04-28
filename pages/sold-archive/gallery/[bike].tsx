@@ -47,18 +47,23 @@ const GalleryPage: FC = () => {
                   'pg.gallery.harley-xr750.sect-1.list-1',
                   'pg.gallery.harley-xr750.sect-1.list-2',
                   'pg.gallery.harley-xr750.sect-1.list-3',
-                ]
+                ],
+                true,
               ),
               childElementPosition: 'under-title'
             },
-            {textContent: ['pg.gallery.harley-xr750.sect-2']},
-            {textContent: ['pg.gallery.harley-xr750.sect-3']},
-            {textContent: ['pg.gallery.harley-xr750.sect-4']},
-            {textContent: ['pg.gallery.harley-xr750.sect-5']},
-            {textContent: ['pg.gallery.harley-xr750.sect-6']},
-            {textContent: ['pg.gallery.harley-xr750.sect-7']},
-            {textContent: ['pg.gallery.harley-xr750.sect-8']},
-            {textContent: ['pg.gallery.harley-xr750.sect-9']}
+            {
+              textContent: [
+                'pg.gallery.harley-xr750.sect-2',
+                'pg.gallery.harley-xr750.sect-3',
+                'pg.gallery.harley-xr750.sect-4',
+                'pg.gallery.harley-xr750.sect-5',
+                'pg.gallery.harley-xr750.sect-6',
+                'pg.gallery.harley-xr750.sect-7',
+                'pg.gallery.harley-xr750.sect-8',
+                'pg.gallery.harley-xr750.sect-9',
+              ]
+            },
           ]
         }
       />

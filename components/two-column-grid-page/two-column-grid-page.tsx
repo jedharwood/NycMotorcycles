@@ -15,7 +15,7 @@ export const TwoColumnGridPage = ({
   return (
     <div className='grid md:grid-cols-2 gap-4'>
       <ImageGrid images={images} maxColumns={1} />
-      <div>
+      <div className='space-y-4'>
         {textDisplayPropObjects.map((props, idx) => (
           <TextDisplay 
             key={idx}

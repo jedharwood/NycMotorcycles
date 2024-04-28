@@ -1,6 +1,6 @@
 import { useIntl } from 'react-intl'
 
-export type ChildElementPosition = 'under-title' | 'bottom' 
+type ChildElementPosition = 'under-title' | 'bottom' 
 
 export type TextDisplayProps = {
   title?: string
