@@ -1,6 +1,6 @@
 import { TextDisplay, TextDisplayProps } from '../text-display'
 import { useIntl } from 'react-intl'
-import { ImageGrid } from '../image-grid'
+import { ImageGrid } from '../image-grid/image-grid'
 
 type TwoColumnGridPageProps = {
   images: GridImage[]

@@ -1,5 +1,5 @@
 import { HeadElement } from '@/components/head-element'
-import { ImageGrid } from '@/components/image-grid'
+import { ImageGrid } from '@/components/image-grid/image-grid'
 import { TextDisplay } from '@/components/text-display'
 import { ImageModal } from '@/components/image-modal'
 import { images as img } from '@/public/images/racing/image-catalog'
