@@ -1,5 +1,5 @@
 import { HeadElement } from '@/components/head-element'
-import { TextDisplay } from '@/components/text-display'
+import { TextDisplay } from '@/components/text-display/text-display'
 import { images as img } from '@/public/images/history/image-catalog'
 import { ImageModal } from '@/components/image-modal'
 import { ImageGrid } from '@/components/image-grid/image-grid'
@@ -36,26 +36,26 @@ const HistoryPage: FC = (): JSX.Element => {
 
   const homeButton: JSX.Element = (
     <LinkButton
-      text="pg.history.sect-10.button"
+      text='pg.history.sect-10.button'
       href={routes.home}
-      type="router-link"
+      type='router-link'
     />
   )
 
   return (
     <>
       <HeadElement
-        pageTitle="pg.history.head.meta.title"
-        content="pg.history.head.meta.content"
+        pageTitle='pg.history.head.meta.title'
+        content='pg.history.head.meta.content'
       />
       <main>
-        <div className="space-y-6">
-          <Jumbotron image={img.larryGoggles} legend="pg.history.jumbotron" />
-          <div className="grid gap-4 md:grid-cols-5">
-            <div className="md:col-span-3">
+        <div className='space-y-6'>
+          <Jumbotron image={img.larryGoggles} legend='pg.history.jumbotron' />
+          <div className='grid gap-4 md:grid-cols-5'>
+            <div className='md:col-span-3'>
               <ImageGrid images={gridImagesUpper} maxColumns={2} />
             </div>
-            <div className="space-y-6 md:col-span-2">
+            <div className='space-y-6 md:col-span-2'>
               <TextDisplay
                 title={'pg.history.sect-2.title'}
                 textContent={['pg.history.sect-2.text-1']}
@@ -91,9 +91,10 @@ const HistoryPage: FC = (): JSX.Element => {
                 title={'pg.history.sect-9.title'}
                 textContent={['pg.history.sect-9.text-1']}
                 childElement={homeButton}
+                childElementPosition='bottom'
               />
             </div>
-            <div className="md:col-span-5">
+            <div className='md:col-span-5'>
               <ImageGrid images={gridImagesLower} maxColumns={2} />
             </div>
           </div>

@@ -34,7 +34,8 @@ const InvestPage: FC = (): JSX.Element => {
                   'pg.invest.sect-1.text-4',
                   'pg.invest.sect-1.text-5',
                 ], 
-                childElement: contactButton
+                childElement: contactButton,
+                childElementPosition: 'bottom',
               }
             ]
           }

@@ -1,4 +1,4 @@
-import { TextDisplay } from '@/components/text-display'
+import { TextDisplay } from '@/components/text-display/text-display'
 import { useIntl } from 'react-intl'
 import { LinkButton, LinkButtonProps } from '@/components/link-button'
 import { HeadElement } from '@/components/head-element'
@@ -52,11 +52,13 @@ const HomePage: FC = (): JSX.Element => {
             href: routes.contact,
             type: 'router-link',
           })}
+          childElementPosition='under-title'
         />
         <TextDisplay
           title="pg.home.sect-2.title"
           textContent={['pg.home.sect-2.text-1', 'pg.home.sect-2.text-2']}
           childElement={BuildList(desirableModelList)}
+          childElementPosition='under-title'
         />
         <TextDisplay
           title="pg.home.sect-3.title"
@@ -74,6 +76,7 @@ const HomePage: FC = (): JSX.Element => {
             href: routes.download,
             type: 'router-link',
           })}
+          childElementPosition='bottom'
         />
         <TextDisplay
           title="pg.home.sect-5.title"
@@ -82,6 +85,7 @@ const HomePage: FC = (): JSX.Element => {
         <TextDisplay
           title="pg.home.sect-6.title"
           childElement={BuildList(soldExampleList)}
+          childElementPosition='under-title'
         />
         <TextDisplay
           title="pg.home.sect-7.title"
@@ -119,6 +123,7 @@ const HomePage: FC = (): JSX.Element => {
             href: routes.contact,
             type: 'router-link',
           })}
+          childElementPosition='bottom'
         />
       </main>
     </>

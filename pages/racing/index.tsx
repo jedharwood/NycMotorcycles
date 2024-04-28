@@ -1,6 +1,6 @@
 import { HeadElement } from '@/components/head-element'
 import { ImageGrid } from '@/components/image-grid/image-grid'
-import { TextDisplay } from '@/components/text-display'
+import { TextDisplay } from '@/components/text-display/text-display'
 import { ImageModal } from '@/components/image-modal'
 import { images as img } from '@/public/images/racing/image-catalog'
 import { BuildGridImages } from '@/helpers/build-grid-images'

@@ -48,7 +48,8 @@ const GalleryPage: FC = () => {
                   'pg.gallery.harley-xr750.sect-1.list-2',
                   'pg.gallery.harley-xr750.sect-1.list-3',
                 ]
-              )
+              ),
+              childElementPosition: 'under-title'
             },
             {textContent: ['pg.gallery.harley-xr750.sect-2']},
             {textContent: ['pg.gallery.harley-xr750.sect-3']},
