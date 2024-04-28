@@ -1,6 +1,11 @@
 import { useIntl } from 'react-intl'
 
-export const BuildList = (listItems: string[], alignCentre?: boolean): JSX.Element => {
+type BuildListProps = {
+  listItems: string[]
+  alignCentre?: boolean
+}
+
+export const BuildList = ({listItems, alignCentre}: BuildListProps): JSX.Element => {
     const intl = useIntl()
     
     return (

@@ -43,12 +43,14 @@ const GalleryPage: FC = () => {
             {
               title: 'pg.gallery.harley-xr750.sect-1.title',
               childElement: BuildList(
-                [
-                  'pg.gallery.harley-xr750.sect-1.list-1',
-                  'pg.gallery.harley-xr750.sect-1.list-2',
-                  'pg.gallery.harley-xr750.sect-1.list-3',
-                ],
-                true,
+                {
+                  listItems: [
+                    'pg.gallery.harley-xr750.sect-1.list-1',
+                    'pg.gallery.harley-xr750.sect-1.list-2',
+                    'pg.gallery.harley-xr750.sect-1.list-3',
+                  ],
+                  alignCentre: true,
+                }
               ),
               childElementPosition: 'under-title'
             },

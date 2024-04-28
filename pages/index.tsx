@@ -57,7 +57,9 @@ const HomePage: FC = (): JSX.Element => {
         <TextDisplay
           title="pg.home.sect-2.title"
           textContent={['pg.home.sect-2.text-1', 'pg.home.sect-2.text-2']}
-          childElement={BuildList(desirableModelList)}
+          childElement={
+            BuildList({listItems: desirableModelList})
+          }
           childElementPosition='under-title'
         />
         <TextDisplay
@@ -84,7 +86,9 @@ const HomePage: FC = (): JSX.Element => {
         />
         <TextDisplay
           title="pg.home.sect-6.title"
-          childElement={BuildList(soldExampleList)}
+          childElement={
+            BuildList({listItems: soldExampleList})
+          }
           childElementPosition='under-title'
         />
         <TextDisplay
