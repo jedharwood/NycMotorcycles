@@ -48,7 +48,7 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
         title='pg.active-auctions.error.title'
         textContent={['pg.active-auctions.error.body']}
         childElement={<LinkButton
-          text='pg.active-auctions.contact-button'
+          text='common.button.contact'
           href={routes.contact}
           type='router-link'
         />}

@@ -46,7 +46,7 @@ export const SoldCard = ({
     ) : (
       <Link
         href={galleryLink}
-        className="relative bg-gray-500 rounded-md h-fit"
+        className='relative bg-gray-500 rounded-md h-fit'
       >
         {buildImageWithClasses(true)}
       </Link>
@@ -58,9 +58,9 @@ export const SoldCard = ({
       <></>
     ) : (
       <LinkButton
-        text="comp.sold-card.gallery-link-button"
+        text='comp.sold-card.gallery-link-button'
         href={galleryLink}
-        type="router-link"
+        type='router-link'
       />
     )
   }
@@ -70,9 +70,9 @@ export const SoldCard = ({
       <></>
     ) : (
       <LinkButton
-        text="comp.sold-card.contact-button"
+        text='common.button.contact'
         href={routes.contact}
-        type="router-link"
+        type='router-link'
       />
     )
   }
@@ -81,14 +81,14 @@ export const SoldCard = ({
     soldOrCall === 'sold' ? 'comp.sold-card.sold' : 'comp.sold-card.call'
 
   return (
-    <article className="bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 grid sm:grid-cols-2 gap-4 shadow-lg">
+    <article className='bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 grid sm:grid-cols-2 gap-4 shadow-lg'>
       {renderImage()}
-      <div className="font-medium sm:opacity-80 text-xl flex items-center justify-center">
-        <div className="space-y-4">
-          <h3 className="flex justify-center">
+      <div className='font-medium sm:opacity-80 text-xl flex items-center justify-center'>
+        <div className='space-y-4'>
+          <h3 className='flex justify-center'>
             {intl.formatMessage({ id: text })}
           </h3>
-          <h4 className="flex justify-center">
+          <h4 className='flex justify-center'>
             {intl.formatMessage({ id: isSoldOrCall })}
           </h4>
           {renderContactButton()}
