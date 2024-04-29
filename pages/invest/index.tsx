@@ -1,6 +1,6 @@
-import { HeadElement } from '@/components/head-element'
-import { LinkButton } from '@/components/link-button'
-import { TwoColumnGridPage } from '@/components/two-column-grid-page/two-column-grid-page'
+import { HeadElement } from '@/components/head-element/head-element'
+import { LinkButton } from '@/components/link-button/link-button'
+import { TwoColumnGridLayout } from '@/components/two-column-grid-layout/two-column-grid-layout'
 import { routes } from '@/utilities/resource-utilities'
 import { images as img } from '@/public/images/invest/image-catalog'
 import { FC } from 'react'
@@ -21,7 +21,7 @@ const InvestPage: FC = (): JSX.Element => {
         content='pg.invest.head.meta.content'
       />
       <main>
-        <TwoColumnGridPage
+        <TwoColumnGridLayout
           images={[img.silverMotorbike]}
           textDisplayPropObjects={
             [

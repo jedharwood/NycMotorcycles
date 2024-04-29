@@ -10,7 +10,6 @@ Investigate 3rd party api solutions for Yahoo
 Tests
 Run tests on GH
 Accessibility audit and refactor semantic structure/styling
-Revisit page naming convention
 Remove mswWorker if unused
 Address code style inconsistences and overlapping css rules
 Add Translations, refactor out undnecessary resx
@@ -19,8 +18,6 @@ Tests to language display
 Bring in ReactQuery
 Refactor resource-utilities to routes
 Find a solution for server side image fetching to bypass 403 issue
-Styling issue image modal width
-Embed video
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

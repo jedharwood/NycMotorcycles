@@ -3,7 +3,7 @@ import nycmcLogo from 'public/svgs/nycmc-logo.svg'
 import burgerIcon from 'public/svgs/burger-icon.svg'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import { NavLink } from '../nav-link'
+import { NavLink } from '../nav-link/nav-link'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { routes } from '@/utilities/resource-utilities'
 

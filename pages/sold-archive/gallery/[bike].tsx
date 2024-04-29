@@ -1,16 +1,16 @@
 import { FC, useContext, useEffect } from 'react'
-import { HeadElement } from '@/components/head-element'
+import { HeadElement } from '@/components/head-element/head-element'
 import { useRouter } from 'next/router'
 import { AppContext } from '@/context/app-context'
-import { Jumbotron } from '@/components/jumbotron'
+import { Jumbotron } from '@/components/jumbotron/jumbotron'
 import { images as img } from '../../../public/images/sold-archive/image-catalog'
 import { useIntl } from 'react-intl'
 import { images as gallery } from '../../../public/images/sold-archive/gallery/image-catalog'
 import { ImageGrid } from '@/components/image-grid/image-grid'
-import { ImageModal } from '@/components/image-modal'
+import { ImageModal } from '@/components/image-modal/image-modal'
 import { BuildGridImages } from '@/helpers/build-grid-images'
 import { archiveBikes as archive } from '@/modules/archive-bikes'
-import { TwoColumnGridPage } from '@/components/two-column-grid-page/two-column-grid-page'
+import { TwoColumnGridLayout } from '@/components/two-column-grid-layout/two-column-grid-layout'
 import { BuildList } from '@/helpers/build-list'
 
 const GalleryPage: FC = () => {
@@ -45,7 +45,7 @@ const GalleryPage: FC = () => {
           referrerPolicy='strict-origin-when-cross-origin' 
           allowFullScreen
         />  
-        <TwoColumnGridPage 
+        <TwoColumnGridLayout 
           images={galleryImages} 
           textDisplayPropObjects={
             [
