@@ -1,4 +1,4 @@
-import { TextDisplay } from '@/components/text-display'
+import { TextDisplay } from '@/components/text-display/text-display'
 import { useIntl } from 'react-intl'
 import { LinkButton, LinkButtonProps } from '@/components/link-button'
 import { HeadElement } from '@/components/head-element'
@@ -6,6 +6,7 @@ import { routes } from '@/utilities/resource-utilities'
 import { FC } from 'react'
 import { Jumbotron } from '@/components/jumbotron'
 import { images as img } from '../public/images/home/image-catalog'
+import { BuildList } from '@/helpers/build-list'
 
 const HomePage: FC = (): JSX.Element => {
   const intl = useIntl()
@@ -27,20 +28,6 @@ const HomePage: FC = (): JSX.Element => {
     'pg.home.sect-6.list-5',
     'pg.home.sect-6.list-6',
   ]
-
-  const buildList = (listItems: string[]): JSX.Element => {
-    return (
-      <ul className="pl-4 list-disc">
-        {listItems.map((listItem, idx) => (
-          <li key={idx}>
-            {intl.formatMessage({
-              id: listItem,
-            })}
-          </li>
-        ))}
-      </ul>
-    )
-  }
 
   const buildLinkButton = (props: LinkButtonProps): JSX.Element => {
     const linkButtonProps: LinkButtonProps = {
@@ -65,11 +52,15 @@ const HomePage: FC = (): JSX.Element => {
             href: routes.contact,
             type: 'router-link',
           })}
+          childElementPosition='under-title'
         />
         <TextDisplay
           title="pg.home.sect-2.title"
           textContent={['pg.home.sect-2.text-1', 'pg.home.sect-2.text-2']}
-          childElement={buildList(desirableModelList)}
+          childElement={
+            BuildList({listItems: desirableModelList})
+          }
+          childElementPosition='under-title'
         />
         <TextDisplay
           title="pg.home.sect-3.title"
@@ -87,6 +78,7 @@ const HomePage: FC = (): JSX.Element => {
             href: routes.download,
             type: 'router-link',
           })}
+          childElementPosition='bottom'
         />
         <TextDisplay
           title="pg.home.sect-5.title"
@@ -94,7 +86,10 @@ const HomePage: FC = (): JSX.Element => {
         />
         <TextDisplay
           title="pg.home.sect-6.title"
-          childElement={buildList(soldExampleList)}
+          childElement={
+            BuildList({listItems: soldExampleList})
+          }
+          childElementPosition='under-title'
         />
         <TextDisplay
           title="pg.home.sect-7.title"
@@ -132,6 +127,7 @@ const HomePage: FC = (): JSX.Element => {
             href: routes.contact,
             type: 'router-link',
           })}
+          childElementPosition='bottom'
         />
       </main>
     </>

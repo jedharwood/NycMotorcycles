@@ -41,8 +41,8 @@ export const AuctionCard = ({
     return value === undefined ? (
       <></>
     ) : (
-      <tr className="hover:underline text-sm sm:text-lg">
-        <td className="pr-4 sm:opacity-80">
+      <tr className='hover:underline text-sm sm:text-lg'>
+        <td className='pr-4 sm:opacity-80'>
           {intl.formatMessage({
             id: label,
           })}
@@ -53,29 +53,29 @@ export const AuctionCard = ({
   }
 
   return (
-    <article className="bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 grid sm:grid-cols-3 gap-4 shadow-lg">
+    <article className='bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 grid sm:grid-cols-3 gap-4 shadow-lg'>
       <a
         href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="relative sm:col-span-1 bg-gray-500 rounded-md h-fit"
+        target='_blank'
+        rel='noopener noreferrer'
+        className='relative sm:col-span-1 bg-gray-500 rounded-md h-fit'
       >
         <img
           src={imageSource}
           alt={imageAltText}
-          className="w-full rounded-md hover:opacity-70"
+          className='w-full rounded-md hover:opacity-70'
         />
       </a>
-      <div className="sm:col-span-2">
+      <div className='sm:col-span-2'>
         <a
           href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium md:opacity-80 hover:opacity-100 hover:underline text-xl"
+          target='_blank'
+          rel='noopener noreferrer'
+          className='font-medium md:opacity-80 hover:opacity-100 hover:underline text-xl'
         >
           {title}
         </a>
-        <table className="mt-4 w-full table-auto">
+        <table className='mt-4 w-full table-auto'>
           <tbody>
             {tableRow(
               'comp.auction-card.table-label.current-price',

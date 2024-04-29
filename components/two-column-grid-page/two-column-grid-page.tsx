@@ -1,32 +1,32 @@
-import { TextDisplay, TextDisplayProps } from '../text-display'
-import { useIntl } from 'react-intl'
 import { ImageGrid } from '../image-grid/image-grid'
+import React from 'react'
+import { TextDisplay, TextDisplayProps } from '../text-display/text-display'
 
 type TwoColumnGridPageProps = {
   images: GridImage[]
-  title: string
-  textContent: string[]
-  childElement?: JSX.Element
+  textDisplayPropObjects: TextDisplayProps[]
 }
 
 export const TwoColumnGridPage = ({
   images,
-  title,
-  textContent,
-  childElement,
+  textDisplayPropObjects
 }: TwoColumnGridPageProps) => {
-  const intl = useIntl()
-
-  const textDisplayProps: TextDisplayProps = {
-    title,
-    textContent,
-    childElement,
-  }
 
   return (
     <div className='grid md:grid-cols-2 gap-4'>
       <ImageGrid images={images} maxColumns={1} />
-      <TextDisplay {...textDisplayProps} />
+      <div className='space-y-4'>
+        {textDisplayPropObjects.map((props, idx) => (
+          <TextDisplay 
+            key={idx}
+            title={props.title}
+            textContent={props.textContent}
+            childElement={props.childElement}
+            childElementPosition={props.childElementPosition}
+          />
+        ))}
+      </div>
+      
     </div>
   )
 }
