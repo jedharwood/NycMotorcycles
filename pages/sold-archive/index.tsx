@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { HeadElement } from '@/components/head-element'
-import { SoldCard, SoldOrCall } from '@/components/sold-card'
+import { HeadElement } from '@/components/head-element/head-element'
+import { SoldCard, SoldOrCall } from '@/components/sold-card/sold-card'
 import { images as img } from '../../public/images/sold-archive/image-catalog'
 import { routes } from '@/utilities/resource-utilities'
 import { useIntl } from 'react-intl'

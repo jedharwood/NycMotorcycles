@@ -1,5 +1,5 @@
-import { HeadElement } from '@/components/head-element'
-import { LinkButton } from '@/components/link-button'
+import { HeadElement } from '@/components/head-element/head-element'
+import { LinkButton } from '@/components/link-button/link-button'
 import { TwoColumnGridPage } from '@/components/two-column-grid-page/two-column-grid-page'
 import { routes } from '@/utilities/resource-utilities'
 import { images as img } from '@/public/images/invest/image-catalog'

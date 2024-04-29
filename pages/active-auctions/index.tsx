@@ -2,9 +2,9 @@ import { AuctionCard } from '@/components/auction-card/auction-card'
 import { FC, useEffect, useState } from 'react'
 import { routes } from '../../utilities/resource-utilities'
 import { TextDisplay } from '@/components/text-display/text-display'
-import { Spinner } from '@/components/spinner'
-import { LinkButton } from '@/components/link-button'
-import { HeadElement } from '@/components/head-element'
+import { Spinner } from '@/components/spinner/spinner'
+import { LinkButton } from '@/components/link-button/link-button'
+import { HeadElement } from '@/components/head-element/head-element'
 
 const ActiveAuctionPage: FC = (): JSX.Element => {
   const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([])

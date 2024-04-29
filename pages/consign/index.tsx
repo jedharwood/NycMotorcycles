@@ -1,4 +1,4 @@
-import { HeadElement } from '@/components/head-element'
+import { HeadElement } from '@/components/head-element/head-element'
 import { TwoColumnGridPage } from '@/components/two-column-grid-page/two-column-grid-page'
 import { images as img } from '@/public/images/consign/image-catalog'
 import { FC } from 'react'

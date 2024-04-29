@@ -1,10 +1,10 @@
 import { TextDisplay } from '@/components/text-display/text-display'
 import { useIntl } from 'react-intl'
-import { LinkButton, LinkButtonProps } from '@/components/link-button'
-import { HeadElement } from '@/components/head-element'
+import { LinkButton, LinkButtonProps } from '@/components/link-button/link-button'
+import { HeadElement } from '@/components/head-element/head-element'
 import { routes } from '@/utilities/resource-utilities'
 import { FC } from 'react'
-import { Jumbotron } from '@/components/jumbotron'
+import { Jumbotron } from '@/components/jumbotron/jumbotron'
 import { images as img } from '../public/images/home/image-catalog'
 import { BuildList } from '@/helpers/build-list'
 
