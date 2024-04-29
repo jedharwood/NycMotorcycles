@@ -32,27 +32,27 @@ const SoldArchivePage: FC = () => {
   return (
     <>
       <HeadElement
-        pageTitle="pg.sold-archive.head.meta.title"
-        content="pg.sold-archive.head.meta.content"
+        pageTitle='pg.sold-archive.head.meta.title'
+        content='pg.sold-archive.head.meta.content'
       />
-      <main className="space-y-6">
-        <section className="bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-2 font-medium text-xl md:text-2xl">
-          <h2 className="flex justify-center opacity-80">
+      <main className='space-y-6'>
+        <section className='bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-2 font-medium text-xl md:text-2xl'>
+          <h2 className='flex justify-center opacity-80'>
             {intl.formatMessage({
               id: 'pg.sold-archive.sect-1.title-1',
             })}
           </h2>
-          <h2 className="flex justify-center opacity-80">
+          <h2 className='flex justify-center opacity-80'>
             {intl.formatMessage({
               id: 'pg.sold-archive.sect-1.title-2',
             })}
           </h2>
         </section>
+        {buildSoldCard('harleyXr750')}
         {buildSoldCard('hondaRc30')}
         {buildSoldCard('suzukiRg400')}
         {buildSoldCard('shovelheadChopper')}
         {buildSoldCard('laverda750Sfc')}
-        {buildSoldCard('harleyXr750')}
         {buildSoldCard('kawasakiH2')}
         {buildSoldCard('suzukiStinger')}
         {buildSoldCard('bsaStarfire')}

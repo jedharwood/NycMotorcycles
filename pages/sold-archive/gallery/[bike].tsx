@@ -36,39 +36,49 @@ const GalleryPage: FC = () => {
     )
 
     return (
-      <TwoColumnGridPage 
-        images={galleryImages} 
-        textDisplayPropObjects={
-          [
-            {
-              title: 'pg.gallery.harley-xr750.sect-1.title',
-              childElement: BuildList(
-                {
-                  listItems: [
-                    'pg.gallery.harley-xr750.sect-1.list-1',
-                    'pg.gallery.harley-xr750.sect-1.list-2',
-                    'pg.gallery.harley-xr750.sect-1.list-3',
-                  ],
-                  alignCentre: true,
-                }
-              ),
-              childElementPosition: 'under-title'
-            },
-            {
-              textContent: [
-                'pg.gallery.harley-xr750.sect-2',
-                'pg.gallery.harley-xr750.sect-3',
-                'pg.gallery.harley-xr750.sect-4',
-                'pg.gallery.harley-xr750.sect-5',
-                'pg.gallery.harley-xr750.sect-6',
-                'pg.gallery.harley-xr750.sect-7',
-                'pg.gallery.harley-xr750.sect-8',
-                'pg.gallery.harley-xr750.sect-9',
-              ]
-            },
-          ]
-        }
-      />
+      <>
+        <iframe 
+          className='w-full h-[300px] sm:h-[450px] md:h-[600px] lg:h-[450px] xl:h-[600px] rounded-md'
+          src='https://www.youtube.com/embed/hWGxH-0bI-s?si=x81MDY7HnOKLztmi' 
+          title='YouTube video player' 
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' 
+          referrerPolicy='strict-origin-when-cross-origin' 
+          allowFullScreen
+        />  
+        <TwoColumnGridPage 
+          images={galleryImages} 
+          textDisplayPropObjects={
+            [
+              {
+                title: 'pg.gallery.harley-xr750.sect-1.title',
+                childElement: BuildList(
+                  {
+                    listItems: [
+                      'pg.gallery.harley-xr750.sect-1.list-1',
+                      'pg.gallery.harley-xr750.sect-1.list-2',
+                      'pg.gallery.harley-xr750.sect-1.list-3',
+                    ],
+                    alignCentre: true,
+                  }
+                ),
+                childElementPosition: 'under-title'
+              },
+              {
+                textContent: [
+                  'pg.gallery.harley-xr750.sect-2',
+                  'pg.gallery.harley-xr750.sect-3',
+                  'pg.gallery.harley-xr750.sect-4',
+                  'pg.gallery.harley-xr750.sect-5',
+                  'pg.gallery.harley-xr750.sect-6',
+                  'pg.gallery.harley-xr750.sect-7',
+                  'pg.gallery.harley-xr750.sect-8',
+                  'pg.gallery.harley-xr750.sect-9',
+                ]
+              },
+            ]
+          }
+        />
+      </>
     )
   }
 
