@@ -1,5 +1,5 @@
 import { HeadElement } from '@/components/head-element/head-element'
-import { TwoColumnGridPage } from '@/components/two-column-grid-page/two-column-grid-page'
+import { TwoColumnGridLayout } from '@/components/two-column-grid-layout/two-column-grid-layout'
 import { images as img } from '@/public/images/consign/image-catalog'
 import { FC } from 'react'
 
@@ -11,7 +11,7 @@ const ConsignPage: FC = (): JSX.Element => {
         content='pg.consign.head.meta.content'
       />
       <main>
-        <TwoColumnGridPage 
+        <TwoColumnGridLayout 
           images={[img.orangeLaverda]}
           textDisplayPropObjects={
             [

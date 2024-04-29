@@ -10,7 +10,7 @@ import { ImageGrid } from '@/components/image-grid/image-grid'
 import { ImageModal } from '@/components/image-modal/image-modal'
 import { BuildGridImages } from '@/helpers/build-grid-images'
 import { archiveBikes as archive } from '@/modules/archive-bikes'
-import { TwoColumnGridPage } from '@/components/two-column-grid-page/two-column-grid-page'
+import { TwoColumnGridLayout } from '@/components/two-column-grid-layout/two-column-grid-layout'
 import { BuildList } from '@/helpers/build-list'
 
 const GalleryPage: FC = () => {
@@ -45,7 +45,7 @@ const GalleryPage: FC = () => {
           referrerPolicy='strict-origin-when-cross-origin' 
           allowFullScreen
         />  
-        <TwoColumnGridPage 
+        <TwoColumnGridLayout 
           images={galleryImages} 
           textDisplayPropObjects={
             [

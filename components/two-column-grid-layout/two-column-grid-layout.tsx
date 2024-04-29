@@ -2,15 +2,15 @@ import { ImageGrid } from '../image-grid/image-grid'
 import React from 'react'
 import { TextDisplay, TextDisplayProps } from '../text-display/text-display'
 
-type TwoColumnGridPageProps = {
+type TwoColumnGridLayoutProps = {
   images: GridImage[]
   textDisplayPropObjects: TextDisplayProps[]
 }
 
-export const TwoColumnGridPage = ({
+export const TwoColumnGridLayout = ({
   images,
   textDisplayPropObjects
-}: TwoColumnGridPageProps) => {
+}: TwoColumnGridLayoutProps) => {
 
   return (
     <div className='grid md:grid-cols-2 gap-4'>
