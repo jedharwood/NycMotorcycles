@@ -1,8 +1,8 @@
 {
   "common.button.contact": "placeholder",
+  "common.img.placeholder.alt": "placeholder",
   "common.title": "NEW YORK CITY MOTORCYCLES",
   "common.meta.brands": "placeholder",
-  "comp.auction-card.alt.placeholder-image": "placeholder",
   "comp.auction-card.table-label.current-price": "placeholder",
   "comp.auction-card.table-label.prompt-price": "placeholder",
   "comp.auction-card.table-label.time-remaining": "placeholder",
@@ -27,7 +27,6 @@
   "comp.header.sr.open-main-menu": "placeholder",
   "comp.image-modal.alt.close": "placeholder",
   "comp.image-modal.sr.close": "placeholder",
-  "comp.jumbotron.placeholder-image": "Placeholder image",
   "comp.spinner.sr.loading": "placeholder",
   "comp.sold-card.gallery-link-button": "pla",
   "comp.sold-card.call": "placeholder",

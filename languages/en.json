@@ -1,8 +1,8 @@
 {
   "common.button.contact": "Contact",
+  "common.img.placeholder.alt": "Placeholder image",
   "common.title": "NEW YORK CITY MOTORCYCLES",
   "common.meta.brands": "| Harley Davidson | Triumph | Norton | BSA | Vincent | Honda | Kawasaki | Suzuki | Yamaha",
-  "comp.auction-card.alt.placeholder-image": "Placeholder image",
   "comp.auction-card.table-label.current-price": "Current price",
   "comp.auction-card.table-label.prompt-price": "Prompt decision price",
   "comp.auction-card.table-label.time-remaining": "Time remaining",
@@ -27,7 +27,6 @@
   "comp.header.sr.open-main-menu": "Open main menu",
   "comp.image-modal.alt.close": "Close button",
   "comp.image-modal.sr.close": "Close button",
-  "comp.jumbotron.placeholder-image": "Placeholder image",
   "comp.spinner.sr.loading": "Loading...",
   "comp.sold-card.gallery-link-button": "Gallery",
   "comp.sold-card.call": "-- CALL --",
