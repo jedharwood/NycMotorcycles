@@ -1,10 +1,9 @@
-import instagramIcon from 'public/svgs/instagram-icon.svg'
-import chevronUp from 'public/svgs/chevron-up.svg'
-import Image from 'next/image'
 import { FormattedMessage, useIntl } from 'react-intl'
-import { instagramProfilePage } from '@/utilities/resource-utilities'
+import Image from 'next/image'
+import chevronUp from 'public/svgs/chevron-up.svg'
+import instagramIcon from 'public/svgs/instagram-icon.svg'
 
-export const Footer = (): JSX.Element => {
+const Footer = (): JSX.Element => {
   const intl = useIntl()
   const scrollToTop = (): void => {
     if (typeof window === 'undefined') return
@@ -31,7 +30,7 @@ export const Footer = (): JSX.Element => {
         <FormattedMessage id='comp.footer.text.scroll-to-top' />
       </button>
       <a
-        href={instagramProfilePage}
+        href={'https://www.instagram.com/newyorkcitymotorcycles/'}
         target='_blank'
         rel='noopener noreferrer'
         className='flex justify-center opacity-80 hover:opacity-100'
@@ -54,3 +53,5 @@ export const Footer = (): JSX.Element => {
     </footer>
   )
 }
+
+export default Footer

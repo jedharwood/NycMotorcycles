@@ -1,7 +1,7 @@
 import { HeadElement } from '@/components/head-element/head-element'
 import { LinkButton } from '@/components/link-button/link-button'
 import { TwoColumnGridLayout } from '@/components/two-column-grid-layout/two-column-grid-layout'
-import { routes } from '@/utilities/resource-utilities'
+import routes from '@/utilities/routes'
 import { images as img } from '@/public/images/invest/image-catalog'
 import { FC } from 'react'
 

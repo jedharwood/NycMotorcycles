@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import nycmcLogo from 'public/svgs/nycmc-logo.svg'
-import burgerIcon from 'public/svgs/burger-icon.svg'
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
-import { NavLink } from '../nav-link/nav-link'
 import { FormattedMessage, useIntl } from 'react-intl'
-import { routes } from '@/utilities/resource-utilities'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+import routes from '@/utilities/routes'
+import burgerIcon from 'public/svgs/burger-icon.svg'
+import nycmcLogo from 'public/svgs/nycmc-logo.svg'
+import { NavLink } from '../nav-link/nav-link'
 
 type NavLinkDetails = {
   href: string
@@ -68,7 +68,7 @@ export const Header = (): JSX.Element => {
   const mapNavLinks = (): JSX.Element[] => {
     return navLinks.map((link, idx) => (
       <li
-        className="flex justify-center uppercase" // capitalize
+        className="flex justify-center uppercase"
         onClick={() => setActiveIdx(idx)}
         key={idx}
       >
