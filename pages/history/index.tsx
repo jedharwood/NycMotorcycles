@@ -1,14 +1,14 @@
-import { HeadElement } from '@/components/head-element/head-element'
-import { TextDisplay } from '@/components/text-display/text-display'
-import { images as img } from '@/public/images/history/image-catalog'
-import { ImageModal } from '@/components/image-modal/image-modal'
-import { ImageGrid } from '@/components/image-grid/image-grid'
-import { LinkButton } from '@/components/link-button/link-button'
-import { routes } from '@/utilities/routes'
-import { BuildGridImages } from '@/helpers/build-grid-images'
 import { FC, useContext, useEffect } from 'react'
-import Jumbotron from '@/components/jumbotron/jumbotron'
 import { AppContext } from '@/context/app-context'
+import routes from '@/utilities/routes'
+import { images as img } from '@/public/images/history/image-catalog'
+import { HeadElement } from '@/components/head-element/head-element'
+import { ImageGrid } from '@/components/image-grid/image-grid'
+import { ImageModal } from '@/components/image-modal/image-modal'
+import Jumbotron from '@/components/jumbotron/jumbotron'
+import { LinkButton } from '@/components/link-button/link-button'
+import { TextDisplay } from '@/components/text-display/text-display'
+import { BuildGridImages } from '@/helpers/build-grid-images'
 
 const HistoryPage: FC = (): JSX.Element => {
   const { closeImageModal } = useContext(AppContext)
