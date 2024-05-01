@@ -14,7 +14,7 @@ export const AuctionCard = ({
   const imageSource = image.imageSrc.length ? image.imageSrc : nycmcLogo
   const imageAltText = image.imageAlt.length
     ? image.imageAlt
-    : intl.formatMessage({ id: 'common.img.placeholder.alt' })
+    : intl.formatMessage({ id: 'common.img.place-holder.alt' })
 
   const timeRemainingValue = (): string | undefined => {
     if (!timeRemaining?.time) return undefined

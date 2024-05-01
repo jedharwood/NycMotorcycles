@@ -117,7 +117,7 @@ const HomePage: FC = (): JSX.Element => {
           textContent={['pg.home.sect-13.text-1']}
           childElement={
             <LinkButton 
-              text='common.button.contact' 
+              text='common.route-names.contact' 
               href={routes.contact} 
               type='router-link'
             />

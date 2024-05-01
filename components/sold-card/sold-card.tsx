@@ -70,7 +70,7 @@ export const SoldCard = ({
       <></>
     ) : (
       <LinkButton
-        text='common.button.contact'
+        text='common.route-names.contact'
         href={routes.contact}
         type='router-link'
       />

@@ -32,7 +32,7 @@ const RacingPage: FC = (): JSX.Element => {
       />
       <main>
         <div className="space-y-6">
-          <Jumbotron image={img.laverdaLowside} legend="pg.racing.jumbotron" />
+          <Jumbotron image={img.laverdaLowside} legend="common.route-names.racing" />
           <TextDisplay
             textContent={['pg.racing.sect-1.text-1', 'pg.racing.sect-1.text-2']}
           />

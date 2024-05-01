@@ -8,7 +8,7 @@ import { FC } from 'react'
 const InvestPage: FC = (): JSX.Element => {
   const contactButton: JSX.Element = (
     <LinkButton
-      text='common.button.contact'
+      text='common.route-names.contact'
       href={routes.contact}
       type='router-link'
     />

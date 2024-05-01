@@ -36,7 +36,7 @@ const HistoryPage: FC = (): JSX.Element => {
 
   const homeButton: JSX.Element = (
     <LinkButton
-      text='pg.history.sect-10.button'
+      text='common.route-names.home'
       href={routes.home}
       type='router-link'
     />
@@ -50,7 +50,7 @@ const HistoryPage: FC = (): JSX.Element => {
       />
       <main>
         <div className='space-y-6'>
-          <Jumbotron image={img.larryGoggles} legend='pg.history.jumbotron' />
+          <Jumbotron image={img.larryGoggles} legend='common.route-names.history' />
           <div className='grid gap-4 md:grid-cols-5'>
             <div className='md:col-span-3'>
               <ImageGrid images={gridImagesUpper} maxColumns={2} />

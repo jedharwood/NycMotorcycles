@@ -30,7 +30,7 @@ export const ImageModal = (): JSX.Element => {
                 height={40}
               />
               <span className='sr-only'>
-                <FormattedMessage id='comp.image-modal.sr.close' />
+                <FormattedMessage id='comp.image-modal.alt.close' />
               </span>
             </button>
           </div>

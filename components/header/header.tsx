@@ -21,35 +21,35 @@ export const Header = (): JSX.Element => {
   const navLinks: NavLinkDetails[] = [
     {
       href: routes.home,
-      text: 'comp.header.nav.home',
+      text: 'common.route-names.home',
     },
     {
       href: routes.activeAuctions,
-      text: 'comp.header.nav.active-auctions',
+      text: 'common.route-names.active-auctions',
     },
     {
       href: routes.soldArchive,
-      text: 'comp.header.nav.sold-archive',
+      text: 'common.route-names.sold-archive',
     },
     {
       href: routes.history,
-      text: 'comp.header.nav.history',
+      text: 'common.route-names.history',
     },
     {
       href: routes.racing,
-      text: 'comp.header.nav.racing',
+      text: 'common.route-names.racing',
     },
     {
       href: routes.contact,
-      text: 'comp.header.nav.contact',
+      text: 'common.route-names.contact',
     },
     {
       href: routes.consign,
-      text: 'comp.header.nav.consign',
+      text: 'common.route-names.consign',
     },
     {
       href: routes.invest,
-      text: 'comp.header.nav.invest',
+      text: 'common.route-names.invest',
     },
     // Maybe I'll add download in here once I have the page up...
   ]
@@ -68,7 +68,7 @@ export const Header = (): JSX.Element => {
   const mapNavLinks = (): JSX.Element[] => {
     return navLinks.map((link, idx) => (
       <li
-        className="flex justify-center"
+        className="flex justify-center uppercase" // capitalize
         onClick={() => setActiveIdx(idx)}
         key={idx}
       >
