@@ -1,7 +1,7 @@
-import nycmcLogo from 'public/svgs/nycmc-logo.svg'
 import { useIntl } from 'react-intl'
+import nycmcLogo from 'public/svgs/nycmc-logo.svg'
 
-export const AuctionCard = ({
+const AuctionCard = ({
   title,
   url,
   image,
@@ -11,10 +11,8 @@ export const AuctionCard = ({
   promptDecisionPrice,
 }: ActiveAuction): JSX.Element => {
   const intl = useIntl()
-  const imageSource = image.imageSrc.length ? image.imageSrc : nycmcLogo
-  const imageAltText = image.imageAlt.length
-    ? image.imageAlt
-    : intl.formatMessage({ id: 'common.img.place-holder.alt' })
+  const imageSource = image.imageSrc || nycmcLogo
+  const imageAltText = image.imageAlt || intl.formatMessage({ id: 'common.img.place-holder.alt' })
 
   const timeRemainingValue = (): string | undefined => {
     if (!timeRemaining?.time) return undefined
@@ -37,10 +35,10 @@ export const AuctionCard = ({
     return `${timeRemaining.time} ${intl.formatMessage({ id: unit })}`
   }
 
-  const tableRow = (label: string, value: string | undefined): JSX.Element => {
-    return value === undefined ? (
-      <></>
-    ) : (
+  const renderTableRow = (label: string, value: string | undefined): JSX.Element | null => {
+    if (!value) return null
+
+    return (
       <tr className='hover:underline text-sm sm:text-lg'>
         <td className='pr-4 sm:opacity-80'>
           {intl.formatMessage({
@@ -77,22 +75,27 @@ export const AuctionCard = ({
         </a>
         <table className='mt-4 w-full table-auto'>
           <tbody>
-            {tableRow(
+            {renderTableRow(
               'comp.auction-card.table-label.current-price',
               currentPrice,
             )}
-            {tableRow(
+            {renderTableRow(
               'comp.auction-card.table-label.prompt-price',
               promptDecisionPrice,
             )}
-            {tableRow(
+            {renderTableRow(
               'comp.auction-card.table-label.time-remaining',
               timeRemainingValue(),
             )}
-            {tableRow('comp.auction-card.table-label.bidders', bidders)}
+            {renderTableRow(
+              'comp.auction-card.table-label.bidders', 
+              bidders
+            )}
           </tbody>
         </table>
       </div>
     </article>
   )
 }
+
+export default AuctionCard

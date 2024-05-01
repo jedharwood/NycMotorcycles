@@ -1,5 +1,5 @@
-import { AuctionCard } from '@/components/auction-card/auction-card'
 import { FC, useEffect, useState } from 'react'
+import AuctionCard from '@/components/auction-card/auction-card'
 import { routes } from '../../utilities/resource-utilities'
 import { TextDisplay } from '@/components/text-display/text-display'
 import { Spinner } from '@/components/spinner/spinner'
