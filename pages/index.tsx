@@ -3,7 +3,7 @@ import { LinkButton } from '@/components/link-button/link-button'
 import { HeadElement } from '@/components/head-element/head-element'
 import { routes } from '@/utilities/resource-utilities'
 import { FC } from 'react'
-import { Jumbotron } from '@/components/jumbotron/jumbotron'
+import Jumbotron from '@/components/jumbotron/jumbotron'
 import { images as img } from '../public/images/home/image-catalog'
 import { BuildList } from '@/helpers/build-list'
 

@@ -5,7 +5,7 @@ import { ImageModal } from '@/components/image-modal/image-modal'
 import { images as img } from '@/public/images/racing/image-catalog'
 import { BuildGridImages } from '@/helpers/build-grid-images'
 import { FC, useContext, useEffect } from 'react'
-import { Jumbotron } from '@/components/jumbotron/jumbotron'
+import Jumbotron from '@/components/jumbotron/jumbotron'
 import { AppContext } from '../../context/app-context'
 
 const RacingPage: FC = (): JSX.Element => {

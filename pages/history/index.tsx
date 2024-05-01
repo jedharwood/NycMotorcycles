@@ -7,7 +7,7 @@ import { LinkButton } from '@/components/link-button/link-button'
 import { routes } from '@/utilities/resource-utilities'
 import { BuildGridImages } from '@/helpers/build-grid-images'
 import { FC, useContext, useEffect } from 'react'
-import { Jumbotron } from '@/components/jumbotron/jumbotron'
+import Jumbotron from '@/components/jumbotron/jumbotron'
 import { AppContext } from '@/context/app-context'
 
 const HistoryPage: FC = (): JSX.Element => {

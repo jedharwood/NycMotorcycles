@@ -6,12 +6,7 @@ type JumbotronProps = {
   legend: string
 }
 
-const defaultImage: GridImage = {
-  imageSrc: '',
-  imageAlt: 'common.img.place-holder.alt',
-}
-
-export const Jumbotron = ({ image = defaultImage, legend }: JumbotronProps) => {
+const Jumbotron = ({ image, legend }: JumbotronProps) => {
   const intl = useIntl()
 
   return (
@@ -36,3 +31,5 @@ export const Jumbotron = ({ image = defaultImage, legend }: JumbotronProps) => {
     </div>
   )
 }
+
+export default Jumbotron
