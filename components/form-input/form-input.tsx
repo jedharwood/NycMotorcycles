@@ -33,15 +33,15 @@ const InputField = ({
   )
 
   return (
-    <>
-      <div className='space-y-2'>
-        <label htmlFor={name}>
+    <div className='flex justify-center'>
+      <div className='space-y-2 w-full md:w-3/4 lg:w-1/2'>
+        <label htmlFor={name} className='block'>
           <FormattedMessage id={label} />
         </label>
         {input}
       </div>
       {error && <span className='text-xs text-rose-400'>{error.message}</span>}
-    </>
+    </div>
   )
 }
 
