@@ -56,17 +56,14 @@ const ContactPage: FC = (): JSX.Element => {
               error={errors.subject}                    
               label={'pg.contact.label.subject'}
             />
-            <div className='space-y-2'>
-              <label htmlFor='message'>
-                <FormattedMessage id='pg.contact.label.message' />
-              </label>
-              <textarea 
-                id='message' 
-                rows={5} 
-                className='bg-stone-50 bg-opacity-90 text-gray-900 rounded-md w-full p-2.5' 
-                placeholder={intl.formatMessage({ id: 'pg.contact.place-holder.message' })}
-              />
-            </div>
+            <InputField
+              type='text-area'
+              placeholder={'pg.contact.place-holder.message'}
+              name='message'
+              register={register}
+              error={errors.message}                    
+              label={'pg.contact.label.message'}
+            />
             <Button type='submit' text='pg.contact.send-button' />
           </form>
       </main>
