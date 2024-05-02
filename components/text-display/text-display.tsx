@@ -21,7 +21,7 @@ export const TextDisplay = ({
     return title === undefined ? (
       <></>
     ) : (
-      <h2 className='flex justify-center font-medium text-xl md:text-2xl mb-4 opacity-80'>
+      <h2 className='text-center font-medium text-xl md:text-2xl mb-4 opacity-80'>
         {intl.formatMessage({
           id: title,
         })}
