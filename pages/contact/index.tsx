@@ -1,13 +1,21 @@
 import { FC } from 'react'
+import { useForm } from 'react-hook-form'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { HeadElement } from '@/components/head-element/head-element'
 import Button from '@/components/button/button'
+import InputField from '@/components/form-input/form-input'
 
 const ContactPage: FC = (): JSX.Element => {
   const intl = useIntl()
-  const handleSubmit = (e: any): void => {
-    e.preventDefault()
-    console.log('Form Submited')
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setError,
+  } = useForm<ContactFormData>();
+
+  const onSubmit = async (data: ContactFormData) => {
+    console.log('SUCCESS', data);
   }
 
   return (
@@ -23,44 +31,32 @@ const ContactPage: FC = (): JSX.Element => {
           <p className='text-center mb-4'>
             <FormattedMessage id='pg.contact.text' />
           </p>
-          <form onSubmit={handleSubmit} className='space-y-6'>
+          <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
+            <InputField
+              type='email'
+              placeholder={'pg.contact.place-holder.email'}
+              name='email'
+              register={register}
+              error={errors.email}                    
+              label={'pg.contact.label.email'}
+            />
+            <InputField
+              type='text'
+              placeholder={'pg.contact.place-holder.sender-name'}
+              name='senderName'
+              register={register}
+              error={errors.senderName}                    
+              label={'pg.contact.label.sender-name'}
+            />
+            <InputField
+              type='text'
+              placeholder={'pg.contact.place-holder.subject'}
+              name='subject'
+              register={register}
+              error={errors.subject}                    
+              label={'pg.contact.label.subject'}
+            />
             <div className='space-y-2'>
-              <label htmlFor='email'>
-                <FormattedMessage id='pg.contact.label.email' />
-               </label>
-              <input 
-                type='email' 
-                id='email' 
-                className='bg-stone-50 bg-opacity-90 text-gray-900 rounded-md w-full p-2.5'                 
-                placeholder={intl.formatMessage({ id: 'pg.contact.place-holder.email' })} 
-                required 
-              />
-            </div>
-            <div className='space-y-2'>
-              <label htmlFor='name'>
-                <FormattedMessage id='pg.contact.label.name' />
-              </label>
-              <input 
-                type='text' 
-                id='name' 
-                className='bg-stone-50 bg-opacity-90 text-gray-900 rounded-md w-full p-2.5' 
-                placeholder={intl.formatMessage({ id: 'pg.contact.place-holder.name' })}  
-                // required 
-              />
-            </div>
-            <div className='space-y-2'>
-              <label htmlFor='subject'>
-                <FormattedMessage id='pg.contact.label.subject' />
-              </label>
-              <input 
-                type='text' 
-                id='subject' 
-                className='bg-stone-50 bg-opacity-90 text-gray-900 rounded-md w-full p-2.5' 
-                placeholder={intl.formatMessage({ id: 'pg.contact.place-holder.subject' })}  
-                // required 
-              />
-            </div>
-            <div className='sm:col-span-2 space-y-2'>
               <label htmlFor='message'>
                 <FormattedMessage id='pg.contact.label.message' />
               </label>
