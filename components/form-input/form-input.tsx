@@ -9,7 +9,11 @@ const InputField = ({
   label
 }: InputFieldProps): JSX.Element => {
   const intl = useIntl()
-  const classes: string = 'bg-stone-50 bg-opacity-90 text-gray-900 rounded-md w-full p-2.5'
+  const classes: string = `bg-stone-50 bg-opacity-90 rounded-md w-full p-2.5 text-gray-900 outline-none focus:ring focus:ring-offset hover:ring hover:ring-offset ${
+    error 
+    ? 'focus:ring-rose-400 hover:ring-rose-400' 
+    : 'focus:ring-teal-500 hover:ring-teal-500'
+  }`
   const placeholderText: string = intl.formatMessage({ id: placeholder })
 
   const input = type === 'text-area' ? (

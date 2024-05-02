@@ -1,12 +1,11 @@
 import { FC } from 'react'
 import { useForm } from 'react-hook-form'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, useIntl } from 'react-intl'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z, ZodType } from 'zod' 
 import { HeadElement } from '@/components/head-element/head-element'
 import Button from '@/components/button/button'
 import InputField from '@/components/form-input/form-input'
-import { zodResolver } from "@hookform/resolvers/zod"
-import { z, ZodType } from 'zod' 
-import { useIntl } from 'react-intl'
 
 const ContactPage: FC = (): JSX.Element => {
   const intl = useIntl()
