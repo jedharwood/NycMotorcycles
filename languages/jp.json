@@ -64,6 +64,8 @@
   "pg.contact.label.subject": "placeholder",
   "pg.contact.place-holder.subject": "placeholder",
   "pg.contact.send-button": "placeholder",
+  "pg.contact.validation.email": "placeholder",
+  "pg.contact.validation.required": "placeholder",
   "pg.gallery.head.meta.title": "{bike} placeholder",
   "pg.gallery.head.meta.content": "placeholder {bike}",
   "pg.gallery.harley-xr750.name": "placeholder",

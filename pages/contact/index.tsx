@@ -4,17 +4,38 @@ import { FormattedMessage } from 'react-intl'
 import { HeadElement } from '@/components/head-element/head-element'
 import Button from '@/components/button/button'
 import InputField from '@/components/form-input/form-input'
-import { ContactFormSchema } from '@/schemas/contact-form'
 import { zodResolver } from "@hookform/resolvers/zod"
+import { z, ZodType } from 'zod' 
+import { useIntl } from 'react-intl'
 
 const ContactPage: FC = (): JSX.Element => {
+  const intl = useIntl()
+  const requiredErrorMessage: string = intl.formatMessage({ id: 'pg.contact.validation.required' })
+  const contactFormSchema: ZodType<ContactFormData> = z
+    .object(
+    {
+      email: z
+        .string()
+        .email(intl.formatMessage({ id: 'pg.contact.validation.email' })),
+      senderName: z
+        .string()
+        .min(1, { message: requiredErrorMessage }),
+      subject: z
+        .string()
+        .min(1, { message: requiredErrorMessage }),
+      message: z
+        .string()
+        .min(1, { message: requiredErrorMessage }) 
+    }
+  )
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     setError,
   } = useForm<ContactFormData>({
-    resolver: zodResolver(ContactFormSchema)
+    resolver: zodResolver(contactFormSchema)
   });
 
   const onSubmit = async (data: ContactFormData) => {
@@ -34,9 +55,9 @@ const ContactPage: FC = (): JSX.Element => {
           <p className='text-center mb-4'>
             <FormattedMessage id='pg.contact.text' />
           </p>
-          <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
+          <form onSubmit={handleSubmit(onSubmit)} className='space-y-6' noValidate>
             <InputField
-              type='email'
+              type='text'
               placeholder={'pg.contact.place-holder.email'}
               name='email'
               register={register}

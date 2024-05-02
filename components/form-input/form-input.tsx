@@ -14,7 +14,7 @@ const InputField = ({
 
   const input = type === 'text-area' ? (
     <textarea 
-      rows={5} 
+      rows={6} 
       placeholder={placeholderText}
       {...register(name)}
       className={classes}

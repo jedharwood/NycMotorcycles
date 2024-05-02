@@ -64,6 +64,8 @@
   "pg.contact.label.subject": "Subject",
   "pg.contact.place-holder.subject": "How can we help you",
   "pg.contact.send-button": "Send",
+  "pg.contact.validation.email": "Please enter a valid email address",
+  "pg.contact.validation.required": "This is a required field",
   "pg.gallery.head.meta.title": "{bike} gallery",
   "pg.gallery.head.meta.content": "A gallery of images for the {bike} sold by New York City Motorcycles ",
   "pg.gallery.harley-xr750.name": "1970 HARLEY-DAVIDSON XR750",
