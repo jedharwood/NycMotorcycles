@@ -1,12 +1,11 @@
 import { FC } from 'react'
 import { useForm } from 'react-hook-form'
-import { FormattedMessage, useIntl } from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 import { HeadElement } from '@/components/head-element/head-element'
 import Button from '@/components/button/button'
 import InputField from '@/components/form-input/form-input'
 
 const ContactPage: FC = (): JSX.Element => {
-  const intl = useIntl()
   const {
     register,
     handleSubmit,

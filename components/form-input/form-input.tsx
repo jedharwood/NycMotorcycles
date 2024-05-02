@@ -34,24 +34,11 @@ const InputField = ({
         <label htmlFor={name}>
           <FormattedMessage id={label} />
         </label>
-        {/* <input
-          type={type}
-          placeholder={intl.formatMessage({ id: placeholder })}
-          {...register(name)}
-          className='bg-stone-50 bg-opacity-90 text-gray-900 rounded-md w-full p-2.5'
-        /> */}
         {input}
       </div>
       {error && <span className=''>{error.message}</span>}
     </>
   )
 }
-
-{/* <textarea 
-id='message' 
-rows={5} 
-className='bg-stone-50 bg-opacity-90 text-gray-900 rounded-md w-full p-2.5' 
-placeholder={intl.formatMessage({ id: 'pg.contact.place-holder.message' })}
-/> */}
 
 export default InputField;
