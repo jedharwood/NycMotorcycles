@@ -1,6 +1,6 @@
-import { AuctionCard } from '@/components/auction-card/auction-card'
 import { FC, useEffect, useState } from 'react'
-import { routes } from '../../utilities/resource-utilities'
+import AuctionCard from '@/components/auction-card/auction-card'
+import routes from '../../utilities/routes'
 import { TextDisplay } from '@/components/text-display/text-display'
 import { Spinner } from '@/components/spinner/spinner'
 import { LinkButton } from '@/components/link-button/link-button'
@@ -48,7 +48,7 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
         title='pg.active-auctions.error.title'
         textContent={['pg.active-auctions.error.body']}
         childElement={<LinkButton
-          text='pg.active-auctions.contact-button'
+          text='common.route-names.contact'
           href={routes.contact}
           type='router-link'
         />}

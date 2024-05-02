@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { HeadElement } from '@/components/head-element/head-element'
 import { SoldCard, SoldOrCall } from '@/components/sold-card/sold-card'
 import { images as img } from '../../public/images/sold-archive/image-catalog'
-import { routes } from '@/utilities/resource-utilities'
+import routes from '@/utilities/routes'
 import { useIntl } from 'react-intl'
 import { archiveBikes as archive } from '@/modules/archive-bikes'
 

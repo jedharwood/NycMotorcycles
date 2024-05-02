@@ -1,14 +1,14 @@
-import { HeadElement } from '@/components/head-element/head-element'
-import { TextDisplay } from '@/components/text-display/text-display'
-import { images as img } from '@/public/images/history/image-catalog'
-import { ImageModal } from '@/components/image-modal/image-modal'
-import { ImageGrid } from '@/components/image-grid/image-grid'
-import { LinkButton } from '@/components/link-button/link-button'
-import { routes } from '@/utilities/resource-utilities'
-import { BuildGridImages } from '@/helpers/build-grid-images'
 import { FC, useContext, useEffect } from 'react'
-import { Jumbotron } from '@/components/jumbotron/jumbotron'
 import { AppContext } from '@/context/app-context'
+import routes from '@/utilities/routes'
+import { images as img } from '@/public/images/history/image-catalog'
+import { HeadElement } from '@/components/head-element/head-element'
+import { ImageGrid } from '@/components/image-grid/image-grid'
+import { ImageModal } from '@/components/image-modal/image-modal'
+import Jumbotron from '@/components/jumbotron/jumbotron'
+import { LinkButton } from '@/components/link-button/link-button'
+import { TextDisplay } from '@/components/text-display/text-display'
+import { BuildGridImages } from '@/helpers/build-grid-images'
 
 const HistoryPage: FC = (): JSX.Element => {
   const { closeImageModal } = useContext(AppContext)
@@ -36,7 +36,7 @@ const HistoryPage: FC = (): JSX.Element => {
 
   const homeButton: JSX.Element = (
     <LinkButton
-      text='pg.history.sect-10.button'
+      text='common.route-names.home'
       href={routes.home}
       type='router-link'
     />
@@ -50,7 +50,7 @@ const HistoryPage: FC = (): JSX.Element => {
       />
       <main>
         <div className='space-y-6'>
-          <Jumbotron image={img.larryGoggles} legend='pg.history.jumbotron' />
+          <Jumbotron image={img.larryGoggles} legend='common.route-names.history' />
           <div className='grid gap-4 md:grid-cols-5'>
             <div className='md:col-span-3'>
               <ImageGrid images={gridImagesUpper} maxColumns={2} />
