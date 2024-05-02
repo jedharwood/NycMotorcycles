@@ -1,4 +1,4 @@
-import { useIntl } from 'react-intl'
+import { FormattedMessage, useIntl } from 'react-intl'
 import nycmcLogo from 'public/svgs/nycmc-logo.svg'
 
 const AuctionCard = ({
@@ -41,9 +41,7 @@ const AuctionCard = ({
     return (
       <tr className='hover:underline text-sm sm:text-lg'>
         <td className='pr-4 sm:opacity-80'>
-          {intl.formatMessage({
-            id: label,
-          })}
+          <FormattedMessage id={label} />
         </td>
         <td>{value}</td>
       </tr>
