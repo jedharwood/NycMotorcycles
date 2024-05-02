@@ -44,7 +44,7 @@ type InputFieldProps = {
 };
 
 type ValidFieldNames =
-| "email"
-| "senderName"
-| "subject"
-| "message"
+| 'email'
+| 'senderName'
+| 'subject'
+| 'message'

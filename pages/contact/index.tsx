@@ -4,6 +4,8 @@ import { FormattedMessage } from 'react-intl'
 import { HeadElement } from '@/components/head-element/head-element'
 import Button from '@/components/button/button'
 import InputField from '@/components/form-input/form-input'
+import { ContactFormSchema } from '@/schemas/contact-form'
+import { zodResolver } from "@hookform/resolvers/zod"
 
 const ContactPage: FC = (): JSX.Element => {
   const {
@@ -11,7 +13,9 @@ const ContactPage: FC = (): JSX.Element => {
     handleSubmit,
     formState: { errors },
     setError,
-  } = useForm<ContactFormData>();
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(ContactFormSchema)
+  });
 
   const onSubmit = async (data: ContactFormData) => {
     console.log('SUCCESS', data);
@@ -71,3 +75,4 @@ const ContactPage: FC = (): JSX.Element => {
 }
 
 export default ContactPage
+

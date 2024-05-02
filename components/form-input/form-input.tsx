@@ -36,7 +36,7 @@ const InputField = ({
         </label>
         {input}
       </div>
-      {error && <span className=''>{error.message}</span>}
+      {error && <span className='text-xs text-rose-400'>{error.message}</span>}
     </>
   )
 }
