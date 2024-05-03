@@ -18,7 +18,7 @@ Tests to language display
 Bring in ReactQuery
 Find a solution for server side image fetching to bypass 403 issue
 Resolve img/Image issue with auction-card component
-input ring colour
+Hover state for Grid Images
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

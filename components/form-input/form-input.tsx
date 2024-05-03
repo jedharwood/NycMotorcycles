@@ -14,7 +14,9 @@ const InputField = ({
     ? 'focus:ring-rose-400 hover:ring-rose-400' 
     : 'focus:ring-teal-500 hover:ring-teal-500'
   }`
+  const errorClasses: string = type === 'text-area' ? 'text-xs text-rose-400 block' : 'text-xs text-rose-400'
   const placeholderText: string = intl.formatMessage({ id: placeholder })
+  
 
   const input = type === 'text-area' ? (
     <textarea 
@@ -34,13 +36,13 @@ const InputField = ({
 
   return (
     <div className='flex justify-center'>
-      <div className='space-y-2 w-full md:w-3/4 lg:w-1/2'>
-        <label htmlFor={name} className='block'>
+      <div className='w-full md:w-3/4 lg:w-1/2'>
+        <label htmlFor={name} className='mb-2 block'>
           <FormattedMessage id={label} />
         </label>
         {input}
+        {error && <span className={errorClasses}>{error.message}</span>}
       </div>
-      {error && <span className='text-xs text-rose-400'>{error.message}</span>}
     </div>
   )
 }
