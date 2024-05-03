@@ -38,7 +38,20 @@ const ContactPage: FC = (): JSX.Element => {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    console.log('SUCCESS', data);
+    const response = await fetch('/api/mailer', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(
+        { 
+          email: data.email,
+          senderName: data.senderName,
+          subject: data.subject,
+          message: data.message 
+        }
+      ),
+    });
   }
 
   return (
