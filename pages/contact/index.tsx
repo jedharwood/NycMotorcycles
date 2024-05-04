@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { FormattedMessage, useIntl } from 'react-intl'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -8,6 +8,8 @@ import Button from '@/components/button/button'
 import InputField from '@/components/form-input/form-input'
 
 const ContactPage: FC = (): JSX.Element => {
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [isSuccess, setIsSuccess] = useState<boolean>(false)
   const intl = useIntl()
   const requiredErrorMessage: string = intl.formatMessage({ id: 'pg.contact.validation.required' })
   const contactFormSchema: ZodType<ContactFormData> = z
@@ -32,12 +34,15 @@ const ContactPage: FC = (): JSX.Element => {
     register,
     handleSubmit,
     formState: { errors },
-    setError,
+    // setError,
+    reset
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema)
   });
 
   const onSubmit = async (data: ContactFormData) => {
+    setIsLoading(true) 
+    // spinner?
     const response = await fetch('/api/mailer', {
       method: 'post',
       headers: {
@@ -45,6 +50,17 @@ const ContactPage: FC = (): JSX.Element => {
       },
       body: JSON.stringify(data),
     });
+    if (response.ok) {
+      setIsLoading(false)
+      setIsSuccess(true)
+      reset()
+      // display success message
+      // enable button
+    } else {
+      // set is loading false
+      // retain form data
+      // display failure message
+    }
   }
 
   return (
@@ -93,7 +109,7 @@ const ContactPage: FC = (): JSX.Element => {
               error={errors.message}                    
               label={'pg.contact.label.message'}
             />
-            <Button type='submit' text='pg.contact.send-button' />
+            <Button type='submit' text='pg.contact.send-button' disabled={isLoading} />
           </form>
       </main>
     </>

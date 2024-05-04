@@ -2,17 +2,22 @@ import { useIntl } from 'react-intl'
 
 type ButtonProps = {
   type: 'button' | 'submit'
-  text: string
+  text: string,
+  disabled?: boolean
 }
 
-const Button = ({ type, text }: ButtonProps): JSX.Element => {
+const Button = ({ type, text, disabled = false }: ButtonProps): JSX.Element => {
   const intl = useIntl()
+  const classes = disabled 
+    ? 'rounded-md px-6 py-2 bg-teal-700 text-lg'
+    : 'rounded-md px-6 py-2 bg-teal-700 text-lg hover:bg-teal-500'
 
   return (
     <div className='flex justify-center'>
       <button
         type={type}
-        className='rounded-md px-6 py-2 bg-teal-700 hover:bg-teal-500 text-lg'
+        className={classes}
+        disabled={disabled}
       >
         {intl.formatMessage({
             id: text,

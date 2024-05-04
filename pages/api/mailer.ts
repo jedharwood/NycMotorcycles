@@ -31,7 +31,7 @@ const mailer = async (
   try {
     const response: MessagesSendResult = await client.messages
       .create(pE.MAILGUN_DOMAIN, messageData)
-    
+
     res.status(response.status).json({ message: response.message })
   } catch (error) {
     res.status(500).json({ message: 'Message sending failed' })
