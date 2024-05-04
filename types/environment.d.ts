@@ -8,6 +8,9 @@ declare global {
         SELECTOR_PRODUCT_TITLE: string;
         SELECTOR_PRODUCT_BID: string;
         YAHOO_AUCTION_PROFILE_PAGE_URL: string;
+        MAILGUN_API_KEY: string;
+        MAILGUN_DOMAIN: string;    
+        DELIVERY_EMAIL: string;
       }
     }
   }

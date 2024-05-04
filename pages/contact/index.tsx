@@ -43,14 +43,7 @@ const ContactPage: FC = (): JSX.Element => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(
-        { 
-          email: data.email,
-          senderName: data.senderName,
-          subject: data.subject,
-          message: data.message 
-        }
-      ),
+      body: JSON.stringify(data),
     });
   }
 
