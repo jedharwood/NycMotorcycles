@@ -7,13 +7,17 @@ export type TextDisplayProps = {
   textContent?: string[]
   childElement?: JSX.Element
   childElementPosition?: ChildElementPosition
+  isOpaque?: boolean
+  hasBorder?: boolean
 }
 
 export const TextDisplay = ({
   title,
   textContent,
   childElement,
-  childElementPosition
+  childElementPosition,
+  isOpaque,
+  hasBorder
 }: TextDisplayProps): JSX.Element => {
   const intl = useIntl()
 
@@ -56,8 +60,14 @@ export const TextDisplay = ({
     return <></>
   }
 
+  const bgClasses: string = `bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg ${
+    !isOpaque && 'bg-opacity-90'
+  } ${
+    hasBorder && 'border-2 border-teal-500'
+  }`
+
   return (
-    <section className='bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg'>
+    <section className={bgClasses}>
       {renderTitle()}
       {renderChildElement('under-title')}
       {mapTextContent()}

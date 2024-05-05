@@ -6,10 +6,11 @@ import { z, ZodType } from 'zod'
 import { HeadElement } from '@/components/head-element/head-element'
 import Button from '@/components/button/button'
 import InputField from '@/components/form-input/form-input'
+import { ConfirmationModal } from '@/components/confirmation-modal/confirmation-modal'
 
 const ContactPage: FC = (): JSX.Element => {
+  const [showConfirmationModal, setShowConfirmationModal] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [isSuccess, setIsSuccess] = useState<boolean>(false)
   const intl = useIntl()
   const requiredErrorMessage: string = intl.formatMessage({ id: 'pg.contact.validation.required' })
   const contactFormSchema: ZodType<ContactFormData> = z
@@ -41,8 +42,8 @@ const ContactPage: FC = (): JSX.Element => {
   });
 
   const onSubmit = async (data: ContactFormData) => {
+    setShowConfirmationModal(true)
     setIsLoading(true) 
-    // spinner?
     const response = await fetch('/api/mailer', {
       method: 'post',
       headers: {
@@ -52,12 +53,9 @@ const ContactPage: FC = (): JSX.Element => {
     });
     if (response.ok) {
       setIsLoading(false)
-      setIsSuccess(true)
       reset()
-      // display success message
-      // enable button
     } else {
-      // set is loading false
+      setIsLoading(false)
       // retain form data
       // display failure message
     }
@@ -68,6 +66,10 @@ const ContactPage: FC = (): JSX.Element => {
       <HeadElement
         pageTitle='pg.contact.head.meta.title'
         content='pg.contact.head.meta.content'
+      />
+      <ConfirmationModal 
+        isVisible={showConfirmationModal} 
+        closeModal={() => setShowConfirmationModal(false)}
       />
       <main className='bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg'>
           <h2 className='text-center font-medium text-xl md:text-2xl mb-4 opacity-80'>
