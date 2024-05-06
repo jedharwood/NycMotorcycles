@@ -2,6 +2,7 @@ import React from 'react'
 import { TextDisplay } from '../text-display/text-display'
 import Button from '../button/button'
 import { Spinner } from '../spinner/spinner'
+import ModalWrapper from '../modal-wrapper/modal-wrapper'
 
 type InfoModalProps = {
     isVisible: boolean
@@ -9,7 +10,7 @@ type InfoModalProps = {
     isLoading: boolean
 }
 
-export const ConfirmationModal = ({ 
+const ConfirmationModal = ({ 
   isVisible, 
   closeModal,
   isLoading
@@ -36,21 +37,18 @@ export const ConfirmationModal = ({
   )
 
   return (
-    <>
-      <div className='flex justify-center items-center fixed inset-0 z-50'>
-        <div className='md:p-6 relative'>
-          <TextDisplay 
-            title={title} 
-            textContent={textContent}
-            textContentCentred={true}
-            childElement={childElement} 
-            childElementPosition='bottom'
-            isOpaque={true} 
-            hasBorder={true} 
-          />
-        </div>
-      </div>
-      <div className='opacity-25 fixed inset-0 z-40 bg-black'></div>
-    </>
+    <ModalWrapper>       
+      <TextDisplay 
+        title={title} 
+        textContent={textContent}
+        textContentCentred={true}
+        childElement={childElement} 
+        childElementPosition='bottom'
+        isOpaque={true} 
+        hasBorder={true} 
+      />
+    </ModalWrapper>
   )
 }
+
+export default ConfirmationModal

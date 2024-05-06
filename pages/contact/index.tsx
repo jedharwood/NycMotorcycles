@@ -6,7 +6,7 @@ import { z, ZodType } from 'zod'
 import { HeadElement } from '@/components/head-element/head-element'
 import Button from '@/components/button/button'
 import InputField from '@/components/form-input/form-input'
-import { ConfirmationModal } from '@/components/confirmation-modal/confirmation-modal'
+import ConfirmationModal from '@/components/confirmation-modal/confirmation-modal'
 
 const ContactPage: FC = (): JSX.Element => {
   const [showConfirmationModal, setShowConfirmationModal] = useState<boolean>(false)
