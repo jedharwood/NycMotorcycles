@@ -48,3 +48,5 @@ type ValidFieldNames =
 | 'senderName'
 | 'subject'
 | 'message'
+
+type ComponentColour = 'green' | 'red'

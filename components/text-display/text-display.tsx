@@ -10,6 +10,7 @@ export type TextDisplayProps = {
   isOpaque?: boolean
   hasBorder?: boolean
   textContentCentred?: boolean
+  borderColour?: ComponentColour
 }
 
 export const TextDisplay = ({
@@ -19,7 +20,8 @@ export const TextDisplay = ({
   childElementPosition,
   isOpaque,
   hasBorder,
-  textContentCentred
+  textContentCentred,
+  borderColour
 }: TextDisplayProps): JSX.Element => {
   const intl = useIntl()
 
@@ -62,10 +64,12 @@ export const TextDisplay = ({
     return <></>
   }
 
+  const borderColourClasses: string = borderColour === 'red' ? 'border-rose-500' : 'border-teal-500'
+  const borderClasses: string = `border-2 ${borderColourClasses}`
   const bgClasses: string = `bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg ${
     !isOpaque && 'bg-opacity-90'
   } ${
-    hasBorder && 'border-2 border-teal-500'
+    hasBorder && borderClasses
   }`
 
   return (

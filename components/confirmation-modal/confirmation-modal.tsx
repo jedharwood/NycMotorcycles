@@ -5,47 +5,70 @@ import { Spinner } from '../spinner/spinner'
 import ModalWrapper from '../modal-wrapper/modal-wrapper'
 
 type InfoModalProps = {
-    isVisible: boolean
-    closeModal: () => void
-    isLoading: boolean
+  isVisible: boolean
+  closeButtonClick: () => void
+  isLoading: boolean
+  isSuccess: boolean
 }
 
 const ConfirmationModal = ({ 
   isVisible, 
-  closeModal,
-  isLoading
+  closeButtonClick,
+  isLoading,
+  isSuccess
 }: InfoModalProps): JSX.Element | null => {
   if (!isVisible) return null
 
-  const title: string = isLoading ? 'comp.confirmation-modal.sending.title' : 'comp.confirmation-modal.sent.title'
+  const renderTitle = (): string => {
+    if (isLoading) return 'comp.confirmation-modal.sending.title'
 
-  const textContent: string[] = isLoading 
-    ? [] 
-    : [
+    return isSuccess 
+    ? 'comp.confirmation-modal.sent.title'
+    : 'comp.confirmation-modal.failed.title' 
+  }
+
+  const renderTextContent = (): string[] => {
+    if (isLoading) return []
+
+    return isSuccess ? [
       'comp.confirmation-modal.sent.text-1',
       'comp.confirmation-modal.sent.text-2'
+    ] : [
+      'comp.confirmation-modal.failed.text-1'
     ]
+  }
+
+  const renderCallsToAction = (): JSX.Element | null => {
+    if (isLoading) return null
+
+    return isSuccess ? (
+      <Button text='comp.confirmation-modal.button.close' type='button' onClick={closeButtonClick} />
+    ) : (
+      <div className='flex justify-center space-x-6'>
+        <Button text='comp.confirmation-modal.button.close' type='button' onClick={closeButtonClick} />
+        <Button text='comp.confirmation-modal.button.retry' type='button' onClick={closeButtonClick} buttonColour='red' />
+      </div>
+    )
+  }
 
   const childElement: JSX.Element = (
     <>
       <Spinner isLoading={isLoading} />
-      {
-        !isLoading && 
-        <Button text='comp.confirmation-modal.button.close' type='button' onClick={closeModal} />
-      }
+      {renderCallsToAction()}
     </>
   )
 
   return (
     <ModalWrapper>       
       <TextDisplay 
-        title={title} 
-        textContent={textContent}
+        title={renderTitle()} 
+        textContent={renderTextContent()}
         textContentCentred={true}
         childElement={childElement} 
         childElementPosition='bottom'
         isOpaque={true} 
         hasBorder={true} 
+        borderColour={isSuccess ? 'green' : 'red'}
       />
     </ModalWrapper>
   )

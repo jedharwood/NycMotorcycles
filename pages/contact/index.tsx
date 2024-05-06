@@ -11,6 +11,7 @@ import ConfirmationModal from '@/components/confirmation-modal/confirmation-moda
 const ContactPage: FC = (): JSX.Element => {
   const [showConfirmationModal, setShowConfirmationModal] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [isSuccess, setIsSuccess] = useState<boolean>(true)
   const intl = useIntl()
   const requiredErrorMessage: string = intl.formatMessage({ id: 'pg.contact.validation.required' })
   const contactFormSchema: ZodType<ContactFormData> = z
@@ -42,6 +43,7 @@ const ContactPage: FC = (): JSX.Element => {
   });
 
   const onSubmit = async (data: ContactFormData) => {
+    setIsSuccess(true)
     setShowConfirmationModal(true)
     setIsLoading(true) 
     const response = await fetch('/api/mailer', {
@@ -56,9 +58,15 @@ const ContactPage: FC = (): JSX.Element => {
       reset()
     } else {
       setIsLoading(false)
+      setIsSuccess(false)
       // retain form data
       // display failure message
     }
+  }
+
+  const onCLoseButtonClick = (): void => {
+    setShowConfirmationModal(false)
+    reset()
   }
 
   return (
@@ -69,8 +77,9 @@ const ContactPage: FC = (): JSX.Element => {
       />
       <ConfirmationModal 
         isVisible={showConfirmationModal} 
-        closeModal={() => setShowConfirmationModal(false)}
+        closeButtonClick={() => onCLoseButtonClick()}
         isLoading={isLoading}
+        isSuccess={isSuccess}
       />
       <main className='bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg'>
           <h2 className='text-center font-medium text-xl md:text-2xl mb-4 opacity-80'>
