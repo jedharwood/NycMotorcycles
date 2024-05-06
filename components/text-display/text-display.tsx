@@ -9,6 +9,7 @@ export type TextDisplayProps = {
   childElementPosition?: ChildElementPosition
   isOpaque?: boolean
   hasBorder?: boolean
+  textContentCentred?: boolean
 }
 
 export const TextDisplay = ({
@@ -17,7 +18,8 @@ export const TextDisplay = ({
   childElement,
   childElementPosition,
   isOpaque,
-  hasBorder
+  hasBorder,
+  textContentCentred
 }: TextDisplayProps): JSX.Element => {
   const intl = useIntl()
 
@@ -37,7 +39,7 @@ export const TextDisplay = ({
     return textContent === undefined || !textContent.length? (
       <></>
     ) : (
-      <div className='space-y-4'>
+      <div className={`space-y-4 ${textContentCentred && 'text-center'}`}>
         {textContent.map((text, idx) => (
           <p key={idx}>
             {intl.formatMessage({

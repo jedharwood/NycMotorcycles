@@ -1,14 +1,15 @@
 import { FormattedMessage } from 'react-intl'
 
 type SpinnerProps = {
-  loading: boolean
+  isLoading: boolean
+  verticalPadding?: boolean 
 }
 
-export const Spinner = ({ loading }: SpinnerProps): JSX.Element => {
-  return !loading ? (
-    <></>
-  ) : (
-    <div className="text-center p-12">
+export const Spinner = ({ isLoading, verticalPadding }: SpinnerProps): JSX.Element | null => {
+  if (!isLoading) return null
+
+  return (
+    <div className={`text-center ${verticalPadding && 'py-12'}`}>
       <div role="status">
         <svg
           aria-hidden="true"

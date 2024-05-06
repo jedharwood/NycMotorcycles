@@ -18,6 +18,7 @@
   "comp.auction-card.time-unit.hours": "hours",
   "comp.auction-card.time-unit.minutes": "minutes",
   "comp.confirmation-modal.button.close": "Close",
+  "comp.confirmation-modal.sending.title": "Sending...",
   "comp.confirmation-modal.sent.title": "Sent",
   "comp.confirmation-modal.sent.text-1": "Your message has been sent. We will reply as soon as we can.",
   "comp.confirmation-modal.sent.text-2": "Thankyou",

@@ -70,6 +70,7 @@ const ContactPage: FC = (): JSX.Element => {
       <ConfirmationModal 
         isVisible={showConfirmationModal} 
         closeModal={() => setShowConfirmationModal(false)}
+        isLoading={isLoading}
       />
       <main className='bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg'>
           <h2 className='text-center font-medium text-xl md:text-2xl mb-4 opacity-80'>
