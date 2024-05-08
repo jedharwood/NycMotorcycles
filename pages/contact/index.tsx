@@ -20,7 +20,7 @@ const submitEmail = async (contactFormData: ContactFormData): Promise<any> => {
     body: JSON.stringify(contactFormData),
   });
 
-  errorMessage = await response.json()
+  // errorMessage = await response.json()
 
   if (!response.ok) {
     throw new Error('Failed to send email')
@@ -32,7 +32,7 @@ const submitEmail = async (contactFormData: ContactFormData): Promise<any> => {
 const ContactPage: FC = (): JSX.Element => {
   const [showConfirmationModal, setShowConfirmationModal] = useState<boolean>(false)
   const [retries, setRetries] =  useState<number>(0)
-  const { mutate, isLoading, isSuccess } = useMutation(submitEmail);
+  const { mutateAsync, isLoading, isSuccess } = useMutation(submitEmail);
   const intl = useIntl()
   const requiredErrorMessage: string = intl.formatMessage({ id: 'pg.contact.validation.required' })
   const contactFormSchema: ZodType<ContactFormData> = z
@@ -65,7 +65,7 @@ const ContactPage: FC = (): JSX.Element => {
 
   const onSubmit = async (contactFormData: ContactFormData) => {
     setShowConfirmationModal(true)
-    mutate(contactFormData) 
+    mutateAsync(contactFormData) 
   }
 
   const onCloseButtonClick = (): void => { 
