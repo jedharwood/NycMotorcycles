@@ -10,25 +10,29 @@ import ConfirmationModal from '@/components/confirmation-modal/confirmation-moda
 import { useMutation } from 'react-query'
 
 const submitEmail = async (contactFormData: ContactFormData): Promise<any> => { 
-  const response = await fetch('/api/mailer', {
-    method: 'post',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(contactFormData),
-  });
+  try {
+    const response = await fetch('/api/mailer', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(contactFormData),
+    });
 
-  if (!response.ok) {
-    throw new Error('Failed to send email')
+    if (!response.ok) {
+      throw new Error('Failed to send email');
+    }
+
+    return response.json();
+  } catch (error) {
+    return Promise.reject(error);
   }
-
-  return response.json() // maybe don't need to await?
 }
 
 const ContactPage: FC = (): JSX.Element => {
   const [showConfirmationModal, setShowConfirmationModal] = useState<boolean>(false)
   const [retries, setRetries] =  useState<number>(0)
-  const { mutateAsync, isLoading, isSuccess } = useMutation(submitEmail);
+  const { mutate, isLoading, isSuccess } = useMutation(submitEmail);
   const intl = useIntl()
   const requiredErrorMessage: string = intl.formatMessage({ id: 'pg.contact.validation.required' })
   const contactFormSchema: ZodType<ContactFormData> = z
@@ -61,7 +65,7 @@ const ContactPage: FC = (): JSX.Element => {
 
   const onSubmit = async (contactFormData: ContactFormData) => {
     setShowConfirmationModal(true)
-    mutateAsync(contactFormData) 
+    mutate(contactFormData) 
   }
 
   const onCloseButtonClick = (): void => { 
@@ -96,9 +100,6 @@ const ContactPage: FC = (): JSX.Element => {
           <p className='text-center mb-4'>
             <FormattedMessage id='pg.contact.text' />
           </p>
-          {/* <p className='text-center mb-4'>
-            Error: {errorMessage && errorMessage.message}
-          </p> */}
           <form onSubmit={handleSubmit(onSubmit)} className='space-y-6' noValidate>
             <InputField
               type='text'
