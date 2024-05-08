@@ -34,7 +34,7 @@ const mailer = async (
 
     res.status(response.status).json({ message: response.message })
   } catch (error) {
-    res.status(500).json({ message: 'Message sending failed' })
+    res.status(500).json({ message: JSON.stringify(error) })
   }
 }
 
