@@ -20,13 +20,14 @@ const submitEmail = async (contactFormData: ContactFormData): Promise<any> => {
     body: JSON.stringify(contactFormData),
   });
 
-  // errorMessage = await response.json()
+  errorMessage = await response.json()
 
   if (!response.ok) {
     throw new Error('Failed to send email')
   }
   
-  return response.json()
+  // return response.json()
+  return errorMessage
 }
 
 const ContactPage: FC = (): JSX.Element => {
