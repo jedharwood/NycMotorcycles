@@ -7,11 +7,28 @@ import { HeadElement } from '@/components/head-element/head-element'
 import Button from '@/components/button/button'
 import InputField from '@/components/form-input/form-input'
 import ConfirmationModal from '@/components/confirmation-modal/confirmation-modal'
+import { useMutation } from 'react-query'
+
+const submitEmail = async (contactFormData: ContactFormData): Promise<any> => { 
+  const response = await fetch('/api/mailer', {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(contactFormData),
+  });
+
+  if (!response.ok) {
+    throw new Error('Failed to send email')
+  }
+
+  return response.json()
+}
 
 const ContactPage: FC = (): JSX.Element => {
   const [showConfirmationModal, setShowConfirmationModal] = useState<boolean>(false)
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [isSuccess, setIsSuccess] = useState<boolean>(true)
+  const [retries, setRetries] =  useState<number>(0)
+  const { mutate, isLoading, isSuccess } = useMutation(submitEmail);
   const intl = useIntl()
   const requiredErrorMessage: string = intl.formatMessage({ id: 'pg.contact.validation.required' })
   const contactFormSchema: ZodType<ContactFormData> = z
@@ -42,31 +59,20 @@ const ContactPage: FC = (): JSX.Element => {
     resolver: zodResolver(contactFormSchema)
   });
 
-  const onSubmit = async (data: ContactFormData) => {
-    setIsSuccess(true)
+  const onSubmit = async (contactFormData: ContactFormData) => {
     setShowConfirmationModal(true)
-    setIsLoading(true) 
-    const response = await fetch('/api/mailer', {
-      method: 'post',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-    if (response.ok) {
-      setIsLoading(false)
-      reset()
-    } else {
-      setIsLoading(false)
-      setIsSuccess(false)
-      // retain form data
-      // display failure message
-    }
+    mutate(contactFormData)
   }
 
-  const onCLoseButtonClick = (): void => {
+  const onCloseButtonClick = (): void => { 
     setShowConfirmationModal(false)
     reset()
+    setRetries(0)
+  }
+
+  const onRetryButtonClick = (): void => {
+    handleSubmit(onSubmit)()
+    setRetries(retries + 1)
   }
 
   return (
@@ -77,9 +83,11 @@ const ContactPage: FC = (): JSX.Element => {
       />
       <ConfirmationModal 
         isVisible={showConfirmationModal} 
-        closeButtonClick={() => onCLoseButtonClick()}
+        closeButtonClick={() => onCloseButtonClick()}
         isLoading={isLoading}
         isSuccess={isSuccess}
+        retryButtonClick={() => onRetryButtonClick()}
+        failedCompletely={retries > 1}
       />
       <main className='bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg'>
           <h2 className='text-center font-medium text-xl md:text-2xl mb-4 opacity-80'>
@@ -129,4 +137,3 @@ const ContactPage: FC = (): JSX.Element => {
 }
 
 export default ContactPage
-

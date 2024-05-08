@@ -3,24 +3,30 @@ import { TextDisplay } from '../text-display/text-display'
 import Button from '../button/button'
 import { Spinner } from '../spinner/spinner'
 import ModalWrapper from '../modal-wrapper/modal-wrapper'
+import InstagramButton from '../instagram-button/instagram-button'
 
 type InfoModalProps = {
   isVisible: boolean
   closeButtonClick: () => void
   isLoading: boolean
   isSuccess: boolean
+  retryButtonClick: () => void
+  failedCompletely: boolean
 }
 
 const ConfirmationModal = ({ 
   isVisible, 
   closeButtonClick,
   isLoading,
-  isSuccess
+  isSuccess,
+  retryButtonClick,
+  failedCompletely
 }: InfoModalProps): JSX.Element | null => {
   if (!isVisible) return null
 
   const renderTitle = (): string => {
     if (isLoading) return 'comp.confirmation-modal.sending.title'
+    if (failedCompletely) return 'comp.confirmation-modal.failed-completely.title'
 
     return isSuccess 
     ? 'comp.confirmation-modal.sent.title'
@@ -29,6 +35,10 @@ const ConfirmationModal = ({
 
   const renderTextContent = (): string[] => {
     if (isLoading) return []
+    if (failedCompletely) return [
+      'comp.confirmation-modal.failed-completely.text-1',
+      'comp.confirmation-modal.failed-completely.text-2'
+    ]
 
     return isSuccess ? [
       'comp.confirmation-modal.sent.text-1',
@@ -39,14 +49,23 @@ const ConfirmationModal = ({
   }
 
   const renderCallsToAction = (): JSX.Element | null => {
-    if (isLoading) return null
-
-    return isSuccess ? (
+    const closeButton: JSX.Element = 
       <Button text='comp.confirmation-modal.button.close' type='button' onClick={closeButtonClick} />
+
+    if (isLoading) return null
+    if (failedCompletely) return (
+      <div className='space-y-4'>
+        <InstagramButton />
+        {closeButton}
+      </div>
+    )
+    
+    return isSuccess ? (
+      closeButton
     ) : (
       <div className='flex justify-center space-x-6'>
-        <Button text='comp.confirmation-modal.button.close' type='button' onClick={closeButtonClick} />
-        <Button text='comp.confirmation-modal.button.retry' type='button' onClick={closeButtonClick} buttonColour='red' />
+        {closeButton}
+        <Button text='comp.confirmation-modal.button.retry' type='button' onClick={retryButtonClick} buttonColour='red' />
       </div>
     )
   }
@@ -68,7 +87,7 @@ const ConfirmationModal = ({
         childElementPosition='bottom'
         isOpaque={true} 
         hasBorder={true} 
-        borderColour={isSuccess ? 'green' : 'red'}
+        borderColour={isSuccess || isLoading ? 'green' : 'red'}
       />
     </ModalWrapper>
   )
