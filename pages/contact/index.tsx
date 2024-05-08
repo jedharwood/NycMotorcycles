@@ -9,6 +9,8 @@ import InputField from '@/components/form-input/form-input'
 import ConfirmationModal from '@/components/confirmation-modal/confirmation-modal'
 import { useMutation } from 'react-query'
 
+let errorMessage: any
+
 const submitEmail = async (contactFormData: ContactFormData): Promise<any> => { 
   const response = await fetch('/api/mailer', {
     method: 'post',
@@ -18,10 +20,12 @@ const submitEmail = async (contactFormData: ContactFormData): Promise<any> => {
     body: JSON.stringify(contactFormData),
   });
 
+  errorMessage = await response.json()
+
   if (!response.ok) {
     throw new Error('Failed to send email')
   }
-
+  
   return response.json()
 }
 
@@ -61,7 +65,7 @@ const ContactPage: FC = (): JSX.Element => {
 
   const onSubmit = async (contactFormData: ContactFormData) => {
     setShowConfirmationModal(true)
-    mutate(contactFormData)
+    mutate(contactFormData) 
   }
 
   const onCloseButtonClick = (): void => { 
@@ -95,6 +99,9 @@ const ContactPage: FC = (): JSX.Element => {
           </h2>
           <p className='text-center mb-4'>
             <FormattedMessage id='pg.contact.text' />
+          </p>
+          <p className='text-center mb-4'>
+            Error: {errorMessage && errorMessage.message}
           </p>
           <form onSubmit={handleSubmit(onSubmit)} className='space-y-6' noValidate>
             <InputField
