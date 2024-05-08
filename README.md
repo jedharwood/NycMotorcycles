@@ -1,7 +1,5 @@
 TO DO
 
-Contact form
-SMPTE server and mocks
 Download page
 Finish page content
 General refactor page content logic (CDN?)
@@ -15,9 +13,13 @@ Address code style inconsistences and overlapping css rules
 Add Translations, refactor out undnecessary resx
 Ensure language routing working properly
 Tests to language display
-Bring in ReactQuery
+Implement ReactQuery for activeAuctions page
 Find a solution for server side image fetching to bypass 403 issue
 Resolve img/Image issue with auction-card component
+Hover state for Grid Images
+Issue tabbing inside modals - accessibility
+Text overflow on Jumbotron and Navbar
+styling width of ScrollToTop button
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

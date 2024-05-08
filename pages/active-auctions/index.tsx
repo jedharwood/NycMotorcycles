@@ -83,7 +83,7 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
         content='pg.active-auctions.head.meta.content'
       />
       <main>
-        <Spinner loading={isLoading} />
+        <Spinner isLoading={isLoading} verticalPadding={true} />
         {auctionDisplay()}
       </main>
     </>

@@ -7,13 +7,21 @@ export type TextDisplayProps = {
   textContent?: string[]
   childElement?: JSX.Element
   childElementPosition?: ChildElementPosition
+  isOpaque?: boolean
+  hasBorder?: boolean
+  textContentCentred?: boolean
+  borderColour?: ComponentColour
 }
 
 export const TextDisplay = ({
   title,
   textContent,
   childElement,
-  childElementPosition
+  childElementPosition,
+  isOpaque,
+  hasBorder,
+  textContentCentred,
+  borderColour
 }: TextDisplayProps): JSX.Element => {
   const intl = useIntl()
 
@@ -21,7 +29,7 @@ export const TextDisplay = ({
     return title === undefined ? (
       <></>
     ) : (
-      <h2 className='flex justify-center font-medium text-xl md:text-2xl mb-4 opacity-80'>
+      <h2 className='text-center font-medium text-xl md:text-2xl mb-4 opacity-80'>
         {intl.formatMessage({
           id: title,
         })}
@@ -33,7 +41,7 @@ export const TextDisplay = ({
     return textContent === undefined || !textContent.length? (
       <></>
     ) : (
-      <div className='space-y-4'>
+      <div className={`space-y-4 ${textContentCentred && 'text-center'}`}>
         {textContent.map((text, idx) => (
           <p key={idx}>
             {intl.formatMessage({
@@ -56,8 +64,16 @@ export const TextDisplay = ({
     return <></>
   }
 
+  const borderColourClasses: string = borderColour === 'red' ? 'border-rose-500' : 'border-teal-500'
+  const borderClasses: string = `border-2 ${borderColourClasses}`
+  const bgClasses: string = `bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg ${
+    !isOpaque && 'bg-opacity-90'
+  } ${
+    hasBorder && borderClasses
+  }`
+
   return (
-    <section className='bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg'>
+    <section className={bgClasses}>
       {renderTitle()}
       {renderChildElement('under-title')}
       {mapTextContent()}

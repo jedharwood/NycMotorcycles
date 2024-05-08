@@ -15,11 +15,11 @@ const yahooAuctionScraper = async (
   const activeAuctions: ActiveAuction[] = []
 
   try {
-    const profilePageRequest: Response = await fetch(pE.YAHOO_AUCTION_PROFILE_PAGE_URL, {
+    const response: Response = await fetch(pE.YAHOO_AUCTION_PROFILE_PAGE_URL, {
       mode: 'no-cors',
     })
 
-    const html: string = await profilePageRequest.text()
+    const html: string = await response.text()
     const dom: JSDOM = new JSDOM(html)
     const document: Document = dom.window.document
     const auctionListings: NodeListOf<Element> =
@@ -29,7 +29,7 @@ const yahooAuctionScraper = async (
       activeAuctions.push(mapAuctionListing(listing))
     })
 
-    const status = profilePageRequest.status === 403 ? 403 : 200
+    const status = response.status === 403 ? 403 : 200
 
     res.status(status).json({ activeAuctions })
   } catch (error) {

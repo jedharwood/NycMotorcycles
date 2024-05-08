@@ -7,6 +7,7 @@ import en from '../languages/en.json'
 import jp from '../languages/jp.json'
 import { AppContext } from '../context/app-context'
 import { useAppContext } from '../context/use-app-context'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 if (process.env.NEXT_PUBLIC_API_MOCKING === 'true') {
   import('../mocks').then(({ setupMocks }) => {
@@ -28,14 +29,17 @@ const messages: Messages = {
 export default function App({ Component, pageProps }: AppProps) {
   const [state, actions] = useAppContext()
   const { locale = 'en' } = useRouter()
+  const queryClient = new QueryClient()
 
   return (
     <AppContext.Provider value={{ ...state, ...actions }}>
-      <IntlProvider locale={locale} messages={messages[locale]}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </IntlProvider>
+      <QueryClientProvider client={queryClient} contextSharing={false}>
+        <IntlProvider locale={locale} messages={messages[locale]}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </IntlProvider>
+      </QueryClientProvider>
     </AppContext.Provider>
   )
 }

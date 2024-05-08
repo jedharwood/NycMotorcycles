@@ -7,7 +7,7 @@ import { images as img } from '../../../public/images/sold-archive/image-catalog
 import { useIntl } from 'react-intl'
 import { images as gallery } from '../../../public/images/sold-archive/gallery/image-catalog'
 import { ImageGrid } from '@/components/image-grid/image-grid'
-import { ImageModal } from '@/components/image-modal/image-modal'
+import ImageModal from '@/components/image-modal/image-modal'
 import { BuildGridImages } from '@/helpers/build-grid-images'
 import { archiveBikes as archive } from '@/modules/archive-bikes'
 import { TwoColumnGridLayout } from '@/components/two-column-grid-layout/two-column-grid-layout'

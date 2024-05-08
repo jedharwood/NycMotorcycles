@@ -115,6 +115,7 @@ const HomePage: FC = (): JSX.Element => {
         <TextDisplay
           title='pg.home.sect-13.title'
           textContent={['pg.home.sect-13.text-1']}
+          textContentCentred={true}
           childElement={
             <LinkButton 
               text='common.route-names.contact' 

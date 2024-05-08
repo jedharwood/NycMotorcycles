@@ -26,3 +26,27 @@ type ArchiveBikeKey = keyof typeof archive
 type ImageCatalog = {
   [key: string]: GridImage
 }
+
+type ContactFormData = {
+  email: string
+  senderName: string
+  subject: string
+  message: string
+};
+
+type InputFieldProps = {
+  type: 'email' | 'text' | 'text-area' 
+  placeholder: string
+  name: ValidFieldNames
+  register: UseFormRegister<ContactFormData>
+  error: FieldError | undefined
+  label: string
+};
+
+type ValidFieldNames =
+| 'email'
+| 'senderName'
+| 'subject'
+| 'message'
+
+type ComponentColour = 'green' | 'red'

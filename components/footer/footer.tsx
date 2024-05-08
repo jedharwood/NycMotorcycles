@@ -1,7 +1,7 @@
 import { FormattedMessage, useIntl } from 'react-intl'
 import Image from 'next/image'
 import chevronUp from 'public/svgs/chevron-up.svg'
-import instagramIcon from 'public/svgs/instagram-icon.svg'
+import InstagramButton from '../instagram-button/instagram-button'
 
 const Footer = (): JSX.Element => {
   const intl = useIntl()
@@ -29,21 +29,7 @@ const Footer = (): JSX.Element => {
         </div>
         <FormattedMessage id='comp.footer.text.scroll-to-top' />
       </button>
-      <a
-        href={'https://www.instagram.com/newyorkcitymotorcycles/'}
-        target='_blank'
-        rel='noopener noreferrer'
-        className='flex justify-center opacity-80 hover:opacity-100'
-      >
-        <Image
-          src={instagramIcon}
-          alt={intl.formatMessage({
-            id: 'comp.footer.alt.instagram-logo',
-          })}
-          width={50}
-          height={50}
-        />
-      </a>
+      <InstagramButton />
       <h3 className='flex justify-center text-sm md:text-md'>
         <FormattedMessage id='comp.footer.text.address' />
       </h3>
