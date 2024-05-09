@@ -10,19 +10,23 @@ import ConfirmationModal from '@/components/confirmation-modal/confirmation-moda
 import { useMutation } from 'react-query'
 
 const submitEmail = async (contactFormData: ContactFormData): Promise<any> => { 
-  const response = await fetch('/api/mailer', {
-    method: 'post',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(contactFormData),
-  });
+  try {
+    const response = await fetch('/api/mailer', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(contactFormData),
+    });
 
-  if (!response.ok) {
-    throw new Error('Failed to send email')
+    if (!response.ok) {
+      throw new Error('Failed to send email');
+    }
+
+    return response.json();
+  } catch (error) {
+    return Promise.reject(error);
   }
-
-  return response.json()
 }
 
 const ContactPage: FC = (): JSX.Element => {
@@ -61,7 +65,7 @@ const ContactPage: FC = (): JSX.Element => {
 
   const onSubmit = async (contactFormData: ContactFormData) => {
     setShowConfirmationModal(true)
-    mutate(contactFormData)
+    mutate(contactFormData) 
   }
 
   const onCloseButtonClick = (): void => { 
