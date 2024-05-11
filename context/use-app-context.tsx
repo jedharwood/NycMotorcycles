@@ -1,13 +1,13 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 interface IAppContextState {
-  showImageModal: boolean
-  imageModalImage: GridImage
+  showImageModal: boolean;
+  imageModalImage: GridImage;
 }
 
 interface IAppContextActions {
-  closeImageModal: () => void
-  openImageModal: (image: GridImage) => void
+  closeImageModal: () => void;
+  openImageModal: (image: GridImage) => void;
 }
 
 export const useAppContext = (): [IAppContextState, IAppContextActions] => {
@@ -16,30 +16,30 @@ export const useAppContext = (): [IAppContextState, IAppContextActions] => {
     imageAlt: '',
     width: undefined,
     height: undefined,
-  }
-  const [showImageModal, setShowImageModal] = useState<boolean>(false)
+  };
+  const [showImageModal, setShowImageModal] = useState<boolean>(false);
   const [imageModalImage, setImageModalImage] =
-    useState<GridImage>(defaultGridImage)
+    useState<GridImage>(defaultGridImage);
 
   const closeImageModal = (): void => {
-    setShowImageModal(false)
-    setImageModalImage(defaultGridImage)
-  }
+    setShowImageModal(false);
+    setImageModalImage(defaultGridImage);
+  };
 
   const openImageModal = (image: GridImage): void => {
-    setImageModalImage(image)
-    setShowImageModal(true)
-  }
+    setImageModalImage(image);
+    setShowImageModal(true);
+  };
 
   const state: IAppContextState = {
     showImageModal,
     imageModalImage,
-  }
+  };
 
   const actions: IAppContextActions = {
     openImageModal,
     closeImageModal,
-  }
+  };
 
-  return [state, actions]
-}
+  return [state, actions];
+};

@@ -1,11 +1,11 @@
-import { TextDisplay } from '@/components/text-display/text-display'
-import { LinkButton } from '@/components/link-button/link-button'
-import { HeadElement } from '@/components/head-element/head-element'
-import routes from '@/utilities/routes'
-import { FC } from 'react'
-import Jumbotron from '@/components/jumbotron/jumbotron'
-import { images as img } from '../public/images/home/image-catalog'
-import { BuildList } from '@/helpers/build-list'
+import { TextDisplay } from '@/components/text-display/text-display';
+import { LinkButton } from '@/components/link-button/link-button';
+import { HeadElement } from '@/components/head-element/head-element';
+import routes from '@/utilities/routes';
+import { FC } from 'react';
+import Jumbotron from '@/components/jumbotron/jumbotron';
+import { images as img } from '../public/images/home/image-catalog';
+import { BuildList } from '@/helpers/build-list';
 
 const HomePage: FC = (): JSX.Element => {
   const desirableModelList: string[] = [
@@ -15,7 +15,7 @@ const HomePage: FC = (): JSX.Element => {
     'pg.home.sect-2.list-4',
     'pg.home.sect-2.list-5',
     'pg.home.sect-2.list-6',
-  ]
+  ];
 
   const soldExampleList: string[] = [
     'pg.home.sect-6.list-1',
@@ -24,7 +24,7 @@ const HomePage: FC = (): JSX.Element => {
     'pg.home.sect-6.list-4',
     'pg.home.sect-6.list-5',
     'pg.home.sect-6.list-6',
-  ]
+  ];
 
   return (
     <>
@@ -37,9 +37,9 @@ const HomePage: FC = (): JSX.Element => {
         <TextDisplay
           title='pg.home.sect-1.title'
           childElement={
-            <LinkButton 
-              text='pg.home.sect-1.button' 
-              href={routes.contact} 
+            <LinkButton
+              text='pg.home.sect-1.button'
+              href={routes.contact}
               type='router-link'
             />
           }
@@ -48,9 +48,7 @@ const HomePage: FC = (): JSX.Element => {
         <TextDisplay
           title='pg.home.sect-2.title'
           textContent={['pg.home.sect-2.text-1', 'pg.home.sect-2.text-2']}
-          childElement={
-            BuildList({listItems: desirableModelList})
-          }
+          childElement={BuildList({ listItems: desirableModelList })}
           childElementPosition='under-title'
         />
         <TextDisplay
@@ -65,9 +63,9 @@ const HomePage: FC = (): JSX.Element => {
             'pg.home.sect-4.text-3',
           ]}
           childElement={
-            <LinkButton 
-              text='pg.home.sect-4.button' 
-              href={routes.download} 
+            <LinkButton
+              text='pg.home.sect-4.button'
+              href={routes.download}
               type='router-link'
             />
           }
@@ -79,9 +77,7 @@ const HomePage: FC = (): JSX.Element => {
         />
         <TextDisplay
           title='pg.home.sect-6.title'
-          childElement={
-            BuildList({listItems: soldExampleList})
-          }
+          childElement={BuildList({ listItems: soldExampleList })}
           childElementPosition='under-title'
         />
         <TextDisplay
@@ -117,9 +113,9 @@ const HomePage: FC = (): JSX.Element => {
           textContent={['pg.home.sect-13.text-1']}
           textContentCentred={true}
           childElement={
-            <LinkButton 
-              text='common.route-names.contact' 
-              href={routes.contact} 
+            <LinkButton
+              text='common.route-names.contact'
+              href={routes.contact}
               type='router-link'
             />
           }
@@ -127,7 +123,7 @@ const HomePage: FC = (): JSX.Element => {
         />
       </main>
     </>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
