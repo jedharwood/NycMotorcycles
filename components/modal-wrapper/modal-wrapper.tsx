@@ -1,20 +1,18 @@
-import { ReactNode } from 'react'
+import { ReactNode } from 'react';
 
 type LayoutProps = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 const ModalWrapper = ({ children }: LayoutProps): JSX.Element => {
   return (
     <>
-      <div className='flex justify-center items-center fixed inset-0 z-50'>
-        <div className='md:p-6 relative'>
-          {children}
-        </div>
+      <div className='fixed inset-0 z-50 flex items-center justify-center'>
+        <div className='relative md:p-6'>{children}</div>
       </div>
-      <div className='opacity-25 fixed inset-0 z-40 bg-black' />
+      <div className='fixed inset-0 z-40 bg-black opacity-25' />
     </>
-  )
-}
+  );
+};
 
-export default ModalWrapper
+export default ModalWrapper;

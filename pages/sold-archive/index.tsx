@@ -1,23 +1,27 @@
-import { FC } from 'react'
-import { HeadElement } from '@/components/head-element/head-element'
-import { SoldCard, SoldOrCall } from '@/components/sold-card/sold-card'
-import { images as img } from '../../public/images/sold-archive/image-catalog'
-import routes from '@/utilities/routes'
-import { useIntl } from 'react-intl'
-import { archiveBikes as archive } from '@/modules/archive-bikes'
+import { FC } from 'react';
+
+import { useIntl } from 'react-intl';
+
+import { HeadElement } from '@/components/head-element/head-element';
+import { SoldCard, SoldOrCall } from '@/components/sold-card/sold-card';
+import { archiveBikes as archive } from '@/modules/archive-bikes';
+import routes from '@/utilities/routes';
+
+import { images as img } from '../../public/images/sold-archive/image-catalog';
+
 
 const SoldArchivePage: FC = () => {
-  const intl = useIntl()
+  const intl = useIntl();
 
   const buildSoldCard = (
     bikeImageName: keyof typeof archive,
     soldOrCall: SoldOrCall = 'sold',
-    isGalleryLink: boolean = true,
+    isGalleryLink: boolean = true
   ): JSX.Element => {
-    const routeName = archive[bikeImageName]
+    const routeName = archive[bikeImageName];
     const galleryLink = isGalleryLink
       ? `${routes.gallery}/${routeName}`
-      : undefined
+      : undefined;
 
     return (
       <SoldCard
@@ -26,8 +30,8 @@ const SoldArchivePage: FC = () => {
         galleryLink={galleryLink}
         soldOrCall={soldOrCall}
       />
-    )
-  }
+    );
+  };
 
   return (
     <>
@@ -36,7 +40,7 @@ const SoldArchivePage: FC = () => {
         content='pg.sold-archive.head.meta.content'
       />
       <main className='space-y-6'>
-        <section className='bg-stone-600 bg-opacity-90 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-2 font-medium text-xl md:text-2xl'>
+        <section className='w-full space-y-2 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-xl font-medium text-stone-50 shadow-lg md:text-2xl'>
           <h2 className='flex justify-center opacity-80'>
             {intl.formatMessage({
               id: 'pg.sold-archive.sect-1.title-1',
@@ -74,7 +78,7 @@ const SoldArchivePage: FC = () => {
         {buildSoldCard('kawasakiH1ra')}
       </main>
     </>
-  )
-}
+  );
+};
 
-export default SoldArchivePage
+export default SoldArchivePage;

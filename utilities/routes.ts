@@ -9,6 +9,6 @@ const routes: { [key: string]: string } = {
   invest: '/invest',
   download: '/download',
   gallery: '/sold-archive/gallery',
-}
+};
 
-export default routes
+export default routes;

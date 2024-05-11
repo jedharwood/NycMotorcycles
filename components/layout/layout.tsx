@@ -1,19 +1,26 @@
-import { ReactNode } from 'react'
-import { Header } from '../header/header'
-import Footer from '../footer/footer'
+import { ReactNode } from 'react';
+
+import Footer from '../footer/footer';
+import { Header } from '../header/header';
 
 type LayoutProps = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 export const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
-    <div id="layout-outer" className="md:px-6 w-full bg-hero bg-no-repeat bg-cover bg-center bg-fixed">
-      <div id="layout-inner" className="py-6 sm:p-6 max-w-6xl mx-auto bg-stone-600 bg-opacity-60">
+    <div
+      id='layout-outer'
+      className='w-full bg-hero bg-cover bg-fixed bg-center bg-no-repeat md:px-6'
+    >
+      <div
+        id='layout-inner'
+        className='mx-auto max-w-6xl bg-stone-600 bg-opacity-60 py-6 sm:p-6'
+      >
         <Header />
         {children}
         <Footer />
       </div>
     </div>
-  )
-}
+  );
+};

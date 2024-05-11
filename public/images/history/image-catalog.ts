@@ -113,4 +113,4 @@ export const images: ImageCatalog = {
     width: 828,
     height: 712,
   },
-}
+};

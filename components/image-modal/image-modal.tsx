@@ -1,23 +1,22 @@
-import Image from 'next/image'
-import closeIcon from 'public/svgs/close-icon.svg'
-import { useIntl, FormattedMessage } from 'react-intl'
-import React, { useContext } from 'react'
-import { AppContext } from '../../context/app-context'
-import ModalWrapper from '../modal-wrapper/modal-wrapper'
+import React, { useContext } from 'react';
+
+import Image from 'next/image';
+import closeIcon from 'public/svgs/close-icon.svg';
+import { useIntl, FormattedMessage } from 'react-intl';
+
+import { AppContext } from '../../context/app-context';
+import ModalWrapper from '../modal-wrapper/modal-wrapper';
 
 const ImageModal = (): JSX.Element | null => {
-  const { 
-    showImageModal, 
-    imageModalImage, 
-    closeImageModal 
-  } = useContext(AppContext)
-  const intl = useIntl()
+  const { showImageModal, imageModalImage, closeImageModal } =
+    useContext(AppContext);
+  const intl = useIntl();
 
-  if (!showImageModal) return null
+  if (!showImageModal) return null;
 
   return (
     <ModalWrapper>
-      <div className='flex flex-row-reverse p-2 w-full absolute md:right-8'>
+      <div className='absolute flex w-full flex-row-reverse p-2 md:right-8'>
         <button
           type='button'
           className=' z-60 hover:opacity-80'
@@ -43,10 +42,10 @@ const ImageModal = (): JSX.Element | null => {
         })}
         width={imageModalImage.width}
         height={imageModalImage.height}
-        className='rounded-md shadow-lg border-2 border-stone-50 max-h-screen max-w-screen'
+        className='max-w-screen max-h-screen rounded-md border-2 border-stone-50 shadow-lg'
       />
     </ModalWrapper>
-  )
-}
+  );
+};
 
-export default ImageModal
+export default ImageModal;

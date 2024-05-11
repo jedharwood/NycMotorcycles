@@ -1,30 +1,33 @@
-import { FC, useEffect, useState } from 'react'
-import AuctionCard from '@/components/auction-card/auction-card'
-import routes from '../../utilities/routes'
-import { TextDisplay } from '@/components/text-display/text-display'
-import { Spinner } from '@/components/spinner/spinner'
-import { LinkButton } from '@/components/link-button/link-button'
-import { HeadElement } from '@/components/head-element/head-element'
+import { FC, useEffect, useState } from 'react';
+
+import AuctionCard from '@/components/auction-card/auction-card';
+import { HeadElement } from '@/components/head-element/head-element';
+import { LinkButton } from '@/components/link-button/link-button';
+import { Spinner } from '@/components/spinner/spinner';
+import { TextDisplay } from '@/components/text-display/text-display';
+
+import routes from '../../utilities/routes';
+
 
 const ActiveAuctionPage: FC = (): JSX.Element => {
-  const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([])
-  const [isLoading, setIsLoading] = useState<boolean>(true)
-  const [status, setStatus] = useState<number>()
+  const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [status, setStatus] = useState<number>();
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('/api/auction-scraper')
-      const data = await response.json()
+      const response = await fetch('/api/auction-scraper');
+      const data = await response.json();
 
-      setStatus(response.status)
-      setActiveAuctions(data.activeAuctions)
-      setIsLoading(false)
-    }
-    fetchData()
-  }, [])
+      setStatus(response.status);
+      setActiveAuctions(data.activeAuctions);
+      setIsLoading(false);
+    };
+    fetchData();
+  }, []);
 
   const auctionDisplay = (): JSX.Element => {
-    if (isLoading) return <></>
+    if (isLoading) return <></>;
 
     const yahooAuctionLinkButton: JSX.Element = (
       <LinkButton
@@ -32,28 +35,34 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
         href={'https://auctions.yahoo.co.jp/seller/lazzamoto?'}
         type='anchor'
       />
-    )
+    );
 
     if (status === 403) {
-      return (<TextDisplay
-        title='pg.active-auctions.error.title'
-        textContent={['pg.active-auctions.unauthorised.body']}
-        childElement={yahooAuctionLinkButton}
-        childElementPosition='bottom'
-      />)
+      return (
+        <TextDisplay
+          title='pg.active-auctions.error.title'
+          textContent={['pg.active-auctions.unauthorised.body']}
+          childElement={yahooAuctionLinkButton}
+          childElementPosition='bottom'
+        />
+      );
     }
 
     if (status === 500) {
-      return (<TextDisplay
-        title='pg.active-auctions.error.title'
-        textContent={['pg.active-auctions.error.body']}
-        childElement={<LinkButton
-          text='common.route-names.contact'
-          href={routes.contact}
-          type='router-link'
-        />}
-        childElementPosition='bottom'
-      />)
+      return (
+        <TextDisplay
+          title='pg.active-auctions.error.title'
+          textContent={['pg.active-auctions.error.body']}
+          childElement={
+            <LinkButton
+              text='common.route-names.contact'
+              href={routes.contact}
+              type='router-link'
+            />
+          }
+          childElementPosition='bottom'
+        />
+      );
     }
 
     return !activeAuctions.length ? (
@@ -70,11 +79,11 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
             <li key={auction.title}>
               <AuctionCard {...auction} />
             </li>
-          )
+          );
         })}
       </ul>
-    )
-  }
+    );
+  };
 
   return (
     <>
@@ -87,7 +96,7 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
         {auctionDisplay()}
       </main>
     </>
-  )
-}
+  );
+};
 
-export default ActiveAuctionPage
+export default ActiveAuctionPage;

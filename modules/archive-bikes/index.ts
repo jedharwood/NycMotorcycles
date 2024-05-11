@@ -1,4 +1,4 @@
-export type ArchiveBikes = { [key: string]: string }
+export type ArchiveBikes = { [key: string]: string };
 
 export const archiveBikes: ArchiveBikes = {
   hondaRc30: 'honda-rc30',
@@ -25,4 +25,4 @@ export const archiveBikes: ArchiveBikes = {
   laverdaFormula500: 'laverda-formula-500',
   laverda750Racer: 'laverda-750-racer',
   kawasakiH1ra: 'kawasaki-h1ra',
-}
+};

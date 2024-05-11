@@ -1,21 +1,18 @@
-import { NextApiResponse, NextApiRequest } from 'next'
-import Mailgun, { 
-  MailgunClientOptions, 
-  MessagesSendResult 
-} from 'mailgun.js'
+import Mailgun, { MailgunClientOptions, MessagesSendResult } from 'mailgun.js';
+import { NextApiResponse, NextApiRequest } from 'next';
 
 const mailer = async (
-  req: NextApiRequest, 
+  req: NextApiRequest,
   res: NextApiResponse
 ): Promise<void> => {
   const pE = process.env;
-  const mg = new Mailgun(FormData)
+  const mg = new Mailgun(FormData);
   const options: MailgunClientOptions = {
     username: 'api',
-    key: pE.MAILGUN_API_KEY
-  }
-  const client = mg.client(options)
-  const data = req.body
+    key: pE.MAILGUN_API_KEY,
+  };
+  const client = mg.client(options);
+  const data = req.body;
   const messageData = {
     from: data.email,
     to: pE.DELIVERY_EMAIL,
@@ -25,17 +22,19 @@ const mailer = async (
       <p>Sender Name: ${data.senderName}</p>
       <h2>${data.subject}</h2>
       <p>${data.message}</p>
-    `
+    `,
   };
 
   try {
-    const response: MessagesSendResult = await client.messages
-      .create(pE.MAILGUN_DOMAIN, messageData)
+    const response: MessagesSendResult = await client.messages.create(
+      pE.MAILGUN_DOMAIN,
+      messageData
+    );
 
-    res.status(response.status).json({ message: response.message })
+    res.status(response.status).json({ message: response.message });
   } catch (error) {
-    res.status(500).json({ message: JSON.stringify(error) })
+    res.status(500).json({ message: JSON.stringify(error) });
   }
-}
+};
 
-export default mailer
+export default mailer;
