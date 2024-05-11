@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useIntl } from 'react-intl';
-import { LinkButton } from '../link-button/link-button';
+
 import routes from '@/utilities/routes';
+
+import { LinkButton } from '../link-button/link-button';
 
 export type SoldOrCall = 'sold' | 'call';
 

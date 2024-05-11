@@ -1,9 +1,10 @@
 import React from 'react';
-import { TextDisplay } from '../text-display/text-display';
+
 import Button from '../button/button';
-import { Spinner } from '../spinner/spinner';
-import ModalWrapper from '../modal-wrapper/modal-wrapper';
 import InstagramButton from '../instagram-button/instagram-button';
+import ModalWrapper from '../modal-wrapper/modal-wrapper';
+import { Spinner } from '../spinner/spinner';
+import { TextDisplay } from '../text-display/text-display';
 
 type InfoModalProps = {
   isVisible: boolean;

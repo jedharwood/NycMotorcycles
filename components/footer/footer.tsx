@@ -1,6 +1,7 @@
-import { FormattedMessage, useIntl } from 'react-intl';
 import Image from 'next/image';
 import chevronUp from 'public/svgs/chevron-up.svg';
+import { FormattedMessage, useIntl } from 'react-intl';
+
 import InstagramButton from '../instagram-button/instagram-button';
 
 const Footer = (): JSX.Element => {

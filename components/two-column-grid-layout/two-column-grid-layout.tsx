@@ -1,5 +1,6 @@
-import { ImageGrid } from '../image-grid/image-grid';
 import React from 'react';
+
+import { ImageGrid } from '../image-grid/image-grid';
 import { TextDisplay, TextDisplayProps } from '../text-display/text-display';
 
 type TwoColumnGridLayoutProps = {

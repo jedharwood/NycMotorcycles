@@ -1,6 +1,6 @@
-import { useIntl } from 'react-intl';
 import Image from 'next/image';
 import instagramIcon from 'public/svgs/instagram-icon.svg';
+import { useIntl } from 'react-intl';
 
 const InstagramButton = (): JSX.Element => {
   const intl = useIntl();

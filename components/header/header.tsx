@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
-import { FormattedMessage, useIntl } from 'react-intl';
+
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import routes from '@/utilities/routes';
 import burgerIcon from 'public/svgs/burger-icon.svg';
 import nycmcLogo from 'public/svgs/nycmc-logo.svg';
+import { FormattedMessage, useIntl } from 'react-intl';
+
+import routes from '@/utilities/routes';
+
 import { NavLink } from '../nav-link/nav-link';
 
 type NavLinkDetails = {

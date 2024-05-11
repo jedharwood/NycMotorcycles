@@ -1,7 +1,9 @@
+import React, { useContext } from 'react';
+
 import Image from 'next/image';
 import closeIcon from 'public/svgs/close-icon.svg';
 import { useIntl, FormattedMessage } from 'react-intl';
-import React, { useContext } from 'react';
+
 import { AppContext } from '../../context/app-context';
 import ModalWrapper from '../modal-wrapper/modal-wrapper';
 

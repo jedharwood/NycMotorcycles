@@ -1,5 +1,5 @@
-import { useIntl } from 'react-intl';
 import Image from 'next/image';
+import { useIntl } from 'react-intl';
 
 type ImageGridProps = {
   images: GridImage[];

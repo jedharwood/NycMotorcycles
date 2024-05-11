@@ -1,5 +1,5 @@
-import { FormattedMessage, useIntl } from 'react-intl';
 import nycmcLogo from 'public/svgs/nycmc-logo.svg';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const AuctionCard = ({
   title,
