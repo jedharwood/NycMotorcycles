@@ -1,5 +1,5 @@
-import { NextApiResponse, NextApiRequest } from 'next';
 import Mailgun, { MailgunClientOptions, MessagesSendResult } from 'mailgun.js';
+import { NextApiResponse, NextApiRequest } from 'next';
 
 const mailer = async (
   req: NextApiRequest,

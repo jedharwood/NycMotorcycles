@@ -1,11 +1,15 @@
-import { TextDisplay } from '@/components/text-display/text-display';
-import { LinkButton } from '@/components/link-button/link-button';
-import { HeadElement } from '@/components/head-element/head-element';
-import routes from '@/utilities/routes';
 import { FC } from 'react';
+
+import { HeadElement } from '@/components/head-element/head-element';
 import Jumbotron from '@/components/jumbotron/jumbotron';
-import { images as img } from '../public/images/home/image-catalog';
+import { LinkButton } from '@/components/link-button/link-button';
+import { TextDisplay } from '@/components/text-display/text-display';
 import { BuildList } from '@/helpers/build-list';
+import routes from '@/utilities/routes';
+
+
+
+import { images as img } from '../public/images/home/image-catalog';
 
 const HomePage: FC = (): JSX.Element => {
   const desirableModelList: string[] = [

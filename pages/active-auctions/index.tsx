@@ -1,10 +1,13 @@
 import { FC, useEffect, useState } from 'react';
+
 import AuctionCard from '@/components/auction-card/auction-card';
-import routes from '../../utilities/routes';
-import { TextDisplay } from '@/components/text-display/text-display';
-import { Spinner } from '@/components/spinner/spinner';
-import { LinkButton } from '@/components/link-button/link-button';
 import { HeadElement } from '@/components/head-element/head-element';
+import { LinkButton } from '@/components/link-button/link-button';
+import { Spinner } from '@/components/spinner/spinner';
+import { TextDisplay } from '@/components/text-display/text-display';
+
+import routes from '../../utilities/routes';
+
 
 const ActiveAuctionPage: FC = (): JSX.Element => {
   const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([]);

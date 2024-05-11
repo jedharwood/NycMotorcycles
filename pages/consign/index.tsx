@@ -1,7 +1,8 @@
+import { FC } from 'react';
+
 import { HeadElement } from '@/components/head-element/head-element';
 import { TwoColumnGridLayout } from '@/components/two-column-grid-layout/two-column-grid-layout';
 import { images as img } from '@/public/images/consign/image-catalog';
-import { FC } from 'react';
 
 const ConsignPage: FC = (): JSX.Element => {
   return (

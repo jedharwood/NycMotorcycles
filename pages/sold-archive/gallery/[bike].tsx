@@ -1,17 +1,20 @@
 import { FC, useContext, useEffect } from 'react';
-import { HeadElement } from '@/components/head-element/head-element';
+
 import { useRouter } from 'next/router';
-import { AppContext } from '@/context/app-context';
-import Jumbotron from '@/components/jumbotron/jumbotron';
-import { images as img } from '../../../public/images/sold-archive/image-catalog';
 import { useIntl } from 'react-intl';
-import { images as gallery } from '../../../public/images/sold-archive/gallery/image-catalog';
+
+import { HeadElement } from '@/components/head-element/head-element';
 import { ImageGrid } from '@/components/image-grid/image-grid';
 import ImageModal from '@/components/image-modal/image-modal';
-import { BuildGridImages } from '@/helpers/build-grid-images';
-import { archiveBikes as archive } from '@/modules/archive-bikes';
+import Jumbotron from '@/components/jumbotron/jumbotron';
 import { TwoColumnGridLayout } from '@/components/two-column-grid-layout/two-column-grid-layout';
+import { AppContext } from '@/context/app-context';
+import { BuildGridImages } from '@/helpers/build-grid-images';
 import { BuildList } from '@/helpers/build-list';
+import { archiveBikes as archive } from '@/modules/archive-bikes';
+
+import { images as gallery } from '../../../public/images/sold-archive/gallery/image-catalog';
+import { images as img } from '../../../public/images/sold-archive/image-catalog';
 
 const GalleryPage: FC = () => {
   const intl = useIntl();
