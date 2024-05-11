@@ -1,18 +1,18 @@
-import Link from 'next/link'
-import Button from '../button/button'
+import Link from 'next/link';
+import Button from '../button/button';
 
 type LinkButtonProps = {
-  text: string
-  href: string
-  type: 'anchor' | 'router-link'
-}
+  text: string;
+  href: string;
+  type: 'anchor' | 'router-link';
+};
 
 export const LinkButton = ({
   text,
   href,
   type,
 }: LinkButtonProps): JSX.Element => {
-  const button = <Button type='button' text={text} />
+  const button = <Button type='button' text={text} />;
 
   const linkButton = () => {
     return type === 'anchor' ? (
@@ -21,8 +21,8 @@ export const LinkButton = ({
       </a>
     ) : (
       <Link href={href}>{button}</Link>
-    )
-  }
+    );
+  };
 
-  return <div className='flex justify-center'>{linkButton()}</div>
-}
+  return <div className='flex justify-center'>{linkButton()}</div>;
+};
