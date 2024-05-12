@@ -36,9 +36,11 @@ export const images: ImageCatalog = {
     height: 1080,
   },
   laverdaLowside: {
-    imageSrc: '/images/racing/laverda-lowside.jpeg',
+    // imageSrc: '/images/racing/laverda-lowside.jpeg',
+    imageSrc: require('./laverda-lowside.jpeg').default,
+    // bluejay: require('../images/bluejay.png').default,
     imageAlt: 'pg.racing.alt.laverda-lowside',
-    width: 2500,
-    height: 1932,
+    // width: 2500,
+    // height: 1932,
   },
 };
