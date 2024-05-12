@@ -9,7 +9,6 @@ import routes from '@/utilities/routes';
 
 import { images as img } from '../../public/images/sold-archive/image-catalog';
 
-
 const SoldArchivePage: FC = () => {
   const intl = useIntl();
 

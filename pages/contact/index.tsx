@@ -11,7 +11,6 @@ import ConfirmationModal from '@/components/confirmation-modal/confirmation-moda
 import InputField from '@/components/form-input/form-input';
 import { HeadElement } from '@/components/head-element/head-element';
 
-
 const submitEmail = async (contactFormData: ContactFormData): Promise<any> => {
   try {
     const response = await fetch('/api/mailer', {
