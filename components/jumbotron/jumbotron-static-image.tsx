@@ -4,14 +4,9 @@ import { useIntl } from 'react-intl';
 import { StaticImage } from '@/types/static-image-types';
 
 type JumbotronStaticImageProps = {
-  image: StaticImage; // type for imageSrc might need to be a json object...
+  image: StaticImage;
   legend: string;
 };
-
-// const defaultImage: StaticImage = { // might not need this?
-//   image: { src: '', height: 0, width: 0},
-//   altText: 'common.img.place-holder.alt',
-// };
 
 const JumbotronStaticImage = ({ image, legend }: JumbotronStaticImageProps) => {
   const intl = useIntl();

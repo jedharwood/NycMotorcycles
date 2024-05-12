@@ -1,15 +1,13 @@
 import { FC } from 'react';
 
 import { HeadElement } from '@/components/head-element/head-element';
-import Jumbotron from '@/components/jumbotron/jumbotron';
+import JumbotronStaticImage from '@/components/jumbotron/jumbotron-static-image';
 import { LinkButton } from '@/components/link-button/link-button';
 import { TextDisplay } from '@/components/text-display/text-display';
 import { BuildList } from '@/helpers/build-list';
 import routes from '@/utilities/routes';
 
-
-
-import { images as img } from '../public/images/home/image-catalog';
+import { images as staticImg } from '../public/images/home/static-image-catalog';
 
 const HomePage: FC = (): JSX.Element => {
   const desirableModelList: string[] = [
@@ -37,7 +35,10 @@ const HomePage: FC = (): JSX.Element => {
         content='pg.home.head.meta.content'
       />
       <main className='space-y-6'>
-        <Jumbotron image={img.racing} legend='pg.home.jumbotron' />
+        <JumbotronStaticImage
+          image={staticImg.racing}
+          legend='pg.home.jumbotron'
+        />
         <TextDisplay
           title='pg.home.sect-1.title'
           childElement={

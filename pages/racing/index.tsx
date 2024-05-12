@@ -3,7 +3,6 @@ import { FC, useContext, useEffect } from 'react';
 import { HeadElement } from '@/components/head-element/head-element';
 import { ImageGrid } from '@/components/image-grid/image-grid';
 import ImageModal from '@/components/image-modal/image-modal';
-// import Jumbotron from '@/components/jumbotron/jumbotron';
 import JumbotronStaticImage from '@/components/jumbotron/jumbotron-static-image';
 import { TextDisplay } from '@/components/text-display/text-display';
 import { BuildGridImages } from '@/helpers/build-grid-images';
@@ -36,10 +35,6 @@ const RacingPage: FC = (): JSX.Element => {
       />
       <main>
         <div className='space-y-6'>
-          {/* <Jumbotron
-            image={img.laverdaLowside}
-            legend='common.route-names.racing'
-          /> */}
           <JumbotronStaticImage
             image={staticImg.laverdaLowside}
             legend='common.route-names.racing'
