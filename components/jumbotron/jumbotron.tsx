@@ -1,33 +1,29 @@
 import Image from 'next/image';
 import { useIntl } from 'react-intl';
 
+import { StaticImage } from '@/types/static-image-types';
+
 type JumbotronProps = {
-  image: GridImage;
+  image: StaticImage;
   legend: string;
 };
 
-const defaultImage: GridImage = {
-  imageSrc: '',
-  imageAlt: 'common.img.place-holder.alt',
-};
-
-const Jumbotron = ({ image = defaultImage, legend }: JumbotronProps) => {
+const Jumbotron = ({ image, legend }: JumbotronProps) => {
   const intl = useIntl();
 
   return (
     <div className='relative'>
       <Image
-        src={image.imageSrc}
+        src={image.image}
         alt={intl.formatMessage({
-          id: image.imageAlt,
+          id: image.altText,
         })}
-        width={image.width}
-        height={image.height}
         priority
         className='w-full rounded-md shadow-lg'
+        placeholder='blur'
       />
       <div className='absolute top-1/2 left-1/2 w-max max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 rounded-md bg-stone-600 opacity-90 shadow-lg md:max-w-[calc(100%-3rem)]'>
-        <h2 className='inline-block px-2 py-2 text-2xl text-stone-50 sm:px-8 sm:text-4xl md:text-5xl lg:text-6xl'>
+        <h2 className='inline-block px-2 py-2 text-center text-2xl text-stone-50 sm:px-8 sm:text-4xl md:text-5xl lg:text-6xl'>
           {intl.formatMessage({
             id: legend,
           })}

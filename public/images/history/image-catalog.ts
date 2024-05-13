@@ -1,10 +1,4 @@
 export const images: ImageCatalog = {
-  larryGoggles: {
-    imageSrc: '/images/history/larry-goggles.jpeg',
-    imageAlt: 'pg.history.alt.larry-goggles',
-    width: 1080,
-    height: 1080,
-  },
   larryOrangeLaverda: {
     imageSrc: '/images/history/larry-orange-laverda.jpeg',
     imageAlt: 'pg.history.alt.larry-orange-laverda',

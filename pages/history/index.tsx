@@ -9,6 +9,7 @@ import { TextDisplay } from '@/components/text-display/text-display';
 import { AppContext } from '@/context/app-context';
 import { BuildGridImages } from '@/helpers/build-grid-images';
 import { images as img } from '@/public/images/history/image-catalog';
+import { images as staticImg } from '@/public/images/history/static-image-catalog';
 import routes from '@/utilities/routes';
 
 const HistoryPage: FC = (): JSX.Element => {
@@ -52,7 +53,7 @@ const HistoryPage: FC = (): JSX.Element => {
       <main>
         <div className='space-y-6'>
           <Jumbotron
-            image={img.larryGoggles}
+            image={staticImg.larryGoggles}
             legend='common.route-names.history'
           />
           <div className='grid gap-4 md:grid-cols-5'>

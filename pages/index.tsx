@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { HeadElement } from '@/components/head-element/head-element';
-import JumbotronStaticImage from '@/components/jumbotron/jumbotron-static-image';
+import Jumbotron from '@/components/jumbotron/jumbotron';
 import { LinkButton } from '@/components/link-button/link-button';
 import { TextDisplay } from '@/components/text-display/text-display';
 import { BuildList } from '@/helpers/build-list';
@@ -35,10 +35,7 @@ const HomePage: FC = (): JSX.Element => {
         content='pg.home.head.meta.content'
       />
       <main className='space-y-6'>
-        <JumbotronStaticImage
-          image={staticImg.racing}
-          legend='pg.home.jumbotron'
-        />
+        <Jumbotron image={staticImg.racing} legend='pg.home.jumbotron' />
         <TextDisplay
           title='pg.home.sect-1.title'
           childElement={

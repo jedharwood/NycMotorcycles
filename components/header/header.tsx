@@ -83,7 +83,7 @@ export const Header = (): JSX.Element => {
   const navMenu = (): JSX.Element => {
     return (
       <div className='hidden w-full md:block md:w-auto'>
-        <ul className='flex flex-col md:flex-row md:space-x-6 md:text-sm md:font-medium'>
+        <ul className='flex flex-col text-center md:flex-row md:space-x-6 md:text-sm md:font-medium'>
           {mapNavLinks()}
         </ul>
       </div>
