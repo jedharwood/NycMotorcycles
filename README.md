@@ -18,7 +18,7 @@ Find a solution for server side image fetching to bypass 403 issue
 Resolve img/Image issue with auction-card component
 Hover state for Grid Images
 Issue tabbing inside modals - accessibility
-Text overflow on Jumbotron and Navbar
+Text-wrap on Navbar
 styling width of ScrollToTop button
 Image/loading optimization
 GH run lint on push

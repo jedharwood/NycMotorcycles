@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect } from 'react';
+import { FC, useContext, useEffect, useState } from 'react';
 
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
@@ -6,7 +6,8 @@ import { useIntl } from 'react-intl';
 import { HeadElement } from '@/components/head-element/head-element';
 import { ImageGrid } from '@/components/image-grid/image-grid';
 import ImageModal from '@/components/image-modal/image-modal';
-import Jumbotron from '@/components/jumbotron/jumbotron';
+import JumbotronStaticImage from '@/components/jumbotron/jumbotron-static-image';
+import { Spinner } from '@/components/spinner/spinner';
 import { TwoColumnGridLayout } from '@/components/two-column-grid-layout/two-column-grid-layout';
 import { AppContext } from '@/context/app-context';
 import { BuildGridImages } from '@/helpers/build-grid-images';
@@ -14,29 +15,43 @@ import { BuildList } from '@/helpers/build-list';
 import { archiveBikes as archive } from '@/modules/archive-bikes';
 
 import { images as gallery } from '../../../public/images/sold-archive/gallery/image-catalog';
-import { images as img } from '../../../public/images/sold-archive/image-catalog';
+import { images as img } from '../../../public/images/sold-archive/static-image-catalog';
 
 const GalleryPage: FC = () => {
   const intl = useIntl();
   const { closeImageModal } = useContext(AppContext);
+  const router = useRouter();
+  const [isReady, setIsReady] = useState<boolean>(false);
+  const [bikeName, setBikeName] = useState<string>('placeholder'); 
 
   useEffect(() => {
     closeImageModal();
-  }, []);
+    if (router.isReady) {
+      setIsReady(true);
+      setBikeName(router.query.bike as string);
+    }
+  }, [router.isReady, bikeName]); // do I need bike name in there? test
 
-  const router = useRouter();
-  const { bike } = router.query;
-  const routeName = Array.isArray(bike) ? bike.join(',') : bike;
   const bikeImageName =
-    Object.keys(archive).find((key) => archive[key] === routeName) || '';
-  const bikeNameVerbose = `pg.gallery.${routeName}.name`;
+    Object.keys(archive).find((key) => archive[key] === bikeName) || 'placeholder'; // Is this too much?
+  const bikeNameVerbose = `pg.gallery.${bikeName}.name`;
   const galleryImages: GridImage[] = BuildGridImages(gallery[bikeImageName]);
+  const theList: JSX.Element = BuildList({
+      listItems: [
+        'pg.gallery.harley-xr750.sect-1.list-1',
+        'pg.gallery.harley-xr750.sect-1.list-2',
+        'pg.gallery.harley-xr750.sect-1.list-3',
+      ],
+      alignCentre: true,
+    });
+  
+  const renderContent = (): JSX.Element | null => {
+    if (!isReady) return null;
 
-  const renderContent = () => {
-    if (routeName !== 'harley-xr750')
-      return <ImageGrid images={galleryImages} maxColumns={4} />;
+    if (bikeName !== 'harley-xr750')
+      return <ImageGrid images={galleryImages} maxColumns={4} />;    
 
-    return (
+    return ( 
       <>
         <iframe
           className='h-[300px] w-full rounded-md sm:h-[450px] md:h-[600px] lg:h-[450px] xl:h-[600px]'
@@ -51,14 +66,7 @@ const GalleryPage: FC = () => {
           textDisplayPropObjects={[
             {
               title: 'pg.gallery.harley-xr750.sect-1.title',
-              childElement: BuildList({
-                listItems: [
-                  'pg.gallery.harley-xr750.sect-1.list-1',
-                  'pg.gallery.harley-xr750.sect-1.list-2',
-                  'pg.gallery.harley-xr750.sect-1.list-3',
-                ],
-                alignCentre: true,
-              }),
+              childElement: theList,
               childElementPosition: 'under-title',
             },
             {
@@ -88,7 +96,11 @@ const GalleryPage: FC = () => {
       />
       <main>
         <div className='space-y-6'>
-          <Jumbotron legend={bikeNameVerbose} image={img[bikeImageName]} />
+          <JumbotronStaticImage
+            image={img[bikeImageName]} 
+            legend={bikeNameVerbose}
+          />
+          <Spinner isLoading={!isReady} verticalPadding={true} />
           {renderContent()}
         </div>
         <ImageModal />

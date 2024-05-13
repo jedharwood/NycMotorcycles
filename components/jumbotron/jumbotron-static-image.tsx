@@ -8,7 +8,10 @@ type JumbotronStaticImageProps = {
   legend: string;
 };
 
-const JumbotronStaticImage = ({ image, legend }: JumbotronStaticImageProps) => {
+const JumbotronStaticImage = ({
+  image,
+  legend,
+}: JumbotronStaticImageProps) => {
   const intl = useIntl();
 
   return (
@@ -20,9 +23,10 @@ const JumbotronStaticImage = ({ image, legend }: JumbotronStaticImageProps) => {
         })}
         priority
         className='w-full rounded-md shadow-lg'
+        placeholder='blur'
       />
       <div className='absolute top-1/2 left-1/2 w-max max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 rounded-md bg-stone-600 opacity-90 shadow-lg md:max-w-[calc(100%-3rem)]'>
-        <h2 className='inline-block px-2 py-2 text-2xl text-stone-50 sm:px-8 sm:text-4xl md:text-5xl lg:text-6xl'>
+        <h2 className='inline-block px-2 py-2 text-2xl text-stone-50 sm:px-8 sm:text-4xl md:text-5xl lg:text-6xl text-center'>
           {intl.formatMessage({
             id: legend,
           })}
