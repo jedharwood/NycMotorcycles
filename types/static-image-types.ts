@@ -3,7 +3,7 @@ import { StaticImageData } from 'next/image';
 export type StaticImage = {
   image: StaticImageData;
   altText: string;
-  // onImageClick?: () => void;
+  onImageClick?: () => void;
 };
 
 export type StaticImageCatalog = {
