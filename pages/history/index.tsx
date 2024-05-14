@@ -1,15 +1,15 @@
 import { FC, useContext, useEffect } from 'react';
 
 import { HeadElement } from '@/components/head-element/head-element';
-import { ImageGrid } from '@/components/image-grid/image-grid';
+import StaticImageGrid from '@/components/image-grid/static-image-grid';
 import ImageModal from '@/components/image-modal/image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { LinkButton } from '@/components/link-button/link-button';
 import { TextDisplay } from '@/components/text-display/text-display';
 import { AppContext } from '@/context/app-context';
-import { BuildGridImages } from '@/helpers/build-grid-images';
-import { images as img } from '@/public/images/history/image-catalog';
+import { BuildStaticGridImages } from '@/helpers/build-grid-images';
 import { images as staticImg } from '@/public/images/history/static-image-catalog';
+import { StaticImage } from '@/types/static-image-types';
 import routes from '@/utilities/routes';
 
 const HistoryPage: FC = (): JSX.Element => {
@@ -19,21 +19,21 @@ const HistoryPage: FC = (): JSX.Element => {
     closeImageModal();
   }, []);
 
-  const gridImagesUpper: GridImage[] = BuildGridImages([
-    img.showroomGig,
-    img.showroomOrange,
-    img.larryTuneup,
-    img.laverdaDucati,
-    img.laverdaRace,
-    img.forklift,
-    img.bsaWorkshop,
-    img.externalWorkshop,
-    img.zushiHq,
-    img.container,
+  const gridImagesUpper: StaticImage[] = BuildStaticGridImages([
+    staticImg.showroomGig,
+    staticImg.showroomOrange,
+    staticImg.larryTuneup,
+    staticImg.laverdaDucati,
+    staticImg.laverdaRace,
+    staticImg.forklift,
+    staticImg.bsaWorkshop,
+    staticImg.externalWorkshop,
+    staticImg.zushiHq,
+    staticImg.container,
   ]);
-  const gridImagesLower: GridImage[] = BuildGridImages([
-    img.customs,
-    img.ferrisWheel,
+  const gridImagesLower: StaticImage[] = BuildStaticGridImages([
+    staticImg.customs,
+    staticImg.ferrisWheel,
   ]);
 
   const homeButton: JSX.Element = (
@@ -58,7 +58,7 @@ const HistoryPage: FC = (): JSX.Element => {
           />
           <div className='grid gap-4 md:grid-cols-5'>
             <div className='md:col-span-3'>
-              <ImageGrid images={gridImagesUpper} maxColumns={2} />
+              <StaticImageGrid images={gridImagesUpper} maxColumns={2} />
             </div>
             <div className='space-y-6 md:col-span-2'>
               <TextDisplay
@@ -100,7 +100,7 @@ const HistoryPage: FC = (): JSX.Element => {
               />
             </div>
             <div className='md:col-span-5'>
-              <ImageGrid images={gridImagesLower} maxColumns={2} />
+              <StaticImageGrid images={gridImagesLower} maxColumns={2} />
             </div>
           </div>
         </div>
