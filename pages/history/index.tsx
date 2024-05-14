@@ -13,10 +13,10 @@ import { StaticImage } from '@/types/static-image-types';
 import routes from '@/utilities/routes';
 
 const HistoryPage: FC = (): JSX.Element => {
-  const { closeImageModal } = useContext(AppContext);
+  const { closeStaticImageModal } = useContext(AppContext);
 
   useEffect(() => {
-    closeImageModal();
+    closeStaticImageModal();
   }, []);
 
   const gridImagesUpper: StaticImage[] = BuildStaticGridImages([

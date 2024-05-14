@@ -1,30 +1,30 @@
 import { FC, useContext, useEffect } from 'react';
 
 import { HeadElement } from '@/components/head-element/head-element';
-import { ImageGrid } from '@/components/image-grid/image-grid';
-import ImageModal from '@/components/image-modal/image-modal';
+import StaticImageGrid from '@/components/image-grid/static-image-grid';
+import StaticImageModal from '@/components/image-modal/static-image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { TextDisplay } from '@/components/text-display/text-display';
-import { BuildGridImages } from '@/helpers/build-grid-images';
-import { images as img } from '@/public/images/racing/image-catalog';
+import { BuildStaticGridImages } from '@/helpers/build-grid-images';
 import { images as staticImg } from '@/public/images/racing/static-image-catalog';
+import { StaticImage } from '@/types/static-image-types';
 
 import { AppContext } from '../../context/app-context';
 
 const RacingPage: FC = (): JSX.Element => {
-  const { closeImageModal } = useContext(AppContext);
+  const { closeStaticImageModal } = useContext(AppContext);
 
   useEffect(() => {
-    closeImageModal();
+    closeStaticImageModal();
   }, []);
 
-  const gridImages: GridImage[] = BuildGridImages([
-    img.harleyNumber7,
-    img.larryRacing667,
-    img.roperVanson,
-    img.larryRacing667Laverda,
-    img.orangeHelmets,
-    img.willowSpringsHonda,
+  const gridImages: StaticImage[] = BuildStaticGridImages([
+    staticImg.harleyNumber7,
+    staticImg.larryRacing667,
+    staticImg.roperVanson,
+    staticImg.larryRacing667Laverda,
+    staticImg.orangeHelmets,
+    staticImg.willowSpringsHonda,
   ]);
 
   return (
@@ -42,9 +42,9 @@ const RacingPage: FC = (): JSX.Element => {
           <TextDisplay
             textContent={['pg.racing.sect-1.text-1', 'pg.racing.sect-1.text-2']}
           />
-          <ImageGrid images={gridImages} maxColumns={3} />
+          <StaticImageGrid images={gridImages} maxColumns={3} />
         </div>
-        <ImageModal />
+        <StaticImageModal />
       </main>
     </>
   );
