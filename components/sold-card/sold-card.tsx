@@ -2,20 +2,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useIntl } from 'react-intl';
 
+import { StaticImage } from '@/types/static-image-types';
 import routes from '@/utilities/routes';
 
 import { LinkButton } from '../link-button/link-button';
 
-export type SoldOrCall = 'sold' | 'call';
-
 type SoldCardProps = {
-  image: GridImage;
+  image: StaticImage;
   text: string;
   galleryLink?: string;
   soldOrCall: SoldOrCall;
 };
 
-export const SoldCard = ({
+const SoldCard = ({
   image,
   text,
   galleryLink,
@@ -30,12 +29,10 @@ export const SoldCard = ({
 
     return (
       <Image
-        src={image.imageSrc}
+        src={image.image}
         alt={intl.formatMessage({
-          id: image.imageAlt,
+          id: image.altText,
         })}
-        width={image.width}
-        height={image.height}
         priority
         className={classes}
       />
@@ -100,3 +97,5 @@ export const SoldCard = ({
     </article>
   );
 };
+
+export default SoldCard;

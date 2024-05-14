@@ -46,3 +46,5 @@ type InputFieldProps = {
 type ValidFieldNames = 'email' | 'senderName' | 'subject' | 'message';
 
 type ComponentColour = 'green' | 'red';
+
+type SoldOrCall = 'sold' | 'call';

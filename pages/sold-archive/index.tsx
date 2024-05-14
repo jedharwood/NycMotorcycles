@@ -3,11 +3,11 @@ import { FC } from 'react';
 import { useIntl } from 'react-intl';
 
 import { HeadElement } from '@/components/head-element/head-element';
-import { SoldCard, SoldOrCall } from '@/components/sold-card/sold-card';
+import SoldCard from '@/components/sold-card/sold-card';
 import { archiveBikes as archive } from '@/modules/archive-bikes';
 import routes from '@/utilities/routes';
 
-import { images as img } from '../../public/images/sold-archive/image-catalog';
+import { images as staticImg } from '../../public/images/sold-archive/static-image-catalog';
 
 const SoldArchivePage: FC = () => {
   const intl = useIntl();
@@ -24,7 +24,7 @@ const SoldArchivePage: FC = () => {
 
     return (
       <SoldCard
-        image={img[bikeImageName]}
+        image={staticImg[bikeImageName]}
         text={`pg.sold-archive.card.${routeName}`}
         galleryLink={galleryLink}
         soldOrCall={soldOrCall}
