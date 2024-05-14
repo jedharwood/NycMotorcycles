@@ -4,28 +4,29 @@ import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 
 import { HeadElement } from '@/components/head-element/head-element';
-import { ImageGrid } from '@/components/image-grid/image-grid';
-import ImageModal from '@/components/image-modal/image-modal';
+import StaticImageGrid from '@/components/image-grid/static-image-grid';
+import StaticImageModal from '@/components/image-modal/static-image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { Spinner } from '@/components/spinner/spinner';
-import { TwoColumnGridLayout } from '@/components/two-column-grid-layout/two-column-grid-layout';
+import StaticImageTwoColumnGridLayout from '@/components/two-column-grid-layout/static-image-two-column-grid-layout';
 import { AppContext } from '@/context/app-context';
-import { BuildGridImages } from '@/helpers/build-grid-images';
+import { BuildStaticGridImages } from '@/helpers/build-grid-images';
 import { BuildList } from '@/helpers/build-list';
 import { archiveBikes as archive } from '@/modules/archive-bikes';
+import { StaticImage } from '@/types/static-image-types';
 
-import { images as gallery } from '../../../public/images/sold-archive/gallery/image-catalog';
-import { images as img } from '../../../public/images/sold-archive/static-image-catalog';
+import { images as gallery } from '../../../public/images/sold-archive/gallery/static-image-catalog';
+import { images as staticImg } from '../../../public/images/sold-archive/static-image-catalog';
 
 const GalleryPage: FC = () => {
   const intl = useIntl();
-  const { closeImageModal } = useContext(AppContext);
+  const { closeStaticImageModal } = useContext(AppContext);
   const router = useRouter();
   const [isReady, setIsReady] = useState<boolean>(false);
   const [bikeName, setBikeName] = useState<string>('placeholder');
 
   useEffect(() => {
-    closeImageModal();
+    closeStaticImageModal();
     if (router.isReady) {
       setBikeName(router.query.bike as string);
       setIsReady(true);
@@ -36,7 +37,7 @@ const GalleryPage: FC = () => {
     Object.keys(archive).find((key) => archive[key] === bikeName) ||
     'placeholder';
   const bikeNameVerbose = `pg.gallery.${bikeName}.name`;
-  const galleryImages: GridImage[] = BuildGridImages(gallery[bikeImageName]);
+  const galleryImages: StaticImage[] = BuildStaticGridImages(gallery[bikeImageName]);
   const theList: JSX.Element = BuildList({
     listItems: [
       'pg.gallery.harley-xr750.sect-1.list-1',
@@ -50,7 +51,7 @@ const GalleryPage: FC = () => {
     if (!isReady) return null;
 
     return bikeName !== 'harley-xr750' ? (
-      <ImageGrid images={galleryImages} maxColumns={4} />
+      <StaticImageGrid images={galleryImages} maxColumns={4} />
     ) : (
       <>
         <iframe
@@ -61,7 +62,7 @@ const GalleryPage: FC = () => {
           referrerPolicy='strict-origin-when-cross-origin'
           allowFullScreen
         />
-        <TwoColumnGridLayout
+        <StaticImageTwoColumnGridLayout
           images={galleryImages}
           textDisplayPropObjects={[
             {
@@ -96,11 +97,11 @@ const GalleryPage: FC = () => {
       />
       <main>
         <div className='space-y-6'>
-          <Jumbotron image={img[bikeImageName]} legend={bikeNameVerbose} />
+          <Jumbotron image={staticImg[bikeImageName]} legend={bikeNameVerbose} />
           <Spinner isLoading={!isReady} verticalPadding={true} />
           {renderContent()}
         </div>
-        <ImageModal />
+        <StaticImageModal />
       </main>
     </>
   );
