@@ -19,13 +19,13 @@ export const BuildGridImages = (images: GridImage[] = []): GridImage[] => {
 };
 
 export const BuildStaticGridImages = (images: StaticImage[] = []): StaticImage[] => {
-  // const { openImageModal } = useContext(AppContext);
+  const { openStaticImageModal } = useContext(AppContext);
 
   return images.map(({ image, altText }) => ({
     image,
     altText,
-    // onImageClick: () => {
-    //   openImageModal({ image, altText });
-    // },
+    onImageClick: () => {
+      openStaticImageModal({ image, altText });
+    },
   }));
 };
