@@ -24,13 +24,14 @@ const defaultState: IAppContext = {
   openImageModal: (): void => {},
   closeImageModal: (): void => {},
   showStaticImageModal: false,
-  staticImageModalImage: { 
-    image: { // Should I import an actual placeholder here?
+  staticImageModalImage: {
+    image: {
+      // Should I import an actual placeholder here?
       src: '',
       height: 0,
-      width: 0
+      width: 0,
     },
-    altText: ''
+    altText: '',
   },
   openStaticImageModal: (): void => {},
   closeStaticImageModal: (): void => {},

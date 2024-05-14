@@ -1,4 +1,4 @@
-import { StaticImageCatalog } from "@/types/static-image-types";
+import { StaticImageCatalog } from '@/types/static-image-types';
 
 export const images: StaticImageCatalog = {
   silverMotorbike: {
@@ -6,4 +6,3 @@ export const images: StaticImageCatalog = {
     altText: 'pg.invest.alt.silver-motorbike',
   },
 };
-

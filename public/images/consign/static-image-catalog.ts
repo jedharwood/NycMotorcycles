@@ -1,4 +1,4 @@
-import { StaticImageCatalog } from "@/types/static-image-types";
+import { StaticImageCatalog } from '@/types/static-image-types';
 
 export const images: StaticImageCatalog = {
   orangeLaverda: {

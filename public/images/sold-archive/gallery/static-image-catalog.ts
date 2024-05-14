@@ -64,7 +64,8 @@ export const images: GalleryCatalog = {
       altText: `pg.gallery.${archive.shovelheadChopper}.alt.right-side`,
     },
     {
-      image: require(`./${archive.shovelheadChopper}/ferris-wheel.jpeg`).default,
+      image: require(`./${archive.shovelheadChopper}/ferris-wheel.jpeg`)
+        .default,
       altText: `pg.gallery.${archive.shovelheadChopper}.alt.ferris-wheel`,
     },
     {
@@ -80,7 +81,8 @@ export const images: GalleryCatalog = {
       altText: `pg.gallery.${archive.shovelheadChopper}.alt.tank-angle`,
     },
     {
-      image: require(`./${archive.shovelheadChopper}/tank-straight.png`).default,
+      image: require(`./${archive.shovelheadChopper}/tank-straight.png`)
+        .default,
       altText: `pg.gallery.${archive.shovelheadChopper}.alt.tank-straight`,
     },
     {

@@ -37,7 +37,9 @@ const GalleryPage: FC = () => {
     Object.keys(archive).find((key) => archive[key] === bikeName) ||
     'placeholder';
   const bikeNameVerbose = `pg.gallery.${bikeName}.name`;
-  const galleryImages: StaticImage[] = BuildStaticGridImages(gallery[bikeImageName]);
+  const galleryImages: StaticImage[] = BuildStaticGridImages(
+    gallery[bikeImageName]
+  );
   const theList: JSX.Element = BuildList({
     listItems: [
       'pg.gallery.harley-xr750.sect-1.list-1',
@@ -97,7 +99,10 @@ const GalleryPage: FC = () => {
       />
       <main>
         <div className='space-y-6'>
-          <Jumbotron image={staticImg[bikeImageName]} legend={bikeNameVerbose} />
+          <Jumbotron
+            image={staticImg[bikeImageName]}
+            legend={bikeNameVerbose}
+          />
           <Spinner isLoading={!isReady} verticalPadding={true} />
           {renderContent()}
         </div>
