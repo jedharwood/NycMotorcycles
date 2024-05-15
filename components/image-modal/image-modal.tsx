@@ -8,11 +8,11 @@ import { AppContext } from '../../context/app-context';
 import ModalWrapper from '../modal-wrapper/modal-wrapper';
 
 const ImageModal = (): JSX.Element | null => {
-  const { showImageModal, imageModalImage, closeImageModal } =
+  const { showStaticImageModal, staticImageModalImage, closeStaticImageModal } =
     useContext(AppContext);
   const intl = useIntl();
 
-  if (!showImageModal) return null;
+  if (!showStaticImageModal) return null;
 
   return (
     <ModalWrapper>
@@ -20,7 +20,7 @@ const ImageModal = (): JSX.Element | null => {
         <button
           type='button'
           className=' z-60 hover:opacity-80'
-          onClick={closeImageModal}
+          onClick={closeStaticImageModal}
         >
           <Image
             src={closeIcon}
@@ -36,12 +36,10 @@ const ImageModal = (): JSX.Element | null => {
         </button>
       </div>
       <Image
-        src={imageModalImage.imageSrc}
+        src={staticImageModalImage.image}
         alt={intl.formatMessage({
-          id: imageModalImage.imageAlt,
+          id: staticImageModalImage.altText,
         })}
-        width={imageModalImage.width}
-        height={imageModalImage.height}
         className='max-w-screen max-h-screen rounded-md border-2 border-stone-50 shadow-lg'
       />
     </ModalWrapper>

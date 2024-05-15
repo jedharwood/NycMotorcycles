@@ -2,7 +2,7 @@ import { FC, useContext, useEffect } from 'react';
 
 import { HeadElement } from '@/components/head-element/head-element';
 import ImageGrid from '@/components/image-grid/image-grid';
-import StaticImageModal from '@/components/image-modal/static-image-modal';
+import ImageModal from '@/components/image-modal/image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { TextDisplay } from '@/components/text-display/text-display';
 import { BuildGridImages } from '@/helpers/build-grid-images';
@@ -44,7 +44,7 @@ const RacingPage: FC = (): JSX.Element => {
           />
           <ImageGrid images={gridImages} maxColumns={3} />
         </div>
-        <StaticImageModal />
+        <ImageModal />
       </main>
     </>
   );

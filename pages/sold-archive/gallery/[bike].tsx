@@ -5,7 +5,7 @@ import { useIntl } from 'react-intl';
 
 import { HeadElement } from '@/components/head-element/head-element';
 import ImageGrid from '@/components/image-grid/image-grid';
-import StaticImageModal from '@/components/image-modal/static-image-modal';
+import ImageModal from '@/components/image-modal/image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { Spinner } from '@/components/spinner/spinner';
 import TwoColumnGridLayout from '@/components/two-column-grid-layout/two-column-grid-layout';
@@ -15,8 +15,8 @@ import { BuildList } from '@/helpers/build-list';
 import { archiveBikes as archive } from '@/modules/archive-bikes';
 import { StaticImage } from '@/types/image-types';
 
-import { images as gallery } from '../../../public/images/sold-archive/gallery';
 import { images as staticImg } from '../../../public/images/sold-archive';
+import { images as gallery } from '../../../public/images/sold-archive/gallery';
 
 const GalleryPage: FC = () => {
   const intl = useIntl();
@@ -37,9 +37,7 @@ const GalleryPage: FC = () => {
     Object.keys(archive).find((key) => archive[key] === bikeName) ||
     'placeholder';
   const bikeNameVerbose = `pg.gallery.${bikeName}.name`;
-  const galleryImages: StaticImage[] = BuildGridImages(
-    gallery[bikeImageName]
-  );
+  const galleryImages: StaticImage[] = BuildGridImages(gallery[bikeImageName]);
   const theList: JSX.Element = BuildList({
     listItems: [
       'pg.gallery.harley-xr750.sect-1.list-1',
@@ -106,7 +104,7 @@ const GalleryPage: FC = () => {
           <Spinner isLoading={!isReady} verticalPadding={true} />
           {renderContent()}
         </div>
-        <StaticImageModal />
+        <ImageModal />
       </main>
     </>
   );

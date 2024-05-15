@@ -2,7 +2,7 @@ import { FC, useContext, useEffect } from 'react';
 
 import { HeadElement } from '@/components/head-element/head-element';
 import ImageGrid from '@/components/image-grid/image-grid';
-import StaticImageModal from '@/components/image-modal/static-image-modal';
+import ImageModal from '@/components/image-modal/image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { LinkButton } from '@/components/link-button/link-button';
 import { TextDisplay } from '@/components/text-display/text-display';
@@ -104,7 +104,7 @@ const HistoryPage: FC = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <StaticImageModal />
+        <ImageModal />
       </main>
     </>
   );
