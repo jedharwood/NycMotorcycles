@@ -1,14 +1,16 @@
 import Image from 'next/image';
 import { useIntl } from 'react-intl';
 
+import { StaticImage } from '@/types/static-image-types';
+
 type ImageGridProps = {
-  images: GridImage[];
+  images: StaticImage[];
   maxColumns: 4 | 3 | 2 | 1;
 };
 
-const defaultImages: GridImage[] = [];
+const defaultImages: StaticImage[] = [];
 
-export const ImageGrid = ({
+const ImageGrid = ({
   images = defaultImages,
   maxColumns,
 }: ImageGridProps): JSX.Element => {
@@ -32,12 +34,10 @@ export const ImageGrid = ({
           onClick={image.onImageClick}
         >
           <Image
-            src={image.imageSrc}
+            src={image.image}
             alt={intl.formatMessage({
-              id: image.imageAlt,
+              id: image.altText,
             })}
-            width={image.width}
-            height={image.height}
             className='h-full w-full rounded-md object-cover hover:opacity-70'
           />
         </div>
@@ -45,3 +45,5 @@ export const ImageGrid = ({
     </section>
   );
 };
+
+export default ImageGrid;

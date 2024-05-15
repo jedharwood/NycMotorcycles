@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 
 import { HeadElement } from '@/components/head-element/head-element';
-import StaticImageGrid from '@/components/image-grid/static-image-grid';
+import ImageGrid from '@/components/image-grid/image-grid';
 import StaticImageModal from '@/components/image-modal/static-image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { Spinner } from '@/components/spinner/spinner';
@@ -53,7 +53,7 @@ const GalleryPage: FC = () => {
     if (!isReady) return null;
 
     return bikeName !== 'harley-xr750' ? (
-      <StaticImageGrid images={galleryImages} maxColumns={4} />
+      <ImageGrid images={galleryImages} maxColumns={4} />
     ) : (
       <>
         <iframe

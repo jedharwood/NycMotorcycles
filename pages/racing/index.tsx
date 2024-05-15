@@ -1,7 +1,7 @@
 import { FC, useContext, useEffect } from 'react';
 
 import { HeadElement } from '@/components/head-element/head-element';
-import StaticImageGrid from '@/components/image-grid/static-image-grid';
+import ImageGrid from '@/components/image-grid/image-grid';
 import StaticImageModal from '@/components/image-modal/static-image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { TextDisplay } from '@/components/text-display/text-display';
@@ -42,7 +42,7 @@ const RacingPage: FC = (): JSX.Element => {
           <TextDisplay
             textContent={['pg.racing.sect-1.text-1', 'pg.racing.sect-1.text-2']}
           />
-          <StaticImageGrid images={gridImages} maxColumns={3} />
+          <ImageGrid images={gridImages} maxColumns={3} />
         </div>
         <StaticImageModal />
       </main>

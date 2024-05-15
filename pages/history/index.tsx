@@ -1,7 +1,7 @@
 import { FC, useContext, useEffect } from 'react';
 
 import { HeadElement } from '@/components/head-element/head-element';
-import StaticImageGrid from '@/components/image-grid/static-image-grid';
+import ImageGrid from '@/components/image-grid/image-grid';
 import StaticImageModal from '@/components/image-modal/static-image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { LinkButton } from '@/components/link-button/link-button';
@@ -58,7 +58,7 @@ const HistoryPage: FC = (): JSX.Element => {
           />
           <div className='grid gap-4 md:grid-cols-5'>
             <div className='md:col-span-3'>
-              <StaticImageGrid images={gridImagesUpper} maxColumns={2} />
+              <ImageGrid images={gridImagesUpper} maxColumns={2} />
             </div>
             <div className='space-y-6 md:col-span-2'>
               <TextDisplay
@@ -100,7 +100,7 @@ const HistoryPage: FC = (): JSX.Element => {
               />
             </div>
             <div className='md:col-span-5'>
-              <StaticImageGrid images={gridImagesLower} maxColumns={2} />
+              <ImageGrid images={gridImagesLower} maxColumns={2} />
             </div>
           </div>
         </div>
