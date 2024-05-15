@@ -1,14 +1,16 @@
 import React from 'react';
 
-import { ImageGrid } from '../image-grid/image-grid';
+import { StaticImage } from '@/types/image-types';
+
+import ImageGrid from '../image-grid/image-grid';
 import { TextDisplay, TextDisplayProps } from '../text-display/text-display';
 
 type TwoColumnGridLayoutProps = {
-  images: GridImage[];
+  images: StaticImage[];
   textDisplayPropObjects: TextDisplayProps[];
 };
 
-export const TwoColumnGridLayout = ({
+const TwoColumnGridLayout = ({
   images,
   textDisplayPropObjects,
 }: TwoColumnGridLayoutProps) => {
@@ -29,3 +31,5 @@ export const TwoColumnGridLayout = ({
     </div>
   );
 };
+
+export default TwoColumnGridLayout;

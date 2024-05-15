@@ -23,10 +23,6 @@ type GridImage = {
 
 type ArchiveBikeKey = keyof typeof archive;
 
-type ImageCatalog = {
-  [key: string]: GridImage;
-};
-
 type ContactFormData = {
   email: string;
   senderName: string;
@@ -46,3 +42,5 @@ type InputFieldProps = {
 type ValidFieldNames = 'email' | 'senderName' | 'subject' | 'message';
 
 type ComponentColour = 'green' | 'red';
+
+type SoldOrCall = 'sold' | 'call';

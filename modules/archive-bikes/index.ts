@@ -25,4 +25,5 @@ export const archiveBikes: ArchiveBikes = {
   laverdaFormula500: 'laverda-formula-500',
   laverda750Racer: 'laverda-750-racer',
   kawasakiH1ra: 'kawasaki-h1ra',
+  placeholder: 'placeholder',
 };

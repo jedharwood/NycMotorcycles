@@ -36,12 +36,10 @@ const ImageModal = (): JSX.Element | null => {
         </button>
       </div>
       <Image
-        src={imageModalImage.imageSrc}
+        src={imageModalImage.image}
         alt={intl.formatMessage({
-          id: imageModalImage.imageAlt,
+          id: imageModalImage.altText,
         })}
-        width={imageModalImage.width}
-        height={imageModalImage.height}
         className='max-w-screen max-h-screen rounded-md border-2 border-stone-50 shadow-lg'
       />
     </ModalWrapper>

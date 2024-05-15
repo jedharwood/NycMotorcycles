@@ -2,8 +2,8 @@ import { FC } from 'react';
 
 import { HeadElement } from '@/components/head-element/head-element';
 import { LinkButton } from '@/components/link-button/link-button';
-import { TwoColumnGridLayout } from '@/components/two-column-grid-layout/two-column-grid-layout';
-import { images as img } from '@/public/images/invest/image-catalog';
+import TwoColumnGridLayout from '@/components/two-column-grid-layout/two-column-grid-layout';
+import { images as staticImg } from '@/public/images/invest';
 import routes from '@/utilities/routes';
 
 const InvestPage: FC = (): JSX.Element => {
@@ -23,7 +23,7 @@ const InvestPage: FC = (): JSX.Element => {
       />
       <main>
         <TwoColumnGridLayout
-          images={[img.silverMotorbike]}
+          images={[staticImg.silverMotorbike]}
           textDisplayPropObjects={[
             {
               title: 'pg.invest.sect-1.title',

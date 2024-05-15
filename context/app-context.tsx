@@ -1,20 +1,17 @@
 import { createContext } from 'react';
 
+import { StaticImage, blankStaticImage } from '@/types/image-types';
+
 interface IAppContext {
   showImageModal: boolean;
-  imageModalImage: GridImage;
-  openImageModal: (image: GridImage) => void;
+  imageModalImage: StaticImage;
+  openImageModal: (image: StaticImage) => void;
   closeImageModal: () => void;
 }
 
 const defaultState: IAppContext = {
   showImageModal: false,
-  imageModalImage: {
-    imageSrc: '',
-    imageAlt: '',
-    width: undefined,
-    height: undefined,
-  },
+  imageModalImage: blankStaticImage,
   openImageModal: (): void => {},
   closeImageModal: (): void => {},
 };

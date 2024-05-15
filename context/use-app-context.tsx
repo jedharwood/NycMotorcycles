@@ -1,34 +1,31 @@
 import { useState } from 'react';
 
+import { StaticImage, blankStaticImage } from '@/types/image-types';
+
 interface IAppContextState {
   showImageModal: boolean;
-  imageModalImage: GridImage;
+  imageModalImage: StaticImage;
 }
 
 interface IAppContextActions {
+  openImageModal: (image: StaticImage) => void;
   closeImageModal: () => void;
-  openImageModal: (image: GridImage) => void;
 }
 
 export const useAppContext = (): [IAppContextState, IAppContextActions] => {
-  const defaultGridImage: GridImage = {
-    imageSrc: '',
-    imageAlt: '',
-    width: undefined,
-    height: undefined,
-  };
-  const [showImageModal, setShowImageModal] = useState<boolean>(false);
+  const [showImageModal, setShowImageModal] =
+    useState<boolean>(false);
   const [imageModalImage, setImageModalImage] =
-    useState<GridImage>(defaultGridImage);
+    useState<StaticImage>(blankStaticImage);
+
+  const openImageModal = (image: StaticImage): void => {
+    setImageModalImage(image);
+    setShowImageModal(true);
+  };
 
   const closeImageModal = (): void => {
     setShowImageModal(false);
-    setImageModalImage(defaultGridImage);
-  };
-
-  const openImageModal = (image: GridImage): void => {
-    setImageModalImage(image);
-    setShowImageModal(true);
+    setImageModalImage(blankStaticImage);
   };
 
   const state: IAppContextState = {

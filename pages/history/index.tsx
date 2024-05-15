@@ -1,14 +1,15 @@
 import { FC, useContext, useEffect } from 'react';
 
 import { HeadElement } from '@/components/head-element/head-element';
-import { ImageGrid } from '@/components/image-grid/image-grid';
+import ImageGrid from '@/components/image-grid/image-grid';
 import ImageModal from '@/components/image-modal/image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { LinkButton } from '@/components/link-button/link-button';
 import { TextDisplay } from '@/components/text-display/text-display';
 import { AppContext } from '@/context/app-context';
 import { BuildGridImages } from '@/helpers/build-grid-images';
-import { images as img } from '@/public/images/history/image-catalog';
+import { images as staticImg } from '@/public/images/history';
+import { StaticImage } from '@/types/image-types';
 import routes from '@/utilities/routes';
 
 const HistoryPage: FC = (): JSX.Element => {
@@ -18,21 +19,21 @@ const HistoryPage: FC = (): JSX.Element => {
     closeImageModal();
   }, []);
 
-  const gridImagesUpper: GridImage[] = BuildGridImages([
-    img.showroomGig,
-    img.showroomOrange,
-    img.larryTuneup,
-    img.laverdaDucati,
-    img.laverdaRace,
-    img.forklift,
-    img.bsaWorkshop,
-    img.externalWorkshop,
-    img.zushiHq,
-    img.container,
+  const gridImagesUpper: StaticImage[] = BuildGridImages([
+    staticImg.showroomGig,
+    staticImg.showroomOrange,
+    staticImg.larryTuneup,
+    staticImg.laverdaDucati,
+    staticImg.laverdaRace,
+    staticImg.forklift,
+    staticImg.bsaWorkshop,
+    staticImg.externalWorkshop,
+    staticImg.zushiHq,
+    staticImg.container,
   ]);
-  const gridImagesLower: GridImage[] = BuildGridImages([
-    img.customs,
-    img.ferrisWheel,
+  const gridImagesLower: StaticImage[] = BuildGridImages([
+    staticImg.customs,
+    staticImg.ferrisWheel,
   ]);
 
   const homeButton: JSX.Element = (
@@ -52,7 +53,7 @@ const HistoryPage: FC = (): JSX.Element => {
       <main>
         <div className='space-y-6'>
           <Jumbotron
-            image={img.larryGoggles}
+            image={staticImg.larryGoggles}
             legend='common.route-names.history'
           />
           <div className='grid gap-4 md:grid-cols-5'>

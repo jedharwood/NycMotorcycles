@@ -8,7 +8,6 @@ import { TextDisplay } from '@/components/text-display/text-display';
 
 import routes from '../../utilities/routes';
 
-
 const ActiveAuctionPage: FC = (): JSX.Element => {
   const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);

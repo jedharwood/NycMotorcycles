@@ -17,11 +17,11 @@ Implement ReactQuery for activeAuctions page
 Find a solution for server side image fetching to bypass 403 issue
 Resolve img/Image issue with auction-card component
 Hover state for Grid Images
-Issue tabbing inside modals - accessibility
-Text overflow on Jumbotron and Navbar
+Focus trapping
 styling width of ScrollToTop button
 Image/loading optimization
 GH run lint on push
+redirect Gallery to sold archive
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
