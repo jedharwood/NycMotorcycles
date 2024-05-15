@@ -33,13 +33,11 @@ type ContactFormData = {
 type InputFieldProps = {
   type: 'email' | 'text' | 'text-area';
   placeholder: string;
-  name: ValidFieldNames;
+  name: 'email' | 'senderName' | 'subject' | 'message';
   register: UseFormRegister<ContactFormData>;
   error: FieldError | undefined;
   label: string;
 };
-
-type ValidFieldNames = 'email' | 'senderName' | 'subject' | 'message';
 
 type ComponentColour = 'green' | 'red';
 

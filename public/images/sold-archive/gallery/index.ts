@@ -134,4 +134,18 @@ export const images: GalleryCatalog = {
       altText: `pg.gallery.${archive.harleyXr750}.alt.tyre`,
     },
   ],
+  kawasakiH2: [
+    {
+      image: require(`./${archive.kawasakiH2}/tank.jpeg`).default,
+      altText: `pg.gallery.${archive.kawasakiH2}.alt.tank`,
+    },
+    {
+      image: require(`./${archive.kawasakiH2}/engine.jpeg`).default,
+      altText: `pg.gallery.${archive.kawasakiH2}.alt.engine`,
+    },
+    {
+      image: require(`./${archive.kawasakiH2}/left-side.jpeg`).default,
+      altText: `pg.gallery.${archive.kawasakiH2}.alt.left-side`,
+    },
+  ]
 };
