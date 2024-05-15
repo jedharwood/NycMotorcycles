@@ -1,20 +1,22 @@
 import React from 'react';
 
-import { ImageGrid } from '../image-grid/image-grid';
+import { StaticImage } from '@/types/static-image-types';
+
+import StaticImageGrid from '../image-grid/static-image-grid';
 import { TextDisplay, TextDisplayProps } from '../text-display/text-display';
 
 type TwoColumnGridLayoutProps = {
-  images: GridImage[];
+  images: StaticImage[];
   textDisplayPropObjects: TextDisplayProps[];
 };
 
-export const TwoColumnGridLayout = ({
+const TwoColumnGridLayout = ({
   images,
   textDisplayPropObjects,
 }: TwoColumnGridLayoutProps) => {
   return (
     <div className='grid gap-4 md:grid-cols-2'>
-      <ImageGrid images={images} maxColumns={1} />
+      <StaticImageGrid images={images} maxColumns={1} />
       <div className='space-y-4'>
         {textDisplayPropObjects.map((props, idx) => (
           <TextDisplay
@@ -29,3 +31,5 @@ export const TwoColumnGridLayout = ({
     </div>
   );
 };
+
+export default TwoColumnGridLayout;

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { HeadElement } from '@/components/head-element/head-element';
-import StaticImageTwoColumnGridLayout from '@/components/two-column-grid-layout/static-image-two-column-grid-layout';
+import TwoColumnGridLayout from '@/components/two-column-grid-layout/two-column-grid-layout';
 import { images as staticImg } from '@/public/images/consign/static-image-catalog';
 
 const ConsignPage: FC = (): JSX.Element => {
@@ -12,7 +12,7 @@ const ConsignPage: FC = (): JSX.Element => {
         content='pg.consign.head.meta.content'
       />
       <main>
-        <StaticImageTwoColumnGridLayout
+        <TwoColumnGridLayout
           images={[staticImg.orangeLaverda]}
           textDisplayPropObjects={[
             {

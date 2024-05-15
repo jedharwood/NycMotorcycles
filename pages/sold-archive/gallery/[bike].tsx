@@ -8,7 +8,7 @@ import StaticImageGrid from '@/components/image-grid/static-image-grid';
 import StaticImageModal from '@/components/image-modal/static-image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { Spinner } from '@/components/spinner/spinner';
-import StaticImageTwoColumnGridLayout from '@/components/two-column-grid-layout/static-image-two-column-grid-layout';
+import TwoColumnGridLayout from '@/components/two-column-grid-layout/two-column-grid-layout';
 import { AppContext } from '@/context/app-context';
 import { BuildStaticGridImages } from '@/helpers/build-grid-images';
 import { BuildList } from '@/helpers/build-list';
@@ -64,7 +64,7 @@ const GalleryPage: FC = () => {
           referrerPolicy='strict-origin-when-cross-origin'
           allowFullScreen
         />
-        <StaticImageTwoColumnGridLayout
+        <TwoColumnGridLayout
           images={galleryImages}
           textDisplayPropObjects={[
             {

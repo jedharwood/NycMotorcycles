@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { HeadElement } from '@/components/head-element/head-element';
 import { LinkButton } from '@/components/link-button/link-button';
-import StaticImageTwoColumnGridLayout from '@/components/two-column-grid-layout/static-image-two-column-grid-layout';
+import TwoColumnGridLayout from '@/components/two-column-grid-layout/two-column-grid-layout';
 import { images as staticImg } from '@/public/images/invest/static-image-catalog';
 import routes from '@/utilities/routes';
 
@@ -22,7 +22,7 @@ const InvestPage: FC = (): JSX.Element => {
         content='pg.invest.head.meta.content'
       />
       <main>
-        <StaticImageTwoColumnGridLayout
+        <TwoColumnGridLayout
           images={[staticImg.silverMotorbike]}
           textDisplayPropObjects={[
             {
