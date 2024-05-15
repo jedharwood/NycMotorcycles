@@ -4,7 +4,7 @@ import { StaticImage } from '@/types/static-image-types';
 
 import { AppContext } from '../context/app-context';
 
-export const BuildStaticGridImages = (
+export const BuildGridImages = (
   images: StaticImage[] = []
 ): StaticImage[] => {
   const { openStaticImageModal } = useContext(AppContext);

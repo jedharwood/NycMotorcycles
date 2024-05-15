@@ -23,9 +23,9 @@ type GridImage = {
 
 type ArchiveBikeKey = keyof typeof archive;
 
-type ImageCatalog = {
-  [key: string]: GridImage;
-};
+// type ImageCatalog = {
+//   [key: string]: GridImage;
+// };
 
 type ContactFormData = {
   email: string;

@@ -5,7 +5,7 @@ import ImageGrid from '@/components/image-grid/image-grid';
 import StaticImageModal from '@/components/image-modal/static-image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { TextDisplay } from '@/components/text-display/text-display';
-import { BuildStaticGridImages } from '@/helpers/build-grid-images';
+import { BuildGridImages } from '@/helpers/build-grid-images';
 import { images as staticImg } from '@/public/images/racing/static-image-catalog';
 import { StaticImage } from '@/types/static-image-types';
 
@@ -18,7 +18,7 @@ const RacingPage: FC = (): JSX.Element => {
     closeStaticImageModal();
   }, []);
 
-  const gridImages: StaticImage[] = BuildStaticGridImages([
+  const gridImages: StaticImage[] = BuildGridImages([
     staticImg.harleyNumber7,
     staticImg.larryRacing667,
     staticImg.roperVanson,

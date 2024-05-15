@@ -10,7 +10,7 @@ import Jumbotron from '@/components/jumbotron/jumbotron';
 import { Spinner } from '@/components/spinner/spinner';
 import TwoColumnGridLayout from '@/components/two-column-grid-layout/two-column-grid-layout';
 import { AppContext } from '@/context/app-context';
-import { BuildStaticGridImages } from '@/helpers/build-grid-images';
+import { BuildGridImages } from '@/helpers/build-grid-images';
 import { BuildList } from '@/helpers/build-list';
 import { archiveBikes as archive } from '@/modules/archive-bikes';
 import { StaticImage } from '@/types/static-image-types';
@@ -37,7 +37,7 @@ const GalleryPage: FC = () => {
     Object.keys(archive).find((key) => archive[key] === bikeName) ||
     'placeholder';
   const bikeNameVerbose = `pg.gallery.${bikeName}.name`;
-  const galleryImages: StaticImage[] = BuildStaticGridImages(
+  const galleryImages: StaticImage[] = BuildGridImages(
     gallery[bikeImageName]
   );
   const theList: JSX.Element = BuildList({

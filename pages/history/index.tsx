@@ -7,7 +7,7 @@ import Jumbotron from '@/components/jumbotron/jumbotron';
 import { LinkButton } from '@/components/link-button/link-button';
 import { TextDisplay } from '@/components/text-display/text-display';
 import { AppContext } from '@/context/app-context';
-import { BuildStaticGridImages } from '@/helpers/build-grid-images';
+import { BuildGridImages } from '@/helpers/build-grid-images';
 import { images as staticImg } from '@/public/images/history/static-image-catalog';
 import { StaticImage } from '@/types/static-image-types';
 import routes from '@/utilities/routes';
@@ -19,7 +19,7 @@ const HistoryPage: FC = (): JSX.Element => {
     closeStaticImageModal();
   }, []);
 
-  const gridImagesUpper: StaticImage[] = BuildStaticGridImages([
+  const gridImagesUpper: StaticImage[] = BuildGridImages([
     staticImg.showroomGig,
     staticImg.showroomOrange,
     staticImg.larryTuneup,
@@ -31,7 +31,7 @@ const HistoryPage: FC = (): JSX.Element => {
     staticImg.zushiHq,
     staticImg.container,
   ]);
-  const gridImagesLower: StaticImage[] = BuildStaticGridImages([
+  const gridImagesLower: StaticImage[] = BuildGridImages([
     staticImg.customs,
     staticImg.ferrisWheel,
   ]);
