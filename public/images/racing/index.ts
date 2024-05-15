@@ -1,6 +1,6 @@
-import { StaticImageCatalog } from '@/types/static-image-types';
+import { ImageIndex } from '@/types/image-types';
 
-export const images: StaticImageCatalog = {
+export const images: ImageIndex = {
   laverdaLowside: {
     image: require('./laverda-lowside.jpeg').default,
     altText: 'pg.racing.alt.laverda-lowside',

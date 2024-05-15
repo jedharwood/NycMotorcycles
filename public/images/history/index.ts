@@ -1,6 +1,6 @@
-import { StaticImageCatalog } from '@/types/static-image-types';
+import { ImageIndex } from '@/types/image-types';
 
-export const images: StaticImageCatalog = {
+export const images: ImageIndex = {
   larryGoggles: {
     image: require('./larry-goggles.jpeg').default,
     altText: 'pg.history.alt.larry-goggles',

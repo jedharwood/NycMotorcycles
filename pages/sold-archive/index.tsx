@@ -7,7 +7,7 @@ import SoldCard from '@/components/sold-card/sold-card';
 import { archiveBikes as archive } from '@/modules/archive-bikes';
 import routes from '@/utilities/routes';
 
-import { images as staticImg } from '../../public/images/sold-archive/static-image-catalog';
+import { images as staticImg } from '../../public/images/sold-archive';
 
 const SoldArchivePage: FC = () => {
   const intl = useIntl();

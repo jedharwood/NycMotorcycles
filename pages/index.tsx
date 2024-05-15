@@ -7,7 +7,7 @@ import { TextDisplay } from '@/components/text-display/text-display';
 import { BuildList } from '@/helpers/build-list';
 import routes from '@/utilities/routes';
 
-import { images as staticImg } from '../public/images/home/static-image-catalog';
+import { images as staticImg } from '../public/images/home';
 
 const HomePage: FC = (): JSX.Element => {
   const desirableModelList: string[] = [

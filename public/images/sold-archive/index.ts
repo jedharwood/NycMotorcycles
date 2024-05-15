@@ -1,5 +1,5 @@
 import { archiveBikes as archive } from '@/modules/archive-bikes';
-import { StaticImage } from '@/types/static-image-types';
+import { StaticImage } from '@/types/image-types';
 
 type ArchiveCatalog = {
   [key in ArchiveBikeKey]: StaticImage;

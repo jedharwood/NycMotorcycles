@@ -13,10 +13,10 @@ import { AppContext } from '@/context/app-context';
 import { BuildGridImages } from '@/helpers/build-grid-images';
 import { BuildList } from '@/helpers/build-list';
 import { archiveBikes as archive } from '@/modules/archive-bikes';
-import { StaticImage } from '@/types/static-image-types';
+import { StaticImage } from '@/types/image-types';
 
-import { images as gallery } from '../../../public/images/sold-archive/gallery/static-image-catalog';
-import { images as staticImg } from '../../../public/images/sold-archive/static-image-catalog';
+import { images as gallery } from '../../../public/images/sold-archive/gallery';
+import { images as staticImg } from '../../../public/images/sold-archive';
 
 const GalleryPage: FC = () => {
   const intl = useIntl();

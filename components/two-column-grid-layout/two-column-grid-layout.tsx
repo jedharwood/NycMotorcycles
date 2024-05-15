@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StaticImage } from '@/types/static-image-types';
+import { StaticImage } from '@/types/image-types';
 
 import ImageGrid from '../image-grid/image-grid';
 import { TextDisplay, TextDisplayProps } from '../text-display/text-display';

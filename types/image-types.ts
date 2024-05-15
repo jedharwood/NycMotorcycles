@@ -6,6 +6,6 @@ export type StaticImage = {
   onImageClick?: () => void;
 };
 
-export type StaticImageCatalog = {
+export type ImageIndex = {
   [key: string]: StaticImage;
 };

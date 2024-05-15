@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useIntl } from 'react-intl';
 
-import { StaticImage } from '@/types/static-image-types';
+import { StaticImage } from '@/types/image-types';
 
 type JumbotronProps = {
   image: StaticImage;

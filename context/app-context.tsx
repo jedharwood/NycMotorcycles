@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-import { StaticImage } from '@/types/static-image-types';
+import { StaticImage } from '@/types/image-types';
 
 interface IAppContext {
   showImageModal: boolean;

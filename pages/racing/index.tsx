@@ -6,8 +6,8 @@ import StaticImageModal from '@/components/image-modal/static-image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { TextDisplay } from '@/components/text-display/text-display';
 import { BuildGridImages } from '@/helpers/build-grid-images';
-import { images as staticImg } from '@/public/images/racing/static-image-catalog';
-import { StaticImage } from '@/types/static-image-types';
+import { images as staticImg } from '@/public/images/racing';
+import { StaticImage } from '@/types/image-types';
 
 import { AppContext } from '../../context/app-context';
 

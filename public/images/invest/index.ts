@@ -1,6 +1,6 @@
-import { StaticImageCatalog } from '@/types/static-image-types';
+import { ImageIndex } from '@/types/image-types';
 
-export const images: StaticImageCatalog = {
+export const images: ImageIndex = {
   silverMotorbike: {
     image: require('./silver-motorbike.jpeg').default,
     altText: 'pg.invest.alt.silver-motorbike',

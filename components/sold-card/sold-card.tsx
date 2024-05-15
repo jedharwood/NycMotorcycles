@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useIntl } from 'react-intl';
 
-import { StaticImage } from '@/types/static-image-types';
+import { StaticImage } from '@/types/image-types';
 import routes from '@/utilities/routes';
 
 import { LinkButton } from '../link-button/link-button';

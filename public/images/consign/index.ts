@@ -1,6 +1,6 @@
-import { StaticImageCatalog } from '@/types/static-image-types';
+import { ImageIndex } from '@/types/image-types';
 
-export const images: StaticImageCatalog = {
+export const images: ImageIndex = {
   orangeLaverda: {
     image: require('./orange-laverda.jpeg').default,
     altText: 'pg.consign.alt.orange-laverda',

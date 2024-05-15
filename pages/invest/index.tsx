@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { HeadElement } from '@/components/head-element/head-element';
 import { LinkButton } from '@/components/link-button/link-button';
 import TwoColumnGridLayout from '@/components/two-column-grid-layout/two-column-grid-layout';
-import { images as staticImg } from '@/public/images/invest/static-image-catalog';
+import { images as staticImg } from '@/public/images/invest';
 import routes from '@/utilities/routes';
 
 const InvestPage: FC = (): JSX.Element => {

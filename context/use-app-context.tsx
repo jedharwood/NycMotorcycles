@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { StaticImage } from '@/types/static-image-types';
+import { StaticImage } from '@/types/image-types';
 
 interface IAppContextState {
   showImageModal: boolean;
