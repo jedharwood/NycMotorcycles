@@ -2,7 +2,7 @@ TO DO
 
 Download page
 Finish page content
-General refactor page content logic (CDN?)
+General refactor page content logic
 Tidy up mocks for scraper (add server side mock)
 Investigate 3rd party api solutions for Yahoo
 Tests
@@ -19,9 +19,10 @@ Resolve img/Image issue with auction-card component
 Hover state for Grid Images
 Focus trapping
 styling width of ScrollToTop button
-Image/loading optimization
+Image priority
 GH run lint on push
 redirect Gallery to sold archive
+Image modal proportions weird on larger images (HondaRc30 gallery)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
