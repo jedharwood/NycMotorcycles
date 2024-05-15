@@ -12,10 +12,10 @@ import { StaticImage } from '@/types/image-types';
 import { AppContext } from '../../context/app-context';
 
 const RacingPage: FC = (): JSX.Element => {
-  const { closeStaticImageModal } = useContext(AppContext);
+  const { closeImageModal } = useContext(AppContext);
 
   useEffect(() => {
-    closeStaticImageModal();
+    closeImageModal();
   }, []);
 
   const gridImages: StaticImage[] = BuildGridImages([

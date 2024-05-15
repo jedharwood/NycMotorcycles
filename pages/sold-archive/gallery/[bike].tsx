@@ -20,13 +20,13 @@ import { images as gallery } from '../../../public/images/sold-archive/gallery';
 
 const GalleryPage: FC = () => {
   const intl = useIntl();
-  const { closeStaticImageModal } = useContext(AppContext);
+  const { closeImageModal } = useContext(AppContext);
   const router = useRouter();
   const [isReady, setIsReady] = useState<boolean>(false);
   const [bikeName, setBikeName] = useState<string>('placeholder');
 
   useEffect(() => {
-    closeStaticImageModal();
+    closeImageModal();
     if (router.isReady) {
       setBikeName(router.query.bike as string);
       setIsReady(true);
