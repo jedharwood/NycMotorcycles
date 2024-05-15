@@ -147,5 +147,27 @@ export const images: GalleryCatalog = {
       image: require(`./${archive.kawasakiH2}/left-side.jpeg`).default,
       altText: `pg.gallery.${archive.kawasakiH2}.alt.left-side`,
     },
+  ],
+  suzukiStinger: [
+    {
+      image: require(`./${archive.suzukiStinger}/left-side.jpeg`).default,
+      altText: `pg.gallery.${archive.suzukiStinger}.alt.left-side`,
+    },
+    {
+      image: require(`./${archive.suzukiStinger}/green-green.jpeg`).default,
+      altText: `pg.gallery.${archive.suzukiStinger}.alt.green-green`,
+    },
+    {
+      image: require(`./${archive.suzukiStinger}/red-green.jpeg`).default,
+      altText: `pg.gallery.${archive.suzukiStinger}.alt.red-green`,
+    },
+    {
+      image: require(`./${archive.suzukiStinger}/rider.jpeg`).default,
+      altText: `pg.gallery.${archive.suzukiStinger}.alt.rider`,
+    },
+    {
+      image: require(`./${archive.suzukiStinger}/fuel.jpeg`).default,
+      altText: `pg.gallery.${archive.suzukiStinger}.alt.fuel`,
+    },
   ]
 };
