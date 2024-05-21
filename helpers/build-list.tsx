@@ -12,7 +12,9 @@ export const BuildList = ({
   const intl = useIntl();
 
   return (
-    <ul className={`list-disc pl-4 ${alignCentre ? 'text-center' : ''}`}>
+    <ul
+      className={`list-disc space-y-2 pl-4 ${alignCentre ? 'text-center' : ''}`}
+    >
       {listItems.map((listItem, idx) => (
         <li key={idx}>
           {intl.formatMessage({
