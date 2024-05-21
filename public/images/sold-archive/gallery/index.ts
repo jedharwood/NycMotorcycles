@@ -242,4 +242,14 @@ export const images: GalleryCatalog = {
       altText: `pg.gallery.${archive.kawasakiS3}.alt.showroom`,
     },
   ],
+  kawasakiG7s: [
+    {
+      image: require(`./${archive.kawasakiG7s}/right-angle.jpeg`).default,
+      altText: `pg.gallery.${archive.kawasakiG7s}.alt.right-angle`,
+    },
+    {
+      image: require(`./${archive.kawasakiG7s}/right-straight.jpeg`).default,
+      altText: `pg.gallery.${archive.kawasakiG7s}.alt.right-straight`,
+    },
+  ]
 };
