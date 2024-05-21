@@ -174,44 +174,62 @@ export const images: GalleryCatalog = {
     {
       image: require(`./${archive.bsaStarfire}/right-side.jpeg`).default,
       altText: `pg.gallery.${archive.bsaStarfire}.alt.right-side`,
-    },  
+    },
     {
       image: require(`./${archive.bsaStarfire}/port.jpeg`).default,
       altText: `pg.gallery.${archive.bsaStarfire}.alt.port`,
-    }, 
+    },
     {
       image: require(`./${archive.bsaStarfire}/rider.jpeg`).default,
       altText: `pg.gallery.${archive.bsaStarfire}.alt.rider`,
-    },  
+    },
     {
       image: require(`./${archive.bsaStarfire}/left-side.jpeg`).default,
       altText: `pg.gallery.${archive.bsaStarfire}.alt.left-side`,
-    },   
+    },
     {
       image: require(`./${archive.bsaStarfire}/silver.jpeg`).default,
       altText: `pg.gallery.${archive.bsaStarfire}.alt.silver`,
-    },    
+    },
   ],
   kawasakiH1: [
     {
       image: require(`./${archive.kawasakiH1}/larry.jpeg`).default,
       altText: `pg.gallery.${archive.kawasakiH1}.alt.larry`,
-    }, 
+    },
     {
       image: require(`./${archive.kawasakiH1}/graf.jpeg`).default,
       altText: `pg.gallery.${archive.kawasakiH1}.alt.graf`,
-    }, 
+    },
     {
       image: require(`./${archive.kawasakiH1}/showroom.jpeg`).default,
       altText: `pg.gallery.${archive.kawasakiH1}.alt.showroom`,
-    }, 
+    },
     {
       image: require(`./${archive.kawasakiH1}/fairing.jpeg`).default,
       altText: `pg.gallery.${archive.kawasakiH1}.alt.fairing`,
-    }, 
+    },
     {
       image: require(`./${archive.kawasakiH1}/pier.jpeg`).default,
       altText: `pg.gallery.${archive.kawasakiH1}.alt.pier`,
-    }, 
-  ]
+    },
+  ],
+  harleyXr750Replica: [
+    {
+      image: require(`./${archive.harleyXr750Replica}/right-side.jpeg`).default,
+      altText: `pg.gallery.${archive.harleyXr750Replica}.alt.right-side`,
+    },
+    {
+      image: require(`./${archive.harleyXr750Replica}/graf.jpeg`).default,
+      altText: `pg.gallery.${archive.harleyXr750Replica}.alt.graf`,
+    },
+    {
+      image: require(`./${archive.harleyXr750Replica}/rider.jpeg`).default,
+      altText: `pg.gallery.${archive.harleyXr750Replica}.alt.rider`,
+    },
+    {
+      image: require(`./${archive.harleyXr750Replica}/larry.jpeg`).default,
+      altText: `pg.gallery.${archive.harleyXr750Replica}.alt.larry`,
+    },
+  ],
 };

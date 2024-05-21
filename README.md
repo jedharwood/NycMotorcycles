@@ -23,6 +23,8 @@ Image priority
 GH run lint on push
 redirect Gallery to sold archive
 Image modal proportions weird on larger images (HondaRc30 gallery)
+Pass pre-formatted text into BuildList?
+Pass hook into BuildGridImage as a prop?
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

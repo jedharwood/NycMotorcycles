@@ -13,8 +13,7 @@ interface IAppContextActions {
 }
 
 export const useAppContext = (): [IAppContextState, IAppContextActions] => {
-  const [showImageModal, setShowImageModal] =
-    useState<boolean>(false);
+  const [showImageModal, setShowImageModal] = useState<boolean>(false);
   const [imageModalImage, setImageModalImage] =
     useState<StaticImage>(blankStaticImage);
 
