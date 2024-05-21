@@ -251,5 +251,27 @@ export const images: GalleryCatalog = {
       image: require(`./${archive.kawasakiG7s}/right-straight.jpeg`).default,
       altText: `pg.gallery.${archive.kawasakiG7s}.alt.right-straight`,
     },
+  ],
+  nortonCommando: [
+    {
+      image: require(`./${archive.nortonCommando}/right-side.jpeg`).default,
+      altText: `pg.gallery.${archive.nortonCommando}.alt.right-side`,
+    },
+    {
+      image: require(`./${archive.nortonCommando}/helmet.jpeg`).default,
+      altText: `pg.gallery.${archive.nortonCommando}.alt.helmet`,
+    },
+    {
+      image: require(`./${archive.nortonCommando}/saddle.jpeg`).default,
+      altText: `pg.gallery.${archive.nortonCommando}.alt.saddle`,
+    },
+    {
+      image: require(`./${archive.nortonCommando}/chicken.jpeg`).default,
+      altText: `pg.gallery.${archive.nortonCommando}.alt.chicken`,
+    },
+    {
+      image: require(`./${archive.nortonCommando}/graf.jpeg`).default,
+      altText: `pg.gallery.${archive.nortonCommando}.alt.graf`,
+    },
   ]
 };
