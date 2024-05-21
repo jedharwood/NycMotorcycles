@@ -29,7 +29,7 @@ export const TextDisplay = ({
     return title === undefined ? (
       <></>
     ) : (
-      <h2 className='mb-4 text-center text-xl font-medium opacity-80 md:text-2xl'>
+      <h2 className='text-center text-xl font-medium opacity-80 md:text-2xl'>
         {intl.formatMessage({
           id: title,
         })}
@@ -53,29 +53,31 @@ export const TextDisplay = ({
     );
   };
 
-  const renderChildElement = (position: ChildElementPosition): JSX.Element => {
+  const renderChildElement = (
+    position: ChildElementPosition
+  ): JSX.Element | null => {
     if (
       childElement &&
       childElementPosition !== 'bottom' &&
       position === 'under-title'
     ) {
-      return <div className='mt-4'>{childElement}</div>;
+      return childElement;
     }
     if (
       childElement &&
       childElementPosition === 'bottom' &&
       position === 'bottom'
     ) {
-      return <div className='mt-4'>{childElement}</div>;
+      return childElement;
     }
 
-    return <></>;
+    return null;
   };
 
   const borderColourClasses: string =
     borderColour === 'red' ? 'border-rose-500' : 'border-teal-500';
   const borderClasses: string = `border-2 ${borderColourClasses}`;
-  const bgClasses: string = `bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg ${
+  const bgClasses: string = `bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 ${
     !isOpaque && 'bg-opacity-90'
   } ${hasBorder && borderClasses}`;
 
