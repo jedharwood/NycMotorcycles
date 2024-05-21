@@ -169,5 +169,27 @@ export const images: GalleryCatalog = {
       image: require(`./${archive.suzukiStinger}/fuel.jpeg`).default,
       altText: `pg.gallery.${archive.suzukiStinger}.alt.fuel`,
     },
+  ],
+  bsaStarfire: [
+    {
+      image: require(`./${archive.bsaStarfire}/right-side.jpeg`).default,
+      altText: `pg.gallery.${archive.bsaStarfire}.alt.right-side`,
+    },  
+    {
+      image: require(`./${archive.bsaStarfire}/port.jpeg`).default,
+      altText: `pg.gallery.${archive.bsaStarfire}.alt.port`,
+    }, 
+    {
+      image: require(`./${archive.bsaStarfire}/rider.jpeg`).default,
+      altText: `pg.gallery.${archive.bsaStarfire}.alt.rider`,
+    },  
+    {
+      image: require(`./${archive.bsaStarfire}/left-side.jpeg`).default,
+      altText: `pg.gallery.${archive.bsaStarfire}.alt.left-side`,
+    },   
+    {
+      image: require(`./${archive.bsaStarfire}/silver.jpeg`).default,
+      altText: `pg.gallery.${archive.bsaStarfire}.alt.silver`,
+    },    
   ]
 };
