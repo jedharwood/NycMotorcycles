@@ -58,6 +58,11 @@ const GalleryPage: FC = () => {
     ],
   });
 
+  const maxGridColumns: TheNumbersOneToFour =
+    galleryImages.length < 4
+      ? (galleryImages.length as TheNumbersOneToFour)
+      : 4;
+
   const renderContent = (): JSX.Element | null => {
     if (!isReady) return null;
 
@@ -125,7 +130,7 @@ const GalleryPage: FC = () => {
       );
     }
 
-    return <ImageGrid images={galleryImages} maxColumns={4} />;
+    return <ImageGrid images={galleryImages} maxColumns={maxGridColumns} />;
   };
 
   return (

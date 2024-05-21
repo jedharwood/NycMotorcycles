@@ -241,5 +241,5 @@ export const images: GalleryCatalog = {
       image: require(`./${archive.kawasakiS3}/showroom.jpeg`).default,
       altText: `pg.gallery.${archive.kawasakiS3}.alt.showroom`,
     },
-  ]
+  ],
 };
