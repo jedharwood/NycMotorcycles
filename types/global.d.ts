@@ -42,3 +42,5 @@ type InputFieldProps = {
 type ComponentColour = 'green' | 'red';
 
 type SoldOrCall = 'sold' | 'call';
+
+type TheNumbersOneToFour = 1 | 2 | 3 | 4;

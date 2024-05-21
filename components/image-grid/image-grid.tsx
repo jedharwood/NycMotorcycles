@@ -5,7 +5,7 @@ import { StaticImage } from '@/types/image-types';
 
 type ImageGridProps = {
   images: StaticImage[];
-  maxColumns: 4 | 3 | 2 | 1;
+  maxColumns: TheNumbersOneToFour;
 };
 
 const defaultImages: StaticImage[] = [];

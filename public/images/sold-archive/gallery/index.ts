@@ -232,4 +232,14 @@ export const images: GalleryCatalog = {
       altText: `pg.gallery.${archive.harleyXr750Replica}.alt.larry`,
     },
   ],
+  kawasakiS3: [
+    {
+      image: require(`./${archive.kawasakiS3}/right-side.jpeg`).default,
+      altText: `pg.gallery.${archive.kawasakiS3}.alt.right-side`,
+    },
+    {
+      image: require(`./${archive.kawasakiS3}/showroom.jpeg`).default,
+      altText: `pg.gallery.${archive.kawasakiS3}.alt.showroom`,
+    },
+  ],
 };
