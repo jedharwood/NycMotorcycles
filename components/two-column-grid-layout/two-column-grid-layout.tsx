@@ -26,6 +26,7 @@ const TwoColumnGridLayout = ({
             textContent={props.textContent}
             childElement={props.childElement}
             childElementPosition={props.childElementPosition}
+            footer={props.footer}
           />
         ))}
       </div>

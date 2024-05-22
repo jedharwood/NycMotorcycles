@@ -12,6 +12,7 @@ export type TextDisplayProps = {
   textContentCentred?: boolean;
   borderColour?: ComponentColour;
   subTitle?: string;
+  footer?: string;
 };
 
 export const TextDisplay = ({
@@ -24,15 +25,17 @@ export const TextDisplay = ({
   textContentCentred,
   borderColour,
   subTitle,
+  footer,
 }: TextDisplayProps): JSX.Element => {
   const intl = useIntl();
+  const titleStyle: string = 'text-xl font-medium opacity-80 md:text-2xl';
 
   const renderTitle = (): JSX.Element | null => {
     if (!title) return null;
 
     return (
       <div className='text-center '>
-        <h2 className='text-xl font-medium opacity-80 md:text-2xl'>
+        <h2 className={titleStyle}>
           {intl.formatMessage({
             id: title,
           })}
@@ -85,6 +88,18 @@ export const TextDisplay = ({
     return null;
   };
 
+  const renderFooter = (): JSX.Element | null => {
+    if (!footer) return null;
+
+    return (
+      <h3 className={`text-center ${titleStyle}`}>
+        {intl.formatMessage({
+          id: footer,
+        })}
+      </h3>
+    );
+  };
+
   const borderColourClasses: string =
     borderColour === 'red' ? 'border-rose-500' : 'border-teal-500';
   const borderClasses: string = `border-2 ${borderColourClasses}`;
@@ -98,6 +113,7 @@ export const TextDisplay = ({
       {renderChildElement('under-title')}
       {mapTextContent()}
       {renderChildElement('bottom')}
+      {renderFooter()}
     </section>
   );
 };
