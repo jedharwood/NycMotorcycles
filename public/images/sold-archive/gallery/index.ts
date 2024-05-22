@@ -73,26 +73,11 @@ export const images: GalleryCatalog = {
     buildStaticImage(archive.suzukiStinger, 'fuel'),
   ],
   bsaStarfire: [
-    {
-      image: require(`./${archive.bsaStarfire}/right-side.jpeg`).default,
-      altText: `pg.gallery.${archive.bsaStarfire}.alt.right-side`,
-    },
-    {
-      image: require(`./${archive.bsaStarfire}/port.jpeg`).default,
-      altText: `pg.gallery.${archive.bsaStarfire}.alt.port`,
-    },
-    {
-      image: require(`./${archive.bsaStarfire}/rider.jpeg`).default,
-      altText: `pg.gallery.${archive.bsaStarfire}.alt.rider`,
-    },
-    {
-      image: require(`./${archive.bsaStarfire}/left-side.jpeg`).default,
-      altText: `pg.gallery.${archive.bsaStarfire}.alt.left-side`,
-    },
-    {
-      image: require(`./${archive.bsaStarfire}/silver.jpeg`).default,
-      altText: `pg.gallery.${archive.bsaStarfire}.alt.silver`,
-    },
+    buildStaticImage(archive.bsaStarfire, 'right-side'),
+    buildStaticImage(archive.bsaStarfire, 'port'),
+    buildStaticImage(archive.bsaStarfire, 'rider'),
+    buildStaticImage(archive.bsaStarfire, 'left-side'),
+    buildStaticImage(archive.bsaStarfire, 'silver'),
   ],
   kawasakiH1: [
     {
