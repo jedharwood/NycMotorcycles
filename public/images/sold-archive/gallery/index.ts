@@ -80,26 +80,11 @@ export const images: GalleryCatalog = {
     buildStaticImage(archive.bsaStarfire, 'silver'),
   ],
   kawasakiH1: [
-    {
-      image: require(`./${archive.kawasakiH1}/larry.jpeg`).default,
-      altText: `pg.gallery.${archive.kawasakiH1}.alt.larry`,
-    },
-    {
-      image: require(`./${archive.kawasakiH1}/graf.jpeg`).default,
-      altText: `pg.gallery.${archive.kawasakiH1}.alt.graf`,
-    },
-    {
-      image: require(`./${archive.kawasakiH1}/showroom.jpeg`).default,
-      altText: `pg.gallery.${archive.kawasakiH1}.alt.showroom`,
-    },
-    {
-      image: require(`./${archive.kawasakiH1}/fairing.jpeg`).default,
-      altText: `pg.gallery.${archive.kawasakiH1}.alt.fairing`,
-    },
-    {
-      image: require(`./${archive.kawasakiH1}/pier.jpeg`).default,
-      altText: `pg.gallery.${archive.kawasakiH1}.alt.pier`,
-    },
+    buildStaticImage(archive.kawasakiH1, 'larry'),
+    buildStaticImage(archive.kawasakiH1, 'graf'),
+    buildStaticImage(archive.kawasakiH1, 'showroom'),
+    buildStaticImage(archive.kawasakiH1, 'fairing'),
+    buildStaticImage(archive.kawasakiH1, 'pier'),
   ],
   harleyXr750Replica: [
     {
