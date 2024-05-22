@@ -58,6 +58,16 @@ const GalleryPage: FC = () => {
     ],
   });
 
+  const hondaDreamList: JSX.Element = BuildList({
+    listItems: [
+      'pg.gallery.honda-dream.sect-1.list-1',
+      'pg.gallery.honda-dream.sect-1.list-2',
+      'pg.gallery.honda-dream.sect-1.list-3',
+      'pg.gallery.honda-dream.sect-1.list-4',
+      'pg.gallery.honda-dream.sect-1.list-5',
+    ]
+  })
+
   const maxGridColumns: TheNumbersOneToFour =
     galleryImages.length < 4
       ? (galleryImages.length as TheNumbersOneToFour)
@@ -65,6 +75,21 @@ const GalleryPage: FC = () => {
 
   const renderContent = (): JSX.Element | null => {
     if (!isReady) return null;
+
+    if (bikeName === 'honda-dream') {
+      return (
+        <TwoColumnGridLayout
+          images={galleryImages}
+          textDisplayPropObjects={[
+            {
+              title: 'pg.gallery.honda-dream.sect-1.title',
+              subTitle: 'pg.gallery.honda-dream.sect-1.subtitle',
+              childElement: hondaDreamList
+            },
+          ]}
+        />
+      );
+    }
 
     if (bikeName === 'harley-xr750-replica') {
       return (
