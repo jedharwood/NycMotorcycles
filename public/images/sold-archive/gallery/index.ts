@@ -107,4 +107,11 @@ export const images: GalleryCatalog = {
     buildStaticImage(archive.nortonCommando, 'chicken'),
     buildStaticImage(archive.nortonCommando, 'graf'),
   ],
+  hondaDream: [
+    buildStaticImage(archive.hondaDream, 'showroom'),
+    buildStaticImage(archive.hondaDream, 'harbour'),
+    buildStaticImage(archive.hondaDream, 'rear-centre'),
+    buildStaticImage(archive.hondaDream, 'right-side'),
+    buildStaticImage(archive.hondaDream, 'rear'),
+  ]
 };
