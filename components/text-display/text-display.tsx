@@ -11,6 +11,7 @@ export type TextDisplayProps = {
   hasBorder?: boolean;
   textContentCentred?: boolean;
   borderColour?: ComponentColour;
+  subTitle?: string;
 };
 
 export const TextDisplay = ({
@@ -22,18 +23,28 @@ export const TextDisplay = ({
   hasBorder,
   textContentCentred,
   borderColour,
+  subTitle,
 }: TextDisplayProps): JSX.Element => {
   const intl = useIntl();
 
-  const renderTitle = (): JSX.Element => {
-    return title === undefined ? (
-      <></>
-    ) : (
-      <h2 className='text-center text-xl font-medium opacity-80 md:text-2xl'>
-        {intl.formatMessage({
-          id: title,
-        })}
-      </h2>
+  const renderTitle = (): JSX.Element | null => {
+    if (!title) return null;
+
+    return (
+      <div className='text-center '>
+        <h2 className='text-xl font-medium opacity-80 md:text-2xl'>
+          {intl.formatMessage({
+            id: title,
+          })}
+        </h2>
+        {subTitle && (
+          <p>
+            {intl.formatMessage({
+              id: subTitle,
+            })}
+          </p>
+        )}
+      </div>
     );
   };
 
