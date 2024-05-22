@@ -93,14 +93,8 @@ export const images: GalleryCatalog = {
     buildStaticImage(archive.harleyXr750Replica, 'larry'),
   ],
   kawasakiS3: [
-    {
-      image: require(`./${archive.kawasakiS3}/right-side.jpeg`).default,
-      altText: `pg.gallery.${archive.kawasakiS3}.alt.right-side`,
-    },
-    {
-      image: require(`./${archive.kawasakiS3}/showroom.jpeg`).default,
-      altText: `pg.gallery.${archive.kawasakiS3}.alt.showroom`,
-    },
+    buildStaticImage(archive.kawasakiS3, 'right-side'),
+    buildStaticImage(archive.kawasakiS3, 'showroom'),
   ],
   kawasakiG7s: [
     {
