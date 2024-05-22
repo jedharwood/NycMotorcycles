@@ -114,4 +114,11 @@ export const images: GalleryCatalog = {
     buildStaticImage(archive.hondaDream, 'right-side'),
     buildStaticImage(archive.hondaDream, 'rear'),
   ],
+  hondaSs: [
+    buildStaticImage(archive.hondaSs, 'right-side'),
+    buildStaticImage(archive.hondaSs, 'shorts'),
+    buildStaticImage(archive.hondaSs, 'beard'),
+    buildStaticImage(archive.hondaSs, 'fence'),
+    buildStaticImage(archive.hondaSs, 'underside'),
+  ]
 };
