@@ -22,9 +22,11 @@ const TwoColumnGridLayout = ({
           <TextDisplay
             key={idx}
             title={props.title}
+            subTitle={props.subTitle}
             textContent={props.textContent}
             childElement={props.childElement}
             childElementPosition={props.childElementPosition}
+            footer={props.footer}
           />
         ))}
       </div>

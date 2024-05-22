@@ -90,12 +90,14 @@ const ContactPage: FC = (): JSX.Element => {
         failedCompletely={retries > 1}
       />
       <main className='w-full rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg'>
-        <h2 className='mb-4 text-center text-xl font-medium opacity-80 md:text-2xl'>
-          <FormattedMessage id='pg.contact.title' />
-        </h2>
-        <p className='mb-4 text-center'>
-          <FormattedMessage id='pg.contact.text' />
-        </p>
+        <div className='mb-4 text-center'>
+          <h2 className='text-xl font-medium opacity-80 md:text-2xl'>
+            <FormattedMessage id='pg.contact.title' />
+          </h2>
+          <p>
+            <FormattedMessage id='pg.contact.subtitle' />
+          </p>
+        </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className='space-y-6'

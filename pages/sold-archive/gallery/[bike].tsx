@@ -58,6 +58,16 @@ const GalleryPage: FC = () => {
     ],
   });
 
+  const hondaDreamList: JSX.Element = BuildList({
+    listItems: [
+      'pg.gallery.honda-dream.list-1',
+      'pg.gallery.honda-dream.list-2',
+      'pg.gallery.honda-dream.list-3',
+      'pg.gallery.honda-dream.list-4',
+      'pg.gallery.honda-dream.list-5',
+    ]
+  });
+
   const maxGridColumns: TheNumbersOneToFour =
     galleryImages.length < 4
       ? (galleryImages.length as TheNumbersOneToFour)
@@ -65,6 +75,27 @@ const GalleryPage: FC = () => {
 
   const renderContent = (): JSX.Element | null => {
     if (!isReady) return null;
+
+    if (bikeName === 'honda-dream') {
+      return (
+        <TwoColumnGridLayout
+          images={galleryImages}
+          textDisplayPropObjects={[
+            {
+              title: 'pg.gallery.honda-dream.title',
+              subTitle: 'pg.gallery.honda-dream.subtitle',
+              childElement: hondaDreamList,
+              childElementPosition: 'under-title',
+              textContent: [
+                'pg.gallery.honda-dream.para-1',
+                'pg.gallery.honda-dream.para-2',
+              ],
+              footer: 'pg.gallery.honda-dream.footer',
+            },
+          ]}
+        />
+      );
+    }
 
     if (bikeName === 'harley-xr750-replica') {
       return (
@@ -114,14 +145,14 @@ const GalleryPage: FC = () => {
               },
               {
                 textContent: [
-                  'pg.gallery.harley-xr750.sect-2',
-                  'pg.gallery.harley-xr750.sect-3',
-                  'pg.gallery.harley-xr750.sect-4',
-                  'pg.gallery.harley-xr750.sect-5',
-                  'pg.gallery.harley-xr750.sect-6',
-                  'pg.gallery.harley-xr750.sect-7',
-                  'pg.gallery.harley-xr750.sect-8',
-                  'pg.gallery.harley-xr750.sect-9',
+                  'pg.gallery.harley-xr750.sect-2.para-1',
+                  'pg.gallery.harley-xr750.sect-2.para-2',
+                  'pg.gallery.harley-xr750.sect-2.para-3',
+                  'pg.gallery.harley-xr750.sect-2.para-4',
+                  'pg.gallery.harley-xr750.sect-2.para-5',
+                  'pg.gallery.harley-xr750.sect-2.para-6',
+                  'pg.gallery.harley-xr750.sect-2.para-7',
+                  'pg.gallery.harley-xr750.sect-2.para-8',
                 ],
               },
             ]}
