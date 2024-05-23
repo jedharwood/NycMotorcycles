@@ -17,7 +17,6 @@ export const archiveBikes: ArchiveBikes = {
   hondaDream: 'honda-dream',
   hondaSs: 'honda-ss',
   laverda500: 'laverda-500',
-  benelli250: 'benelli-250',
   matchless61: 'matchless-61',
   matchless59: 'matchless-59',
   ducati250: 'ducati-250',
