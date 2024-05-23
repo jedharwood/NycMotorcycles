@@ -2,18 +2,16 @@ import { useIntl } from 'react-intl';
 
 type BuildListProps = {
   listItems: string[];
-  alignCentre?: boolean;
 };
 
 export const BuildList = ({
   listItems,
-  alignCentre,
 }: BuildListProps): JSX.Element => {
   const intl = useIntl();
 
   return (
     <ul
-      className={`list-disc space-y-2 pl-4 ${alignCentre ? 'text-center' : ''}`}
+      className='space-y-2'
     >
       {listItems.map((listItem, idx) => (
         <li key={idx}>
