@@ -134,5 +134,12 @@ export const images: GalleryCatalog = {
     buildStaticImage(archive.matchless61, 'tank'),
     buildStaticImage(archive.matchless61, 'rear'),
     buildStaticImage(archive.matchless61, 'left-side'),
+  ],
+  matchless59: [
+    buildStaticImage(archive.matchless59, 'right-side'),
+    buildStaticImage(archive.matchless59, 'tank'),
+    buildStaticImage(archive.matchless59, 'left-side'),
+    buildStaticImage(archive.matchless59, 'head-lamp'),
+    buildStaticImage(archive.matchless59, 'tail'),
   ]
 };
