@@ -120,5 +120,12 @@ export const images: GalleryCatalog = {
     buildStaticImage(archive.hondaSs, 'beard'),
     buildStaticImage(archive.hondaSs, 'fence'),
     buildStaticImage(archive.hondaSs, 'underside'),
+  ],
+  laverda500: [
+    buildStaticImage(archive.laverda500, 'tank'),
+    buildStaticImage(archive.laverda500, 'right-side'),
+    buildStaticImage(archive.laverda500, 'front'),
+    buildStaticImage(archive.laverda500, 'left-side'),
+    buildStaticImage(archive.laverda500, 'david'),
   ]
 };
