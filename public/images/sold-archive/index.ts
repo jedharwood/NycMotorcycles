@@ -29,6 +29,7 @@ export const images: ArchiveCatalog = {
   hondaDream: buildStaticImage(archive.hondaDream),
   hondaSs: buildStaticImage(archive.hondaSs),
   laverda500: buildStaticImage(archive.laverda500),
+  benelli250: buildStaticImage(archive.benelli250),
   matchless61: buildStaticImage(archive.matchless61),
   matchless59: buildStaticImage(archive.matchless59),
   ducati250: buildStaticImage(archive.ducati250),
