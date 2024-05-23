@@ -141,5 +141,11 @@ export const images: GalleryCatalog = {
     buildStaticImage(archive.matchless59, 'left-side'),
     buildStaticImage(archive.matchless59, 'head-lamp'),
     buildStaticImage(archive.matchless59, 'tail'),
+  ],
+  ducati250: [
+    buildStaticImage(archive.ducati250, 'pitstop'),
+    buildStaticImage(archive.ducati250, 'graf'),
+    buildStaticImage(archive.ducati250, 'garden'),
+    buildStaticImage(archive.ducati250, 'tank'),
   ]
 };
