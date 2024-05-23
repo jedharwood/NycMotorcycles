@@ -127,5 +127,19 @@ export const images: GalleryCatalog = {
     buildStaticImage(archive.laverda500, 'front'),
     buildStaticImage(archive.laverda500, 'left-side'),
     buildStaticImage(archive.laverda500, 'david'),
+  ],
+  matchless61: [
+    buildStaticImage(archive.matchless61, 'pier'),
+    buildStaticImage(archive.matchless61, 'right-side'),
+    buildStaticImage(archive.matchless61, 'tank'),
+    buildStaticImage(archive.matchless61, 'rear'),
+    buildStaticImage(archive.matchless61, 'left-side'),
+  ],
+  matchless59: [
+    buildStaticImage(archive.matchless59, 'right-side'),
+    buildStaticImage(archive.matchless59, 'tank'),
+    buildStaticImage(archive.matchless59, 'left-side'),
+    buildStaticImage(archive.matchless59, 'head-lamp'),
+    buildStaticImage(archive.matchless59, 'tail'),
   ]
 };
