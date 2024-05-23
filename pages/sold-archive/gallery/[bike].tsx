@@ -44,7 +44,6 @@ const GalleryPage: FC = () => {
       'pg.gallery.harley-xr750.sect-1.list-2',
       'pg.gallery.harley-xr750.sect-1.list-3',
     ],
-    alignCentre: true,
   });
 
   const harleyXr750ReplicaList: JSX.Element = BuildList({
@@ -68,6 +67,26 @@ const GalleryPage: FC = () => {
     ]
   });
 
+  const ducati250List: JSX.Element = BuildList({
+    listItems: [
+      'pg.gallery.ducati-250.list-1',
+      'pg.gallery.ducati-250.list-2',
+      'pg.gallery.ducati-250.list-3',
+      'pg.gallery.ducati-250.list-4',
+      'pg.gallery.ducati-250.list-5',
+      'pg.gallery.ducati-250.list-6',
+      'pg.gallery.ducati-250.list-7',
+      'pg.gallery.ducati-250.list-8',
+      'pg.gallery.ducati-250.list-9',
+      'pg.gallery.ducati-250.list-10',
+      'pg.gallery.ducati-250.list-11',
+      'pg.gallery.ducati-250.list-12',
+      'pg.gallery.ducati-250.list-13',
+      'pg.gallery.ducati-250.list-14',
+      'pg.gallery.ducati-250.list-15',
+    ]
+  })
+
   const maxGridColumns: TheNumbersOneToFour =
     galleryImages.length < 4
       ? (galleryImages.length as TheNumbersOneToFour)
@@ -75,6 +94,24 @@ const GalleryPage: FC = () => {
 
   const renderContent = (): JSX.Element | null => {
     if (!isReady) return null;
+
+    if (bikeName === 'ducati-250') {
+      return (
+        <TwoColumnGridLayout 
+          images={galleryImages}
+          textDisplayPropObjects={[
+            {
+              title: 'pg.gallery.ducati-250.title',
+              childElement: ducati250List,
+              textContent: [
+                'pg.gallery.ducati-250.para-1',
+                'pg.gallery.ducati-250.para-2'
+              ]
+            }
+          ]}
+        />
+      )
+    }
 
     if (bikeName === 'honda-dream') {
       return (
