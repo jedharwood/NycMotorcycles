@@ -153,4 +153,10 @@ export const images: GalleryCatalog = {
     buildStaticImage(archive.harleyXr75075, 'pier'),
     buildStaticImage(archive.harleyXr75075, 'beach'),
   ],
+  kawasakiH1ra: [
+    buildStaticImage(archive.kawasakiH1ra, 'left-side'),
+    buildStaticImage(archive.kawasakiH1ra, 'fairing'),
+    buildStaticImage(archive.kawasakiH1ra, 'bars'),
+    buildStaticImage(archive.kawasakiH1ra, 'tank'),
+  ]
 };
