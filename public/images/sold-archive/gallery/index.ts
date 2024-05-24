@@ -147,5 +147,10 @@ export const images: GalleryCatalog = {
     buildStaticImage(archive.ducati250, 'graf'),
     buildStaticImage(archive.ducati250, 'garden'),
     buildStaticImage(archive.ducati250, 'tank'),
-  ]
+  ],
+  harleyXr75075: [
+    buildStaticImage(archive.harleyXr75075, 'showroom'),
+    buildStaticImage(archive.harleyXr75075, 'pier'),
+    buildStaticImage(archive.harleyXr75075, 'beach'),
+  ],
 };

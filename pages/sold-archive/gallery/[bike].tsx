@@ -64,7 +64,7 @@ const GalleryPage: FC = () => {
       'pg.gallery.honda-dream.list-3',
       'pg.gallery.honda-dream.list-4',
       'pg.gallery.honda-dream.list-5',
-    ]
+    ],
   });
 
   const ducati250List: JSX.Element = BuildList({
@@ -84,8 +84,8 @@ const GalleryPage: FC = () => {
       'pg.gallery.ducati-250.list-13',
       'pg.gallery.ducati-250.list-14',
       'pg.gallery.ducati-250.list-15',
-    ]
-  })
+    ],
+  });
 
   const maxGridColumns: TheNumbersOneToFour =
     galleryImages.length < 4
@@ -95,9 +95,34 @@ const GalleryPage: FC = () => {
   const renderContent = (): JSX.Element | null => {
     if (!isReady) return null;
 
+    if (bikeName === 'harley-xr750-75') {
+      return (
+        <TwoColumnGridLayout
+          images={galleryImages}
+          textDisplayPropObjects={[
+            {
+              title: 'pg.gallery.harley-xr750-75.title',
+              textContent: [
+                'pg.gallery.harley-xr750-75.para-1',
+                'pg.gallery.harley-xr750-75.para-2',
+                'pg.gallery.harley-xr750-75.para-3',
+                'pg.gallery.harley-xr750-75.para-4',
+                'pg.gallery.harley-xr750-75.para-5',
+                'pg.gallery.harley-xr750-75.para-6',
+                'pg.gallery.harley-xr750-75.para-7',
+                'pg.gallery.harley-xr750-75.para-8',
+                'pg.gallery.harley-xr750-75.para-9',
+                'pg.gallery.harley-xr750-75.para-10',
+              ],
+            },
+          ]}
+        />
+      )
+    }
+
     if (bikeName === 'ducati-250') {
       return (
-        <TwoColumnGridLayout 
+        <TwoColumnGridLayout
           images={galleryImages}
           textDisplayPropObjects={[
             {
@@ -105,12 +130,12 @@ const GalleryPage: FC = () => {
               childElement: ducati250List,
               textContent: [
                 'pg.gallery.ducati-250.para-1',
-                'pg.gallery.ducati-250.para-2'
-              ]
-            }
+                'pg.gallery.ducati-250.para-2',
+              ],
+            },
           ]}
         />
-      )
+      );
     }
 
     if (bikeName === 'honda-dream') {
