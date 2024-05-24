@@ -4,15 +4,11 @@ type BuildListProps = {
   listItems: string[];
 };
 
-export const BuildList = ({
-  listItems,
-}: BuildListProps): JSX.Element => {
+export const BuildList = ({ listItems }: BuildListProps): JSX.Element => {
   const intl = useIntl();
 
   return (
-    <ul
-      className='space-y-2'
-    >
+    <ul className='space-y-2'>
       {listItems.map((listItem, idx) => (
         <li key={idx}>
           {intl.formatMessage({
