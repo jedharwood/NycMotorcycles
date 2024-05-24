@@ -35,7 +35,7 @@ const HomePage: FC = (): JSX.Element => {
         content='pg.home.head.meta.content'
       />
       <main className='space-y-6'>
-        <Jumbotron image={staticImg.racing} legend='pg.home.jumbotron' />
+        {/* <Jumbotron image={staticImg.racing} legend='pg.home.jumbotron' /> */}
         <TextDisplay
           title='pg.home.sect-1.title'
           childElement={
