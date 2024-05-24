@@ -1,7 +1,6 @@
 TO DO
 
 Download page
-Finish page content
 General refactor page content logic
 Tidy up mocks for scraper (add server side mock)
 Investigate 3rd party api solutions for Yahoo
