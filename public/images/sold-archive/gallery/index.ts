@@ -158,5 +158,5 @@ export const images: GalleryCatalog = {
     buildStaticImage(archive.kawasakiH1ra, 'fairing'),
     buildStaticImage(archive.kawasakiH1ra, 'bars'),
     buildStaticImage(archive.kawasakiH1ra, 'tank'),
-  ]
+  ],
 };

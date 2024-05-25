@@ -97,18 +97,20 @@ const GalleryPage: FC = () => {
 
     if (bikeName === 'kawasaki-h1ra') {
       return (
-        <TwoColumnGridLayout 
+        <TwoColumnGridLayout
           images={galleryImages}
-          textDisplayPropObjects={[{
-            textContent: [
-              'pg.gallery.kawasaki-h1ra.para-1',
-              'pg.gallery.kawasaki-h1ra.para-2',
-              'pg.gallery.kawasaki-h1ra.para-3',
-              'pg.gallery.kawasaki-h1ra.para-4',
-            ]
-          }]}
-        />      
-      )
+          textDisplayPropObjects={[
+            {
+              textContent: [
+                'pg.gallery.kawasaki-h1ra.para-1',
+                'pg.gallery.kawasaki-h1ra.para-2',
+                'pg.gallery.kawasaki-h1ra.para-3',
+                'pg.gallery.kawasaki-h1ra.para-4',
+              ],
+            },
+          ]}
+        />
+      );
     }
 
     if (bikeName === 'harley-xr750-75') {
@@ -133,7 +135,7 @@ const GalleryPage: FC = () => {
             },
           ]}
         />
-      )
+      );
     }
 
     if (bikeName === 'ducati-250') {
