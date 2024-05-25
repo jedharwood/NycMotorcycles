@@ -5,7 +5,6 @@ General refactor page content logic
 Tidy up mocks for scraper (add server side mock)
 Investigate 3rd party api solutions for Yahoo
 Tests
-Run tests on GH
 Accessibility audit and refactor semantic structure/styling
 Remove mswWorker if unused
 Address code style inconsistences and overlapping css rules
