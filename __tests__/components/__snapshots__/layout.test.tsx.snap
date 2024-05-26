@@ -237,21 +237,25 @@ exports[`Layout matches snapshot 1`] = `
       <footer
         class="mt-6 grid space-y-4 font-light tracking-widest text-stone-50"
       >
-        <button
-          class="opacity-80 hover:underline hover:opacity-100"
-          data-testid="scroll-to-top-button"
-          type="button"
+        <div
+          class="flex justify-center"
         >
-          <div
-            class="flex justify-center"
+          <button
+            class="opacity-80 hover:underline hover:opacity-100"
+            data-testid="scroll-to-top-button"
+            type="button"
           >
-            <img
-              alt="Scroll to top"
-              src="[object Object]"
-            />
-          </div>
-          Scroll to top
-        </button>
+            <div
+              class="flex justify-center"
+            >
+              <img
+                alt="Scroll to top"
+                src="[object Object]"
+              />
+            </div>
+            Scroll to top
+          </button>
+        </div>
         <div
           class="flex justify-center"
         >
