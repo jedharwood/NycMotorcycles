@@ -148,6 +148,7 @@ exports[`HomePage should render page in English 1`] = `
         class="flex justify-center"
       >
         <a
+          data-testid="home-page-download-button"
           href="/download"
         >
           <div

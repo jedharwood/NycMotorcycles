@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import NextLink from 'next/link';
 
 import Button from '../button/button';
 
@@ -24,7 +24,7 @@ export const LinkButton = ({
         {button}
       </a>
     ) : (
-      <Link href={href} data-testid={id}>{button}</Link>
+      <NextLink href={href} data-testid={id}>{button}</NextLink>
     );
   };
 
