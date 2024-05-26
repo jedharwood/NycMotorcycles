@@ -41,7 +41,7 @@ describe('HomePage', () => {
 
   it('should render navigate to contact page when ClickForAQuote button is clicked', async () => {
     const user = userEvent.setup();
-    const {} = render(
+    render(
       <IntlProvider locale='en' messages={en}>
         <HomePage />
       </IntlProvider>,
@@ -62,7 +62,7 @@ describe('HomePage', () => {
 
   it('should render navigate to download page when DownloadForms button is clicked', async () => {
     const user = userEvent.setup();
-    const {} = render(
+    render(
       <IntlProvider locale='en' messages={en}>
         <HomePage />
       </IntlProvider>,
@@ -83,7 +83,7 @@ describe('HomePage', () => {
 
   it('should render navigate to contact page when Contact button is clicked', async () => {
     const user = userEvent.setup();
-    const {} = render(
+    render(
       <IntlProvider locale='en' messages={en}>
         <HomePage />
       </IntlProvider>,

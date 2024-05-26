@@ -1,17 +1,23 @@
 import Image from 'next/image';
 import instagramIcon from 'public/svgs/instagram-icon.svg';
 import { useIntl } from 'react-intl';
+import { instagramLink } from '@/utilities/resources';
 
-const InstagramButton = (): JSX.Element => {
+type InstagramButtonProps = {
+  id?: string;
+};
+
+const InstagramButton = ({ id }: InstagramButtonProps): JSX.Element => {
   const intl = useIntl();
 
   return (
     <div className='flex justify-center'>
       <a
-        href={'https://www.instagram.com/newyorkcitymotorcycles/'}
+        href={instagramLink}
         target='_blank'
         rel='noopener noreferrer'
         className='opacity-80 hover:opacity-100'
+        data-testid={id}
       >
         <Image
           src={instagramIcon}

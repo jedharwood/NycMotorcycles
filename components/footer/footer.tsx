@@ -30,7 +30,7 @@ const Footer = (): JSX.Element => {
         </div>
         <FormattedMessage id='comp.footer.text.scroll-to-top' />
       </button>
-      <InstagramButton />
+      <InstagramButton id='instagram-button-footer' />
       <h3 className='md:text-md flex justify-center text-sm'>
         <FormattedMessage id='comp.footer.text.address' />
       </h3>
