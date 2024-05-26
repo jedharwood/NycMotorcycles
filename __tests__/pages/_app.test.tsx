@@ -17,7 +17,7 @@ const renderApp = (Component: React.ComponentType, pageProps: any = {}) => {
   return render(<App {...props} />);
 };
 
-describe('_app', () => {
+describe('App', () => {
   it('renders Layout and matches snapshot', () => {
     const TestPage = (): JSX.Element => <div>Test Page</div>;
 

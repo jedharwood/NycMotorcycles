@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders Layout and matches snapshot 1`] = `
+exports[`Layout matches snapshot 1`] = `
 <div>
   <div
     class="w-full bg-hero bg-cover bg-fixed bg-center bg-no-repeat md:px-6"
@@ -232,7 +232,7 @@ exports[`App renders Layout and matches snapshot 1`] = `
         </nav>
       </header>
       <div>
-        Test Page
+        Test Child
       </div>
       <footer
         class="mt-6 grid space-y-4 font-light tracking-widest text-stone-50"

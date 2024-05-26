@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { IntlProvider } from 'react-intl';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-import { Layout } from '@/components/layout/layout';
+import Layout from '@/components/layout/layout';
 
 import { AppContext } from '../context/app-context';
 import { useAppContext } from '../context/use-app-context';

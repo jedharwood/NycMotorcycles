@@ -7,7 +7,7 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-export const Layout = ({ children }: LayoutProps): JSX.Element => {
+const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
     <div
       id='layout-outer'
@@ -24,3 +24,5 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
     </div>
   );
 };
+
+export default Layout;

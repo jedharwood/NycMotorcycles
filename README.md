@@ -16,7 +16,6 @@ Find a solution for server side image fetching to bypass 403 issue
 Resolve img/Image issue with auction-card component
 Hover state for Grid Images
 Focus trapping
-styling width of ScrollToTop button
 Image priority
 GH run lint on push
 redirect Gallery to sold archive
