@@ -239,6 +239,7 @@ exports[`App renders Layout and matches snapshot 1`] = `
       >
         <button
           class="opacity-80 hover:underline hover:opacity-100"
+          data-testid="scroll-to-top-button"
           type="button"
         >
           <div

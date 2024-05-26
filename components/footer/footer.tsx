@@ -17,6 +17,7 @@ const Footer = (): JSX.Element => {
         type='button'
         onClick={scrollToTop}
         className='opacity-80 hover:underline hover:opacity-100'
+        data-testid='scroll-to-top-button'
       >
         <div className='flex justify-center'>
           <Image
