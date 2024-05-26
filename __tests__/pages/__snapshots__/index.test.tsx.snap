@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage should render page in English 1`] = `
+<div>
+  <main
+    class="space-y-6"
+  >
+    <div
+      class="relative"
+    >
+      <img
+        alt="An image of Larry from New York City Motorcycles racing a vintage orange Laverda around a track."
+        src="./racing.jpeg"
+      />
+      <div
+        class="absolute top-1/2 left-1/2 w-max max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 rounded-md bg-stone-600 opacity-90 shadow-lg md:max-w-[calc(100%-3rem)]"
+      >
+        <h2
+          class="inline-block px-2 py-2 text-center text-2xl text-stone-50 sm:px-8 sm:text-4xl md:text-5xl lg:text-6xl"
+        >
+          Sell Your Motorcycle In Japan
+        </h2>
+      </div>
+    </div>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          What's my bike worth in Japan?
+        </h2>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          data-testid="home-page-contact-button-1"
+          href="/contact"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              Click for a quote
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          Thinking about selling your motorcycle in Japan?
+        </h2>
+      </div>
+      <ul
+        class="space-y-2"
+      >
+        <li>
+          Harley-Davidson Knuckleheads, Flatheads, Panheads, Shovelheads, KH stock, custom and especially choppers
+        </li>
+        <li>
+          Vintage British-made bikes; namely Triumph, Norton, BSA, Vincent
+        </li>
+        <li>
+          Vintage Honda CBs of all varieties; CL, C and CR
+        </li>
+        <li>
+          Kawasaki H1, N2, S3, Z1, KZ
+        </li>
+        <li>
+          Suzuki GT (alll sizes), T500, GS
+        </li>
+        <li>
+          Yamaha RD, TD, TA, YS
+        </li>
+      </ul>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          Here's a guide for what you need to know;
+        </p>
+        <p>
+          Japan is the best market in the world for selling many types of vintage motorcycles. Demand for certain types far outstrips supply. That means that prices realized are significantly higher than would be possible in the USA, UK or Europe. These especially:
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          Is it right for you? Is it really worth it?
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          If you have one of the above , in a word...YES! The process and costs of shipping and selling your motorcycle in Japan will leave a net return after costs that far exceeds what selling your bike in America, the UK or Europe would bring. We're into no-brainer territory.
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          OK. But what are the costs?
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          If you live near or can get your motorcycle to Los Angeles it costs $700 to ship a standard-sized motorcycle ($800 for choppers) to Japan.
+        </p>
+        <p>
+          My shipper runs a consolidated motorcycle container service to Japan approximately avery three weeks. No crating required, just drop off the bike, keys, title and a signed power of attorney permitting transit. You will also need to prepare an export invoice to declare the value of the motorcycle for Japan customs. I have templates for both forms. If getting your bike to Los Angeles is not feasible I will work with you to find an economical alternative.
+        </p>
+        <p>
+          Japan's import duties will be 10% of the declared value. A rough idea of declared value 50% of USA market price; if you can sell your bike in the USA for $7000 the declared value would be $3500. The import tax would therefore be $350.
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          data-testid="home-page-download-button"
+          href="/download"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              Download forms
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          That's all the costs?
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          No. One more cost; me! I charge a service fee of 12% of the final sale value.
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          Let's take a look at an example and see if it makes sense to sell your bike in Japan:
+        </h2>
+      </div>
+      <ul
+        class="space-y-2"
+      >
+        <li>
+          1969 Harley-Davidson Shovelhead recently sold in Japan
+        </li>
+        <li>
+          $9000 value - Purchased on Craigslist, Arizona and sent directly to Japan for sale
+        </li>
+        <li>
+          Declared value: $5000. Import tax: $500
+        </li>
+        <li>
+          Shipping: $800
+        </li>
+        <li>
+          Sold for $17,000. The 12% service fee was $2000
+        </li>
+        <li>
+          Net payment to seller: $13,700!
+        </li>
+      </ul>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          Great. Does the bike need to be shipped before or after it's sold?
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          Although there are exceptions the general rule is the bike should be in Japan before it is listed for sale here. Why? Two reasons:
+        </p>
+        <p>
+          First: the pool of buyers will be far greater for a motorcycle that's physically in the country rather than overseas. More buyers = more demand = higher price.
+        </p>
+        <p>
+          Second: because there is no payout until the buyer receives the bike. Unlike in the USA, UK or Europe where the buyer pays the seller directly before the seller ships the item, in Japan the buyer does not pay the seller directly. The buyer pays Yahoo auction; the principal online marketplace for sales of vintage motorcycles by private owners and where your bike would be listed for sale.
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          Does the title need to be in your name?
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          No. You just need a VIN-Matching title. It doesn't matter who's name it's in.
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          What happens if nobody buys it?
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          Great care is taken to make sure only bikes in high demand with realistic sales price expectations are sent to Japan for sale. There is no value to the seller or to New York City Motorcycles for a bike to come to Japan and not sell. In the worst case scenario it would be returned to the seller. Hasn't happened yet and it never should!
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          You're in Japan, how can I trust you?
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          2023 is the 11th anniversary of New York City Motorcycles founding. I'm proud of my company's sterling reputation for honesty, to never have had a single deal end in acrimony or worse; a person left feeling ripped off. DOn't take my word for it, ask around. New York City Motorcycles is only as good as it's reputation, nothing more and nothing less.
+        </p>
+        <p>
+          If we agree to sell your bike in Japan you will receive a signed consignment agreement covering all terms before you ship your bike.
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          I'm still interested. OK, how long does it take?
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          On average, approximately 60 days from the day that you drop off your bike. Transit is only 12-14 days at sea but containers depart once every three weeks, or so. Auctions run for 7 days, usually Sunday-to-Sunday. I will list the bike the week I pick it up from the port. Payment by the buyer is prompt and Japanese are excellent, honourable buyers.
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          What else do you need?
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          A complete and exhaustive description by you, since you know your bike best. Sure, I want to know all the pluses but it's critically important that defects, dents, aftermarket parts and issues to be addressed are carefully described. You will do better being transparent and credible than trying to conceal material informationthat the buyer - such as if it were you - would wish to know. Japanese have a well-earned reputation for obsessing over details and there's no detail too trivial to include - especially the negatives. And it's not just the Japanese; I guard my excellent seller's reputation religiously. Without it, none of this is possible, so please don't leave anything out! If in doubt, include it and we can review and edit it together afterwards.
+        </p>
+        <p>
+          Photos and video of the bike running are also required. Other than a brief start to make sure there are no issues after shipment, your bike will be secured indoors until it is collected or transported. When the bike arrives it will be unregistered in japan; therefore I cannot legally move it for photos or video. The more photos the better. High resolution, detailed close-ups of everything! Not just beauty shots of left side, right side, front and back.
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          Got more questions?
+        </h2>
+      </div>
+      <div
+        class="space-y-4 text-center"
+      >
+        <p>
+          Send me an email!
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          data-testid="home-page-contact-button-2"
+          href="/contact"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              Contact
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+`;

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import NextLink from 'next/link';
 
 import Button from '../button/button';
 
@@ -6,12 +6,14 @@ type LinkButtonProps = {
   text: string;
   href: string;
   type: 'anchor' | 'router-link';
+  id?: string;
 };
 
 export const LinkButton = ({
   text,
   href,
   type,
+  id,
 }: LinkButtonProps): JSX.Element => {
   const button = <Button type='button' text={text} />;
 
@@ -21,7 +23,9 @@ export const LinkButton = ({
         {button}
       </a>
     ) : (
-      <Link href={href}>{button}</Link>
+      <NextLink href={href} data-testid={id}>
+        {button}
+      </NextLink>
     );
   };
 
