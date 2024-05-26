@@ -6,14 +6,17 @@ type LinkButtonProps = {
   text: string;
   href: string;
   type: 'anchor' | 'router-link';
+  id?: string;
 };
 
 export const LinkButton = ({
   text,
   href,
   type,
+  id
 }: LinkButtonProps): JSX.Element => {
-  const button = <Button type='button' text={text} />;
+  const button = <Button type='button' text={text} 
+  />;
 
   const linkButton = () => {
     return type === 'anchor' ? (
@@ -21,7 +24,7 @@ export const LinkButton = ({
         {button}
       </a>
     ) : (
-      <Link href={href}>{button}</Link>
+      <Link href={href} data-testid={id}>{button}</Link>
     );
   };
 
