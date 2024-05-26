@@ -1,8 +1,9 @@
-import { render} from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import HomePage from '@/pages';
 import { IntlProvider } from 'react-intl';
 import en from '../../languages/en.json';
 import '@testing-library/jest-dom';
+import userEvent from '@testing-library/user-event';
 
 jest.mock('next/image');
 
@@ -24,5 +25,21 @@ describe('HomePage', () => {
     );
 
     expect(container).toMatchSnapshot();
+  });
+
+  it('should render navigate to contact page when ClickForAQuote button is clicked', () => {
+    const user = userEvent.setup();
+    const {} = render(
+      <IntlProvider locale='en' messages={en}>
+        <HomePage />
+      </IntlProvider>
+    );
+
+    const homePageContactButton: HTMLElement = screen.getByTestId('home-page-contact-button'); 
+
+    waitFor(() => {
+      user.click(homePageContactButton);
+      expect(window.location.pathname).toBe('/contact');
+    });
   });
 });
