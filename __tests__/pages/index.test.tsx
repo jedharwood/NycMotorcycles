@@ -18,7 +18,7 @@ jest.mock('../../public/images/home/', () => ({
   },
 }));
 
-jest.mock('next/router', () => jest.requireActual('next-router-mock'))
+jest.mock('next/router', () => jest.requireActual('next-router-mock'));
 
 describe('HomePage', () => {
   beforeEach(() => {
@@ -27,7 +27,7 @@ describe('HomePage', () => {
 
   afterEach(() => {
     jest.restoreAllMocks();
-  })
+  });
 
   it('should render page in English', () => {
     const { container } = render(
@@ -44,17 +44,19 @@ describe('HomePage', () => {
     const {} = render(
       <IntlProvider locale='en' messages={en}>
         <HomePage />
-      </IntlProvider>, 
-    { wrapper: MemoryRouterProvider }
+      </IntlProvider>,
+      { wrapper: MemoryRouterProvider }
     );
 
-    await expect(mockRouter.asPath).toEqual('/')
+    await expect(mockRouter.asPath).toEqual('/');
 
-    const homePageContactButton: HTMLElement = screen.getByTestId('home-page-contact-button'); 
+    const homePageContactButton: HTMLElement = screen.getByTestId(
+      'home-page-contact-button'
+    );
 
     await waitFor(() => {
       user.click(homePageContactButton);
-      expect(mockRouter.asPath).toEqual('/contact')
+      expect(mockRouter.asPath).toEqual('/contact');
     });
   });
 
@@ -63,17 +65,19 @@ describe('HomePage', () => {
     const {} = render(
       <IntlProvider locale='en' messages={en}>
         <HomePage />
-      </IntlProvider>, 
-    { wrapper: MemoryRouterProvider }
+      </IntlProvider>,
+      { wrapper: MemoryRouterProvider }
     );
 
-    await expect(mockRouter.asPath).toEqual('/')
+    await expect(mockRouter.asPath).toEqual('/');
 
-    const downloadFormsButton: HTMLElement = screen.getByTestId('home-page-download-button'); 
+    const downloadFormsButton: HTMLElement = screen.getByTestId(
+      'home-page-download-button'
+    );
 
     await waitFor(() => {
       user.click(downloadFormsButton);
-      expect(mockRouter.asPath).toEqual('/download')
+      expect(mockRouter.asPath).toEqual('/download');
     });
   });
 });
