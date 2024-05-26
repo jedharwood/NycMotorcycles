@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`_app renders Layout and matches snapshot 1`] = `
+<div>
+  <div
+    class="w-full bg-hero bg-cover bg-fixed bg-center bg-no-repeat md:px-6"
+    id="layout-outer"
+  >
+    <div
+      class="mx-auto max-w-6xl bg-stone-600 bg-opacity-60 py-6 sm:p-6"
+      id="layout-inner"
+    >
+      <header
+        class="text-stone-50"
+      >
+        <div
+          class="flex justify-center pb-6"
+        >
+          <img
+            alt="New york city motorcycles logo"
+            src="[object Object]"
+          />
+        </div>
+        <div
+          class="flex justify-center"
+        >
+          <h1
+            class="text-lg tracking-widest md:text-xl"
+          >
+            NEW YORK CITY MOTORCYCLES
+          </h1>
+        </div>
+        <nav
+          class="mt-2 mb-6 rounded-md bg-stone-600 bg-opacity-90 py-2 px-6 shadow-lg"
+        >
+          <div
+            class="container mx-auto flex flex-wrap justify-center"
+          >
+            <button
+              aria-controls="navbar-default"
+              aria-expanded="false"
+              class="inline-flex items-center rounded-lg opacity-80 hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-stone-50 md:hidden"
+              type="button"
+            >
+              <span
+                class="sr-only"
+              >
+                Open main menu
+              </span>
+              <img
+                alt="Burger menu icon"
+                src="[object Object]"
+              />
+            </button>
+            <div
+              class="hidden w-full md:block md:w-auto"
+            >
+              <ul
+                class="flex flex-wrap justify-center md:space-x-6 md:font-medium"
+              >
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap underline opacity-100"
+                    href="/"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/active-auctions"
+                  >
+                    Active Auctions
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/sold-archive"
+                  >
+                    Sold Archive
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/history"
+                  >
+                    History
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/racing"
+                  >
+                    Racing
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/contact"
+                  >
+                    Contact
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/consign"
+                  >
+                    Consign
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/invest"
+                  >
+                    Invest
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="invisible h-0 transition[height] overflow-hidden duration-300 ease-in-out md:hidden"
+          >
+            <ul
+              class="mt-4 mb-2 grid space-y-2"
+            >
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap underline opacity-100"
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/active-auctions"
+                >
+                  Active Auctions
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/sold-archive"
+                >
+                  Sold Archive
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/history"
+                >
+                  History
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/racing"
+                >
+                  Racing
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/contact"
+                >
+                  Contact
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/consign"
+                >
+                  Consign
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/invest"
+                >
+                  Invest
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div>
+        Test Page
+      </div>
+      <footer
+        class="mt-6 grid space-y-4 font-light tracking-widest text-stone-50"
+      >
+        <button
+          class="opacity-80 hover:underline hover:opacity-100"
+          type="button"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <img
+              alt="Scroll to top"
+              src="[object Object]"
+            />
+          </div>
+          Scroll to top
+        </button>
+        <div
+          class="flex justify-center"
+        >
+          <a
+            class="opacity-80 hover:opacity-100"
+            href="https://www.instagram.com/newyorkcitymotorcycles/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Instagram logo"
+              src="[object Object]"
+            />
+          </a>
+        </div>
+        <h3
+          class="md:text-md flex justify-center text-sm"
+        >
+          SHONAN COAST, JAPAN | LOS ANGELES
+        </h3>
+        <h4
+          class="flex justify-center px-1 text-xs md:text-sm"
+        >
+          Vintage Motorcycles, Inc | All Rights Reserved
+        </h4>
+      </footer>
+    </div>
+  </div>
+</div>
+`;
