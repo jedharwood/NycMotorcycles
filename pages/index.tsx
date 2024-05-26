@@ -43,7 +43,7 @@ const HomePage: FC = (): JSX.Element => {
               text='pg.home.sect-1.button'
               href={routes.contact}
               type='router-link'
-              id='home-page-contact-button'
+              id='home-page-contact-button-1'
             />
           }
           childElementPosition='under-title'
@@ -121,6 +121,7 @@ const HomePage: FC = (): JSX.Element => {
               text='common.route-names.contact'
               href={routes.contact}
               type='router-link'
+              id='home-page-contact-button-2'
             />
           }
           childElementPosition='bottom'

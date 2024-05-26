@@ -50,12 +50,12 @@ describe('HomePage', () => {
 
     await expect(mockRouter.asPath).toEqual('/');
 
-    const homePageContactButton: HTMLElement = screen.getByTestId(
-      'home-page-contact-button'
+    const clickForAQuoteButton: HTMLElement = screen.getByTestId(
+      'home-page-contact-button-1'
     );
 
     await waitFor(() => {
-      user.click(homePageContactButton);
+      user.click(clickForAQuoteButton);
       expect(mockRouter.asPath).toEqual('/contact');
     });
   });
@@ -78,6 +78,27 @@ describe('HomePage', () => {
     await waitFor(() => {
       user.click(downloadFormsButton);
       expect(mockRouter.asPath).toEqual('/download');
+    });
+  });
+
+  it('should render navigate to contact page when Contact button is clicked', async () => {
+    const user = userEvent.setup();
+    const {} = render(
+      <IntlProvider locale='en' messages={en}>
+        <HomePage />
+      </IntlProvider>,
+      { wrapper: MemoryRouterProvider }
+    );
+
+    await expect(mockRouter.asPath).toEqual('/');
+
+    const contactButton: HTMLElement = screen.getByTestId(
+      'home-page-contact-button-2'
+    );
+
+    await waitFor(() => {
+      user.click(contactButton);
+      expect(mockRouter.asPath).toEqual('/contact');
     });
   });
 });
