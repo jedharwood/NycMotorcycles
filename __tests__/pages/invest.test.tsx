@@ -1,32 +1,20 @@
-import { render, screen, waitFor } from '@testing-library/react';
 import InvestPage from '@/pages/invest';
-import { IntlProvider } from 'react-intl';
-import en from '../../languages/en.json';
 import userEvent from '@testing-library/user-event';
 import mockRouter from 'next-router-mock';
-import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { render, screen, waitFor } from '@/test-utils';
 
 jest.mock('next/router', () => jest.requireActual('next-router-mock'));
 
 describe('InvestPage', () => {
-    it('should render page in English', () => {
-    const { container } = render(
-      <IntlProvider locale='en' messages={en}>
-        <InvestPage />
-      </IntlProvider>
-    );
+  it('should render page in English', () => {
+    const { container } = render(<InvestPage />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should navigate to contact page when Contact button is clicked', async () => {
     const user = userEvent.setup();
-    render(
-      <IntlProvider locale='en' messages={en}>
-        <InvestPage />
-      </IntlProvider>,
-      { wrapper: MemoryRouterProvider }
-    );
+    render(<InvestPage />);
 
     await expect(mockRouter.asPath).toEqual('/');
 
