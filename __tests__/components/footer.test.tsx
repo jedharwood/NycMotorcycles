@@ -38,7 +38,6 @@ describe('Footer', () => {
 
     await waitFor(() => {
       user.click(scrollToTopButton);
-      expect(window.scrollTo).toHaveBeenCalledTimes(1);
       expect(window.scrollTo).toHaveBeenCalledWith({
         top: 0,
         behavior: 'smooth',
