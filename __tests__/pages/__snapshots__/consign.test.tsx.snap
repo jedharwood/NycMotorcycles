@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConsignPage should render page in English 1`] = `
+<div>
+  <main>
+    <div
+      class="grid gap-4 md:grid-cols-2"
+    >
+      <section
+        class="space-y-4"
+      >
+        <div
+          class="rounded-md bg-gray-500 shadow-lg 
+            cursor-default 
+            h-fit"
+        >
+          <img
+            alt="A photograph of an orange coloured vintage Laverda motorcycle."
+          />
+        </div>
+      </section>
+      <div
+        class="space-y-4"
+      >
+        <section
+          class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+        >
+          <div
+            class="text-center "
+          >
+            <h2
+              class="text-xl font-medium opacity-80 md:text-2xl"
+            >
+              Consignment sales
+            </h2>
+          </div>
+          <div
+            class="space-y-4 undefined"
+          >
+            <p>
+              Racing old motorbikes throughout the United States has led to an extensive network of racers, collectors, specialists and enthusiasts throughout the world. When not visiting "old dudes'" garages, NYCMC's owner is working the phones, finding worthy homes for cherished motorcycles.
+            </p>
+            <p>
+              For years, only motorcycles added to the collection were pursued.
+            </p>
+            <p>
+              Consignment Sales was born out of feeling sad that otherwise great motorcycles were being left behind.  On one side, there's an owner who has reluctantly realized they can't give enough time and care to a beloved motorcycle owned usually decades, that will slowly decay...along with its optimal value.
+            </p>
+            <p>
+              On the other end, is someone dying to own, care for and love that very motorcycle.
+            </p>
+            <p>
+              "...unless its pried out of my cold, dying hands".
+            </p>
+            <p>
+              Its hard to count the number of times I've heard that response to my "would you sell it?".
+            </p>
+            <p>
+              The first time I asked.
+            </p>
+            <p>
+              Seeing me year after year, "Hell No!!" eventually becomes "maybe".
+            </p>
+            <p>
+              Trusting New York City Motorcycles' bonafides: Integrity, Passion, Knowledge - maybe becomes, "for the right buyer".
+            </p>
+            <p>
+              Consignment fees are generally 10% of gross sale, paid by seller, upon completion of the sale.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+`;

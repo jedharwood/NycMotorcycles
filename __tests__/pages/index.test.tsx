@@ -39,7 +39,7 @@ describe('HomePage', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render navigate to contact page when ClickForAQuote button is clicked', async () => {
+  it('should navigate to contact page when ClickForAQuote button is clicked', async () => {
     const user = userEvent.setup();
     render(
       <IntlProvider locale='en' messages={en}>
@@ -60,7 +60,7 @@ describe('HomePage', () => {
     });
   });
 
-  it('should render navigate to download page when DownloadForms button is clicked', async () => {
+  it('should navigate to download page when DownloadForms button is clicked', async () => {
     const user = userEvent.setup();
     render(
       <IntlProvider locale='en' messages={en}>
@@ -81,7 +81,7 @@ describe('HomePage', () => {
     });
   });
 
-  it('should render navigate to contact page when Contact button is clicked', async () => {
+  it('should navigate to contact page when Contact button is clicked', async () => {
     const user = userEvent.setup();
     render(
       <IntlProvider locale='en' messages={en}>

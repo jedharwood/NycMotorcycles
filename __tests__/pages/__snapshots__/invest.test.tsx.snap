@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvestPage should render page in English 1`] = `
+<div>
+  <main>
+    <div
+      class="grid gap-4 md:grid-cols-2"
+    >
+      <section
+        class="space-y-4"
+      >
+        <div
+          class="rounded-md bg-gray-500 shadow-lg 
+            cursor-default 
+            h-fit"
+        >
+          <img
+            alt="A photograph of a silver coloured vintage motorcycle being displayed in Sotheby's auction house."
+          />
+        </div>
+      </section>
+      <div
+        class="space-y-4"
+      >
+        <section
+          class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+        >
+          <div
+            class="text-center "
+          >
+            <h2
+              class="text-xl font-medium opacity-80 md:text-2xl"
+            >
+              Investment
+            </h2>
+          </div>
+          <div
+            class="space-y-4 undefined"
+          >
+            <p>
+              As a portfolio investment, motorcycles as an asset class, professionally-sourced and possessing meaningful character and provenance, outperform the S & P 500 year after year.
+            </p>
+            <p>
+              Demand for coveted motorcycles far outstrips supply; this puts significant upward pressure on prices. Tracking similar trends to four wheeled automobiles, demand has increased exponentially during the recent decade.
+            </p>
+            <p>
+              Two reasons: Social media = envy. That drives those with the means to step up their game. In the past trophies were kept inside a cabinet or on the mantle. Now its on your instagram and twitter.
+            </p>
+            <p>
+              The second reason is the art market. Investment art has also consistently outperformed many financial markets. In the past 10 years, art buyers - not just car and motorcycle collectors have been responsible for driving prices ever higher. Think about it. Why spend (invest) $100K for a static sculpture. The symphony of hundreds, thousands of moving parts...motion, contours, aesthetics. Moving scupture. Like collectible cars, motorcycles as sound investment are getting the respect - and promotion - from unlikely places. Art dealers, writers and critics.
+            </p>
+            <p>
+              New York City Motorcycles acts as a buyer's agent. As an independent third party with deep knowledge and contacts in the vintage motorcycle world, we never accept what is claimed to be a motorcycle's history and provenance. We prove it. We make sure that prices defend value. These are motorcycles that are intended to be liquid, desirable and offer conisistent high growth at the lowest possible risk. Call or email for further guidance.
+            </p>
+          </div>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              data-testid="invest-page-contact-button"
+              href="/contact"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Contact
+                </button>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+`;

@@ -12,6 +12,7 @@ const InvestPage: FC = (): JSX.Element => {
       text='common.route-names.contact'
       href={routes.contact}
       type='router-link'
+      id='invest-page-contact-button'
     />
   );
 
