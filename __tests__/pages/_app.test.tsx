@@ -1,7 +1,7 @@
-import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import App from '../../pages/_app';
 import { AppProps } from 'next/app';
+import { render } from '@/test-utils';
 
 jest.mock('next/router', () => jest.requireActual('next-router-mock'));
 

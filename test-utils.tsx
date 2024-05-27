@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import { IntlProvider } from 'react-intl';
-import en from '../languages/en.json';
+import en from './languages/en.json';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
@@ -20,5 +20,4 @@ const renderWithProviders = (
 ) => render(ui, { wrapper: AllTheProviders, ...options });
 
 export * from '@testing-library/react';
-// export {customRender as render}
-export { renderWithProviders };
+export { renderWithProviders as render };

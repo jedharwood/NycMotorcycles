@@ -1,9 +1,9 @@
 import ConsignPage from '@/pages/consign';
-import { renderWithProviders } from '@/__mocks__/test-utils';
+import { render } from '@/test-utils';
 
 describe('ConsignPage', () => {
   it('should render page in English', () => {
-    const { container } = renderWithProviders(<ConsignPage />);
+    const { container } = render(<ConsignPage />);
 
     expect(container).toMatchSnapshot();
   });

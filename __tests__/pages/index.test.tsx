@@ -1,9 +1,8 @@
-import { screen, waitFor } from '@testing-library/react';
 import HomePage from '@/pages';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import mockRouter from 'next-router-mock';
-import { renderWithProviders } from '@/__mocks__/test-utils';
+import { render, screen, waitFor  } from '@/test-utils';
 
 jest.mock('next/image');
 
@@ -28,14 +27,14 @@ describe('HomePage', () => {
   });
 
   it('should render page in English', () => {
-    const { container } = renderWithProviders(<HomePage />);
+    const { container } = render(<HomePage />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should navigate to contact page when ClickForAQuote button is clicked', async () => {
     const user = userEvent.setup();
-    renderWithProviders(<HomePage />);
+    render(<HomePage />);
 
     await expect(mockRouter.asPath).toEqual('/');
 
@@ -51,7 +50,7 @@ describe('HomePage', () => {
 
   it('should navigate to download page when DownloadForms button is clicked', async () => {
     const user = userEvent.setup();
-    renderWithProviders(<HomePage />);
+    render(<HomePage />);
 
     await expect(mockRouter.asPath).toEqual('/');
 
@@ -67,7 +66,7 @@ describe('HomePage', () => {
 
   it('should navigate to contact page when Contact button is clicked', async () => {
     const user = userEvent.setup();
-    renderWithProviders(<HomePage />);
+    render(<HomePage />);
 
     await expect(mockRouter.asPath).toEqual('/');
 
