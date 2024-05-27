@@ -15,7 +15,7 @@ type NavLinkDetails = {
   text: string;
 };
 
-export const Header = (): JSX.Element => {
+const Header = (): JSX.Element => {
   const intl = useIntl();
   const [showMobileNav, setShowMobileNav] = useState<boolean>(false);
   const [activeIdx, setActiveIdx] = useState<number>(-1);
@@ -146,3 +146,5 @@ export const Header = (): JSX.Element => {
     </header>
   );
 };
+
+export default Header;
