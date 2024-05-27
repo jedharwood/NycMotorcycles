@@ -1,11 +1,9 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { screen, waitFor } from '@testing-library/react';
 import HomePage from '@/pages';
-import { IntlProvider } from 'react-intl';
-import en from '../../languages/en.json';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import mockRouter from 'next-router-mock';
-import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { renderWithProviders } from '@/__mocks__/test-utils';
 
 jest.mock('next/image');
 
@@ -30,23 +28,14 @@ describe('HomePage', () => {
   });
 
   it('should render page in English', () => {
-    const { container } = render(
-      <IntlProvider locale='en' messages={en}>
-        <HomePage />
-      </IntlProvider>
-    );
+    const { container } = renderWithProviders(<HomePage />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should navigate to contact page when ClickForAQuote button is clicked', async () => {
     const user = userEvent.setup();
-    render(
-      <IntlProvider locale='en' messages={en}>
-        <HomePage />
-      </IntlProvider>,
-      { wrapper: MemoryRouterProvider }
-    );
+    renderWithProviders(<HomePage />);
 
     await expect(mockRouter.asPath).toEqual('/');
 
@@ -62,12 +51,7 @@ describe('HomePage', () => {
 
   it('should navigate to download page when DownloadForms button is clicked', async () => {
     const user = userEvent.setup();
-    render(
-      <IntlProvider locale='en' messages={en}>
-        <HomePage />
-      </IntlProvider>,
-      { wrapper: MemoryRouterProvider }
-    );
+    renderWithProviders(<HomePage />);
 
     await expect(mockRouter.asPath).toEqual('/');
 
@@ -83,12 +67,7 @@ describe('HomePage', () => {
 
   it('should navigate to contact page when Contact button is clicked', async () => {
     const user = userEvent.setup();
-    render(
-      <IntlProvider locale='en' messages={en}>
-        <HomePage />
-      </IntlProvider>,
-      { wrapper: MemoryRouterProvider }
-    );
+    renderWithProviders(<HomePage />);
 
     await expect(mockRouter.asPath).toEqual('/');
 
