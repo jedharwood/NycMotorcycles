@@ -1,0 +1,1125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SoldArchivePage should render page in English 1`] = `
+<div>
+  <main
+    class="space-y-6"
+  >
+    <section
+      class="w-full space-y-2 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-xl font-medium text-stone-50 shadow-lg md:text-2xl"
+    >
+      <h2
+        class="flex justify-center opacity-80"
+      >
+        !! Select motorcycles sold - this list is not updated often !!
+      </h2>
+      <h2
+        class="flex justify-center opacity-80"
+      >
+        !! Call or email for recently sold or current availability !!
+      </h2>
+    </section>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/harley-xr750"
+      >
+        <img
+          alt="An image of an orange coloured 1970 Harley Davidson XR750"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1970 Harley Davidson XR750
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/harley-xr750"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/honda-rc30"
+      >
+        <img
+          alt="An image of a 1988 Honda RC30 VFR750 parked at Zushi marina in Japan."
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1988 Honda RC30 VFR750
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/honda-rc30"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/suzuki-rg400"
+      >
+        <img
+          alt="An image of a 1985 Suzuki WW RG400 awaiting collection from customs in Japan."
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1985 Suzuki WW RG400
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/suzuki-rg400"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/shovelhead-chopper"
+      >
+        <img
+          alt="An image of a 1969 Harley Davidson Shovelhead Chopper awaiting collection from the port in Japan."
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1969 Harley Davidson Shovelhead Chopper
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/shovelhead-chopper"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/laverda-750-sfc"
+      >
+        <img
+          alt="An image of an orange coloured 1972 Laverda 750 SFC"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1972 Laverda 750 SFC
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/laverda-750-sfc"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/kawasaki-h2"
+      >
+        <img
+          alt="An image of a purple 1975 Kawasaki H2"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1975 Kawasaki H2
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/kawasaki-h2"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/suzuki-stinger"
+      >
+        <img
+          alt="An image of a green 1971 Suzuki T125 Stinger"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1971 Suzuki T125 Stinger
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/suzuki-stinger"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/bsa-starfire"
+      >
+        <img
+          alt="An image of an indigo coloured 1970 BSA B25 Starfire"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1970 BSA B25 Starfire
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/bsa-starfire"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/kawasaki-h1"
+      >
+        <img
+          alt="An image of a 1970 Monotrack Engineering Kawasaki H1 painted silver with green trim"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1970 Monotrack Engineering Kawasaki H1
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/kawasaki-h1"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/harley-xr750-replica"
+      >
+        <img
+          alt="An image of a Harley Davidson Streettracker XR750 replica in orange"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            Streettracker XR750 replica
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- CALL --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/contact"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Contact
+                </button>
+              </div>
+            </a>
+          </div>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/harley-xr750-replica"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/kawasaki-s3"
+      >
+        <img
+          alt="An image of a lime green 1974 Kawasaki S3 race replica"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1974 Kawasaki S3 race replica
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/kawasaki-s3"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/kawasaki-g7s"
+      >
+        <img
+          alt="An image of a red 1974 Kawasaki G7S"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1974 Kawasaki G7S
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/kawasaki-g7s"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/norton-commando"
+      >
+        <img
+          alt="An image of a black 1970 Norton Commando with gold trim"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1970 Norton Commando
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/norton-commando"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/honda-dream"
+      >
+        <img
+          alt="An image of a silver 1997 Honda Dream 50 with red frame"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1997 Honda Dream 50
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/honda-dream"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/honda-ss"
+      >
+        <img
+          alt="An image of an olive green 1970 Honda SS CL90 being ridden by a lady in a biker jacket"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1970 Honda SS CL90
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/honda-ss"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/laverda-500"
+      >
+        <img
+          alt="An image of an orange coloured 1980 Laverda 500 Montjuic"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1980 Laverda 500 Montjuic
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/laverda-500"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <img
+        alt="An image of an olive green 1972 Benelli 250SS"
+      />
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1972 Benelli 250SS
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/matchless-61"
+      >
+        <img
+          alt="An image of a red 1961 Matchless G80 Scrambler"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1961 Matchless G80 Scrambler
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/matchless-61"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/matchless-59"
+      >
+        <img
+          alt="An image of a red 1959 Matchless G80"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1959 Matchless G80
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/matchless-59"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/ducati-250"
+      >
+        <img
+          alt="An image of a red Ducati 250GP racer"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            Ducati 250GP racer
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/ducati-250"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/harley-xr750-75"
+      >
+        <img
+          alt="An image of an orange coloured 1975 Harley Davidson XR750"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1975 Harley Davidson XR750
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/harley-xr750-75"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <img
+        alt="A black and white image of a 1980 Laverda Formula 500"
+      />
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1980 Laverda Formula 500
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <img
+        alt="An image of an orange coloured Laverda 750 SFC-spec racer"
+      />
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            Laverda 750 SFC-spec racer
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+        </div>
+      </div>
+    </article>
+    <article
+      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/kawasaki-h1ra"
+      >
+        <img
+          alt="An image of a lime green 1971 Kawasaki H1RA"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center"
+          >
+            1971 Kawasaki H1RA
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            -- SOLD --
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/kawasaki-h1ra"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  Gallery
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</div>
+`;

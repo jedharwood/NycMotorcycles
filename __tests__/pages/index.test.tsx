@@ -1,8 +1,7 @@
 import HomePage from '@/pages';
-import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import mockRouter from 'next-router-mock';
-import { render, screen, waitFor  } from '@/test-utils';
+import { render, screen, waitFor } from '@/test-utils';
 
 jest.mock('next/image');
 
