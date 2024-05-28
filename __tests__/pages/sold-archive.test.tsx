@@ -1,5 +1,4 @@
 import SoldArchivePage from '@/pages/sold-archive';
-
 import { render } from '@/test-utils';
 
 describe('SoldArchivePage', () => {
@@ -9,5 +8,3 @@ describe('SoldArchivePage', () => {
     expect(container).toMatchSnapshot();
   });
 });
-
-// should I test router navigation or just hfref attribute?
