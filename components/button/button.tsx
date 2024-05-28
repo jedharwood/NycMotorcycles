@@ -1,21 +1,18 @@
-import { useIntl } from 'react-intl';
-
 type ButtonProps = {
-  type: 'button' | 'submit';
   text: string;
+  type: 'button' | 'submit';
+  buttonColour?: ComponentColour;
   disabled?: boolean;
   onClick?: () => void;
-  buttonColour?: ComponentColour;
 };
 
 const Button = ({
-  type,
   text,
+  type,
+  buttonColour = 'green',
   disabled = false,
   onClick,
-  buttonColour = 'green',
 }: ButtonProps): JSX.Element => {
-  const intl = useIntl();
   const backgroundColour: string =
     buttonColour === 'red' ? 'bg-rose-500' : 'bg-teal-700';
   const hoverState: string =
@@ -33,9 +30,7 @@ const Button = ({
         disabled={disabled}
         onClick={onClick}
       >
-        {intl.formatMessage({
-          id: text,
-        })}
+        {text}
       </button>
     </div>
   );

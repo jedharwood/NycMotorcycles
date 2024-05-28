@@ -1,5 +1,7 @@
 import { FC, useContext, useEffect } from 'react';
 
+import { useIntl } from 'react-intl';
+
 import { HeadElement } from '@/components/head-element/head-element';
 import ImageGrid from '@/components/image-grid/image-grid';
 import ImageModal from '@/components/image-modal/image-modal';
@@ -13,6 +15,7 @@ import { StaticImage } from '@/types/image-types';
 import routes from '@/utilities/routes';
 
 const HistoryPage: FC = (): JSX.Element => {
+  const intl = useIntl();
   const { closeImageModal } = useContext(AppContext);
 
   useEffect(() => {
@@ -38,7 +41,7 @@ const HistoryPage: FC = (): JSX.Element => {
 
   const homeButton: JSX.Element = (
     <LinkButton
-      text='common.route-names.home'
+      text={intl.formatMessage({ id: 'common.route-names.home' })}
       href={routes.home}
       type='router-link'
     />

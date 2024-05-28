@@ -57,7 +57,7 @@ const SoldCard = ({
       <></>
     ) : (
       <LinkButton
-        text='comp.sold-card.gallery-link-button'
+        text={intl.formatMessage({ id: 'comp.sold-card.gallery-link-button' })}
         href={galleryLink}
         type='router-link'
       />
@@ -69,7 +69,7 @@ const SoldCard = ({
       <></>
     ) : (
       <LinkButton
-        text='common.route-names.contact'
+        text={intl.formatMessage({ id: 'common.route-names.contact' })}
         href={routes.contact}
         type='router-link'
       />
