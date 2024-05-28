@@ -1,4 +1,3 @@
-import '@testing-library/jest-dom';
 import App from '../../pages/_app';
 import { AppProps } from 'next/app';
 import { render } from '@/test-utils';
