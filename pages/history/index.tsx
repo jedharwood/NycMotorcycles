@@ -1,5 +1,7 @@
 import { FC, useContext, useEffect } from 'react';
 
+import { useIntl } from 'react-intl';
+
 import { HeadElement } from '@/components/head-element/head-element';
 import ImageGrid from '@/components/image-grid/image-grid';
 import ImageModal from '@/components/image-modal/image-modal';
@@ -11,8 +13,6 @@ import { BuildGridImages } from '@/helpers/build-grid-images';
 import { images as staticImg } from '@/public/images/history';
 import { StaticImage } from '@/types/image-types';
 import routes from '@/utilities/routes';
-import { useIntl } from 'react-intl';
-
 
 const HistoryPage: FC = (): JSX.Element => {
   const intl = useIntl();

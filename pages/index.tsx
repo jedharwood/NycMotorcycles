@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import { useIntl } from 'react-intl';
+
 import { HeadElement } from '@/components/head-element/head-element';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import { LinkButton } from '@/components/link-button/link-button';
@@ -8,9 +10,6 @@ import { BuildList } from '@/helpers/build-list';
 import routes from '@/utilities/routes';
 
 import { images as staticImg } from '../public/images/home';
-
-import { useIntl } from 'react-intl';
-
 
 const HomePage: FC = (): JSX.Element => {
   const intl = useIntl();

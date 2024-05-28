@@ -1,12 +1,12 @@
 import React from 'react';
 
+import { useIntl } from 'react-intl';
+
 import Button from '../button/button';
 import InstagramButton from '../instagram-button/instagram-button';
 import ModalWrapper from '../modal-wrapper/modal-wrapper';
 import { Spinner } from '../spinner/spinner';
 import { TextDisplay } from '../text-display/text-display';
-
-import { useIntl } from 'react-intl';
 
 type InfoModalProps = {
   isVisible: boolean;
@@ -78,7 +78,6 @@ const ConfirmationModal = ({
       <div className='flex justify-center space-x-6'>
         {closeButton}
         <Button
-          // text='comp.confirmation-modal.button.retry'
           text={intl.formatMessage({ id: 'comp.confirmation-modal.button.retry' })}
           type='button'
           onClick={retryButtonClick}
