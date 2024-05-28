@@ -5,11 +5,14 @@ import { LinkButton } from '@/components/link-button/link-button';
 import TwoColumnGridLayout from '@/components/two-column-grid-layout/two-column-grid-layout';
 import { images as staticImg } from '@/public/images/invest';
 import routes from '@/utilities/routes';
+import { useIntl } from 'react-intl';
 
 const InvestPage: FC = (): JSX.Element => {
+  const intl = useIntl();
+
   const contactButton: JSX.Element = (
     <LinkButton
-      text='common.route-names.contact'
+      text={intl.formatMessage({ id: 'common.route-names.contact' })}
       href={routes.contact}
       type='router-link'
       id='invest-page-contact-button'

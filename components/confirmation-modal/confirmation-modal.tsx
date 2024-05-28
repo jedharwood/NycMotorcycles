@@ -6,6 +6,8 @@ import ModalWrapper from '../modal-wrapper/modal-wrapper';
 import { Spinner } from '../spinner/spinner';
 import { TextDisplay } from '../text-display/text-display';
 
+import { useIntl } from 'react-intl';
+
 type InfoModalProps = {
   isVisible: boolean;
   closeButtonClick: () => void;
@@ -23,6 +25,7 @@ const ConfirmationModal = ({
   retryButtonClick,
   failedCompletely,
 }: InfoModalProps): JSX.Element | null => {
+  const intl = useIntl();
   if (!isVisible) return null;
 
   const renderTitle = (): string => {
@@ -54,7 +57,7 @@ const ConfirmationModal = ({
   const renderCallsToAction = (): JSX.Element | null => {
     const closeButton: JSX.Element = (
       <Button
-        text='comp.confirmation-modal.button.close'
+        text={intl.formatMessage({ id: 'comp.confirmation-modal.button.close' })}
         type='button'
         onClick={closeButtonClick}
       />
@@ -75,7 +78,8 @@ const ConfirmationModal = ({
       <div className='flex justify-center space-x-6'>
         {closeButton}
         <Button
-          text='comp.confirmation-modal.button.retry'
+          // text='comp.confirmation-modal.button.retry'
+          text={intl.formatMessage({ id: 'comp.confirmation-modal.button.retry' })}
           type='button'
           onClick={retryButtonClick}
           buttonColour='red'

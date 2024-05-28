@@ -11,8 +11,11 @@ import { BuildGridImages } from '@/helpers/build-grid-images';
 import { images as staticImg } from '@/public/images/history';
 import { StaticImage } from '@/types/image-types';
 import routes from '@/utilities/routes';
+import { useIntl } from 'react-intl';
+
 
 const HistoryPage: FC = (): JSX.Element => {
+  const intl = useIntl();
   const { closeImageModal } = useContext(AppContext);
 
   useEffect(() => {
@@ -38,7 +41,7 @@ const HistoryPage: FC = (): JSX.Element => {
 
   const homeButton: JSX.Element = (
     <LinkButton
-      text='common.route-names.home'
+      text={intl.formatMessage({ id: 'common.route-names.home' })}
       href={routes.home}
       type='router-link'
     />

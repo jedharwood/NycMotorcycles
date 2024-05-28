@@ -9,7 +9,12 @@ import routes from '@/utilities/routes';
 
 import { images as staticImg } from '../public/images/home';
 
+import { useIntl } from 'react-intl';
+
+
 const HomePage: FC = (): JSX.Element => {
+  const intl = useIntl();
+
   const desirableModelList: string[] = [
     'pg.home.sect-2.list-1',
     'pg.home.sect-2.list-2',
@@ -40,7 +45,7 @@ const HomePage: FC = (): JSX.Element => {
           title='pg.home.sect-1.title'
           childElement={
             <LinkButton
-              text='pg.home.sect-1.button'
+              text={intl.formatMessage({ id: 'pg.home.sect-1.button' })}
               href={routes.contact}
               type='router-link'
               id='home-page-contact-button-1'
@@ -67,7 +72,7 @@ const HomePage: FC = (): JSX.Element => {
           ]}
           childElement={
             <LinkButton
-              text='pg.home.sect-4.button'
+              text={intl.formatMessage({ id: 'pg.home.sect-4.button' })}              
               href={routes.download}
               type='router-link'
               id='home-page-download-button'
@@ -118,7 +123,7 @@ const HomePage: FC = (): JSX.Element => {
           textContentCentred={true}
           childElement={
             <LinkButton
-              text='common.route-names.contact'
+              text={intl.formatMessage({ id: 'common.route-names.contact' })}
               href={routes.contact}
               type='router-link'
               id='home-page-contact-button-2'

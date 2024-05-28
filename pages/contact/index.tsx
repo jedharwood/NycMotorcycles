@@ -137,7 +137,7 @@ const ContactPage: FC = (): JSX.Element => {
           />
           <Button
             type='submit'
-            text='pg.contact.send-button'
+            text={intl.formatMessage({ id: 'pg.contact.send-button' })}
             disabled={isLoading}
           />
         </form>
