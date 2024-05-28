@@ -57,7 +57,9 @@ const ConfirmationModal = ({
   const renderCallsToAction = (): JSX.Element | null => {
     const closeButton: JSX.Element = (
       <Button
-        text={intl.formatMessage({ id: 'comp.confirmation-modal.button.close' })}
+        text={intl.formatMessage({
+          id: 'comp.confirmation-modal.button.close',
+        })}
         type='button'
         onClick={closeButtonClick}
       />
@@ -78,7 +80,9 @@ const ConfirmationModal = ({
       <div className='flex justify-center space-x-6'>
         {closeButton}
         <Button
-          text={intl.formatMessage({ id: 'comp.confirmation-modal.button.retry' })}
+          text={intl.formatMessage({
+            id: 'comp.confirmation-modal.button.retry',
+          })}
           type='button'
           onClick={retryButtonClick}
           buttonColour='red'

@@ -71,7 +71,7 @@ const HomePage: FC = (): JSX.Element => {
           ]}
           childElement={
             <LinkButton
-              text={intl.formatMessage({ id: 'pg.home.sect-4.button' })}              
+              text={intl.formatMessage({ id: 'pg.home.sect-4.button' })}
               href={routes.download}
               type='router-link'
               id='home-page-download-button'
