@@ -41,6 +41,7 @@ const SoldArchivePage: FC = () => {
         metaContent={intl.formatMessage({
           id: 'pg.sold-archive.head.meta.content',
         })}
+        metaBrandList={intl.formatMessage({ id: 'common.meta.brands' })}
       />
       <main className='space-y-6'>
         <section className='w-full space-y-2 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-xl font-medium text-stone-50 shadow-lg md:text-2xl'>

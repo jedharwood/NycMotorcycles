@@ -108,6 +108,7 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
         metaContent={intl.formatMessage({
           id: 'pg.active-auctions.head.meta.content',
         })}
+        metaBrandList={intl.formatMessage({ id: 'common.meta.brands' })}
       />
       <main>
         <Spinner

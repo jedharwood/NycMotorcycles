@@ -314,6 +314,7 @@ const GalleryPage: FC = () => {
           { id: 'pg.gallery.head.meta.content' },
           { bike: formattedBikeName }
         )}
+        metaBrandList={intl.formatMessage({ id: 'common.meta.brands' })}
       />
       <main>
         <div className='space-y-6'>

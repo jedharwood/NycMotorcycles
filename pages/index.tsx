@@ -41,6 +41,7 @@ const HomePage: FC = (): JSX.Element => {
       <HeadElement
         metaTitle={intl.formatMessage({ id: 'pg.home.head.meta.title' })}
         metaContent={intl.formatMessage({ id: 'pg.home.head.meta.content' })}
+        metaBrandList={intl.formatMessage({ id: 'common.meta.brands' })}
       />
       <main className='space-y-6'>
         <Jumbotron

@@ -25,6 +25,7 @@ const InvestPage: FC = (): JSX.Element => {
       <HeadElement
         metaTitle={intl.formatMessage({ id: 'pg.invest.head.meta.title' })}
         metaContent={intl.formatMessage({ id: 'pg.invest.head.meta.content' })}
+        metaBrandList={intl.formatMessage({ id: 'common.meta.brands' })}
       />
       <main>
         <TwoColumnGridLayout

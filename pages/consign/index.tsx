@@ -14,6 +14,7 @@ const ConsignPage: FC = (): JSX.Element => {
       <HeadElement
         metaTitle={intl.formatMessage({ id: 'pg.consign.head.meta.title' })}
         metaContent={intl.formatMessage({ id: 'pg.consign.head.meta.content' })}
+        metaBrandList={intl.formatMessage({ id: 'common.meta.brands' })}
       />
       <main>
         <TwoColumnGridLayout
