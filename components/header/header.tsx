@@ -4,58 +4,27 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import burgerIcon from 'public/svgs/burger-icon.svg';
 import nycmcLogo from 'public/svgs/nycmc-logo.svg';
-import { FormattedMessage, useIntl } from 'react-intl';
-
-import routes from '@/utilities/routes';
 
 import { NavLink } from '../nav-link/nav-link';
 
-type NavLinkDetails = {
-  href: string;
-  text: string;
+type HeaderProps = {
+  navLinks: NavLinkDetails[];
+  altTextNycmcLogo: string;
+  title: string;
+  openMainMenuText: string;
+  altTextBurgerMenu: string;
 };
 
-const Header = (): JSX.Element => {
-  const intl = useIntl();
+const Header = ({
+  navLinks,
+  altTextNycmcLogo,
+  title,
+  openMainMenuText,
+  altTextBurgerMenu,
+}: HeaderProps): JSX.Element => {
   const [showMobileNav, setShowMobileNav] = useState<boolean>(false);
   const [activeIdx, setActiveIdx] = useState<number>(-1);
   const { route } = useRouter();
-
-  const navLinks: NavLinkDetails[] = [
-    {
-      href: routes.home,
-      text: intl.formatMessage({ id: 'common.route-names.home' }),
-    },
-    {
-      href: routes.activeAuctions,
-      text: intl.formatMessage({ id: 'common.route-names.active-auctions' }),
-    },
-    {
-      href: routes.soldArchive,
-      text: intl.formatMessage({ id: 'common.route-names.sold-archive' }),
-    },
-    {
-      href: routes.history,
-      text: intl.formatMessage({ id: 'common.route-names.history' }),
-    },
-    {
-      href: routes.racing,
-      text: intl.formatMessage({ id: 'common.route-names.racing' }),
-    },
-    {
-      href: routes.contact,
-      text: intl.formatMessage({ id: 'common.route-names.contact' }),
-    },
-    {
-      href: routes.consign,
-      text: intl.formatMessage({ id: 'common.route-names.consign' }),
-    },
-    {
-      href: routes.invest,
-      text: intl.formatMessage({ id: 'common.route-names.invest' }),
-    },
-    // Maybe I'll add download in here once I have the page up...
-  ];
 
   useEffect(() => {
     const currentPageIndex: number = navLinks.findIndex(
@@ -107,16 +76,14 @@ const Header = (): JSX.Element => {
       <div className='flex justify-center pb-6'>
         <Image
           src={nycmcLogo}
-          alt={intl.formatMessage({ id: 'comp.header.alt.nycmc-logo' })}
+          alt={altTextNycmcLogo}
           width={111}
           height={111}
           priority
         />
       </div>
       <div className='flex justify-center'>
-        <h1 className='text-lg tracking-widest md:text-xl'>
-          <FormattedMessage id='common.title' />
-        </h1>
+        <h1 className='text-lg tracking-widest md:text-xl'>{title}</h1>
       </div>
       <nav className='mt-2 mb-6 rounded-md bg-stone-600 bg-opacity-90 py-2 px-6 shadow-lg'>
         <div className='container mx-auto flex flex-wrap justify-center'>
@@ -127,14 +94,10 @@ const Header = (): JSX.Element => {
             aria-expanded='false'
             onClick={toggleMobilenav}
           >
-            <span className='sr-only'>
-              <FormattedMessage id='comp.header.sr.open-main-menu' />
-            </span>
+            <span className='sr-only'>{openMainMenuText}</span>
             <Image
               src={burgerIcon}
-              alt={intl.formatMessage({
-                id: 'comp.header.alt.burger-menu',
-              })}
+              alt={altTextBurgerMenu}
               width={40}
               height={40}
             />
