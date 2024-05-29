@@ -270,7 +270,13 @@ const GalleryPage: FC = () => {
             image={staticImg[bikeImageName]}
             legend={bikeNameVerbose}
           />
-          <Spinner isLoading={!isReady} verticalPadding={true} />
+          <Spinner
+            isLoading={!isReady}
+            verticalPadding={true}
+            text={intl.formatMessage({
+              id: 'comp.spinner.sr.loading',
+            })}
+          />
           {renderContent()}
         </div>
         <ImageModal />
