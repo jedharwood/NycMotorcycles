@@ -1,11 +1,21 @@
 import Image from 'next/image';
 import chevronUp from 'public/svgs/chevron-up.svg';
-import { FormattedMessage, useIntl } from 'react-intl';
 
 import InstagramButton from '../instagram-button/instagram-button';
 
-const Footer = (): JSX.Element => {
-  const intl = useIntl();
+type FooterProps = {
+  address: string;
+  disclaimer: string;
+  chevronText: string;
+  altTextInstagramButton: string;
+};
+
+const Footer = ({
+  chevronText,
+  altTextInstagramButton,
+  address,
+  disclaimer,
+}: FooterProps): JSX.Element => {
   const scrollToTop = (): void => {
     if (typeof window === 'undefined') return;
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -21,29 +31,18 @@ const Footer = (): JSX.Element => {
           data-testid='scroll-to-top-button'
         >
           <div className='flex justify-center'>
-            <Image
-              src={chevronUp}
-              alt={intl.formatMessage({
-                id: 'comp.footer.text.scroll-to-top',
-              })}
-              width={40}
-              height={40}
-            />
+            <Image src={chevronUp} alt={chevronText} width={40} height={40} />
           </div>
-          <FormattedMessage id='comp.footer.text.scroll-to-top' />
+          {chevronText}
         </button>
       </div>
       <InstagramButton
         id='instagram-button-footer'
-        altText={intl.formatMessage({
-          id: 'common.img.instagram-logo.alt',
-        })}
+        altText={altTextInstagramButton}
       />
-      <h3 className='md:text-md flex justify-center text-sm'>
-        <FormattedMessage id='comp.footer.text.address' />
-      </h3>
+      <h3 className='md:text-md flex justify-center text-sm'>{address}</h3>
       <h4 className='flex justify-center px-1 text-xs md:text-sm'>
-        <FormattedMessage id='comp.footer.text.disclaimer' />
+        {disclaimer}
       </h4>
     </footer>
   );

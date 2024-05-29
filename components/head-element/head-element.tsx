@@ -3,13 +3,13 @@ import Head from 'next/head';
 type HeadElementProps = {
   metaTitle: string;
   metaContent: string;
-  metaBrandList: string
+  metaBrandList: string;
 };
 
 export const HeadElement = ({
   metaTitle,
   metaContent,
-  metaBrandList
+  metaBrandList,
 }: HeadElementProps) => {
   return (
     <Head>

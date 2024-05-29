@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 
+import { useIntl } from 'react-intl';
+
 import Footer from '../footer/footer';
 import Header from '../header/header';
 
@@ -8,6 +10,8 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
+  const intl = useIntl();
+
   return (
     <div
       id='layout-outer'
@@ -19,7 +23,20 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
       >
         <Header />
         {children}
-        <Footer />
+        <Footer
+          chevronText={intl.formatMessage({
+            id: 'comp.footer.text.scroll-to-top',
+          })}
+          altTextInstagramButton={intl.formatMessage({
+            id: 'common.img.instagram-logo.alt',
+          })}
+          address={intl.formatMessage({
+            id: 'comp.footer.text.address',
+          })}
+          disclaimer={intl.formatMessage({
+            id: 'comp.footer.text.disclaimer',
+          })}
+        />
       </div>
     </div>
   );
