@@ -12,7 +12,7 @@ const ConsignPage: FC = (): JSX.Element => {
   return (
     <>
       <HeadElement
-        pageTitle='pg.consign.head.meta.title'
+        metaTitle={intl.formatMessage({ id: 'pg.consign.head.meta.title' })}
         content='pg.consign.head.meta.content'
       />
       <main>

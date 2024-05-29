@@ -23,7 +23,7 @@ const InvestPage: FC = (): JSX.Element => {
   return (
     <>
       <HeadElement
-        pageTitle='pg.invest.head.meta.title'
+        metaTitle={intl.formatMessage({ id: 'pg.invest.head.meta.title' })}
         content='pg.invest.head.meta.content'
       />
       <main>

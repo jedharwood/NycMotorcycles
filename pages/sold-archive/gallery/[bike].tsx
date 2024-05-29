@@ -304,7 +304,7 @@ const GalleryPage: FC = () => {
   return (
     <>
       <HeadElement
-        pageTitle='pg.gallery.head.meta.title'
+        metaTitle={intl.formatMessage({ id: 'pg.gallery.head.meta.title' }, { bike: formattedBikeName })}
         content='pg.gallery.head.meta.content'
         bikeName={formattedBikeName}
       />

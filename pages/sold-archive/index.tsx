@@ -35,7 +35,9 @@ const SoldArchivePage: FC = () => {
   return (
     <>
       <HeadElement
-        pageTitle='pg.sold-archive.head.meta.title'
+        metaTitle={intl.formatMessage({
+          id: 'pg.sold-archive.head.meta.title'
+        })}
         content='pg.sold-archive.head.meta.content'
       />
       <main className='space-y-6'>

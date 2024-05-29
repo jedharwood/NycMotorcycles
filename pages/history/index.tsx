@@ -50,7 +50,7 @@ const HistoryPage: FC = (): JSX.Element => {
   return (
     <>
       <HeadElement
-        pageTitle='pg.history.head.meta.title'
+        metaTitle={intl.formatMessage({ id: 'pg.history.head.meta.title' })}
         content='pg.history.head.meta.content'
       />
       <main>

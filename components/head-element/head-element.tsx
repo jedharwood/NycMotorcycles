@@ -2,13 +2,13 @@ import Head from 'next/head';
 import { useIntl } from 'react-intl';
 
 type HeadElementProps = {
-  pageTitle: string;
+  metaTitle: string;
   content: string;
   bikeName?: string;
 };
 
 export const HeadElement = ({
-  pageTitle,
+  metaTitle,
   content,
   bikeName,
 }: HeadElementProps) => {
@@ -16,10 +16,6 @@ export const HeadElement = ({
   const metaBrandList: string = intl.formatMessage({
     id: 'common.meta.brands',
   });
-  const metaTitle: string =
-    bikeName === undefined
-      ? intl.formatMessage({ id: pageTitle })
-      : intl.formatMessage({ id: pageTitle }, { bike: bikeName });
   const metaContent: string =
     bikeName === undefined
       ? intl.formatMessage({ id: content })

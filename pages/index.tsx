@@ -39,7 +39,7 @@ const HomePage: FC = (): JSX.Element => {
   return (
     <>
       <HeadElement
-        pageTitle='pg.home.head.meta.title'
+        metaTitle={intl.formatMessage({ id: 'pg.home.head.meta.title' })}
         content='pg.home.head.meta.content'
       />
       <main className='space-y-6'>

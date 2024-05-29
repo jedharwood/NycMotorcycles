@@ -33,7 +33,7 @@ const RacingPage: FC = (): JSX.Element => {
   return (
     <>
       <HeadElement
-        pageTitle='pg.racing.head.meta.title'
+        metaTitle={intl.formatMessage({ id: 'pg.racing.head.meta.title' })}
         content='pg.racing.head.meta.content'
       />
       <main>
