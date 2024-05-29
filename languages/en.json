@@ -1,4 +1,5 @@
 {
+  "common.img.instagram-logo.alt": "Instagram logo",
   "common.img.place-holder.alt": "Placeholder image",
   "common.meta.brands": "| Harley Davidson | Triumph | Norton | BSA | Vincent | Honda | Kawasaki | Suzuki | Yamaha",
   "common.route-names.active-auctions": "Active Auctions",
@@ -28,7 +29,6 @@
   "comp.confirmation-modal.sent.text-1": "Your message has been sent. We will reply as soon as we can.",
   "comp.confirmation-modal.sent.text-2": "Thankyou",
   "comp.confirmation-modal.sent.title": "Sent",
-  "comp.footer.alt.instagram-logo": "Instagram logo",
   "comp.footer.text.address": "SHONAN COAST, JAPAN | LOS ANGELES",
   "comp.footer.text.disclaimer": "Vintage Motorcycles, Inc | All Rights Reserved",
   "comp.footer.text.scroll-to-top": "Scroll to top",

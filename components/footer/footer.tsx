@@ -33,7 +33,12 @@ const Footer = (): JSX.Element => {
           <FormattedMessage id='comp.footer.text.scroll-to-top' />
         </button>
       </div>
-      <InstagramButton id='instagram-button-footer' />
+      <InstagramButton
+        id='instagram-button-footer'
+        altText={intl.formatMessage({
+          id: 'common.img.instagram-logo.alt',
+        })}
+      />
       <h3 className='md:text-md flex justify-center text-sm'>
         <FormattedMessage id='comp.footer.text.address' />
       </h3>
