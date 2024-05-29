@@ -1,5 +1,3 @@
-import { useIntl } from 'react-intl';
-
 type ChildElementPosition = 'under-title' | 'bottom';
 
 export type TextDisplayProps = {
@@ -27,7 +25,6 @@ export const TextDisplay = ({
   subTitle,
   footer,
 }: TextDisplayProps): JSX.Element => {
-  const intl = useIntl();
   const titleStyle: string = 'text-xl font-medium opacity-80 md:text-2xl';
 
   const renderTitle = (): JSX.Element | null => {
@@ -35,18 +32,8 @@ export const TextDisplay = ({
 
     return (
       <div className='text-center '>
-        <h2 className={titleStyle}>
-          {intl.formatMessage({
-            id: title,
-          })}
-        </h2>
-        {subTitle && (
-          <p>
-            {intl.formatMessage({
-              id: subTitle,
-            })}
-          </p>
-        )}
+        <h2 className={titleStyle}>{title}</h2>
+        {subTitle && <p>{subTitle}</p>}
       </div>
     );
   };
@@ -57,11 +44,7 @@ export const TextDisplay = ({
     ) : (
       <div className={`space-y-4 ${textContentCentred && 'text-center'}`}>
         {textContent.map((text, idx) => (
-          <p key={idx}>
-            {intl.formatMessage({
-              id: text,
-            })}
-          </p>
+          <p key={idx}>{text}</p>
         ))}
       </div>
     );
@@ -91,13 +74,7 @@ export const TextDisplay = ({
   const renderFooter = (): JSX.Element | null => {
     if (!footer) return null;
 
-    return (
-      <h3 className={`text-center ${titleStyle}`}>
-        {intl.formatMessage({
-          id: footer,
-        })}
-      </h3>
-    );
+    return <h3 className={`text-center ${titleStyle}`}>{footer}</h3>;
   };
 
   const borderColourClasses: string =

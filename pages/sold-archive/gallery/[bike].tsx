@@ -115,10 +115,10 @@ const GalleryPage: FC = () => {
           textDisplayPropObjects={[
             {
               textContent: [
-                'pg.gallery.kawasaki-h1ra.para-1',
-                'pg.gallery.kawasaki-h1ra.para-2',
-                'pg.gallery.kawasaki-h1ra.para-3',
-                'pg.gallery.kawasaki-h1ra.para-4',
+                intl.formatMessage({ id: 'pg.gallery.kawasaki-h1ra.para-1' }),
+                intl.formatMessage({ id: 'pg.gallery.kawasaki-h1ra.para-2' }),
+                intl.formatMessage({ id: 'pg.gallery.kawasaki-h1ra.para-3' }),
+                intl.formatMessage({ id: 'pg.gallery.kawasaki-h1ra.para-4' }),
               ],
             },
           ]}
@@ -132,18 +132,22 @@ const GalleryPage: FC = () => {
           images={galleryImages}
           textDisplayPropObjects={[
             {
-              title: 'pg.gallery.harley-xr750-75.title',
+              title: intl.formatMessage({
+                id: 'pg.gallery.harley-xr750-75.title',
+              }),
               textContent: [
-                'pg.gallery.harley-xr750-75.para-1',
-                'pg.gallery.harley-xr750-75.para-2',
-                'pg.gallery.harley-xr750-75.para-3',
-                'pg.gallery.harley-xr750-75.para-4',
-                'pg.gallery.harley-xr750-75.para-5',
-                'pg.gallery.harley-xr750-75.para-6',
-                'pg.gallery.harley-xr750-75.para-7',
-                'pg.gallery.harley-xr750-75.para-8',
-                'pg.gallery.harley-xr750-75.para-9',
-                'pg.gallery.harley-xr750-75.para-10',
+                intl.formatMessage({ id: 'pg.gallery.harley-xr750-75.para-1' }),
+                intl.formatMessage({ id: 'pg.gallery.harley-xr750-75.para-2' }),
+                intl.formatMessage({ id: 'pg.gallery.harley-xr750-75.para-3' }),
+                intl.formatMessage({ id: 'pg.gallery.harley-xr750-75.para-4' }),
+                intl.formatMessage({ id: 'pg.gallery.harley-xr750-75.para-5' }),
+                intl.formatMessage({ id: 'pg.gallery.harley-xr750-75.para-6' }),
+                intl.formatMessage({ id: 'pg.gallery.harley-xr750-75.para-7' }),
+                intl.formatMessage({ id: 'pg.gallery.harley-xr750-75.para-8' }),
+                intl.formatMessage({ id: 'pg.gallery.harley-xr750-75.para-9' }),
+                intl.formatMessage({
+                  id: 'pg.gallery.harley-xr750-75.para-10',
+                }),
               ],
             },
           ]}
@@ -157,11 +161,11 @@ const GalleryPage: FC = () => {
           images={galleryImages}
           textDisplayPropObjects={[
             {
-              title: 'pg.gallery.ducati-250.title',
+              title: intl.formatMessage({ id: 'pg.gallery.ducati-250.title' }),
               childElement: ducati250List,
               textContent: [
-                'pg.gallery.ducati-250.para-1',
-                'pg.gallery.ducati-250.para-2',
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.para-1' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.para-2' }),
               ],
             },
           ]}
@@ -175,15 +179,19 @@ const GalleryPage: FC = () => {
           images={galleryImages}
           textDisplayPropObjects={[
             {
-              title: 'pg.gallery.honda-dream.title',
-              subTitle: 'pg.gallery.honda-dream.subtitle',
+              title: intl.formatMessage({ id: 'pg.gallery.honda-dream.title' }),
+              subTitle: intl.formatMessage({
+                id: 'pg.gallery.honda-dream.subtitle',
+              }),
               childElement: hondaDreamList,
               childElementPosition: 'under-title',
               textContent: [
-                'pg.gallery.honda-dream.para-1',
-                'pg.gallery.honda-dream.para-2',
+                intl.formatMessage({ id: 'pg.gallery.honda-dream.para-1' }),
+                intl.formatMessage({ id: 'pg.gallery.honda-dream.para-2' }),
               ],
-              footer: 'pg.gallery.honda-dream.footer',
+              footer: intl.formatMessage({
+                id: 'pg.gallery.honda-dream.footer',
+              }),
             },
           ]}
         />
@@ -196,19 +204,37 @@ const GalleryPage: FC = () => {
           images={galleryImages}
           textDisplayPropObjects={[
             {
-              title: 'pg.gallery.harley-xr750-replica.sect-1.title',
+              title: intl.formatMessage({
+                id: 'pg.gallery.harley-xr750-replica.sect-1.title',
+              }),
               textContent: [
-                'pg.gallery.harley-xr750-replica.sect-1.para-1',
-                'pg.gallery.harley-xr750-replica.sect-1.para-2',
-                'pg.gallery.harley-xr750-replica.sect-1.para-3',
-                'pg.gallery.harley-xr750-replica.sect-1.para-4',
-                'pg.gallery.harley-xr750-replica.sect-1.para-5',
-                'pg.gallery.harley-xr750-replica.sect-1.para-6',
-                'pg.gallery.harley-xr750-replica.sect-1.para-7',
+                intl.formatMessage({
+                  id: 'pg.gallery.harley-xr750-replica.sect-1.para-1',
+                }),
+                intl.formatMessage({
+                  id: 'pg.gallery.harley-xr750-replica.sect-1.para-2',
+                }),
+                intl.formatMessage({
+                  id: 'pg.gallery.harley-xr750-replica.sect-1.para-3',
+                }),
+                intl.formatMessage({
+                  id: 'pg.gallery.harley-xr750-replica.sect-1.para-4',
+                }),
+                intl.formatMessage({
+                  id: 'pg.gallery.harley-xr750-replica.sect-1.para-5',
+                }),
+                intl.formatMessage({
+                  id: 'pg.gallery.harley-xr750-replica.sect-1.para-6',
+                }),
+                intl.formatMessage({
+                  id: 'pg.gallery.harley-xr750-replica.sect-1.para-7',
+                }),
               ],
             },
             {
-              title: 'pg.gallery.harley-xr750-replica.sect-2.title',
+              title: intl.formatMessage({
+                id: 'pg.gallery.harley-xr750-replica.sect-2.title',
+              }),
               childElement: harleyXr750ReplicaList,
               childElementPosition: 'under-title',
             },
@@ -232,20 +258,38 @@ const GalleryPage: FC = () => {
             images={galleryImages}
             textDisplayPropObjects={[
               {
-                title: 'pg.gallery.harley-xr750.sect-1.title',
+                title: intl.formatMessage({
+                  id: 'pg.gallery.harley-xr750.sect-1.title',
+                }),
                 childElement: harleyXr750List,
                 childElementPosition: 'under-title',
               },
               {
                 textContent: [
-                  'pg.gallery.harley-xr750.sect-2.para-1',
-                  'pg.gallery.harley-xr750.sect-2.para-2',
-                  'pg.gallery.harley-xr750.sect-2.para-3',
-                  'pg.gallery.harley-xr750.sect-2.para-4',
-                  'pg.gallery.harley-xr750.sect-2.para-5',
-                  'pg.gallery.harley-xr750.sect-2.para-6',
-                  'pg.gallery.harley-xr750.sect-2.para-7',
-                  'pg.gallery.harley-xr750.sect-2.para-8',
+                  intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750.sect-2.para-1',
+                  }),
+                  intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750.sect-2.para-2',
+                  }),
+                  intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750.sect-2.para-3',
+                  }),
+                  intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750.sect-2.para-4',
+                  }),
+                  intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750.sect-2.para-5',
+                  }),
+                  intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750.sect-2.para-6',
+                  }),
+                  intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750.sect-2.para-7',
+                  }),
+                  intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750.sect-2.para-8',
+                  }),
                 ],
               },
             ]}

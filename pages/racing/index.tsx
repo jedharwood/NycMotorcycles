@@ -1,5 +1,7 @@
 import { FC, useContext, useEffect } from 'react';
 
+import { useIntl } from 'react-intl';
+
 import { HeadElement } from '@/components/head-element/head-element';
 import ImageGrid from '@/components/image-grid/image-grid';
 import ImageModal from '@/components/image-modal/image-modal';
@@ -12,6 +14,7 @@ import { StaticImage } from '@/types/image-types';
 import { AppContext } from '../../context/app-context';
 
 const RacingPage: FC = (): JSX.Element => {
+  const intl = useIntl();
   const { closeImageModal } = useContext(AppContext);
 
   useEffect(() => {
@@ -40,7 +43,10 @@ const RacingPage: FC = (): JSX.Element => {
             legend='common.route-names.racing'
           />
           <TextDisplay
-            textContent={['pg.racing.sect-1.text-1', 'pg.racing.sect-1.text-2']}
+            textContent={[
+              intl.formatMessage({ id: 'pg.racing.sect-1.text-1' }),
+              intl.formatMessage({ id: 'pg.racing.sect-1.text-2' }),
+            ]}
           />
           <ImageGrid images={gridImages} maxColumns={3} />
         </div>
