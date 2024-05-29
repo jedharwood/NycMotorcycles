@@ -24,35 +24,35 @@ const Header = (): JSX.Element => {
   const navLinks: NavLinkDetails[] = [
     {
       href: routes.home,
-      text: 'common.route-names.home',
+      text: intl.formatMessage({ id: 'common.route-names.home' }),
     },
     {
       href: routes.activeAuctions,
-      text: 'common.route-names.active-auctions',
+      text: intl.formatMessage({ id: 'common.route-names.active-auctions' }),
     },
     {
       href: routes.soldArchive,
-      text: 'common.route-names.sold-archive',
+      text: intl.formatMessage({ id: 'common.route-names.sold-archive' }),
     },
     {
       href: routes.history,
-      text: 'common.route-names.history',
+      text: intl.formatMessage({ id: 'common.route-names.history' }),
     },
     {
       href: routes.racing,
-      text: 'common.route-names.racing',
+      text: intl.formatMessage({ id: 'common.route-names.racing' }),
     },
     {
       href: routes.contact,
-      text: 'common.route-names.contact',
+      text: intl.formatMessage({ id: 'common.route-names.contact' }),
     },
     {
       href: routes.consign,
-      text: 'common.route-names.consign',
+      text: intl.formatMessage({ id: 'common.route-names.consign' }),
     },
     {
       href: routes.invest,
-      text: 'common.route-names.invest',
+      text: intl.formatMessage({ id: 'common.route-names.invest' }),
     },
     // Maybe I'll add download in here once I have the page up...
   ];
