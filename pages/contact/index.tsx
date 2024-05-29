@@ -105,35 +105,43 @@ const ContactPage: FC = (): JSX.Element => {
         >
           <InputField
             type='text'
-            placeholder={'pg.contact.place-holder.email'}
+            placeholder={intl.formatMessage({
+              id: 'pg.contact.place-holder.email',
+            })}
             name='email'
             register={register}
             error={errors.email}
-            label={'pg.contact.label.email'}
+            label={intl.formatMessage({ id: 'pg.contact.label.email' })}
           />
           <InputField
             type='text'
-            placeholder={'pg.contact.place-holder.sender-name'}
+            placeholder={intl.formatMessage({
+              id: 'pg.contact.place-holder.sender-name',
+            })}
             name='senderName'
             register={register}
             error={errors.senderName}
-            label={'pg.contact.label.sender-name'}
+            label={intl.formatMessage({ id: 'pg.contact.label.sender-name' })}
           />
           <InputField
             type='text'
-            placeholder={'pg.contact.place-holder.subject'}
+            placeholder={intl.formatMessage({
+              id: 'pg.contact.place-holder.subject',
+            })}
             name='subject'
             register={register}
             error={errors.subject}
-            label={'pg.contact.label.subject'}
+            label={intl.formatMessage({ id: 'pg.contact.label.subject' })}
           />
           <InputField
             type='text-area'
-            placeholder={'pg.contact.place-holder.message'}
+            placeholder={intl.formatMessage({
+              id: 'pg.contact.place-holder.message',
+            })}
             name='message'
             register={register}
             error={errors.message}
-            label={'pg.contact.label.message'}
+            label={intl.formatMessage({ id: 'pg.contact.label.message' })}
           />
           <Button
             type='submit'
