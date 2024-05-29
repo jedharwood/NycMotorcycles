@@ -38,52 +38,65 @@ const GalleryPage: FC = () => {
     'placeholder';
   const bikeNameVerbose = `pg.gallery.${bikeName}.name`;
   const galleryImages: StaticImage[] = BuildGridImages(gallery[bikeImageName]);
+
   const harleyXr750List: JSX.Element = BuildList({
     listItems: [
-      'pg.gallery.harley-xr750.sect-1.list-1',
-      'pg.gallery.harley-xr750.sect-1.list-2',
-      'pg.gallery.harley-xr750.sect-1.list-3',
+      intl.formatMessage({ id: 'pg.gallery.harley-xr750.sect-1.list-1' }),
+      intl.formatMessage({ id: 'pg.gallery.harley-xr750.sect-1.list-2' }),
+      intl.formatMessage({ id: 'pg.gallery.harley-xr750.sect-1.list-3' }),
     ],
   });
 
   const harleyXr750ReplicaList: JSX.Element = BuildList({
     listItems: [
-      'pg.gallery.harley-xr750-replica.sect-2.list-1',
-      'pg.gallery.harley-xr750-replica.sect-2.list-2',
-      'pg.gallery.harley-xr750-replica.sect-2.list-3',
-      'pg.gallery.harley-xr750-replica.sect-2.list-4',
-      'pg.gallery.harley-xr750-replica.sect-2.list-5',
-      'pg.gallery.harley-xr750-replica.sect-2.list-6',
+      intl.formatMessage({
+        id: 'pg.gallery.harley-xr750-replica.sect-2.list-1',
+      }),
+      intl.formatMessage({
+        id: 'pg.gallery.harley-xr750-replica.sect-2.list-2',
+      }),
+      intl.formatMessage({
+        id: 'pg.gallery.harley-xr750-replica.sect-2.list-3',
+      }),
+      intl.formatMessage({
+        id: 'pg.gallery.harley-xr750-replica.sect-2.list-4',
+      }),
+      intl.formatMessage({
+        id: 'pg.gallery.harley-xr750-replica.sect-2.list-5',
+      }),
+      intl.formatMessage({
+        id: 'pg.gallery.harley-xr750-replica.sect-2.list-6',
+      }),
     ],
   });
 
   const hondaDreamList: JSX.Element = BuildList({
     listItems: [
-      'pg.gallery.honda-dream.list-1',
-      'pg.gallery.honda-dream.list-2',
-      'pg.gallery.honda-dream.list-3',
-      'pg.gallery.honda-dream.list-4',
-      'pg.gallery.honda-dream.list-5',
+      intl.formatMessage({ id: 'pg.gallery.honda-dream.list-1' }),
+      intl.formatMessage({ id: 'pg.gallery.honda-dream.list-2' }),
+      intl.formatMessage({ id: 'pg.gallery.honda-dream.list-3' }),
+      intl.formatMessage({ id: 'pg.gallery.honda-dream.list-4' }),
+      intl.formatMessage({ id: 'pg.gallery.honda-dream.list-5' }),
     ],
   });
 
   const ducati250List: JSX.Element = BuildList({
     listItems: [
-      'pg.gallery.ducati-250.list-1',
-      'pg.gallery.ducati-250.list-2',
-      'pg.gallery.ducati-250.list-3',
-      'pg.gallery.ducati-250.list-4',
-      'pg.gallery.ducati-250.list-5',
-      'pg.gallery.ducati-250.list-6',
-      'pg.gallery.ducati-250.list-7',
-      'pg.gallery.ducati-250.list-8',
-      'pg.gallery.ducati-250.list-9',
-      'pg.gallery.ducati-250.list-10',
-      'pg.gallery.ducati-250.list-11',
-      'pg.gallery.ducati-250.list-12',
-      'pg.gallery.ducati-250.list-13',
-      'pg.gallery.ducati-250.list-14',
-      'pg.gallery.ducati-250.list-15',
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-1' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-2' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-3' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-4' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-5' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-6' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-7' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-8' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-9' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-10' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-11' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-12' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-13' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-14' }),
+      intl.formatMessage({ id: 'pg.gallery.ducati-250.list-15' }),
     ],
   });
 

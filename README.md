@@ -20,7 +20,7 @@ Image priority
 GH run lint on push
 redirect Gallery to sold archive
 Image modal proportions weird on larger images (HondaRc30 gallery)
-Pass pre-formatted text into BuildList?
+Move I18n logic up from child to parent components
 Pass hook into BuildGridImage as a prop?
 Check styling on larger screen
 

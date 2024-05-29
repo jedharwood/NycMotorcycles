@@ -84,7 +84,7 @@ const SoldCard = ({
       {renderImage()}
       <div className='flex items-center justify-center text-xl font-medium sm:opacity-80'>
         <div className='space-y-4'>
-          <h3 className='flex justify-center'>
+          <h3 className='flex justify-center text-center'>
             {intl.formatMessage({ id: text })}
           </h3>
           <h4 className='flex justify-center'>

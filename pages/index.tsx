@@ -14,23 +14,27 @@ import { images as staticImg } from '../public/images/home';
 const HomePage: FC = (): JSX.Element => {
   const intl = useIntl();
 
-  const desirableModelList: string[] = [
-    'pg.home.sect-2.list-1',
-    'pg.home.sect-2.list-2',
-    'pg.home.sect-2.list-3',
-    'pg.home.sect-2.list-4',
-    'pg.home.sect-2.list-5',
-    'pg.home.sect-2.list-6',
-  ];
+  const desirableModelList: JSX.Element = BuildList({
+    listItems: [
+      intl.formatMessage({ id: 'pg.home.sect-2.list-1' }),
+      intl.formatMessage({ id: 'pg.home.sect-2.list-2' }),
+      intl.formatMessage({ id: 'pg.home.sect-2.list-3' }),
+      intl.formatMessage({ id: 'pg.home.sect-2.list-4' }),
+      intl.formatMessage({ id: 'pg.home.sect-2.list-5' }),
+      intl.formatMessage({ id: 'pg.home.sect-2.list-6' }),
+    ],
+  });
 
-  const soldExampleList: string[] = [
-    'pg.home.sect-6.list-1',
-    'pg.home.sect-6.list-2',
-    'pg.home.sect-6.list-3',
-    'pg.home.sect-6.list-4',
-    'pg.home.sect-6.list-5',
-    'pg.home.sect-6.list-6',
-  ];
+  const soldExampleList: JSX.Element = BuildList({
+    listItems: [
+      intl.formatMessage({ id: 'pg.home.sect-6.list-1' }),
+      intl.formatMessage({ id: 'pg.home.sect-6.list-2' }),
+      intl.formatMessage({ id: 'pg.home.sect-6.list-3' }),
+      intl.formatMessage({ id: 'pg.home.sect-6.list-4' }),
+      intl.formatMessage({ id: 'pg.home.sect-6.list-5' }),
+      intl.formatMessage({ id: 'pg.home.sect-6.list-6' }),
+    ],
+  });
 
   return (
     <>
@@ -55,7 +59,7 @@ const HomePage: FC = (): JSX.Element => {
         <TextDisplay
           title='pg.home.sect-2.title'
           textContent={['pg.home.sect-2.text-1', 'pg.home.sect-2.text-2']}
-          childElement={BuildList({ listItems: desirableModelList })}
+          childElement={desirableModelList}
           childElementPosition='under-title'
         />
         <TextDisplay
@@ -85,7 +89,7 @@ const HomePage: FC = (): JSX.Element => {
         />
         <TextDisplay
           title='pg.home.sect-6.title'
-          childElement={BuildList({ listItems: soldExampleList })}
+          childElement={soldExampleList}
           childElementPosition='under-title'
         />
         <TextDisplay
