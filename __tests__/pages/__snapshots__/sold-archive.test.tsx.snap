@@ -37,7 +37,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1970 Harley Davidson XR750
           </h3>
@@ -85,7 +85,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1988 Honda RC30 VFR750
           </h3>
@@ -133,7 +133,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1985 Suzuki WW RG400
           </h3>
@@ -181,7 +181,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1969 Harley Davidson Shovelhead Chopper
           </h3>
@@ -229,7 +229,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1972 Laverda 750 SFC
           </h3>
@@ -277,7 +277,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1975 Kawasaki H2
           </h3>
@@ -325,7 +325,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1971 Suzuki T125 Stinger
           </h3>
@@ -373,7 +373,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1970 BSA B25 Starfire
           </h3>
@@ -421,7 +421,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1970 Monotrack Engineering Kawasaki H1
           </h3>
@@ -469,7 +469,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             Streettracker XR750 replica
           </h3>
@@ -535,7 +535,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1974 Kawasaki S3 race replica
           </h3>
@@ -583,7 +583,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1974 Kawasaki G7S
           </h3>
@@ -631,7 +631,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1970 Norton Commando
           </h3>
@@ -679,7 +679,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1997 Honda Dream 50
           </h3>
@@ -727,7 +727,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1970 Honda SS CL90
           </h3>
@@ -775,7 +775,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1980 Laverda 500 Montjuic
           </h3>
@@ -818,7 +818,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1972 Benelli 250SS
           </h3>
@@ -848,7 +848,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1961 Matchless G80 Scrambler
           </h3>
@@ -896,7 +896,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1959 Matchless G80
           </h3>
@@ -944,7 +944,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             Ducati 250GP racer
           </h3>
@@ -992,7 +992,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1975 Harley Davidson XR750
           </h3>
@@ -1035,7 +1035,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1980 Laverda Formula 500
           </h3>
@@ -1060,7 +1060,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             Laverda 750 SFC-spec racer
           </h3>
@@ -1090,7 +1090,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
           class="space-y-4"
         >
           <h3
-            class="flex justify-center"
+            class="flex justify-center text-center"
           >
             1971 Kawasaki H1RA
           </h3>
