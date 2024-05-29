@@ -1,5 +1,3 @@
-import { FormattedMessage, useIntl } from 'react-intl';
-
 const InputField = ({
   type,
   placeholder,
@@ -8,7 +6,6 @@ const InputField = ({
   error,
   label,
 }: InputFieldProps): JSX.Element => {
-  const intl = useIntl();
   const classes: string = `bg-stone-50 bg-opacity-90 rounded-md w-full p-2.5 text-gray-900 outline-none focus:ring focus:ring-offset hover:ring hover:ring-offset ${
     error
       ? 'focus:ring-rose-400 hover:ring-rose-400'
@@ -18,20 +15,19 @@ const InputField = ({
     type === 'text-area'
       ? 'text-xs text-rose-400 block'
       : 'text-xs text-rose-400';
-  const placeholderText: string = intl.formatMessage({ id: placeholder });
 
   const input =
     type === 'text-area' ? (
       <textarea
         rows={6}
-        placeholder={placeholderText}
+        placeholder={placeholder}
         {...register(name)}
         className={classes}
       />
     ) : (
       <input
         type={type}
-        placeholder={placeholderText}
+        placeholder={placeholder}
         {...register(name)}
         className={classes}
       />
@@ -41,7 +37,7 @@ const InputField = ({
     <div className='flex justify-center'>
       <div className='w-full md:w-3/4 lg:w-1/2'>
         <label htmlFor={name} className='mb-2 block'>
-          <FormattedMessage id={label} />
+          {label}
         </label>
         {input}
         {error && <span className={errorClasses}>{error.message}</span>}
