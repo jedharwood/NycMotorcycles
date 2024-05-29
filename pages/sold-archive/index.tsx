@@ -36,9 +36,11 @@ const SoldArchivePage: FC = () => {
     <>
       <HeadElement
         metaTitle={intl.formatMessage({
-          id: 'pg.sold-archive.head.meta.title'
+          id: 'pg.sold-archive.head.meta.title',
         })}
-        content='pg.sold-archive.head.meta.content'
+        metaContent={intl.formatMessage({
+          id: 'pg.sold-archive.head.meta.content',
+        })}
       />
       <main className='space-y-6'>
         <section className='w-full space-y-2 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-xl font-medium text-stone-50 shadow-lg md:text-2xl'>

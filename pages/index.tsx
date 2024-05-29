@@ -40,7 +40,7 @@ const HomePage: FC = (): JSX.Element => {
     <>
       <HeadElement
         metaTitle={intl.formatMessage({ id: 'pg.home.head.meta.title' })}
-        content='pg.home.head.meta.content'
+        metaContent={intl.formatMessage({ id: 'pg.home.head.meta.content' })}
       />
       <main className='space-y-6'>
         <Jumbotron

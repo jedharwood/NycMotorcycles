@@ -34,7 +34,7 @@ const RacingPage: FC = (): JSX.Element => {
     <>
       <HeadElement
         metaTitle={intl.formatMessage({ id: 'pg.racing.head.meta.title' })}
-        content='pg.racing.head.meta.content'
+        metaContent={intl.formatMessage({ id: 'pg.racing.head.meta.content' })}
       />
       <main>
         <div className='space-y-6'>

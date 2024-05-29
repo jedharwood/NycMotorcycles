@@ -24,7 +24,7 @@ const InvestPage: FC = (): JSX.Element => {
     <>
       <HeadElement
         metaTitle={intl.formatMessage({ id: 'pg.invest.head.meta.title' })}
-        content='pg.invest.head.meta.content'
+        metaContent={intl.formatMessage({ id: 'pg.invest.head.meta.content' })}
       />
       <main>
         <TwoColumnGridLayout

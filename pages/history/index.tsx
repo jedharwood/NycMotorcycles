@@ -51,7 +51,7 @@ const HistoryPage: FC = (): JSX.Element => {
     <>
       <HeadElement
         metaTitle={intl.formatMessage({ id: 'pg.history.head.meta.title' })}
-        content='pg.history.head.meta.content'
+        metaContent={intl.formatMessage({ id: 'pg.history.head.meta.content' })}
       />
       <main>
         <div className='space-y-6'>

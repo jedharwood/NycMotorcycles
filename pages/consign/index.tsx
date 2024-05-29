@@ -13,7 +13,7 @@ const ConsignPage: FC = (): JSX.Element => {
     <>
       <HeadElement
         metaTitle={intl.formatMessage({ id: 'pg.consign.head.meta.title' })}
-        content='pg.consign.head.meta.content'
+        metaContent={intl.formatMessage({ id: 'pg.consign.head.meta.content' })}
       />
       <main>
         <TwoColumnGridLayout

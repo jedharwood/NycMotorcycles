@@ -78,8 +78,8 @@ const ContactPage: FC = (): JSX.Element => {
   return (
     <>
       <HeadElement
-        pageTitle='pg.contact.head.meta.title'
-        content='pg.contact.head.meta.content'
+        metaTitle={intl.formatMessage({ id: 'pg.contact.head.meta.title' })}
+        metaContent={intl.formatMessage({ id: 'pg.contact.head.meta.content' })}
       />
       <ConfirmationModal
         isVisible={showConfirmationModal}

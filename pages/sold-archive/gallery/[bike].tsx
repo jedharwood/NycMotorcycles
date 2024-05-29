@@ -36,7 +36,9 @@ const GalleryPage: FC = () => {
   const bikeImageName =
     Object.keys(archive).find((key) => archive[key] === bikeName) ||
     'placeholder';
-  const formattedBikeName = intl.formatMessage({ id: `pg.gallery.${bikeName}.name` })
+  const formattedBikeName = intl.formatMessage({
+    id: `pg.gallery.${bikeName}.name`,
+  });
   const galleryImages: StaticImage[] = BuildGridImages(gallery[bikeImageName]);
 
   const harleyXr750List: JSX.Element = BuildList({
@@ -304,16 +306,21 @@ const GalleryPage: FC = () => {
   return (
     <>
       <HeadElement
-        metaTitle={intl.formatMessage({ id: 'pg.gallery.head.meta.title' }, { bike: formattedBikeName })}
-        content='pg.gallery.head.meta.content'
-        bikeName={formattedBikeName}
+        metaTitle={intl.formatMessage(
+          { id: 'pg.gallery.head.meta.title' },
+          { bike: formattedBikeName }
+        )}
+        metaContent={intl.formatMessage(
+          { id: 'pg.gallery.head.meta.content' },
+          { bike: formattedBikeName }
+        )}
       />
       <main>
         <div className='space-y-6'>
           <Jumbotron
             image={img[bikeImageName]}
             legend={formattedBikeName}
-            altText={intl.formatMessage({ id: img[bikeImageName].altText})}
+            altText={intl.formatMessage({ id: img[bikeImageName].altText })}
           />
           <Spinner
             isLoading={!isReady}

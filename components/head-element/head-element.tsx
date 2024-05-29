@@ -3,23 +3,23 @@ import { useIntl } from 'react-intl';
 
 type HeadElementProps = {
   metaTitle: string;
-  content: string;
-  bikeName?: string;
+  metaContent: string;
+  // bikeName?: string;
 };
 
 export const HeadElement = ({
   metaTitle,
-  content,
-  bikeName,
+  metaContent,
+  // bikeName,
 }: HeadElementProps) => {
   const intl = useIntl();
   const metaBrandList: string = intl.formatMessage({
     id: 'common.meta.brands',
   });
-  const metaContent: string =
-    bikeName === undefined
-      ? intl.formatMessage({ id: content })
-      : intl.formatMessage({ id: content }, { bike: bikeName });
+  // const metaContent: string =
+  //   bikeName === undefined
+  //     ? intl.formatMessage({ id: content })
+  //     : intl.formatMessage({ id: content }, { bike: bikeName });
 
   return (
     <Head>
