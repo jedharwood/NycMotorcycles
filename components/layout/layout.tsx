@@ -2,9 +2,10 @@ import { ReactNode } from 'react';
 
 import { useIntl } from 'react-intl';
 
+import routes from '@/utilities/routes';
+
 import Footer from '../footer/footer';
 import Header from '../header/header';
-import routes from '@/utilities/routes';
 
 type LayoutProps = {
   children: ReactNode;
