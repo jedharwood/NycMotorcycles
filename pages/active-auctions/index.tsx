@@ -1,5 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 
+import { useIntl } from 'react-intl';
+
 import AuctionCard from '@/components/auction-card/auction-card';
 import { HeadElement } from '@/components/head-element/head-element';
 import { LinkButton } from '@/components/link-button/link-button';
@@ -9,6 +11,7 @@ import { TextDisplay } from '@/components/text-display/text-display';
 import routes from '../../utilities/routes';
 
 const ActiveAuctionPage: FC = (): JSX.Element => {
+  const intl = useIntl();
   const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [status, setStatus] = useState<number>();
@@ -30,7 +33,9 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
 
     const yahooAuctionLinkButton: JSX.Element = (
       <LinkButton
-        text='pg.active-auctions.yahoo-auctions-button'
+        text={intl.formatMessage({
+          id: 'pg.active-auctions.yahoo-auctions-button',
+        })}
         href={'https://auctions.yahoo.co.jp/seller/lazzamoto?'}
         type='anchor'
       />
@@ -54,7 +59,9 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
           textContent={['pg.active-auctions.error.body']}
           childElement={
             <LinkButton
-              text='common.route-names.contact'
+              text={intl.formatMessage({
+                id: 'common.route-names.contact',
+              })}
               href={routes.contact}
               type='router-link'
             />
@@ -91,7 +98,13 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
         content='pg.active-auctions.head.meta.content'
       />
       <main>
-        <Spinner isLoading={isLoading} verticalPadding={true} />
+        <Spinner
+          isLoading={isLoading}
+          verticalPadding={true}
+          text={intl.formatMessage({
+            id: 'comp.spinner.sr.loading',
+          })}
+        />
         {auctionDisplay()}
       </main>
     </>

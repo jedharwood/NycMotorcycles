@@ -1,13 +1,13 @@
-import { FormattedMessage } from 'react-intl';
-
 type SpinnerProps = {
   isLoading: boolean;
+  text: string;
   verticalPadding?: boolean;
 };
 
 export const Spinner = ({
   isLoading,
   verticalPadding,
+  text,
 }: SpinnerProps): JSX.Element | null => {
   if (!isLoading) return null;
 
@@ -30,9 +30,7 @@ export const Spinner = ({
             fill='currentFill'
           />
         </svg>
-        <span className='sr-only'>
-          <FormattedMessage id='comp.spinner.sr.loading' />
-        </span>
+        <span className='sr-only'>{text}</span>
       </div>
     </div>
   );

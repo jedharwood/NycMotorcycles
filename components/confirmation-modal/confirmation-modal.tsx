@@ -93,7 +93,12 @@ const ConfirmationModal = ({
 
   const childElement: JSX.Element = (
     <>
-      <Spinner isLoading={isLoading} />
+      <Spinner
+        isLoading={isLoading}
+        text={intl.formatMessage({
+          id: 'comp.spinner.sr.loading',
+        })}
+      />
       {renderCallsToAction()}
     </>
   );
