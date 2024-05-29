@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { useIntl } from 'react-intl';
 
 interface NavLinkProps {
   href: string;
@@ -8,7 +7,6 @@ interface NavLinkProps {
 }
 
 export const NavLink = ({ href, text, active }: NavLinkProps): JSX.Element => {
-  const intl = useIntl();
   const classes: string =
     'block md:hover:underline md:hover:opacity-100 text-nowrap';
   const activeClasses: string = active
@@ -17,7 +15,7 @@ export const NavLink = ({ href, text, active }: NavLinkProps): JSX.Element => {
 
   return (
     <Link href={href} className={activeClasses}>
-      {intl.formatMessage({ id: text })}
+      {text}
     </Link>
   );
 };
