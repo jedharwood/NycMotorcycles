@@ -28,7 +28,7 @@ const ConfirmationModal = ({
   const intl = useIntl();
   if (!isVisible) return null;
 
-  const renderTitle = (): string => {
+  const getTitleId = (): string => {
     if (isLoading) return 'comp.confirmation-modal.sending.title';
     if (failedCompletely)
       return 'comp.confirmation-modal.failed-completely.title';
@@ -42,16 +42,20 @@ const ConfirmationModal = ({
     if (isLoading) return [];
     if (failedCompletely)
       return [
-        'comp.confirmation-modal.failed-completely.text-1',
-        'comp.confirmation-modal.failed-completely.text-2',
+        intl.formatMessage({
+          id: 'comp.confirmation-modal.failed-completely.text-1',
+        }),
+        intl.formatMessage({
+          id: 'comp.confirmation-modal.failed-completely.text-2',
+        }),
       ];
 
     return isSuccess
       ? [
-          'comp.confirmation-modal.sent.text-1',
-          'comp.confirmation-modal.sent.text-2',
+          intl.formatMessage({ id: 'comp.confirmation-modal.sent.text-1' }),
+          intl.formatMessage({ id: 'comp.confirmation-modal.sent.text-2' }),
         ]
-      : ['comp.confirmation-modal.failed.text-1'];
+      : [intl.formatMessage({ id: 'comp.confirmation-modal.failed.text-1' })];
   };
 
   const renderCallsToAction = (): JSX.Element | null => {
@@ -106,7 +110,7 @@ const ConfirmationModal = ({
   return (
     <ModalWrapper>
       <TextDisplay
-        title={renderTitle()}
+        title={intl.formatMessage({ id: getTitleId() })}
         textContent={renderTextContent()}
         textContentCentred={true}
         childElement={childElement}

@@ -44,8 +44,10 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
     if (status === 403) {
       return (
         <TextDisplay
-          title='pg.active-auctions.error.title'
-          textContent={['pg.active-auctions.unauthorised.body']}
+          title={intl.formatMessage({ id: 'pg.active-auctions.error.title' })}
+          textContent={[
+            intl.formatMessage({ id: 'pg.active-auctions.unauthorised.body' }),
+          ]}
           childElement={yahooAuctionLinkButton}
           childElementPosition='bottom'
         />
@@ -55,8 +57,10 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
     if (status === 500) {
       return (
         <TextDisplay
-          title='pg.active-auctions.error.title'
-          textContent={['pg.active-auctions.error.body']}
+          title={intl.formatMessage({ id: 'pg.active-auctions.error.title' })}
+          textContent={[
+            intl.formatMessage({ id: 'pg.active-auctions.error.body' }),
+          ]}
           childElement={
             <LinkButton
               text={intl.formatMessage({
@@ -73,8 +77,12 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
 
     return !activeAuctions.length ? (
       <TextDisplay
-        title='pg.active-auctions.no-auctions.title'
-        textContent={['pg.active-auctions.no-auctions.body']}
+        title={intl.formatMessage({
+          id: 'pg.active-auctions.no-auctions.title',
+        })}
+        textContent={[
+          intl.formatMessage({ id: 'pg.active-auctions.no-auctions.body' }),
+        ]}
         childElement={yahooAuctionLinkButton}
         childElementPosition='bottom'
       />

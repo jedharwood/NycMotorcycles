@@ -45,7 +45,7 @@ const HomePage: FC = (): JSX.Element => {
       <main className='space-y-6'>
         <Jumbotron image={staticImg.racing} legend='pg.home.jumbotron' />
         <TextDisplay
-          title='pg.home.sect-1.title'
+          title={intl.formatMessage({ id: 'pg.home.sect-1.title' })}
           childElement={
             <LinkButton
               text={intl.formatMessage({ id: 'pg.home.sect-1.button' })}
@@ -57,21 +57,24 @@ const HomePage: FC = (): JSX.Element => {
           childElementPosition='under-title'
         />
         <TextDisplay
-          title='pg.home.sect-2.title'
-          textContent={['pg.home.sect-2.text-1', 'pg.home.sect-2.text-2']}
+          title={intl.formatMessage({ id: 'pg.home.sect-2.title' })}
+          textContent={[
+            intl.formatMessage({ id: 'pg.home.sect-2.text-1' }),
+            intl.formatMessage({ id: 'pg.home.sect-2.text-2' }),
+          ]}
           childElement={desirableModelList}
           childElementPosition='under-title'
         />
         <TextDisplay
-          title='pg.home.sect-3.title'
-          textContent={['pg.home.sect-3.text-1']}
+          title={intl.formatMessage({ id: 'pg.home.sect-3.title' })}
+          textContent={[intl.formatMessage({ id: 'pg.home.sect-3.text-1' })]}
         />
         <TextDisplay
-          title='pg.home.sect-4.title'
+          title={intl.formatMessage({ id: 'pg.home.sect-4.title' })}
           textContent={[
-            'pg.home.sect-4.text-1',
-            'pg.home.sect-4.text-2',
-            'pg.home.sect-4.text-3',
+            intl.formatMessage({ id: 'pg.home.sect-4.text-1' }),
+            intl.formatMessage({ id: 'pg.home.sect-4.text-2' }),
+            intl.formatMessage({ id: 'pg.home.sect-4.text-3' }),
           ]}
           childElement={
             <LinkButton
@@ -84,45 +87,51 @@ const HomePage: FC = (): JSX.Element => {
           childElementPosition='bottom'
         />
         <TextDisplay
-          title='pg.home.sect-5.title'
-          textContent={['pg.home.sect-5.text-1']}
+          title={intl.formatMessage({ id: 'pg.home.sect-5.title' })}
+          textContent={[intl.formatMessage({ id: 'pg.home.sect-5.text-1' })]}
         />
         <TextDisplay
-          title='pg.home.sect-6.title'
+          title={intl.formatMessage({ id: 'pg.home.sect-6.title' })}
           childElement={soldExampleList}
           childElementPosition='under-title'
         />
         <TextDisplay
-          title='pg.home.sect-7.title'
+          title={intl.formatMessage({ id: 'pg.home.sect-7.title' })}
           textContent={[
-            'pg.home.sect-7.text-1',
-            'pg.home.sect-7.text-2',
-            'pg.home.sect-7.text-3',
+            intl.formatMessage({ id: 'pg.home.sect-7.text-1' }),
+            intl.formatMessage({ id: 'pg.home.sect-7.text-2' }),
+            intl.formatMessage({ id: 'pg.home.sect-7.text-3' }),
           ]}
         />
         <TextDisplay
-          title='pg.home.sect-8.title'
-          textContent={['pg.home.sect-8.text-1']}
+          title={intl.formatMessage({ id: 'pg.home.sect-8.title' })}
+          textContent={[intl.formatMessage({ id: 'pg.home.sect-8.text-1' })]}
         />
         <TextDisplay
-          title='pg.home.sect-9.title'
-          textContent={['pg.home.sect-9.text-1']}
+          title={intl.formatMessage({ id: 'pg.home.sect-9.title' })}
+          textContent={[intl.formatMessage({ id: 'pg.home.sect-9.text-1' })]}
         />
         <TextDisplay
-          title='pg.home.sect-10.title'
-          textContent={['pg.home.sect-10.text-1', 'pg.home.sect-10.text-2']}
+          title={intl.formatMessage({ id: 'pg.home.sect-10.title' })}
+          textContent={[
+            intl.formatMessage({ id: 'pg.home.sect-10.text-1' }),
+            intl.formatMessage({ id: 'pg.home.sect-10.text-2' }),
+          ]}
         />
         <TextDisplay
-          title='pg.home.sect-11.title'
-          textContent={['pg.home.sect-11.text-1']}
+          title={intl.formatMessage({ id: 'pg.home.sect-11.title' })}
+          textContent={[intl.formatMessage({ id: 'pg.home.sect-11.text-1' })]}
         />
         <TextDisplay
-          title='pg.home.sect-12.title'
-          textContent={['pg.home.sect-12.text-1', 'pg.home.sect-12.text-2']}
+          title={intl.formatMessage({ id: 'pg.home.sect-12.title' })}
+          textContent={[
+            intl.formatMessage({ id: 'pg.home.sect-12.text-1' }),
+            intl.formatMessage({ id: 'pg.home.sect-12.text-2' }),
+          ]}
         />
         <TextDisplay
-          title='pg.home.sect-13.title'
-          textContent={['pg.home.sect-13.text-1']}
+          title={intl.formatMessage({ id: 'pg.home.sect-13.title' })}
+          textContent={[intl.formatMessage({ id: 'pg.home.sect-13.text-1' })]}
           textContentCentred={true}
           childElement={
             <LinkButton

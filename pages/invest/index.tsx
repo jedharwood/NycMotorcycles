@@ -31,13 +31,13 @@ const InvestPage: FC = (): JSX.Element => {
           images={[staticImg.silverMotorbike]}
           textDisplayPropObjects={[
             {
-              title: 'pg.invest.sect-1.title',
+              title: intl.formatMessage({ id: 'pg.invest.sect-1.title' }),
               textContent: [
-                'pg.invest.sect-1.text-1',
-                'pg.invest.sect-1.text-2',
-                'pg.invest.sect-1.text-3',
-                'pg.invest.sect-1.text-4',
-                'pg.invest.sect-1.text-5',
+                intl.formatMessage({ id: 'pg.invest.sect-1.text-1' }),
+                intl.formatMessage({ id: 'pg.invest.sect-1.text-2' }),
+                intl.formatMessage({ id: 'pg.invest.sect-1.text-3' }),
+                intl.formatMessage({ id: 'pg.invest.sect-1.text-4' }),
+                intl.formatMessage({ id: 'pg.invest.sect-1.text-5' }),
               ],
               childElement: contactButton,
               childElementPosition: 'bottom',
