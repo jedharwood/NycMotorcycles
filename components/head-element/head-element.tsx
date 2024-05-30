@@ -1,30 +1,16 @@
 import Head from 'next/head';
-import { useIntl } from 'react-intl';
 
 type HeadElementProps = {
-  pageTitle: string;
-  content: string;
-  bikeName?: string;
+  metaTitle: string;
+  metaContent: string;
+  metaBrandList: string;
 };
 
 export const HeadElement = ({
-  pageTitle,
-  content,
-  bikeName,
+  metaTitle,
+  metaContent,
+  metaBrandList,
 }: HeadElementProps) => {
-  const intl = useIntl();
-  const metaBrandList: string = intl.formatMessage({
-    id: 'common.meta.brands',
-  });
-  const metaTitle: string =
-    bikeName === undefined
-      ? intl.formatMessage({ id: pageTitle })
-      : intl.formatMessage({ id: pageTitle }, { bike: bikeName });
-  const metaContent: string =
-    bikeName === undefined
-      ? intl.formatMessage({ id: content })
-      : intl.formatMessage({ id: content }, { bike: bikeName });
-
   return (
     <Head>
       <title>{metaTitle}</title>

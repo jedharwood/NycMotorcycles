@@ -1,4 +1,5 @@
 {
+  "common.img.instagram-logo.alt": "placeholder",
   "common.img.place-holder.alt": "placeholder",
   "common.meta.brands": "placeholder",
   "common.route-names.active-auctions": "placeholder",
@@ -28,7 +29,6 @@
   "comp.confirmation-modal.sent.text-1": "placeholder",
   "comp.confirmation-modal.sent.text-2": "placeholder",
   "comp.confirmation-modal.sent.title": "placeholder",
-  "comp.footer.alt.instagram-logo": "placeholder",
   "comp.footer.text.address": "placeholder",
   "comp.footer.text.disclaimer": "placeholder",
   "comp.header.alt.burger-menu": "placeholder",

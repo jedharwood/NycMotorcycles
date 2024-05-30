@@ -9,7 +9,7 @@ import { TextDisplay } from '@/components/text-display/text-display';
 import { BuildList } from '@/helpers/build-list';
 import routes from '@/utilities/routes';
 
-import { images as staticImg } from '../public/images/home';
+import { images as img } from '../public/images/home';
 
 const HomePage: FC = (): JSX.Element => {
   const intl = useIntl();
@@ -39,11 +39,16 @@ const HomePage: FC = (): JSX.Element => {
   return (
     <>
       <HeadElement
-        pageTitle='pg.home.head.meta.title'
-        content='pg.home.head.meta.content'
+        metaTitle={intl.formatMessage({ id: 'pg.home.head.meta.title' })}
+        metaContent={intl.formatMessage({ id: 'pg.home.head.meta.content' })}
+        metaBrandList={intl.formatMessage({ id: 'common.meta.brands' })}
       />
       <main className='space-y-6'>
-        <Jumbotron image={staticImg.racing} legend='pg.home.jumbotron' />
+        <Jumbotron
+          image={img.racing}
+          legend={intl.formatMessage({ id: 'pg.home.jumbotron' })}
+          altText={intl.formatMessage({ id: img.racing.altText })}
+        />
         <TextDisplay
           title={intl.formatMessage({ id: 'pg.home.sect-1.title' })}
           childElement={

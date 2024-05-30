@@ -44,3 +44,8 @@ type ComponentColour = 'green' | 'red';
 type SoldOrCall = 'sold' | 'call';
 
 type TheNumbersOneToFour = 1 | 2 | 3 | 4;
+
+type NavLinkDetails = {
+  href: string;
+  text: string;
+};

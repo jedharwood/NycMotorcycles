@@ -7,7 +7,7 @@ import SoldCard from '@/components/sold-card/sold-card';
 import { archiveBikes as archive } from '@/modules/archive-bikes';
 import routes from '@/utilities/routes';
 
-import { images as staticImg } from '../../public/images/sold-archive';
+import { images as img } from '../../public/images/sold-archive';
 
 const SoldArchivePage: FC = () => {
   const intl = useIntl();
@@ -24,7 +24,7 @@ const SoldArchivePage: FC = () => {
 
     return (
       <SoldCard
-        image={staticImg[bikeImageName]}
+        image={img[bikeImageName]}
         text={`pg.sold-archive.card.${routeName}`}
         galleryLink={galleryLink}
         soldOrCall={soldOrCall}
@@ -35,8 +35,13 @@ const SoldArchivePage: FC = () => {
   return (
     <>
       <HeadElement
-        pageTitle='pg.sold-archive.head.meta.title'
-        content='pg.sold-archive.head.meta.content'
+        metaTitle={intl.formatMessage({
+          id: 'pg.sold-archive.head.meta.title',
+        })}
+        metaContent={intl.formatMessage({
+          id: 'pg.sold-archive.head.meta.content',
+        })}
+        metaBrandList={intl.formatMessage({ id: 'common.meta.brands' })}
       />
       <main className='space-y-6'>
         <section className='w-full space-y-2 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-xl font-medium text-stone-50 shadow-lg md:text-2xl'>

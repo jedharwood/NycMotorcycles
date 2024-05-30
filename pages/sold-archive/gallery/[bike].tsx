@@ -15,7 +15,7 @@ import { BuildList } from '@/helpers/build-list';
 import { archiveBikes as archive } from '@/modules/archive-bikes';
 import { StaticImage } from '@/types/image-types';
 
-import { images as staticImg } from '../../../public/images/sold-archive';
+import { images as img } from '../../../public/images/sold-archive';
 import { images as gallery } from '../../../public/images/sold-archive/gallery';
 
 const GalleryPage: FC = () => {
@@ -36,7 +36,9 @@ const GalleryPage: FC = () => {
   const bikeImageName =
     Object.keys(archive).find((key) => archive[key] === bikeName) ||
     'placeholder';
-  const bikeNameVerbose = `pg.gallery.${bikeName}.name`;
+  const formattedBikeName = intl.formatMessage({
+    id: `pg.gallery.${bikeName}.name`,
+  });
   const galleryImages: StaticImage[] = BuildGridImages(gallery[bikeImageName]);
 
   const harleyXr750List: JSX.Element = BuildList({
@@ -304,15 +306,22 @@ const GalleryPage: FC = () => {
   return (
     <>
       <HeadElement
-        pageTitle='pg.gallery.head.meta.title'
-        content='pg.gallery.head.meta.content'
-        bikeName={intl.formatMessage({ id: bikeNameVerbose })}
+        metaTitle={intl.formatMessage(
+          { id: 'pg.gallery.head.meta.title' },
+          { bike: formattedBikeName }
+        )}
+        metaContent={intl.formatMessage(
+          { id: 'pg.gallery.head.meta.content' },
+          { bike: formattedBikeName }
+        )}
+        metaBrandList={intl.formatMessage({ id: 'common.meta.brands' })}
       />
       <main>
         <div className='space-y-6'>
           <Jumbotron
-            image={staticImg[bikeImageName]}
-            legend={bikeNameVerbose}
+            image={img[bikeImageName]}
+            legend={formattedBikeName}
+            altText={intl.formatMessage({ id: img[bikeImageName].altText })}
           />
           <Spinner
             isLoading={!isReady}

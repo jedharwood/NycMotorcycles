@@ -73,7 +73,11 @@ const ConfirmationModal = ({
     if (failedCompletely)
       return (
         <div className='space-y-4'>
-          <InstagramButton />
+          <InstagramButton
+            altText={intl.formatMessage({
+              id: 'common.img.instagram-logo.alt',
+            })}
+          />
           {closeButton}
         </div>
       );

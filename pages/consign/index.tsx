@@ -4,7 +4,7 @@ import { useIntl } from 'react-intl';
 
 import { HeadElement } from '@/components/head-element/head-element';
 import TwoColumnGridLayout from '@/components/two-column-grid-layout/two-column-grid-layout';
-import { images as staticImg } from '@/public/images/consign';
+import { images as img } from '@/public/images/consign';
 
 const ConsignPage: FC = (): JSX.Element => {
   const intl = useIntl();
@@ -12,12 +12,13 @@ const ConsignPage: FC = (): JSX.Element => {
   return (
     <>
       <HeadElement
-        pageTitle='pg.consign.head.meta.title'
-        content='pg.consign.head.meta.content'
+        metaTitle={intl.formatMessage({ id: 'pg.consign.head.meta.title' })}
+        metaContent={intl.formatMessage({ id: 'pg.consign.head.meta.content' })}
+        metaBrandList={intl.formatMessage({ id: 'common.meta.brands' })}
       />
       <main>
         <TwoColumnGridLayout
-          images={[staticImg.orangeLaverda]}
+          images={[img.orangeLaverda]}
           textDisplayPropObjects={[
             {
               title: intl.formatMessage({ id: 'pg.consign.sect-1.title' }),
