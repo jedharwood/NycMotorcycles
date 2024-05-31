@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 
 import { useIntl } from 'react-intl';
 
@@ -9,27 +9,23 @@ import { Spinner } from '@/components/spinner/spinner';
 import { TextDisplay } from '@/components/text-display/text-display';
 
 import routes from '../../utilities/routes';
+import { useQuery } from 'react-query';
+
+const fetchAuctions = async () => {
+  const res = await fetch('/api/auction-scraper');
+  const data = await res.json();
+  return { status: res.status, data };
+};
 
 const ActiveAuctionPage: FC = (): JSX.Element => {
   const intl = useIntl();
-  const [activeAuctions, setActiveAuctions] = useState<ActiveAuction[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [status, setStatus] = useState<number>();
+  const { isLoading, data } = useQuery('activeAuctions', fetchAuctions)
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch('/api/auction-scraper');
-      const data = await response.json();
+  const renderAuctionDisplay = (): JSX.Element | null => {
+    if (isLoading) return null;
 
-      setStatus(response.status);
-      setActiveAuctions(data.activeAuctions);
-      setIsLoading(false);
-    };
-    fetchData();
-  }, []);
-
-  const auctionDisplay = (): JSX.Element => {
-    if (isLoading) return <></>;
+    const activeAuctions: ActiveAuction[] = data?.data.activeAuctions || [];
+    const status: number | undefined = data?.status;
 
     const yahooAuctionLinkButton: JSX.Element = (
       <LinkButton
@@ -118,7 +114,7 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
             id: 'comp.spinner.sr.loading',
           })}
         />
-        {auctionDisplay()}
+        {renderAuctionDisplay()}
       </main>
     </>
   );
