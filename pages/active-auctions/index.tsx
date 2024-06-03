@@ -83,15 +83,11 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
         childElementPosition='bottom'
       />
     ) : (
-      <ul className='space-y-6'>
-        {activeAuctions.map((auction) => {
-          return (
-            <li key={auction.title}>
-              <AuctionCard {...auction} />
-            </li>
-          );
+      <div className='grid gap-6 lg:grid-cols-2'>
+        {activeAuctions.map((auction, idx) => {
+          return <AuctionCard {...auction} key={`${idx}: ${auction.title}`} />;
         })}
-      </ul>
+      </div>
     );
   };
 
