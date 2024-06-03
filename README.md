@@ -22,7 +22,6 @@ Image modal proportions weird on larger images (HondaRc30 gallery)
 Move I18n logic up from child to parent components
 Pass hook into BuildGridImage as a prop?
 Check styling on larger screen
-hover state for active auctions
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
