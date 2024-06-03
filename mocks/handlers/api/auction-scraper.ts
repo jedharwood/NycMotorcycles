@@ -45,6 +45,20 @@ const activeAuctions: ActiveAuction[] = [
     currentPrice: '33,000円',
     promptDecisionPrice: '35,000円',
   },
+  {
+    title: 'Another Vincent Black Shadow with a much longer title, this time',
+    url: 'https://www.google.com/',
+    image: {
+      imageSrc: 'http://placekitten.com/200/300',
+      imageAlt: 'Another image of a cat',
+    },
+    timeRemaining: {
+      time: 9,
+      unit: 'hours',
+    },
+    bidders: '3',
+    currentPrice: '98,560円',
+  },
 ];
 
 export const auctionScraperHandlers = [

@@ -11,7 +11,6 @@ Address code style inconsistences and overlapping css rules
 Add Translations, refactor out undnecessary resx
 Ensure language routing working properly
 Tests to language display
-Implement ReactQuery for activeAuctions page
 Find a solution for server side image fetching to bypass 403 issue
 Resolve img/Image issue with auction-card component
 Hover state for Grid Images
