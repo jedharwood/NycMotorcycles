@@ -27,7 +27,7 @@ const ImageGrid = ({
     <section className={getClasses()}>
       {images.map((image, idx) => (
         <div
-          className={`rounded-md bg-gray-500 shadow-lg 
+          className={`card-hover rounded-md
             ${image.onImageClick === undefined ? 'cursor-default' : 'cursor-pointer'} 
             ${maxColumns === 1 ? 'h-fit' : ''}`}
           key={idx}
@@ -38,7 +38,7 @@ const ImageGrid = ({
             alt={intl.formatMessage({
               id: image.altText,
             })}
-            className='h-full w-full rounded-md object-cover hover:opacity-70'
+            className='h-full w-full rounded-md object-cover'
           />
         </div>
       ))}

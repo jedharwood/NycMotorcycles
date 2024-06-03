@@ -80,7 +80,7 @@ const SoldCard = ({
     soldOrCall === 'sold' ? 'comp.sold-card.sold' : 'comp.sold-card.call';
 
   return (
-    <article className='grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2'>
+    <article className='card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2'>
       {renderImage()}
       <div className='flex items-center justify-center text-xl font-medium sm:opacity-80'>
         <div className='space-y-4'>
