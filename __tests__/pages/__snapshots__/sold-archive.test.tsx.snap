@@ -20,7 +20,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </h2>
     </section>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -68,7 +68,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -116,7 +116,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -164,7 +164,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -212,7 +212,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -260,7 +260,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -308,7 +308,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -356,7 +356,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -404,7 +404,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -452,7 +452,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -518,7 +518,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -566,7 +566,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -614,7 +614,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -662,7 +662,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -710,7 +710,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -758,7 +758,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -806,7 +806,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <img
         alt="An image of an olive green 1972 Benelli 250SS"
@@ -831,7 +831,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -879,7 +879,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -927,7 +927,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -975,7 +975,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"
@@ -1023,7 +1023,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <img
         alt="A black and white image of a 1980 Laverda Formula 500"
@@ -1048,7 +1048,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <img
         alt="An image of an orange coloured Laverda 750 SFC-spec racer"
@@ -1073,7 +1073,7 @@ exports[`SoldArchivePage should render page in English 1`] = `
       </div>
     </article>
     <article
-      class="grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg sm:grid-cols-2"
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
     >
       <a
         class="relative h-fit rounded-md bg-gray-500"

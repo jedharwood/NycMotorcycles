@@ -27,8 +27,8 @@ const ImageGrid = ({
     <section className={getClasses()}>
       {images.map((image, idx) => (
         <div
-          className={`card-hover rounded-md
-            ${image.onImageClick === undefined ? 'cursor-default' : 'cursor-pointer'} 
+          className={`rounded-md
+            ${image.onImageClick === undefined ? 'cursor-default shadow-lg' : 'card-hover cursor-pointer'} 
             ${maxColumns === 1 ? 'h-fit' : ''}`}
           key={idx}
           onClick={image.onImageClick}
