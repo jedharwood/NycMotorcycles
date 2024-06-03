@@ -13,7 +13,7 @@ Ensure language routing working properly
 Tests to language display
 Find a solution for server side image fetching to bypass 403 issue
 Resolve img/Image issue with auction-card component
-Hover state for Grid Images
+Possible Grid layout for Sold Archive page
 Focus trapping
 Image priority
 GH run lint on push

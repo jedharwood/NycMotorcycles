@@ -53,7 +53,7 @@ const AuctionCard = ({
   };
 
   return (
-    <article className='grid w-full gap-4 rounded-md border-2 border-transparent bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg hover:border-teal-500 hover:bg-opacity-100 hover:shadow-2xl sm:grid-cols-3'>
+    <article className='card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-3'>
       <a
         href={url}
         target='_blank'
