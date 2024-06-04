@@ -17,7 +17,6 @@ Possible Grid layout for Sold Archive page
 Focus trapping
 Image priority
 GH run lint on push
-redirect Gallery to sold archive
 Image modal proportions weird on larger images (HondaRc30 gallery)
 Move I18n logic up from child to parent components
 Pass hook into BuildGridImage as a prop?

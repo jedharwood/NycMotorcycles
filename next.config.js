@@ -13,6 +13,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/sold-archive/gallery',
+        destination: '/sold-archive',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 module.exports = nextConfig;
