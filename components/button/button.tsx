@@ -4,6 +4,7 @@ type ButtonProps = {
   buttonColour?: ComponentColour;
   disabled?: boolean;
   onClick?: () => void;
+  id?: string;
 };
 
 const Button = ({
@@ -12,6 +13,7 @@ const Button = ({
   buttonColour = 'green',
   disabled = false,
   onClick,
+  id
 }: ButtonProps): JSX.Element => {
   const backgroundColour: string =
     buttonColour === 'red' ? 'bg-rose-500' : 'bg-teal-700';
@@ -29,6 +31,7 @@ const Button = ({
         className={classes}
         disabled={disabled}
         onClick={onClick}
+        data-testid={id}
       >
         {text}
       </button>
