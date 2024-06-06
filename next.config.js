@@ -20,7 +20,7 @@ const nextConfig = {
         destination: '/sold-archive',
         permanent: true,
       },
-    ]
+    ];
   },
 };
 

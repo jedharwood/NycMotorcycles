@@ -13,7 +13,7 @@ const Button = ({
   buttonColour = 'green',
   disabled = false,
   onClick,
-  id
+  id,
 }: ButtonProps): JSX.Element => {
   const backgroundColour: string =
     buttonColour === 'red' ? 'bg-rose-500' : 'bg-teal-700';

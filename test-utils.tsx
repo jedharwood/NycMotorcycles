@@ -6,15 +6,14 @@ import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-  const queryClient = new QueryClient()
+  const queryClient = new QueryClient();
 
   return (
-    
     <MemoryRouterProvider>
       <QueryClientProvider client={queryClient}>
-      <IntlProvider locale='en' messages={en}>
-        {children}
-      </IntlProvider>
+        <IntlProvider locale='en' messages={en}>
+          {children}
+        </IntlProvider>
       </QueryClientProvider>
     </MemoryRouterProvider>
   );
