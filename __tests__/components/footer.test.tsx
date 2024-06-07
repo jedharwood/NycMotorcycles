@@ -11,8 +11,8 @@ const footerProps: FooterProps = {
   address: 'mock address',
   disclaimer: 'mock disclaimer',
   chevronText: 'mock chevronText',
-  altTextInstagramButton: 'mock altTextInstagramButton'
-}
+  altTextInstagramButton: 'mock altTextInstagramButton',
+};
 
 describe('Footer', () => {
   it('instagram button has expected href attribute', () => {
