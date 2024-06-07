@@ -1,7 +1,7 @@
 import HomePage from '@/pages';
 import userEvent from '@testing-library/user-event';
 import mockRouter from 'next-router-mock';
-import { render, screen, waitFor } from '@/test-utils';
+import { render, screen, waitFor, act } from '@/test-utils';
 
 jest.mock('next/image');
 
@@ -41,8 +41,11 @@ describe('HomePage', () => {
       'home-page-contact-button-1'
     );
 
-    await waitFor(() => {
+    await act(() => {
       user.click(clickForAQuoteButton);
+    });
+
+    await waitFor(() => {
       expect(mockRouter.asPath).toEqual('/contact');
     });
   });
@@ -57,8 +60,11 @@ describe('HomePage', () => {
       'home-page-download-button'
     );
 
-    await waitFor(() => {
+    await act(() => {
       user.click(downloadFormsButton);
+    });
+
+    await waitFor(() => {
       expect(mockRouter.asPath).toEqual('/download');
     });
   });
@@ -73,8 +79,11 @@ describe('HomePage', () => {
       'home-page-contact-button-2'
     );
 
-    await waitFor(() => {
+    await act(() => {
       user.click(contactButton);
+    });
+
+    await waitFor(() => {
       expect(mockRouter.asPath).toEqual('/contact');
     });
   });

@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HistoryPage should render page in English 1`] = `
+<div>
+  <main>
+    <div
+      class="space-y-6"
+    >
+      <div
+        class="relative"
+      >
+        <img
+          alt="A black and white image of Larry from New York City Motorcycles posing on a vintage motorcycle wearing a fur hat. He is wearing sunglasses and rider's goggles; it's a wonder he can see anything at all."
+        />
+        <div
+          class="absolute top-1/2 left-1/2 w-max max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 rounded-md bg-stone-600 opacity-90 shadow-lg md:max-w-[calc(100%-3rem)]"
+        >
+          <h2
+            class="inline-block px-2 py-2 text-center text-2xl text-stone-50 sm:px-8 sm:text-4xl md:text-5xl lg:text-6xl"
+          >
+            History
+          </h2>
+        </div>
+      </div>
+      <div
+        class="grid gap-4 md:grid-cols-5"
+      >
+        <div
+          class="md:col-span-3"
+        >
+          <section
+            class="grid gap-4 sm:grid-cols-2 md:grid-cols-2"
+          >
+            <div
+              class="rounded-md
+            card-hover cursor-pointer 
+            "
+            >
+              <img
+                alt="A crowd of vintage motorbike enthusiasts gathered outside the New York City Motorcycles showroom to watch a band that is playing inside."
+              />
+            </div>
+            <div
+              class="rounded-md
+            card-hover cursor-pointer 
+            "
+            >
+              <img
+                alt="An image of a David Karp, the founder of Tumblr leaning on an orange coloured Laverda motorbike outside the New York City Motorcycles showroom."
+              />
+            </div>
+            <div
+              class="rounded-md
+            card-hover cursor-pointer 
+            "
+            >
+              <img
+                alt="An image of Larry from New York City Motorcycles performing a last minute tune-up on his bike wearing full race leathers."
+              />
+            </div>
+            <div
+              class="rounded-md
+            card-hover cursor-pointer 
+            "
+            >
+              <img
+                alt="An orange Laverda and a red Ducati vintage motorbikes basking in the sunlight in the pit on race day."
+              />
+            </div>
+            <div
+              class="rounded-md
+            card-hover cursor-pointer 
+            "
+            >
+              <img
+                alt="An image of Larry from New York City Motorcycles leaning deep into a turn on the race track riding an orange coloured Laverda motorbike."
+              />
+            </div>
+            <div
+              class="rounded-md
+            card-hover cursor-pointer 
+            "
+            >
+              <img
+                alt="A black and white image of a motorbike being lifted by a forklift truck outside the New York City Motorcycles showroom."
+              />
+            </div>
+            <div
+              class="rounded-md
+            card-hover cursor-pointer 
+            "
+            >
+              <img
+                alt="An image of the New York City Motorcycles garage in Venice, California. There are a lot of vintage motorbikes crowded in there; most notably a lovely old BSA motorcycle."
+              />
+            </div>
+            <div
+              class="rounded-md
+            card-hover cursor-pointer 
+            "
+            >
+              <img
+                alt="The New York City Motorcycles garage viewed from outside."
+              />
+            </div>
+            <div
+              class="rounded-md
+            card-hover cursor-pointer 
+            "
+            >
+              <img
+                alt="A satisfied customer riding his new motorbike away from New York City Motorcycles HQ in Zushi, Kanagawa, Japan."
+              />
+            </div>
+            <div
+              class="rounded-md
+            card-hover cursor-pointer 
+            "
+            >
+              <img
+                alt="An image of a shipping container full of vintage cars and motorcycles on their way to Japan."
+              />
+            </div>
+          </section>
+        </div>
+        <div
+          class="space-y-6 md:col-span-2"
+        >
+          <section
+            class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+          >
+            <div
+              class="text-center "
+            >
+              <h2
+                class="text-xl font-medium opacity-80 md:text-2xl"
+              >
+                2012
+              </h2>
+            </div>
+            <div
+              class="space-y-4 undefined"
+            >
+              <p>
+                New York City Motorcycle "club" starts in a Soho loft in Manhattan. The idea is simple: to givr an identity and a home base to NYC's unique vintage motorcycle scene. Riding and owning motorcycles in New York City is cumbersome and complicated. The payoff is experiencing the greatest city in the world on two wheels. From toughness to style, riding bikes in New York is not like anywhere else. New York City Motorcycles provided a platform for like-minded enthusiasts enduring the pain and pleasure of motorcycling in "The Big Apple".
+              </p>
+            </div>
+          </section>
+          <section
+            class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+          >
+            <div
+              class="text-center "
+            >
+              <h2
+                class="text-xl font-medium opacity-80 md:text-2xl"
+              >
+                2014
+              </h2>
+            </div>
+            <div
+              class="space-y-4 undefined"
+            >
+              <p>
+                New York City Motorcycles starts AHRMA Roadracing, supported by buying and selling vintage motorcycles. Race school at Roebling Road Raceway, Pooler Georgia, pictured.
+              </p>
+            </div>
+          </section>
+          <section
+            class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+          >
+            <div
+              class="text-center "
+            >
+              <h2
+                class="text-xl font-medium opacity-80 md:text-2xl"
+              >
+                2015
+              </h2>
+            </div>
+            <div
+              class="space-y-4 undefined"
+            >
+              <p>
+                Brooklyn showroom and retail shop opens in the center of New York's legendary vintage and custom "Motorcycle District" on North 14th Street in Williamsburg. N14th is home to Indian Larry, Works Engineering, The Brooklyn Invitational and NYCVINMOTO motorcycle shows.
+              </p>
+              <p>
+                Racing program expands to three bikes with coast-to-coast races on a Laverda 750SFC race replica, Ducati 250 and Triumph 500.
+              </p>
+            </div>
+          </section>
+          <section
+            class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+          >
+            <div
+              class="text-center "
+            >
+              <h2
+                class="text-xl font-medium opacity-80 md:text-2xl"
+              >
+                2016
+              </h2>
+            </div>
+            <div
+              class="space-y-4 undefined"
+            >
+              <p>
+                New York City Motorcycles opens a garage in Venice, California, adjacent to Deus Ex Machina.
+              </p>
+            </div>
+          </section>
+          <section
+            class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+          >
+            <div
+              class="text-center "
+            >
+              <h2
+                class="text-xl font-medium opacity-80 md:text-2xl"
+              >
+                2017
+              </h2>
+            </div>
+            <div
+              class="space-y-4 undefined"
+            >
+              <p>
+                Following a major race crash ans the sale of the building, NYCMC's Brooklyn shop closes. Full relocation to Venice, CA completed. Resumes racing, including first international competition at the 5oth anniversary of the first Canadian GP at Mosport.
+              </p>
+            </div>
+          </section>
+          <section
+            class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+          >
+            <div
+              class="text-center "
+            >
+              <h2
+                class="text-xl font-medium opacity-80 md:text-2xl"
+              >
+                2018
+              </h2>
+            </div>
+            <div
+              class="space-y-4 undefined"
+            >
+              <p>
+                Most of the year is spent on the road, lving in an Airstream and racing, buying and selling vintage motorcycles. A most blissful year.
+              </p>
+            </div>
+          </section>
+          <section
+            class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+          >
+            <div
+              class="text-center "
+            >
+              <h2
+                class="text-xl font-medium opacity-80 md:text-2xl"
+              >
+                2019
+              </h2>
+            </div>
+            <div
+              class="space-y-4 undefined"
+            >
+              <p>
+                Get's married, moves to Japan.
+              </p>
+            </div>
+          </section>
+          <section
+            class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+          >
+            <div
+              class="text-center "
+            >
+              <h2
+                class="text-xl font-medium opacity-80 md:text-2xl"
+              >
+                2020
+              </h2>
+            </div>
+            <div
+              class="space-y-4 undefined"
+            >
+              <p>
+                New York City Motorcycles opens in Kanagawa, on Japan's famous Shonan coast, sourcing and exporting motorcycles worldwide.
+              </p>
+            </div>
+            <div
+              class="flex justify-center"
+            >
+              <a
+                data-testid="history-page-home-button"
+                href="/"
+              >
+                <div
+                  class="flex justify-center"
+                >
+                  <button
+                    class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                    type="button"
+                  >
+                    Home
+                  </button>
+                </div>
+              </a>
+            </div>
+          </section>
+        </div>
+        <div
+          class="md:col-span-5"
+        >
+          <section
+            class="grid gap-4 sm:grid-cols-2 md:grid-cols-2"
+          >
+            <div
+              class="rounded-md
+            card-hover cursor-pointer 
+            "
+            >
+              <img
+                alt="An image of a motorbike passing customs checks at a Japanese port."
+              />
+            </div>
+            <div
+              class="rounded-md
+            card-hover cursor-pointer 
+            "
+            >
+              <img
+                alt="An exterior shot of a vintage motorcycle being loaded onto the back of a small flatbed truck. There's a large ferris wheel in the background so it might be in Yokohama."
+              />
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;

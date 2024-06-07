@@ -3,13 +3,6 @@ import chevronUp from 'public/svgs/chevron-up.svg';
 
 import InstagramButton from '../instagram-button/instagram-button';
 
-type FooterProps = {
-  address: string;
-  disclaimer: string;
-  chevronText: string;
-  altTextInstagramButton: string;
-};
-
 const Footer = ({
   chevronText,
   altTextInstagramButton,
