@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RacingPage should render page in English 1`] = `
+<div>
+  <main>
+    <div
+      class="space-y-6"
+    >
+      <div
+        class="relative"
+      >
+        <img
+          alt="An image of Larry from New York City Motorcycles racing an orange, vintage Laverda motorcycle on a track."
+        />
+        <div
+          class="absolute top-1/2 left-1/2 w-max max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 rounded-md bg-stone-600 opacity-90 shadow-lg md:max-w-[calc(100%-3rem)]"
+        >
+          <h2
+            class="inline-block px-2 py-2 text-center text-2xl text-stone-50 sm:px-8 sm:text-4xl md:text-5xl lg:text-6xl"
+          >
+            Racing
+          </h2>
+        </div>
+      </div>
+      <section
+        class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+      >
+        <div
+          class="space-y-4 undefined"
+        >
+          <p>
+            After attending the Barber Vintage Festival at the end of the 2013 race season as a spectator/collector/enthusiast, I boldly announced that 2013 would be the last year that I didn't race. And so it was.
+          </p>
+          <p>
+            The first race in the 2014 AHRMA National Championship was at Roebling Road Raceway, in Savannah, GA.  After completing the AHRMA race school on the Friday, I was on the starting grid the following two days. By the end of the 2014 season I raced at 7 of the 10 weekend events, campaigning a heavily-modified ex-Tim Joyce T-100 unit Triumph in Sportsman 500 class and toward the end of the season, in addition, a Laverda 750SFC clone.
+          </p>
+        </div>
+      </section>
+      <section
+        class="grid gap-4 sm:grid-cols-2 md:grid-cols-3"
+      >
+        <div
+          class="rounded-md
+            card-hover cursor-pointer 
+            "
+        >
+          <img
+            alt="An image of a cool looking vintage Harley Davidson motorcycle with an orange colour fairing and the number seven on the front."
+          />
+        </div>
+        <div
+          class="rounded-md
+            card-hover cursor-pointer 
+            "
+        >
+          <img
+            alt="An image of Larry from New York City Motorcycles racing on a white coloured vintage motorcycle with the race number 667 on the front. He's leaning low into a corner."
+          />
+        </div>
+        <div
+          class="rounded-md
+            card-hover cursor-pointer 
+            "
+        >
+          <img
+            alt="A black and white image a rider in full leathers on a vintage motorcycle. The leathers have the words 'Roper' and 'Vanson' on the back."
+          />
+        </div>
+        <div
+          class="rounded-md
+            card-hover cursor-pointer 
+            "
+        >
+          <img
+            alt="An image of Larry from New York City Motorcycles racing on a vintage Laverda motorcycle. He's leaning low into a corner."
+          />
+        </div>
+        <div
+          class="rounded-md
+            card-hover cursor-pointer 
+            "
+        >
+          <img
+            alt="An image of two riders on vintage motorcycles lining up for the start of a race wearing full leathers and orange helmets under a dramatic sky."
+          />
+        </div>
+        <div
+          class="rounded-md
+            card-hover cursor-pointer 
+            "
+        >
+          <img
+            alt="An image of Larry from New York City Motorcycles racing a vintage Honda motorbike. He's riding at Willow Springs - the fastest road in the west."
+          />
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+`;
