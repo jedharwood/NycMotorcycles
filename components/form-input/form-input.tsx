@@ -23,6 +23,7 @@ const InputField = ({
         placeholder={placeholder}
         {...register(name)}
         className={classes}
+        data-testid={name}
       />
     ) : (
       <input
@@ -30,6 +31,7 @@ const InputField = ({
         placeholder={placeholder}
         {...register(name)}
         className={classes}
+        data-testid={name}
       />
     );
 
