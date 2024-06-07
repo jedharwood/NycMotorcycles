@@ -1,7 +1,7 @@
 import InvestPage from '@/pages/invest';
 import userEvent from '@testing-library/user-event';
 import mockRouter from 'next-router-mock';
-import { render, screen, waitFor } from '@/test-utils';
+import { render, screen, waitFor, act } from '@/test-utils';
 
 jest.mock('next/router', () => jest.requireActual('next-router-mock'));
 
@@ -22,8 +22,11 @@ describe('InvestPage', () => {
       'invest-page-contact-button'
     );
 
-    await waitFor(() => {
+    await act(() => {
       user.click(contactButton);
+    });
+
+    await waitFor(() => {
       expect(mockRouter.asPath).toEqual('/contact');
     });
   });

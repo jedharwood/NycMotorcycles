@@ -31,7 +31,7 @@ describe('HistoryPage', () => {
     );
 
     await act(() => {
-        userEvent.click(homeButton);
+      userEvent.click(homeButton);
     });
 
     await waitFor(() => {
