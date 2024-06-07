@@ -49,3 +49,10 @@ type NavLinkDetails = {
   href: string;
   text: string;
 };
+
+type FooterProps = {
+  address: string;
+  disclaimer: string;
+  chevronText: string;
+  altTextInstagramButton: string;
+};
