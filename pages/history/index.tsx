@@ -44,6 +44,7 @@ const HistoryPage: FC = (): JSX.Element => {
       text={intl.formatMessage({ id: 'common.route-names.home' })}
       href={routes.home}
       type='router-link'
+      id='history-page-home-button'
     />
   );
 
