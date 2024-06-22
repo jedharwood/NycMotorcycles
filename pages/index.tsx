@@ -4,7 +4,7 @@ import { useIntl } from 'react-intl';
 
 import { HeadElement } from '@/components/head-element/head-element';
 import Jumbotron from '@/components/jumbotron/jumbotron';
-import { LinkButton } from '@/components/link-button/link-button';
+import LinkButton from '@/components/link-button/link-button';
 import { TextDisplay } from '@/components/text-display/text-display';
 import { BuildList } from '@/helpers/build-list';
 import routes from '@/utilities/routes';

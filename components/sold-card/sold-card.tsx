@@ -5,7 +5,7 @@ import { useIntl } from 'react-intl';
 import { StaticImage } from '@/types/image-types';
 import routes from '@/utilities/routes';
 
-import { LinkButton } from '../link-button/link-button';
+import LinkButton from '../link-button/link-button';
 
 type SoldCardProps = {
   image: StaticImage;

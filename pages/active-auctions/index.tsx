@@ -5,7 +5,7 @@ import { useQuery } from 'react-query';
 
 import AuctionCard from '@/components/auction-card/auction-card';
 import { HeadElement } from '@/components/head-element/head-element';
-import { LinkButton } from '@/components/link-button/link-button';
+import LinkButton from '@/components/link-button/link-button';
 import { Spinner } from '@/components/spinner/spinner';
 import { TextDisplay } from '@/components/text-display/text-display';
 
