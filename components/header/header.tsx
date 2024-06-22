@@ -62,7 +62,7 @@ const Header = ({
   const mobileNavMenu = (): JSX.Element => {
     return (
       <div
-        className={`${showMobileNav ? 'h-72' : 'invisible h-0'} transition[height] overflow-hidden duration-300 ease-in-out md:hidden`}
+        className={`${showMobileNav ? 'h-75' : 'invisible h-0'} transition[height] overflow-hidden duration-300 ease-in-out md:hidden`}
       >
         <ul className='mt-4 mb-2 grid space-y-2' onClick={toggleMobilenav}>
           {mapNavLinks()}
