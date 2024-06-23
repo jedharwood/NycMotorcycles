@@ -56,3 +56,18 @@ type FooterProps = {
   chevronText: string;
   altTextInstagramButton: string;
 };
+
+type ChildElementPosition = 'under-title' | 'bottom';
+
+type TextDisplayProps = {
+  title?: string;
+  textContent?: string[];
+  childElement?: JSX.Element;
+  childElementPosition?: ChildElementPosition;
+  isOpaque?: boolean;
+  hasBorder?: boolean;
+  textContentCentred?: boolean;
+  borderColour?: ComponentColour;
+  subTitle?: string;
+  footer?: string;
+};

@@ -7,7 +7,7 @@ import ImageGrid from '@/components/image-grid/image-grid';
 import ImageModal from '@/components/image-modal/image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import LinkButton from '@/components/link-button/link-button';
-import { TextDisplay } from '@/components/text-display/text-display';
+import TextDisplay from '@/components/text-display/text-display';
 import { AppContext } from '@/context/app-context';
 import { BuildGridImages } from '@/helpers/build-grid-images';
 import { images as img } from '@/public/images/history';
