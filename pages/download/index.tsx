@@ -3,8 +3,8 @@ import { FC } from 'react';
 import { useIntl } from 'react-intl';
 
 import { HeadElement } from '@/components/head-element/head-element';
-import { TextDisplay } from '@/components/text-display/text-display';
 import LinkButton from '@/components/link-button/link-button';
+import { TextDisplay } from '@/components/text-display/text-display';
 
 const DownloadPage: FC = (): JSX.Element => {
   const intl = useIntl();
