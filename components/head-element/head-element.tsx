@@ -6,7 +6,7 @@ type HeadElementProps = {
   metaBrandList: string;
 };
 
-export const HeadElement = ({
+const HeadElement = ({
   metaTitle,
   metaContent,
   metaBrandList,
@@ -20,3 +20,5 @@ export const HeadElement = ({
     </Head>
   );
 };
+
+export default HeadElement;

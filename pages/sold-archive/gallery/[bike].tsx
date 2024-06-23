@@ -3,7 +3,7 @@ import { FC, useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 
-import { HeadElement } from '@/components/head-element/head-element';
+import HeadElement from '@/components/head-element/head-element';
 import ImageGrid from '@/components/image-grid/image-grid';
 import ImageModal from '@/components/image-modal/image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
