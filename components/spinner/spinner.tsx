@@ -4,7 +4,7 @@ type SpinnerProps = {
   verticalPadding?: boolean;
 };
 
-export const Spinner = ({
+const Spinner = ({
   isLoading,
   verticalPadding,
   text,
@@ -35,3 +35,5 @@ export const Spinner = ({
     </div>
   );
 };
+
+export default Spinner;

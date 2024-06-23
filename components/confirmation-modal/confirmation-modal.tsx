@@ -5,7 +5,7 @@ import { useIntl } from 'react-intl';
 import Button from '../button/button';
 import InstagramButton from '../instagram-button/instagram-button';
 import ModalWrapper from '../modal-wrapper/modal-wrapper';
-import { Spinner } from '../spinner/spinner';
+import Spinner from '../spinner/spinner';
 import { TextDisplay } from '../text-display/text-display';
 
 type InfoModalProps = {
