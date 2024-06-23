@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import burgerIcon from 'public/svgs/burger-icon.svg';
 import nycmcLogo from 'public/svgs/nycmc-logo.svg';
 
-import { NavLink } from '../nav-link/nav-link';
+import NavLink from '../nav-link/nav-link';
 
 type HeaderProps = {
   navLinks: NavLinkDetails[];

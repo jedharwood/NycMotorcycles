@@ -6,7 +6,7 @@ interface NavLinkProps {
   active: boolean;
 }
 
-export const NavLink = ({ href, text, active }: NavLinkProps): JSX.Element => {
+const NavLink = ({ href, text, active }: NavLinkProps): JSX.Element => {
   const classes: string =
     'block md:hover:underline md:hover:opacity-100 text-nowrap';
   const activeClasses: string = active
@@ -19,3 +19,5 @@ export const NavLink = ({ href, text, active }: NavLinkProps): JSX.Element => {
     </Link>
   );
 };
+
+export default NavLink;
