@@ -1,19 +1,4 @@
-type ChildElementPosition = 'under-title' | 'bottom';
-
-export type TextDisplayProps = {
-  title?: string;
-  textContent?: string[];
-  childElement?: JSX.Element;
-  childElementPosition?: ChildElementPosition;
-  isOpaque?: boolean;
-  hasBorder?: boolean;
-  textContentCentred?: boolean;
-  borderColour?: ComponentColour;
-  subTitle?: string;
-  footer?: string;
-};
-
-export const TextDisplay = ({
+const TextDisplay = ({
   title,
   textContent,
   childElement,
@@ -94,3 +79,5 @@ export const TextDisplay = ({
     </section>
   );
 };
+
+export default TextDisplay;

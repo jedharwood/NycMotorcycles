@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import burgerIcon from 'public/svgs/burger-icon.svg';
 import nycmcLogo from 'public/svgs/nycmc-logo.svg';
 
-import { NavLink } from '../nav-link/nav-link';
+import NavLink from '../nav-link/nav-link';
 
 type HeaderProps = {
   navLinks: NavLinkDetails[];
@@ -62,7 +62,7 @@ const Header = ({
   const mobileNavMenu = (): JSX.Element => {
     return (
       <div
-        className={`${showMobileNav ? 'h-72' : 'invisible h-0'} transition[height] overflow-hidden duration-300 ease-in-out md:hidden`}
+        className={`${showMobileNav ? 'h-75' : 'invisible h-0'} transition[height] overflow-hidden duration-300 ease-in-out md:hidden`}
       >
         <ul className='mt-4 mb-2 grid space-y-2' onClick={toggleMobilenav}>
           {mapNavLinks()}

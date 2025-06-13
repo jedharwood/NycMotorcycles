@@ -9,7 +9,7 @@ import { z, ZodType } from 'zod';
 import Button from '@/components/button/button';
 import ConfirmationModal from '@/components/confirmation-modal/confirmation-modal';
 import InputField from '@/components/form-input/form-input';
-import { HeadElement } from '@/components/head-element/head-element';
+import HeadElement from '@/components/head-element/head-element';
 
 const submitEmail = async (contactFormData: ContactFormData): Promise<any> => {
   try {

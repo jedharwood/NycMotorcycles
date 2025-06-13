@@ -3,11 +3,11 @@ import { FC, useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 
-import { HeadElement } from '@/components/head-element/head-element';
+import HeadElement from '@/components/head-element/head-element';
 import ImageGrid from '@/components/image-grid/image-grid';
 import ImageModal from '@/components/image-modal/image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
-import { Spinner } from '@/components/spinner/spinner';
+import Spinner from '@/components/spinner/spinner';
 import TwoColumnGridLayout from '@/components/two-column-grid-layout/two-column-grid-layout';
 import { AppContext } from '@/context/app-context';
 import { BuildGridImages } from '@/helpers/build-grid-images';

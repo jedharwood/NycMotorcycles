@@ -47,7 +47,10 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
       href: routes.invest,
       text: intl.formatMessage({ id: 'common.route-names.invest' }),
     },
-    // Maybe I'll add download in here once I have the page up...
+    {
+      href: routes.download,
+      text: intl.formatMessage({ id: 'common.route-names.download' }),
+    },
   ];
 
   return (

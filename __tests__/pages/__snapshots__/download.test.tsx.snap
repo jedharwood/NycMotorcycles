@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DownloadPage should render page in English 1`] = `
+<div>
+  <main
+    class="space-y-6"
+  >
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          Power of Attorney form
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          The power of attorney form permits our shipping agent to move your bike internationally.
+        </p>
+        <p>
+          Please contact us if you need assistance in completing this form; we're happy to help.
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          download="mock-form-one"
+          href="/documents/mock-form-one.pdf"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              Download
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          Export Invoice form
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          The export invoice form will detail the value of your motorcycle and is required in order for your bike to clear customs here in Japan.
+        </p>
+        <p>
+          Please contact us if you need assistance in completing this form; we're happy to help.
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          download="mock-form-two"
+          href="/documents/mock-form-two.pdf"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              Download
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+`;

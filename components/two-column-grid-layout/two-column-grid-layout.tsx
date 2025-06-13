@@ -3,7 +3,7 @@ import React from 'react';
 import { StaticImage } from '@/types/image-types';
 
 import ImageGrid from '../image-grid/image-grid';
-import { TextDisplay, TextDisplayProps } from '../text-display/text-display';
+import TextDisplay from '../text-display/text-display';
 
 type TwoColumnGridLayoutProps = {
   images: StaticImage[];

@@ -138,6 +138,16 @@ exports[`App renders Layout and matches snapshot 1`] = `
                     Invest
                   </a>
                 </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/download"
+                  >
+                    Download
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -225,6 +235,16 @@ exports[`App renders Layout and matches snapshot 1`] = `
                   href="/invest"
                 >
                   Invest
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/download"
+                >
+                  Download
                 </a>
               </li>
             </ul>
