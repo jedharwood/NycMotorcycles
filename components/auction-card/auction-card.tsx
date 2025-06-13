@@ -61,7 +61,7 @@ const AuctionCard = ({
         className='relative h-fit rounded-md bg-gray-500 sm:col-span-1'
       >
         <img
-          src={imageSource}
+          src={`/api/image-proxy?url=${encodeURIComponent(imageSource)}`}
           alt={imageAltText}
           className='w-full rounded-md hover:opacity-70'
         />
