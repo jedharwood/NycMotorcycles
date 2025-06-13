@@ -21,6 +21,8 @@ Move I18n logic up from child to parent components
 Pass hook into BuildGridImage as a prop?
 Check styling on larger screen
 Get real download docs from Larry
+Sticky footer
+Should link buttons be buttons?
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
