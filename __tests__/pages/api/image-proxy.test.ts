@@ -18,6 +18,10 @@ describe('proxyImageFetcher', () => {
         end: jest.fn(),
     } as any;
     const imageUrl = 'http://www.trashbat.co.ck'
+    const mockStream = {
+        pipe: jest.fn(),
+    };
+    const fakeStreamBody = Readable.from(['mock-image-data']);
 
     beforeEach(() => {
         req = {
@@ -27,10 +31,11 @@ describe('proxyImageFetcher', () => {
         } as any;
         global.fetch = jest.fn();
         jest.spyOn(console, 'error').mockImplementation(() => {});
+        jest.spyOn(Readable, 'from').mockReturnValue(mockStream as any);
     });
     
     afterEach(() => {
-        req = null;
+        req = {};
         jest.restoreAllMocks();
     });
 
@@ -84,12 +89,27 @@ describe('proxyImageFetcher', () => {
         });
     });
 
+    it('should parse url from query string when url is an array', async () => {
+        req.query.url = [imageUrl];
+
+        await proxyImageFetcher(req, res);
+
+        expect(fetch).toHaveBeenCalledTimes(1);
+        expect(fetch).toHaveBeenCalledWith(imageUrl);
+    });
+
+    it('should default response header type to image/jpeg', async () => {
+        (global.fetch as jest.Mock).mockResolvedValue({
+            ok: true,
+            body: fakeStreamBody,
+        });
+    
+        await proxyImageFetcher(req, res);
+    
+        expect(res.setHeader).toHaveBeenCalledWith('Content-Type', 'image/jpeg');
+    });
+
     it('should stream the fetched image', async () => {
-        const mockStream = {
-            pipe: jest.fn(),
-        };
-        const fakeStreamBody = Readable.from(['mock-image-data']);
-        jest.spyOn(Readable, 'from').mockReturnValue(mockStream as any);
         (global.fetch as jest.Mock).mockResolvedValue({
             ok: true,
             headers: {
