@@ -5,8 +5,8 @@ import { Readable } from 'stream';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const proxyImageFetcher = async (
-  req: NextApiRequest,
-  res: NextApiResponse
+    req: NextApiRequest,
+    res: NextApiResponse
 ): Promise<void> => {
     const queryUrl = req.query.url;
     const url = Array.isArray(queryUrl) ? queryUrl[0] : queryUrl;
@@ -32,13 +32,13 @@ const proxyImageFetcher = async (
     }
 };
   
-  export default proxyImageFetcher;
+export default proxyImageFetcher;
 
-  const streamDefaultImageOnFailure = (res: NextApiResponse, errorMessage: string) => {
+const streamDefaultImageOnFailure = (res: NextApiResponse, errorMessage: string): void => { 
     console.error(errorMessage);
 
     const defaultImagePath = join(process.cwd(), 'public/images', 'background.jpg');
     res.setHeader('Content-Type', 'image/jpeg');
 
     createReadStream(defaultImagePath).pipe(res);
-  }
+};
