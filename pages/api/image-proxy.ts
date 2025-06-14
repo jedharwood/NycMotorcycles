@@ -28,9 +28,8 @@ const proxyImageFetcher = async (
         const readableStream = Readable.from(response.body as any);
         readableStream.pipe(res);
     } catch (error) {
-        return streamDefaultImageOnFailure(res, `An error occurred while fetching the image from ${url}. Error: ${error}`);
+        return streamDefaultImageOnFailure(res, `An error occurred while fetching the image from ${url}. ${error}`);
     }
-
 };
   
   export default proxyImageFetcher;
