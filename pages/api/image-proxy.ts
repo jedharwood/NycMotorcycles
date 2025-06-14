@@ -1,3 +1,5 @@
+import { createReadStream } from 'fs';
+import { join } from 'path';
 import { Readable } from 'stream';
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -10,15 +12,14 @@ const proxyImageFetcher = async (
     const url = Array.isArray(queryUrl) ? queryUrl[0] : queryUrl;
 
     if (!url || typeof url !== 'string') {
-        return res.status(400).json({ error: `Missing or invalid image url parameter. Url: ${url}` });
-        // return a default image on failure
+        return streamDefaultImageOnFailure(res, `Missing or invalid image url parameter. Url: ${url}`);
     }
 
     try {
         const response = await fetch(url);
 
         if (!response.ok) {
-            return res.status(response.status).json({ error: `Response not ok fetching image from: ${url}`});
+            return streamDefaultImageOnFailure(res, `Response not ok fetching image from: ${url}`);
         }
 
         res.setHeader('Content-Type', response.headers.get('content-type') || 'image/jpeg');
@@ -27,10 +28,18 @@ const proxyImageFetcher = async (
         const readableStream = Readable.from(response.body as any);
         readableStream.pipe(res);
     } catch (error) {
-        console.error(`An error occurred while fetching the image from ${url}. Error:`, error);
-        res.status(500).json({ error: 'Internal server error'});
+        return streamDefaultImageOnFailure(res, `An error occurred while fetching the image from ${url}. Error: ${error}`);
     }
 
 };
   
   export default proxyImageFetcher;
+
+  const streamDefaultImageOnFailure = (res: NextApiResponse, errorMessage: string) => {
+    console.error(errorMessage);
+
+    const defaultImagePath = join(process.cwd(), 'public/images', 'background.jpg');
+    res.setHeader('Content-Type', 'image/jpeg');
+
+    createReadStream(defaultImagePath).pipe(res);
+  }

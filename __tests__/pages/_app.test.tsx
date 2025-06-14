@@ -1,6 +1,8 @@
-import App from '../../pages/_app';
 import { AppProps } from 'next/app';
+
 import { render } from '@/test-utils';
+
+import App from '../../pages/_app';
 
 jest.mock('next/router', () => jest.requireActual('next-router-mock'));
 
