@@ -28,7 +28,7 @@ describe('proxyImageFetcher', () => {
         jest.restoreAllMocks();
       });
 
-  it('should return stream image if url is undefined', async () => {
+  it('should stream default image if url is undefined', async () => {
     const req = {
       query: {
         url: undefined,
@@ -40,8 +40,21 @@ describe('proxyImageFetcher', () => {
 
     expect(fs.createReadStream).toHaveBeenCalledWith(defaultImagePath);
     expect(res.setHeader).toHaveBeenCalledWith('Content-Type', 'image/jpeg');
-    expect(console.error).toHaveBeenCalledWith(
-        expect.stringContaining('Missing or invalid image url parameter')
-      );
+    expect(console.error).toHaveBeenCalledWith('Missing or invalid image url parameter. Url: undefined');
+  });
+
+  it('should stream default image if url is not a string', async () => {
+    const req = {
+      query: {
+        url: 1,
+      },
+    } as any;
+    const res = mockRes();
+
+    await proxyImageFetcher(req, res);
+
+    expect(fs.createReadStream).toHaveBeenCalledWith(defaultImagePath);
+    expect(res.setHeader).toHaveBeenCalledWith('Content-Type', 'image/jpeg');
+    expect(console.error).toHaveBeenCalledWith('Missing or invalid image url parameter. Url: 1');
   });
 });
