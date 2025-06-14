@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import { join } from 'path';
+import { Readable } from 'stream';
 
 import proxyImageFetcher from '../../../pages/api/image-proxy';
 
@@ -81,5 +82,30 @@ describe('proxyImageFetcher', () => {
             expect(res.setHeader).toHaveBeenCalledWith('Content-Type', 'image/jpeg');
             expect(console.error).toHaveBeenCalledWith(`An error occurred while fetching the image from ${imageUrl}. Error: Network error`);
         });
+    });
+
+    it('should stream the fetched image', async () => {
+        const mockStream = {
+            pipe: jest.fn(),
+        };
+        const fakeStreamBody = Readable.from(['mock-image-data']);
+        jest.spyOn(Readable, 'from').mockReturnValue(mockStream as any);
+        (global.fetch as jest.Mock).mockResolvedValue({
+            ok: true,
+            headers: {
+                get: jest.fn().mockReturnValue('image/jpeg'),
+            },
+            body: fakeStreamBody,
+        });
+    
+        await proxyImageFetcher(req, res);
+    
+        expect(fetch).toHaveBeenCalledTimes(1);
+        expect(fetch).toHaveBeenCalledWith(imageUrl);
+        expect(res.setHeader).toHaveBeenCalledWith('Content-Type', 'image/jpeg');
+        expect(res.setHeader).toHaveBeenCalledWith('Cache-Control', 'public, max-age=3600');
+        expect(Readable.from).toHaveBeenCalledWith(fakeStreamBody);
+        expect(mockStream.pipe).toHaveBeenCalledWith(res);
+        expect(console.error).not.toHaveBeenCalled();
     });
 });
