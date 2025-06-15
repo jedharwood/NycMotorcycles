@@ -3,25 +3,25 @@
 @tailwind utilities;
 
 @layer components {
-  .card-hover {
-    @apply border-2 border-transparent shadow-lg transition-all duration-300 hover:scale-103 hover:border-teal-500 hover:shadow-2xl;
-  }
+    .card-hover {
+        @apply border-2 border-transparent shadow-lg transition-all duration-300 hover:scale-103 hover:border-teal-500 hover:shadow-2xl;
+    }
 }
 
 #__next {
-  min-height: 100vh;
+    min-height: 100vh;
 }
 
 #layout-outer {
-  min-height: 100vh;
+    min-height: 100vh;
 }
 
 #layout-inner {
-  min-height: 100vh;
+    min-height: 100vh;
 }
 
 li {
-  list-style-type: disc;
+    list-style-type: disc;
 }
 
 /* :root {
