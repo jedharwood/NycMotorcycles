@@ -1,2 +1,2 @@
 export const instagramLink: string =
-  'https://www.instagram.com/newyorkcitymotorcycles/';
+    'https://www.instagram.com/newyorkcitymotorcycles/';

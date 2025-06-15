@@ -8,42 +8,42 @@ import { AppContext } from '../../context/app-context';
 import ModalWrapper from '../modal-wrapper/modal-wrapper';
 
 const ImageModal = (): JSX.Element | null => {
-  const { showImageModal, imageModalImage, closeImageModal } =
-    useContext(AppContext);
-  const intl = useIntl();
+    const { showImageModal, imageModalImage, closeImageModal } =
+        useContext(AppContext);
+    const intl = useIntl();
 
-  if (!showImageModal) return null;
+    if (!showImageModal) return null;
 
-  return (
-    <ModalWrapper>
-      <div className='absolute flex w-full flex-row-reverse p-2 md:right-8'>
-        <button
-          type='button'
-          className=' z-60 hover:opacity-80'
-          onClick={closeImageModal}
-        >
-          <Image
-            src={closeIcon}
-            alt={intl.formatMessage({
-              id: 'comp.image-modal.alt.close',
-            })}
-            width={40}
-            height={40}
-          />
-          <span className='sr-only'>
-            <FormattedMessage id='comp.image-modal.alt.close' />
-          </span>
-        </button>
-      </div>
-      <Image
-        src={imageModalImage.image}
-        alt={intl.formatMessage({
-          id: imageModalImage.altText,
-        })}
-        className='max-w-screen max-h-screen rounded-md border-2 border-stone-50 shadow-lg'
-      />
-    </ModalWrapper>
-  );
+    return (
+        <ModalWrapper>
+            <div className='absolute flex w-full flex-row-reverse p-2 md:right-8'>
+                <button
+                    type='button'
+                    className=' z-60 hover:opacity-80'
+                    onClick={closeImageModal}
+                >
+                    <Image
+                        src={closeIcon}
+                        alt={intl.formatMessage({
+                            id: 'comp.image-modal.alt.close',
+                        })}
+                        width={40}
+                        height={40}
+                    />
+                    <span className='sr-only'>
+                        <FormattedMessage id='comp.image-modal.alt.close' />
+                    </span>
+                </button>
+            </div>
+            <Image
+                src={imageModalImage.image}
+                alt={intl.formatMessage({
+                    id: imageModalImage.altText,
+                })}
+                className='max-w-screen max-h-screen rounded-md border-2 border-stone-50 shadow-lg'
+            />
+        </ModalWrapper>
+    );
 };
 
 export default ImageModal;
