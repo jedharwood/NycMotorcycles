@@ -40,11 +40,7 @@ describe('proxyImageFetcher', () => {
     });
 
     describe('should stream default image', () => {
-        const defaultImagePath = join(
-            process.cwd(),
-            'public/images',
-            'background.jpg'
-        );
+        const defaultImagePath = join(process.cwd(), 'public/images', 'background.jpg');
 
         it('when url is undefined', async () => {
             req.query.url = undefined;
@@ -53,10 +49,7 @@ describe('proxyImageFetcher', () => {
 
             expect(fetch).not.toHaveBeenCalled();
             expect(fs.createReadStream).toHaveBeenCalledWith(defaultImagePath);
-            expect(res.setHeader).toHaveBeenCalledWith(
-                'Content-Type',
-                'image/jpeg'
-            );
+            expect(res.setHeader).toHaveBeenCalledWith('Content-Type', 'image/jpeg');
             expect(console.error).toHaveBeenCalledWith(
                 'Missing or invalid image url parameter. Url: undefined'
             );
@@ -69,10 +62,7 @@ describe('proxyImageFetcher', () => {
 
             expect(fetch).not.toHaveBeenCalled();
             expect(fs.createReadStream).toHaveBeenCalledWith(defaultImagePath);
-            expect(res.setHeader).toHaveBeenCalledWith(
-                'Content-Type',
-                'image/jpeg'
-            );
+            expect(res.setHeader).toHaveBeenCalledWith('Content-Type', 'image/jpeg');
             expect(console.error).toHaveBeenCalledWith(
                 'Missing or invalid image url parameter. Url: 1'
             );
@@ -86,29 +76,21 @@ describe('proxyImageFetcher', () => {
             expect(fetch).toHaveBeenCalledTimes(1);
             expect(fetch).toHaveBeenCalledWith(imageUrl);
             expect(fs.createReadStream).toHaveBeenCalledWith(defaultImagePath);
-            expect(res.setHeader).toHaveBeenCalledWith(
-                'Content-Type',
-                'image/jpeg'
-            );
+            expect(res.setHeader).toHaveBeenCalledWith('Content-Type', 'image/jpeg');
             expect(console.error).toHaveBeenCalledWith(
                 `Response not ok fetching image from: ${imageUrl}`
             );
         });
 
         it('when fetch response contains error', async () => {
-            global.fetch = jest
-                .fn()
-                .mockRejectedValue(new Error('Network error'));
+            global.fetch = jest.fn().mockRejectedValue(new Error('Network error'));
 
             await proxyImageFetcher(req, res);
 
             expect(fetch).toHaveBeenCalledTimes(1);
             expect(fetch).toHaveBeenCalledWith(imageUrl);
             expect(fs.createReadStream).toHaveBeenCalledWith(defaultImagePath);
-            expect(res.setHeader).toHaveBeenCalledWith(
-                'Content-Type',
-                'image/jpeg'
-            );
+            expect(res.setHeader).toHaveBeenCalledWith('Content-Type', 'image/jpeg');
             expect(console.error).toHaveBeenCalledWith(
                 `An error occurred while fetching the image from ${imageUrl}. Error: Network error`
             );
@@ -132,10 +114,7 @@ describe('proxyImageFetcher', () => {
 
         await proxyImageFetcher(req, res);
 
-        expect(res.setHeader).toHaveBeenCalledWith(
-            'Content-Type',
-            'image/jpeg'
-        );
+        expect(res.setHeader).toHaveBeenCalledWith('Content-Type', 'image/jpeg');
     });
 
     it('should stream the fetched image', async () => {
@@ -151,10 +130,7 @@ describe('proxyImageFetcher', () => {
 
         expect(fetch).toHaveBeenCalledTimes(1);
         expect(fetch).toHaveBeenCalledWith(imageUrl);
-        expect(res.setHeader).toHaveBeenCalledWith(
-            'Content-Type',
-            'image/jpeg'
-        );
+        expect(res.setHeader).toHaveBeenCalledWith('Content-Type', 'image/jpeg');
         expect(res.setHeader).toHaveBeenCalledWith(
             'Cache-Control',
             'public, max-age=3600'

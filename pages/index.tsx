@@ -78,9 +78,7 @@ const HomePage: FC = (): JSX.Element => {
                 />
                 <TextDisplay
                     title={intl.formatMessage({ id: 'pg.home.sect-3.title' })}
-                    textContent={[
-                        intl.formatMessage({ id: 'pg.home.sect-3.text-1' }),
-                    ]}
+                    textContent={[intl.formatMessage({ id: 'pg.home.sect-3.text-1' })]}
                 />
                 <TextDisplay
                     title={intl.formatMessage({ id: 'pg.home.sect-4.title' })}
@@ -103,9 +101,7 @@ const HomePage: FC = (): JSX.Element => {
                 />
                 <TextDisplay
                     title={intl.formatMessage({ id: 'pg.home.sect-5.title' })}
-                    textContent={[
-                        intl.formatMessage({ id: 'pg.home.sect-5.text-1' }),
-                    ]}
+                    textContent={[intl.formatMessage({ id: 'pg.home.sect-5.text-1' })]}
                 />
                 <TextDisplay
                     title={intl.formatMessage({ id: 'pg.home.sect-6.title' })}
@@ -122,15 +118,11 @@ const HomePage: FC = (): JSX.Element => {
                 />
                 <TextDisplay
                     title={intl.formatMessage({ id: 'pg.home.sect-8.title' })}
-                    textContent={[
-                        intl.formatMessage({ id: 'pg.home.sect-8.text-1' }),
-                    ]}
+                    textContent={[intl.formatMessage({ id: 'pg.home.sect-8.text-1' })]}
                 />
                 <TextDisplay
                     title={intl.formatMessage({ id: 'pg.home.sect-9.title' })}
-                    textContent={[
-                        intl.formatMessage({ id: 'pg.home.sect-9.text-1' }),
-                    ]}
+                    textContent={[intl.formatMessage({ id: 'pg.home.sect-9.text-1' })]}
                 />
                 <TextDisplay
                     title={intl.formatMessage({ id: 'pg.home.sect-10.title' })}
@@ -141,9 +133,7 @@ const HomePage: FC = (): JSX.Element => {
                 />
                 <TextDisplay
                     title={intl.formatMessage({ id: 'pg.home.sect-11.title' })}
-                    textContent={[
-                        intl.formatMessage({ id: 'pg.home.sect-11.text-1' }),
-                    ]}
+                    textContent={[intl.formatMessage({ id: 'pg.home.sect-11.text-1' })]}
                 />
                 <TextDisplay
                     title={intl.formatMessage({ id: 'pg.home.sect-12.title' })}
@@ -154,9 +144,7 @@ const HomePage: FC = (): JSX.Element => {
                 />
                 <TextDisplay
                     title={intl.formatMessage({ id: 'pg.home.sect-13.title' })}
-                    textContent={[
-                        intl.formatMessage({ id: 'pg.home.sect-13.text-1' }),
-                    ]}
+                    textContent={[intl.formatMessage({ id: 'pg.home.sect-13.text-1' })]}
                     textContentCentred={true}
                     childElement={
                         <LinkButton

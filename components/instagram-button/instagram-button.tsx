@@ -8,10 +8,7 @@ type InstagramButtonProps = {
     altText: string;
 };
 
-const InstagramButton = ({
-    id,
-    altText,
-}: InstagramButtonProps): JSX.Element => {
+const InstagramButton = ({ id, altText }: InstagramButtonProps): JSX.Element => {
     return (
         <div className='flex justify-center'>
             <a
@@ -21,12 +18,7 @@ const InstagramButton = ({
                 className='opacity-80 hover:opacity-100'
                 data-testid={id}
             >
-                <Image
-                    src={instagramIcon}
-                    alt={altText}
-                    width={50}
-                    height={50}
-                />
+                <Image src={instagramIcon} alt={altText} width={50} height={50} />
             </a>
         </div>
     );

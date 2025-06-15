@@ -44,11 +44,7 @@ const Header = ({
                 onClick={() => setActiveIdx(idx)}
                 key={idx}
             >
-                <NavLink
-                    href={link.href}
-                    text={link.text}
-                    active={activeIdx === idx}
-                />
+                <NavLink href={link.href} text={link.text} active={activeIdx === idx} />
             </li>
         ));
     };
@@ -68,10 +64,7 @@ const Header = ({
             <div
                 className={`${showMobileNav ? 'h-75' : 'invisible h-0'} transition[height] overflow-hidden duration-300 ease-in-out md:hidden`}
             >
-                <ul
-                    className='mt-4 mb-2 grid space-y-2'
-                    onClick={toggleMobilenav}
-                >
+                <ul className='mt-4 mb-2 grid space-y-2' onClick={toggleMobilenav}>
                     {mapNavLinks()}
                 </ul>
             </div>

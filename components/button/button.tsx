@@ -20,9 +20,7 @@ const Button = ({
     const hoverState: string =
         buttonColour === 'red' ? 'hover:bg-rose-400' : 'hover:bg-teal-500';
     const baseClasses: string = `rounded-md px-6 py-2 text-lg ${backgroundColour}`;
-    const classes: string = disabled
-        ? baseClasses
-        : `${baseClasses} ${hoverState}`;
+    const classes: string = disabled ? baseClasses : `${baseClasses} ${hoverState}`;
 
     return (
         <div className='flex justify-center'>

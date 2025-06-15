@@ -32,8 +32,7 @@ const submitEmail = async (contactFormData: ContactFormData): Promise<any> => {
 };
 
 const ContactPage: FC = (): JSX.Element => {
-    const [showConfirmationModal, setShowConfirmationModal] =
-        useState<boolean>(false);
+    const [showConfirmationModal, setShowConfirmationModal] = useState<boolean>(false);
     const [retries, setRetries] = useState<number>(0);
     const { mutate, isLoading, isSuccess } = useMutation(submitEmail);
     const intl = useIntl();
@@ -103,11 +102,7 @@ const ContactPage: FC = (): JSX.Element => {
                         <FormattedMessage id='pg.contact.subtitle' />
                     </p>
                 </div>
-                <form
-                    onSubmit={handleSubmit(onSubmit)}
-                    className='space-y-6'
-                    noValidate
-                >
+                <form onSubmit={handleSubmit(onSubmit)} className='space-y-6' noValidate>
                     <InputField
                         type='text'
                         placeholder={intl.formatMessage({

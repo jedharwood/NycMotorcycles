@@ -30,9 +30,7 @@ describe('Footer', () => {
         const user = userEvent.setup();
         render(<Footer {...footerProps} />);
 
-        const scrollToTopButton: HTMLElement = screen.getByTestId(
-            'scroll-to-top-button'
-        );
+        const scrollToTopButton: HTMLElement = screen.getByTestId('scroll-to-top-button');
 
         await waitFor(() => {
             user.click(scrollToTopButton);

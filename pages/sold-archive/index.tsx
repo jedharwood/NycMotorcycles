@@ -18,9 +18,7 @@ const SoldArchivePage: FC = () => {
         isGalleryLink: boolean = true
     ): JSX.Element => {
         const routeName = archive[bikeImageName];
-        const galleryLink = isGalleryLink
-            ? `${routes.gallery}/${routeName}`
-            : undefined;
+        const galleryLink = isGalleryLink ? `${routes.gallery}/${routeName}` : undefined;
 
         return (
             <SoldCard

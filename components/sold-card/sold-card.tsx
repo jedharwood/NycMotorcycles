@@ -43,10 +43,7 @@ const SoldCard = ({
         return galleryLink === undefined ? (
             buildImageWithClasses(false)
         ) : (
-            <Link
-                href={galleryLink}
-                className='relative h-fit rounded-md bg-gray-500'
-            >
+            <Link href={galleryLink} className='relative h-fit rounded-md bg-gray-500'>
                 {buildImageWithClasses(true)}
             </Link>
         );

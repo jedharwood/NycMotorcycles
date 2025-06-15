@@ -15,12 +15,9 @@ const yahooAuctionScraper = async (
     const activeAuctions: ActiveAuction[] = [];
 
     try {
-        const response: Response = await fetch(
-            pE.YAHOO_AUCTION_PROFILE_PAGE_URL,
-            {
-                mode: 'no-cors',
-            }
-        );
+        const response: Response = await fetch(pE.YAHOO_AUCTION_PROFILE_PAGE_URL, {
+            mode: 'no-cors',
+        });
 
         const html: string = await response.text();
         const dom: JSDOM = new JSDOM(html);
@@ -49,27 +46,20 @@ const mapAuctionListing = (listing: Element): ActiveAuction => {
     );
     const prices: Prices = mapPrices(priceElements);
     const timeRemaining: TimeRemaining = formatRemainingTime(
-        listing.querySelector(process.env.SELECTOR_PRODUCT_TIME)?.textContent ??
-            undefined
+        listing.querySelector(process.env.SELECTOR_PRODUCT_TIME)?.textContent ?? undefined
     );
 
     return {
-        title:
-            listing.querySelector(pE.SELECTOR_PRODUCT_TITLE)?.textContent ??
-            undefined,
+        title: listing.querySelector(pE.SELECTOR_PRODUCT_TITLE)?.textContent ?? undefined,
         url:
             listing
                 .querySelector(`${pE.SELECTOR_PRODUCT_TITLE} > a`)
                 ?.getAttribute('href') ?? undefined,
         image: {
-            imageSrc:
-                listing.querySelector('a > img')?.getAttribute('src') ?? '',
-            imageAlt:
-                listing.querySelector('a > img')?.getAttribute('alt') ?? '',
+            imageSrc: listing.querySelector('a > img')?.getAttribute('src') ?? '',
+            imageAlt: listing.querySelector('a > img')?.getAttribute('alt') ?? '',
         },
-        bidders:
-            listing.querySelector(pE.SELECTOR_PRODUCT_BID)?.textContent ??
-            undefined,
+        bidders: listing.querySelector(pE.SELECTOR_PRODUCT_BID)?.textContent ?? undefined,
         timeRemaining: timeRemaining,
         currentPrice: prices.currentPrice,
         promptDecisionPrice: prices.promptDecisionPrice,
@@ -99,9 +89,7 @@ const mapPrices = (priceElements: NodeListOf<Element>): Prices => {
     return prices;
 };
 
-const formatRemainingTime = (
-    timeRemaining: string | undefined
-): TimeRemaining => {
+const formatRemainingTime = (timeRemaining: string | undefined): TimeRemaining => {
     const days: string = '日';
     const hours: string = '時間';
 
@@ -114,9 +102,7 @@ const formatRemainingTime = (
         return { time: time, unit: 'hours' };
     }
 
-    const time: number = parseInt(
-        timeRemaining.substring(0, timeRemaining.length - 1)
-    );
+    const time: number = parseInt(timeRemaining.substring(0, timeRemaining.length - 1));
     return timeRemaining.includes(days)
         ? { time: time, unit: 'days' }
         : { time: time, unit: 'minutes' };

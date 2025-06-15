@@ -24,12 +24,7 @@ const Footer = ({
                     data-testid='scroll-to-top-button'
                 >
                     <div className='flex justify-center'>
-                        <Image
-                            src={chevronUp}
-                            alt={chevronText}
-                            width={40}
-                            height={40}
-                        />
+                        <Image src={chevronUp} alt={chevronText} width={40} height={40} />
                     </div>
                     {chevronText}
                 </button>
@@ -38,12 +33,8 @@ const Footer = ({
                 id='instagram-button-footer'
                 altText={altTextInstagramButton}
             />
-            <h3 className='md:text-md flex justify-center text-sm'>
-                {address}
-            </h3>
-            <h4 className='flex justify-center px-1 text-xs md:text-sm'>
-                {disclaimer}
-            </h4>
+            <h3 className='md:text-md flex justify-center text-sm'>{address}</h3>
+            <h4 className='flex justify-center px-1 text-xs md:text-sm'>{disclaimer}</h4>
         </footer>
     );
 };

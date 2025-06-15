@@ -72,10 +72,7 @@ const HistoryPage: FC = (): JSX.Element => {
                     />
                     <div className='grid gap-4 md:grid-cols-5'>
                         <div className='md:col-span-3'>
-                            <ImageGrid
-                                images={gridImagesUpper}
-                                maxColumns={2}
-                            />
+                            <ImageGrid images={gridImagesUpper} maxColumns={2} />
                         </div>
                         <div className='space-y-6 md:col-span-2'>
                             <TextDisplay
@@ -165,10 +162,7 @@ const HistoryPage: FC = (): JSX.Element => {
                             />
                         </div>
                         <div className='md:col-span-5'>
-                            <ImageGrid
-                                images={gridImagesLower}
-                                maxColumns={2}
-                            />
+                            <ImageGrid images={gridImagesLower} maxColumns={2} />
                         </div>
                     </div>
                 </div>

@@ -7,8 +7,7 @@ interface NavLinkProps {
 }
 
 const NavLink = ({ href, text, active }: NavLinkProps): JSX.Element => {
-    const classes: string =
-        'block md:hover:underline md:hover:opacity-100 text-nowrap';
+    const classes: string = 'block md:hover:underline md:hover:opacity-100 text-nowrap';
     const activeClasses: string = active
         ? classes + ' underline opacity-100'
         : classes + ' opacity-80';

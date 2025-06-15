@@ -10,13 +10,7 @@ type LinkButtonProps = {
     id?: string;
 };
 
-const LinkButton = ({
-    text,
-    href,
-    type,
-    id,
-    fileName,
-}: LinkButtonProps): JSX.Element => {
+const LinkButton = ({ text, href, type, id, fileName }: LinkButtonProps): JSX.Element => {
     const button = <Button type='button' text={text} />;
 
     const linkButton = (): JSX.Element => {

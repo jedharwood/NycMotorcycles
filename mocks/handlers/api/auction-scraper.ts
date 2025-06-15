@@ -63,10 +63,6 @@ const activeAuctions: ActiveAuction[] = [
 
 export const auctionScraperHandlers = [
     rest.get('api/auction-scraper', async (req, res, ctx) => {
-        return res(
-            ctx.status(200),
-            ctx.json({ activeAuctions }),
-            ctx.delay(3000)
-        );
+        return res(ctx.status(200), ctx.json({ activeAuctions }), ctx.delay(3000));
     }),
 ];

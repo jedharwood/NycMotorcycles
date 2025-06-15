@@ -1,2 +1,1 @@
-export const instagramLink: string =
-    'https://www.instagram.com/newyorkcitymotorcycles/';
+export const instagramLink: string = 'https://www.instagram.com/newyorkcitymotorcycles/';

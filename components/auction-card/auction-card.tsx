@@ -13,8 +13,7 @@ const AuctionCard = ({
     const intl = useIntl();
     const imageSource = image.imageSrc || nycmcLogo;
     const imageAltText =
-        image.imageAlt ||
-        intl.formatMessage({ id: 'common.img.place-holder.alt' });
+        image.imageAlt || intl.formatMessage({ id: 'common.img.place-holder.alt' });
 
     const timeRemainingValue = (): string | undefined => {
         if (!timeRemaining?.time) return undefined;
@@ -90,10 +89,7 @@ const AuctionCard = ({
                             'comp.auction-card.table-label.time-remaining',
                             timeRemainingValue()
                         )}
-                        {renderTableRow(
-                            'comp.auction-card.table-label.bidders',
-                            bidders
-                        )}
+                        {renderTableRow('comp.auction-card.table-label.bidders', bidders)}
                     </tbody>
                 </table>
             </div>

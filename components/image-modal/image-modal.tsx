@@ -8,8 +8,7 @@ import { AppContext } from '../../context/app-context';
 import ModalWrapper from '../modal-wrapper/modal-wrapper';
 
 const ImageModal = (): JSX.Element | null => {
-    const { showImageModal, imageModalImage, closeImageModal } =
-        useContext(AppContext);
+    const { showImageModal, imageModalImage, closeImageModal } = useContext(AppContext);
     const intl = useIntl();
 
     if (!showImageModal) return null;

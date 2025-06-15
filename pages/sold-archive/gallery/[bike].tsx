@@ -34,14 +34,11 @@ const GalleryPage: FC = () => {
     }, [router.isReady]);
 
     const bikeImageName =
-        Object.keys(archive).find((key) => archive[key] === bikeName) ||
-        'placeholder';
+        Object.keys(archive).find((key) => archive[key] === bikeName) || 'placeholder';
     const formattedBikeName = intl.formatMessage({
         id: `pg.gallery.${bikeName}.name`,
     });
-    const galleryImages: StaticImage[] = BuildGridImages(
-        gallery[bikeImageName]
-    );
+    const galleryImages: StaticImage[] = BuildGridImages(gallery[bikeImageName]);
 
     const harleyXr750List: JSX.Element = BuildList({
         listItems: [
@@ -105,9 +102,7 @@ const GalleryPage: FC = () => {
     });
 
     const maxGridColumns: TheNumbersOneToFour =
-        galleryImages.length < 4
-            ? (galleryImages.length as TheNumbersOneToFour)
-            : 4;
+        galleryImages.length < 4 ? (galleryImages.length as TheNumbersOneToFour) : 4;
 
     const renderContent = (): JSX.Element | null => {
         if (!isReady) return null;

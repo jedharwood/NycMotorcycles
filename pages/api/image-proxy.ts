@@ -52,11 +52,7 @@ const streamDefaultImageOnFailure = (
 ): void => {
     console.error(errorMessage);
 
-    const defaultImagePath = join(
-        process.cwd(),
-        'public/images',
-        'background.jpg'
-    );
+    const defaultImagePath = join(process.cwd(), 'public/images', 'background.jpg');
     res.setHeader('Content-Type', 'image/jpeg');
 
     createReadStream(defaultImagePath).pipe(res);

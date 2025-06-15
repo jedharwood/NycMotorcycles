@@ -156,12 +156,8 @@ async function handleRequest(event, requestId) {
                     status: clonedResponse.status,
                     statusText: clonedResponse.statusText,
                     body:
-                        clonedResponse.body === null
-                            ? null
-                            : await clonedResponse.text(),
-                    headers: Object.fromEntries(
-                        clonedResponse.headers.entries()
-                    ),
+                        clonedResponse.body === null ? null : await clonedResponse.text(),
+                    headers: Object.fromEntries(clonedResponse.headers.entries()),
                     redirected: clonedResponse.redirected,
                 },
             });

@@ -14,8 +14,7 @@ interface IAppContextActions {
 
 export const useAppContext = (): [IAppContextState, IAppContextActions] => {
     const [showImageModal, setShowImageModal] = useState<boolean>(false);
-    const [imageModalImage, setImageModalImage] =
-        useState<StaticImage>(blankStaticImage);
+    const [imageModalImage, setImageModalImage] = useState<StaticImage>(blankStaticImage);
 
     const openImageModal = (image: StaticImage): void => {
         setImageModalImage(image);

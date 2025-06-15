@@ -30,8 +30,7 @@ const ConfirmationModal = ({
 
     const getTitleId = (): string => {
         if (isLoading) return 'comp.confirmation-modal.sending.title';
-        if (failedCompletely)
-            return 'comp.confirmation-modal.failed-completely.title';
+        if (failedCompletely) return 'comp.confirmation-modal.failed-completely.title';
 
         return isSuccess
             ? 'comp.confirmation-modal.sent.title'

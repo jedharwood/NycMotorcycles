@@ -95,12 +95,7 @@ const ActiveAuctionPage: FC = (): JSX.Element => {
         ) : (
             <div className='grid gap-6 lg:grid-cols-2'>
                 {activeAuctions.map((auction, idx) => {
-                    return (
-                        <AuctionCard
-                            {...auction}
-                            key={`${idx}: ${auction.title}`}
-                        />
-                    );
+                    return <AuctionCard {...auction} key={`${idx}: ${auction.title}`} />;
                 })}
             </div>
         );

@@ -19,9 +19,7 @@ const findAndPopulateInputAsync = async (
 };
 
 const clickSubmitButtonAsync = async (screen: any): Promise<void> => {
-    const submitButton: HTMLElement = screen.getByTestId(
-        'contact-form-submit-button'
-    );
+    const submitButton: HTMLElement = screen.getByTestId('contact-form-submit-button');
     await userEvent.click(submitButton);
 };
 
@@ -51,9 +49,7 @@ describe('ContactPage', () => {
         });
 
         await waitFor(() => {
-            expect(
-                screen.queryByText(emailValidationMessage)
-            ).toBeInTheDocument();
+            expect(screen.queryByText(emailValidationMessage)).toBeInTheDocument();
             expect(
                 screen.queryByText(requiredFieldValidationMessage)
             ).not.toBeInTheDocument();
@@ -72,9 +68,7 @@ describe('ContactPage', () => {
         });
 
         await waitFor(() => {
-            expect(
-                screen.queryByText(emailValidationMessage)
-            ).toBeInTheDocument();
+            expect(screen.queryByText(emailValidationMessage)).toBeInTheDocument();
             expect(
                 screen.queryByText(requiredFieldValidationMessage)
             ).not.toBeInTheDocument();
@@ -93,12 +87,10 @@ describe('ContactPage', () => {
         });
 
         await waitFor(() => {
-            expect(
-                screen.queryByText(emailValidationMessage)
-            ).not.toBeInTheDocument();
-            expect(
-                screen.queryAllByText(requiredFieldValidationMessage).length
-            ).toEqual(1);
+            expect(screen.queryByText(emailValidationMessage)).not.toBeInTheDocument();
+            expect(screen.queryAllByText(requiredFieldValidationMessage).length).toEqual(
+                1
+            );
             expect(fetchMock).toHaveBeenCalledTimes(0);
         });
     });
@@ -114,12 +106,10 @@ describe('ContactPage', () => {
         });
 
         await waitFor(() => {
-            expect(
-                screen.queryByText(emailValidationMessage)
-            ).not.toBeInTheDocument();
-            expect(
-                screen.queryAllByText(requiredFieldValidationMessage).length
-            ).toEqual(1);
+            expect(screen.queryByText(emailValidationMessage)).not.toBeInTheDocument();
+            expect(screen.queryAllByText(requiredFieldValidationMessage).length).toEqual(
+                1
+            );
             expect(fetchMock).toHaveBeenCalledTimes(0);
         });
     });
@@ -135,12 +125,10 @@ describe('ContactPage', () => {
         });
 
         await waitFor(() => {
-            expect(
-                screen.queryByText(emailValidationMessage)
-            ).not.toBeInTheDocument();
-            expect(
-                screen.queryAllByText(requiredFieldValidationMessage).length
-            ).toEqual(1);
+            expect(screen.queryByText(emailValidationMessage)).not.toBeInTheDocument();
+            expect(screen.queryAllByText(requiredFieldValidationMessage).length).toEqual(
+                1
+            );
             expect(fetchMock).toHaveBeenCalledTimes(0);
         });
     });
@@ -153,12 +141,10 @@ describe('ContactPage', () => {
         });
 
         await waitFor(() => {
-            expect(
-                screen.queryByText(emailValidationMessage)
-            ).toBeInTheDocument();
-            expect(
-                screen.queryAllByText(requiredFieldValidationMessage).length
-            ).toEqual(3);
+            expect(screen.queryByText(emailValidationMessage)).toBeInTheDocument();
+            expect(screen.queryAllByText(requiredFieldValidationMessage).length).toEqual(
+                3
+            );
             expect(fetchMock).toHaveBeenCalledTimes(0);
         });
     });
@@ -175,9 +161,7 @@ describe('ContactPage', () => {
         });
 
         await waitFor(() => {
-            expect(
-                screen.queryByText(emailValidationMessage)
-            ).not.toBeInTheDocument();
+            expect(screen.queryByText(emailValidationMessage)).not.toBeInTheDocument();
             expect(
                 screen.queryByText(requiredFieldValidationMessage)
             ).not.toBeInTheDocument();

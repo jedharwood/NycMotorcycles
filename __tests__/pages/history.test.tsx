@@ -27,9 +27,7 @@ describe('HistoryPage', () => {
 
         await expect(mockRouter.asPath).toEqual('/history');
 
-        const homeButton: HTMLElement = screen.getByTestId(
-            'history-page-home-button'
-        );
+        const homeButton: HTMLElement = screen.getByTestId('history-page-home-button');
 
         await act(() => {
             userEvent.click(homeButton);

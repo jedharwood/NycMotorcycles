@@ -1,10 +1,7 @@
 import Mailgun, { MailgunClientOptions, MessagesSendResult } from 'mailgun.js';
 import { NextApiResponse, NextApiRequest } from 'next';
 
-const mailer = async (
-    req: NextApiRequest,
-    res: NextApiResponse
-): Promise<void> => {
+const mailer = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
     const pE = process.env;
     const mg = new Mailgun(FormData);
     const options: MailgunClientOptions = {
