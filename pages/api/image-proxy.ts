@@ -11,22 +11,20 @@ const proxyImageFetcher = async (
     const queryUrl = req.query.url;
     const url = Array.isArray(queryUrl) ? queryUrl[0] : queryUrl;
 
-    if (!url || typeof url !== 'string') {
+    if (!url || typeof url !== 'string')
         return streamDefaultImageOnFailure(
             res,
             `Missing or invalid image url parameter. Url: ${url}`
         );
-    }
 
     try {
         const response = await fetch(url);
 
-        if (!response.ok) {
+        if (!response.ok)
             return streamDefaultImageOnFailure(
                 res,
                 `Response not ok fetching image from: ${url}`
             );
-        }
 
         res.setHeader(
             'Content-Type',
