@@ -9,9 +9,9 @@ import ImageModal from '@/components/image-modal/image-modal';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import Spinner from '@/components/spinner/spinner';
 import TwoColumnGridLayout from '@/components/two-column-grid-layout/two-column-grid-layout';
+import UnorderedList from '@/components/unordered-list/unordered-list';
 import { AppContext } from '@/context/app-context';
 import { BuildGridImages } from '@/helpers/build-grid-images';
-import { BuildList } from '@/helpers/build-list';
 import { archiveBikes as archive } from '@/modules/archive-bikes';
 import { StaticImage } from '@/types/image-types';
 
@@ -39,67 +39,6 @@ const GalleryPage: FC = () => {
         id: `pg.gallery.${bikeName}.name`,
     });
     const galleryImages: StaticImage[] = BuildGridImages(gallery[bikeImageName]);
-
-    const harleyXr750List: JSX.Element = BuildList({
-        listItems: [
-            intl.formatMessage({ id: 'pg.gallery.harley-xr750.sect-1.list-1' }),
-            intl.formatMessage({ id: 'pg.gallery.harley-xr750.sect-1.list-2' }),
-            intl.formatMessage({ id: 'pg.gallery.harley-xr750.sect-1.list-3' }),
-        ],
-    });
-
-    const harleyXr750ReplicaList: JSX.Element = BuildList({
-        listItems: [
-            intl.formatMessage({
-                id: 'pg.gallery.harley-xr750-replica.sect-2.list-1',
-            }),
-            intl.formatMessage({
-                id: 'pg.gallery.harley-xr750-replica.sect-2.list-2',
-            }),
-            intl.formatMessage({
-                id: 'pg.gallery.harley-xr750-replica.sect-2.list-3',
-            }),
-            intl.formatMessage({
-                id: 'pg.gallery.harley-xr750-replica.sect-2.list-4',
-            }),
-            intl.formatMessage({
-                id: 'pg.gallery.harley-xr750-replica.sect-2.list-5',
-            }),
-            intl.formatMessage({
-                id: 'pg.gallery.harley-xr750-replica.sect-2.list-6',
-            }),
-        ],
-    });
-
-    const hondaDreamList: JSX.Element = BuildList({
-        listItems: [
-            intl.formatMessage({ id: 'pg.gallery.honda-dream.list-1' }),
-            intl.formatMessage({ id: 'pg.gallery.honda-dream.list-2' }),
-            intl.formatMessage({ id: 'pg.gallery.honda-dream.list-3' }),
-            intl.formatMessage({ id: 'pg.gallery.honda-dream.list-4' }),
-            intl.formatMessage({ id: 'pg.gallery.honda-dream.list-5' }),
-        ],
-    });
-
-    const ducati250List: JSX.Element = BuildList({
-        listItems: [
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-1' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-2' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-3' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-4' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-5' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-6' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-7' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-8' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-9' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-10' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-11' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-12' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-13' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-14' }),
-            intl.formatMessage({ id: 'pg.gallery.ducati-250.list-15' }),
-        ],
-    });
 
     const maxGridColumns: TheNumbersOneToFour =
         galleryImages.length < 4 ? (galleryImages.length as TheNumbersOneToFour) : 4;
@@ -181,6 +120,24 @@ const GalleryPage: FC = () => {
         }
 
         if (bikeName === 'ducati-250') {
+            const ducati250List: string[] = [
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-1' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-2' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-3' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-4' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-5' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-6' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-7' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-8' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-9' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-10' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-11' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-12' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-13' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-14' }),
+                intl.formatMessage({ id: 'pg.gallery.ducati-250.list-15' }),
+            ];
+
             return (
                 <TwoColumnGridLayout
                     images={galleryImages}
@@ -189,7 +146,7 @@ const GalleryPage: FC = () => {
                             title: intl.formatMessage({
                                 id: 'pg.gallery.ducati-250.title',
                             }),
-                            childElement: ducati250List,
+                            childElement: <UnorderedList listItems={ducati250List} />,
                             textContent: [
                                 intl.formatMessage({
                                     id: 'pg.gallery.ducati-250.para-1',
@@ -205,6 +162,14 @@ const GalleryPage: FC = () => {
         }
 
         if (bikeName === 'honda-dream') {
+            const hondaDreamList: string[] = [
+                intl.formatMessage({ id: 'pg.gallery.honda-dream.list-1' }),
+                intl.formatMessage({ id: 'pg.gallery.honda-dream.list-2' }),
+                intl.formatMessage({ id: 'pg.gallery.honda-dream.list-3' }),
+                intl.formatMessage({ id: 'pg.gallery.honda-dream.list-4' }),
+                intl.formatMessage({ id: 'pg.gallery.honda-dream.list-5' }),
+            ];
+
             return (
                 <TwoColumnGridLayout
                     images={galleryImages}
@@ -216,7 +181,7 @@ const GalleryPage: FC = () => {
                             subTitle: intl.formatMessage({
                                 id: 'pg.gallery.honda-dream.subtitle',
                             }),
-                            childElement: hondaDreamList,
+                            childElement: <UnorderedList listItems={hondaDreamList} />,
                             childElementPosition: 'under-title',
                             textContent: [
                                 intl.formatMessage({
@@ -236,6 +201,27 @@ const GalleryPage: FC = () => {
         }
 
         if (bikeName === 'harley-xr750-replica') {
+            const harleyXr750ReplicaList: string[] = [
+                intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750-replica.sect-2.list-1',
+                }),
+                intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750-replica.sect-2.list-2',
+                }),
+                intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750-replica.sect-2.list-3',
+                }),
+                intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750-replica.sect-2.list-4',
+                }),
+                intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750-replica.sect-2.list-5',
+                }),
+                intl.formatMessage({
+                    id: 'pg.gallery.harley-xr750-replica.sect-2.list-6',
+                }),
+            ];
+
             return (
                 <TwoColumnGridLayout
                     images={galleryImages}
@@ -272,7 +258,9 @@ const GalleryPage: FC = () => {
                             title: intl.formatMessage({
                                 id: 'pg.gallery.harley-xr750-replica.sect-2.title',
                             }),
-                            childElement: harleyXr750ReplicaList,
+                            childElement: (
+                                <UnorderedList listItems={harleyXr750ReplicaList} />
+                            ),
                             childElementPosition: 'under-title',
                         },
                     ]}
@@ -281,6 +269,12 @@ const GalleryPage: FC = () => {
         }
 
         if (bikeName === 'harley-xr750') {
+            const harleyXr750List: string[] = [
+                intl.formatMessage({ id: 'pg.gallery.harley-xr750.sect-1.list-1' }),
+                intl.formatMessage({ id: 'pg.gallery.harley-xr750.sect-1.list-2' }),
+                intl.formatMessage({ id: 'pg.gallery.harley-xr750.sect-1.list-3' }),
+            ];
+
             return (
                 <>
                     <iframe
@@ -298,7 +292,9 @@ const GalleryPage: FC = () => {
                                 title: intl.formatMessage({
                                     id: 'pg.gallery.harley-xr750.sect-1.title',
                                 }),
-                                childElement: harleyXr750List,
+                                childElement: (
+                                    <UnorderedList listItems={harleyXr750List} />
+                                ),
                                 childElementPosition: 'under-title',
                             },
                             {
@@ -356,16 +352,12 @@ const GalleryPage: FC = () => {
                     <Jumbotron
                         image={img[bikeImageName]}
                         legend={formattedBikeName}
-                        altText={intl.formatMessage({
-                            id: img[bikeImageName].altText,
-                        })}
+                        altText={intl.formatMessage({ id: img[bikeImageName].altText })}
                     />
                     <Spinner
                         isLoading={!isReady}
                         verticalPadding={true}
-                        text={intl.formatMessage({
-                            id: 'comp.spinner.sr.loading',
-                        })}
+                        text={intl.formatMessage({ id: 'comp.spinner.sr.loading' })}
                     />
                     {renderContent()}
                 </div>

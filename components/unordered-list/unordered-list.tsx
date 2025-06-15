@@ -2,7 +2,7 @@ type BuildListProps = {
     listItems: string[];
 };
 
-export const BuildList = ({ listItems }: BuildListProps): JSX.Element => {
+const UnorderedList = ({ listItems }: BuildListProps): JSX.Element => {
     return (
         <ul className='space-y-2'>
             {listItems.map((listItem, idx) => (
@@ -11,3 +11,5 @@ export const BuildList = ({ listItems }: BuildListProps): JSX.Element => {
         </ul>
     );
 };
+
+export default UnorderedList;

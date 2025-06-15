@@ -6,7 +6,7 @@ import HeadElement from '@/components/head-element/head-element';
 import Jumbotron from '@/components/jumbotron/jumbotron';
 import LinkButton from '@/components/link-button/link-button';
 import TextDisplay from '@/components/text-display/text-display';
-import { BuildList } from '@/helpers/build-list';
+import UnorderedList from '@/components/unordered-list/unordered-list';
 import routes from '@/utilities/routes';
 
 import { images as img } from '../public/images/home';
@@ -14,27 +14,23 @@ import { images as img } from '../public/images/home';
 const HomePage: FC = (): JSX.Element => {
     const intl = useIntl();
 
-    const desirableModelList: JSX.Element = BuildList({
-        listItems: [
-            intl.formatMessage({ id: 'pg.home.sect-2.list-1' }),
-            intl.formatMessage({ id: 'pg.home.sect-2.list-2' }),
-            intl.formatMessage({ id: 'pg.home.sect-2.list-3' }),
-            intl.formatMessage({ id: 'pg.home.sect-2.list-4' }),
-            intl.formatMessage({ id: 'pg.home.sect-2.list-5' }),
-            intl.formatMessage({ id: 'pg.home.sect-2.list-6' }),
-        ],
-    });
+    const desirableModels: string[] = [
+        intl.formatMessage({ id: 'pg.home.sect-2.list-1' }),
+        intl.formatMessage({ id: 'pg.home.sect-2.list-2' }),
+        intl.formatMessage({ id: 'pg.home.sect-2.list-3' }),
+        intl.formatMessage({ id: 'pg.home.sect-2.list-4' }),
+        intl.formatMessage({ id: 'pg.home.sect-2.list-5' }),
+        intl.formatMessage({ id: 'pg.home.sect-2.list-6' }),
+    ];
 
-    const soldExampleList: JSX.Element = BuildList({
-        listItems: [
-            intl.formatMessage({ id: 'pg.home.sect-6.list-1' }),
-            intl.formatMessage({ id: 'pg.home.sect-6.list-2' }),
-            intl.formatMessage({ id: 'pg.home.sect-6.list-3' }),
-            intl.formatMessage({ id: 'pg.home.sect-6.list-4' }),
-            intl.formatMessage({ id: 'pg.home.sect-6.list-5' }),
-            intl.formatMessage({ id: 'pg.home.sect-6.list-6' }),
-        ],
-    });
+    const soldExamples: string[] = [
+        intl.formatMessage({ id: 'pg.home.sect-6.list-1' }),
+        intl.formatMessage({ id: 'pg.home.sect-6.list-2' }),
+        intl.formatMessage({ id: 'pg.home.sect-6.list-3' }),
+        intl.formatMessage({ id: 'pg.home.sect-6.list-4' }),
+        intl.formatMessage({ id: 'pg.home.sect-6.list-5' }),
+        intl.formatMessage({ id: 'pg.home.sect-6.list-6' }),
+    ];
 
     return (
         <>
@@ -73,7 +69,7 @@ const HomePage: FC = (): JSX.Element => {
                         intl.formatMessage({ id: 'pg.home.sect-2.text-1' }),
                         intl.formatMessage({ id: 'pg.home.sect-2.text-2' }),
                     ]}
-                    childElement={desirableModelList}
+                    childElement={<UnorderedList listItems={desirableModels} />}
                     childElementPosition='under-title'
                 />
                 <TextDisplay
@@ -105,7 +101,7 @@ const HomePage: FC = (): JSX.Element => {
                 />
                 <TextDisplay
                     title={intl.formatMessage({ id: 'pg.home.sect-6.title' })}
-                    childElement={soldExampleList}
+                    childElement={<UnorderedList listItems={soldExamples} />}
                     childElementPosition='under-title'
                 />
                 <TextDisplay
