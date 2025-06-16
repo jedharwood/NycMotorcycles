@@ -8,7 +8,6 @@ Accessibility audit and refactor semantic structure/styling
 Remove mswWorker if unused
 Address code style inconsistences and overlapping css rules
 Add Translations, refactor out undnecessary resx
-Tests to language display
 Resolve img/Image issue with auction-card component
 Possible Grid layout for Sold Archive page
 Focus trapping for email modal
