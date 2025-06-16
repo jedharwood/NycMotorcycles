@@ -18,12 +18,6 @@ if (process.env.NEXT_PUBLIC_API_MOCKING === 'true') {
     });
 }
 
-type Messages = {
-    [key: string]: {
-        [key: string]: string;
-    };
-};
-
 const messages: Messages = {
     en,
     ja,
