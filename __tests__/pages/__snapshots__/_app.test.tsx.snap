@@ -16,11 +16,9 @@ exports[`App renders Layout and matches snapshot 1`] = `
         <div
           class="mr-6 flex justify-end sm:mr-0"
         >
-          <button
-            class="h-6 w-9"
-          >
+          <button>
             <svg
-              class="rounded-sm w-full h-full"
+              class="rounded-sm h-6 w-9 shadow-lg card-hover"
               viewBox="0 0 513 342"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -49,19 +47,27 @@ exports[`App renders Layout and matches snapshot 1`] = `
         <div
           class="flex justify-center pb-6"
         >
-          <img
-            alt="New york city motorcycles logo"
-            src="[object Object]"
-          />
+          <a
+            href="/"
+          >
+            <img
+              alt="New york city motorcycles logo"
+              src="[object Object]"
+            />
+          </a>
         </div>
         <div
           class="flex justify-center"
         >
-          <h1
-            class="text-lg tracking-widest md:text-xl"
+          <a
+            href="/"
           >
-            NEW YORK CITY MOTORCYCLES
-          </h1>
+            <h1
+              class="text-lg tracking-widest md:text-xl"
+            >
+              NEW YORK CITY MOTORCYCLES
+            </h1>
+          </a>
         </div>
         <nav
           class="mt-2 mb-6 rounded-md bg-stone-600 bg-opacity-90 py-2 px-6 shadow-lg"
