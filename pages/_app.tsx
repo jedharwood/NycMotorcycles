@@ -9,7 +9,7 @@ import Layout from '@/components/layout/layout';
 import { AppContext } from '../context/app-context';
 import { useAppContext } from '../context/use-app-context';
 import en from '../languages/en.json';
-import jp from '../languages/jp.json';
+import ja from '../languages/ja.json';
 
 if (process.env.NEXT_PUBLIC_API_MOCKING === 'true') {
     import('../mocks').then(({ setupMocks }) => {
@@ -25,7 +25,7 @@ type Messages = {
 
 const messages: Messages = {
     en,
-    jp,
+    ja,
 };
 
 export default function App({ Component, pageProps }: AppProps) {
