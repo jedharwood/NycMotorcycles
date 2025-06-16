@@ -3,6 +3,7 @@ import mockRouter from 'next-router-mock';
 
 import HomePage from '@/pages';
 import { render, screen, waitFor, act } from '@/test-utils';
+import { langs } from '@/utilities/resources';
 
 jest.mock('next/image');
 
@@ -28,6 +29,12 @@ describe('HomePage', () => {
 
     it('should render page in English', () => {
         const { container } = render(<HomePage />);
+
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render page in Japanese', () => {
+        const { container } = render(<HomePage />, { locale: langs.ja });
 
         expect(container).toMatchSnapshot();
     });

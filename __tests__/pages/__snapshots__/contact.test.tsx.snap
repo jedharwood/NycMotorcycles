@@ -120,3 +120,124 @@ exports[`ContactPage should render page in English 1`] = `
   </main>
 </div>
 `;
+
+exports[`ContactPage should render page in Japanese 1`] = `
+<div>
+  <main
+    class="w-full rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 shadow-lg"
+  >
+    <div
+      class="mb-4 text-center"
+    >
+      <h2
+        class="text-xl font-medium opacity-80 md:text-2xl"
+      >
+        placeholder
+      </h2>
+      <p>
+        placeholder
+      </p>
+    </div>
+    <form
+      class="space-y-6"
+      novalidate=""
+    >
+      <div
+        class="flex justify-center"
+      >
+        <div
+          class="w-full md:w-3/4 lg:w-1/2"
+        >
+          <label
+            class="mb-2 block"
+            for="email"
+          >
+            placeholder
+          </label>
+          <input
+            class="bg-stone-50 bg-opacity-90 rounded-md w-full p-2.5 text-gray-900 outline-none focus:ring focus:ring-offset hover:ring hover:ring-offset focus:ring-teal-500 hover:ring-teal-500"
+            data-testid="email"
+            name="email"
+            placeholder="placeholder"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <div
+          class="w-full md:w-3/4 lg:w-1/2"
+        >
+          <label
+            class="mb-2 block"
+            for="senderName"
+          >
+            placeholder
+          </label>
+          <input
+            class="bg-stone-50 bg-opacity-90 rounded-md w-full p-2.5 text-gray-900 outline-none focus:ring focus:ring-offset hover:ring hover:ring-offset focus:ring-teal-500 hover:ring-teal-500"
+            data-testid="senderName"
+            name="senderName"
+            placeholder="placeholder"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <div
+          class="w-full md:w-3/4 lg:w-1/2"
+        >
+          <label
+            class="mb-2 block"
+            for="subject"
+          >
+            placeholder
+          </label>
+          <input
+            class="bg-stone-50 bg-opacity-90 rounded-md w-full p-2.5 text-gray-900 outline-none focus:ring focus:ring-offset hover:ring hover:ring-offset focus:ring-teal-500 hover:ring-teal-500"
+            data-testid="subject"
+            name="subject"
+            placeholder="placeholder"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <div
+          class="w-full md:w-3/4 lg:w-1/2"
+        >
+          <label
+            class="mb-2 block"
+            for="message"
+          >
+            placeholder
+          </label>
+          <textarea
+            class="bg-stone-50 bg-opacity-90 rounded-md w-full p-2.5 text-gray-900 outline-none focus:ring focus:ring-offset hover:ring hover:ring-offset focus:ring-teal-500 hover:ring-teal-500"
+            data-testid="message"
+            name="message"
+            placeholder="placeholder"
+            rows="6"
+          />
+        </div>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <button
+          class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+          data-testid="contact-form-submit-button"
+          type="submit"
+        >
+          placeholder
+        </button>
+      </div>
+    </form>
+  </main>
+</div>
+`;

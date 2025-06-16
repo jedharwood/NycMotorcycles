@@ -3,6 +3,7 @@ import mockRouter from 'next-router-mock';
 
 import HistoryPage from '@/pages/history';
 import { render, screen, waitFor, act } from '@/test-utils';
+import { langs } from '@/utilities/resources';
 
 jest.mock('next/router', () => jest.requireActual('next-router-mock'));
 
@@ -17,6 +18,12 @@ describe('HistoryPage', () => {
 
     it('should render page in English', () => {
         const { container } = render(<HistoryPage />);
+
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render page in Japanese', () => {
+        const { container } = render(<HistoryPage />, { locale: langs.ja });
 
         expect(container).toMatchSnapshot();
     });
