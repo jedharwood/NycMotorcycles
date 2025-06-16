@@ -8,12 +8,10 @@ Accessibility audit and refactor semantic structure/styling
 Remove mswWorker if unused
 Address code style inconsistences and overlapping css rules
 Add Translations, refactor out undnecessary resx
-Ensure language routing working properly
 Tests to language display
-Find a solution for server side image fetching to bypass 403 issue
 Resolve img/Image issue with auction-card component
 Possible Grid layout for Sold Archive page
-Focus trapping
+Focus trapping for email modal
 Image priority
 GH run lint on push
 Image modal proportions weird on larger images (HondaRc30 gallery)
@@ -24,6 +22,7 @@ Get real download docs from Larry
 Sticky footer
 Should link buttons be buttons?
 Investigate and swallow console error in contact.test.tsx
+Make logo click in header nav home
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

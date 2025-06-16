@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import burgerIcon from 'public/svgs/burger-icon.svg';
 import nycmcLogo from 'public/svgs/nycmc-logo.svg';
 
+import LanguageSwitcher from '../language-switcher/language-switcher';
 import NavLink from '../nav-link/nav-link';
 
 type HeaderProps = {
@@ -73,6 +74,7 @@ const Header = ({
 
     return (
         <header className='text-stone-50'>
+            <LanguageSwitcher />
             <div className='flex justify-center pb-6'>
                 <Image
                     src={nycmcLogo}
