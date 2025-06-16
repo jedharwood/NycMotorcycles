@@ -5,6 +5,7 @@ import { IntlProvider } from 'react-intl';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 import Layout from '@/components/layout/layout';
+import { langs } from '@/utilities/resources';
 
 import { AppContext } from '../context/app-context';
 import { useAppContext } from '../context/use-app-context';
@@ -30,7 +31,7 @@ const messages: Messages = {
 
 export default function App({ Component, pageProps }: AppProps) {
     const [state, actions] = useAppContext();
-    const { locale = 'en' } = useRouter();
+    const { locale = langs.en } = useRouter();
     const queryClient = new QueryClient();
 
     return (
