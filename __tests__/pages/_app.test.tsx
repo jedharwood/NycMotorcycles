@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app';
 
 import { render } from '@/test-utils';
+import { langs } from '@/utilities/resources';
 
 import App from '../../pages/_app';
 
@@ -11,7 +12,7 @@ const renderApp = (Component: React.ComponentType, pageProps: any = {}) => {
         Component,
         pageProps,
         router: {
-            locale: 'en',
+            locale: langs.en,
         } as any,
     };
 
@@ -19,8 +20,19 @@ const renderApp = (Component: React.ComponentType, pageProps: any = {}) => {
 };
 
 describe('App', () => {
-    it('renders Layout and matches snapshot', () => {
-        const TestPage = (): JSX.Element => <div>Test Page</div>;
+    const TestPage = (): JSX.Element => <div>Test Page</div>;
+
+    it('renders Layout in English and matches snapshot', () => {
+        const { container } = renderApp(TestPage);
+
+        expect(container).toMatchSnapshot();
+    });
+
+    it('renders Layout in Japanese and matches snapshot', () => {
+        const router = require('next-router-mock');
+        router.useRouter = jest.fn(() => ({
+            locale: langs.ja
+        }));
 
         const { container } = renderApp(TestPage);
 
