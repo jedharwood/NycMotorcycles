@@ -3,7 +3,7 @@ import mockRouter from 'next-router-mock';
 
 import HistoryPage from '@/pages/history';
 import { render, screen, waitFor, act } from '@/test-utils';
-import { langs } from '@/utilities/resources';
+import { langs } from '@/types/languages';
 
 jest.mock('next/router', () => jest.requireActual('next-router-mock'));
 

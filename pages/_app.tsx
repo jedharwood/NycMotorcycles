@@ -5,23 +5,16 @@ import { IntlProvider } from 'react-intl';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 import Layout from '@/components/layout/layout';
-import { langs } from '@/utilities/resources';
+import { langs, messages } from '@/types/languages';
 
 import { AppContext } from '../context/app-context';
 import { useAppContext } from '../context/use-app-context';
-import en from '../languages/en.json';
-import ja from '../languages/ja.json';
 
 if (process.env.NEXT_PUBLIC_API_MOCKING === 'true') {
     import('../mocks').then(({ setupMocks }) => {
         setupMocks();
     });
 }
-
-const messages: Messages = {
-    en,
-    ja,
-};
 
 export default function App({ Component, pageProps }: AppProps) {
     const [state, actions] = useAppContext();

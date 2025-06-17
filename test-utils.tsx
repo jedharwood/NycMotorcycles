@@ -5,13 +5,7 @@ import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import { IntlProvider } from 'react-intl';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-import en from './languages/en.json';
-import ja from './languages/ja.json';
-
-const messages: Messages = {
-    en,
-    ja,
-};
+import { langs, messages } from './types/languages';
 
 type ProviderProps = {
     children: React.ReactNode;
@@ -38,7 +32,7 @@ type RenderWithProvidersOptions = RenderOptions & {
 
 const renderWithProviders = (
     ui: ReactElement,
-    { locale = 'en', ...renderOptions }: RenderWithProvidersOptions = {}
+    { locale = langs.en, ...renderOptions }: RenderWithProvidersOptions = {}
 ) =>
     render(ui, {
         wrapper: ({ children }) => (

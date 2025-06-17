@@ -2,7 +2,7 @@ import userEvent from '@testing-library/user-event';
 
 import ContactPage from '@/pages/contact';
 import { render, screen, waitFor, act } from '@/test-utils';
-import { langs } from '@/utilities/resources';
+import { langs } from '@/types/languages';
 
 const emailValidationMessage: string = 'Please enter a valid email address';
 const requiredFieldValidationMessage: string = 'This is a required field';

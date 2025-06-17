@@ -71,9 +71,3 @@ type TextDisplayProps = {
     subTitle?: string;
     footer?: string;
 };
-
-type Messages = {
-    [key: string]: {
-        [key: string]: string;
-    };
-};

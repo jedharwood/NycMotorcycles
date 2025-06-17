@@ -1,6 +1,6 @@
 import DownloadPage from '@/pages/download';
 import { render } from '@/test-utils';
-import { langs } from '@/utilities/resources';
+import { langs } from '@/types/languages';
 
 describe('DownloadPage', () => {
     it('should render page in English', () => {

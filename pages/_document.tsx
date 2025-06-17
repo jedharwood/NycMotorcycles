@@ -1,6 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
-import { langs } from '@/utilities/resources';
+import { langs } from '@/types/languages';
 
 export default function Document() {
     return (

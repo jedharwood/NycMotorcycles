@@ -3,7 +3,7 @@ import mockRouter from 'next-router-mock';
 
 import HomePage from '@/pages';
 import { render, screen, waitFor, act } from '@/test-utils';
-import { langs } from '@/utilities/resources';
+import { langs } from '@/types/languages';
 
 jest.mock('next/image');
 

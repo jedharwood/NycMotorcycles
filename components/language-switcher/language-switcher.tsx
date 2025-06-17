@@ -1,7 +1,7 @@
 import { JP, US } from 'country-flag-icons/react/3x2';
 import { useRouter } from 'next/router';
 
-import { langs } from '@/utilities/resources';
+import { langs } from '@/types/languages';
 
 const LanguageSwitcher = (): JSX.Element => {
     const router = useRouter();

@@ -1,6 +1,6 @@
 import SoldArchivePage from '@/pages/sold-archive';
 import { render } from '@/test-utils';
-import { langs } from '@/utilities/resources';
+import { langs } from '@/types/languages';
 
 describe('SoldArchivePage', () => {
     it('should render page in English', () => {

@@ -1,6 +1,6 @@
 import RacingPage from '@/pages/racing';
 import { render } from '@/test-utils';
-import { langs } from '@/utilities/resources';
+import { langs } from '@/types/languages';
 
 describe('RacingPage', () => {
     it('should render page in English', () => {

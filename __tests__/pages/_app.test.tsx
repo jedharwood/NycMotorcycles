@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 
 import { render } from '@/test-utils';
-import { langs } from '@/utilities/resources';
+import { langs } from '@/types/languages';
 
 import App from '../../pages/_app';
 
