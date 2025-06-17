@@ -5,11 +5,10 @@ import { IntlProvider } from 'react-intl';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 import Layout from '@/components/layout/layout';
+import { langs, messages } from '@/types/languages';
 
 import { AppContext } from '../context/app-context';
 import { useAppContext } from '../context/use-app-context';
-import en from '../languages/en.json';
-import jp from '../languages/jp.json';
 
 if (process.env.NEXT_PUBLIC_API_MOCKING === 'true') {
     import('../mocks').then(({ setupMocks }) => {
@@ -17,20 +16,9 @@ if (process.env.NEXT_PUBLIC_API_MOCKING === 'true') {
     });
 }
 
-type Messages = {
-    [key: string]: {
-        [key: string]: string;
-    };
-};
-
-const messages: Messages = {
-    en,
-    jp,
-};
-
 export default function App({ Component, pageProps }: AppProps) {
     const [state, actions] = useAppContext();
-    const { locale = 'en' } = useRouter();
+    const { locale = langs.en } = useRouter();
     const queryClient = new QueryClient();
 
     return (

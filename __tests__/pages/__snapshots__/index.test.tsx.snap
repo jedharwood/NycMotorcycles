@@ -393,3 +393,397 @@ exports[`HomePage should render page in English 1`] = `
   </main>
 </div>
 `;
+
+exports[`HomePage should render page in Japanese 1`] = `
+<div>
+  <main
+    class="space-y-6"
+  >
+    <div
+      class="relative"
+    >
+      <img
+        alt="placeholder"
+        src="./racing.jpeg"
+      />
+      <div
+        class="absolute top-1/2 left-1/2 w-max max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 rounded-md bg-stone-600 opacity-90 shadow-lg md:max-w-[calc(100%-3rem)]"
+      >
+        <h2
+          class="inline-block px-2 py-2 text-center text-2xl text-stone-50 sm:px-8 sm:text-4xl md:text-5xl lg:text-6xl"
+        >
+          placeholder
+        </h2>
+      </div>
+    </div>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          data-testid="home-page-contact-button-1"
+          href="/contact"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              placeholder
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <ul
+        class="space-y-2"
+      >
+        <li>
+          placeholder
+        </li>
+        <li>
+          placeholder
+        </li>
+        <li>
+          placeholder
+        </li>
+        <li>
+          placeholder
+        </li>
+        <li>
+          placeholder
+        </li>
+        <li>
+          placeholder
+        </li>
+      </ul>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+        <p>
+          placeholder
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+        <p>
+          placeholder
+        </p>
+        <p>
+          placeholder
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          data-testid="home-page-download-button"
+          href="/download"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              placeholder
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <ul
+        class="space-y-2"
+      >
+        <li>
+          placeholder
+        </li>
+        <li>
+          placeholder
+        </li>
+        <li>
+          placeholder
+        </li>
+        <li>
+          placeholder
+        </li>
+        <li>
+          placeholder
+        </li>
+        <li>
+          placeholder
+        </li>
+      </ul>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+        <p>
+          placeholder
+        </p>
+        <p>
+          placeholder
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+        <p>
+          placeholder
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+        <p>
+          placeholder
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 text-center"
+      >
+        <p>
+          placeholder
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          data-testid="home-page-contact-button-2"
+          href="/contact"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              placeholder
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+`;

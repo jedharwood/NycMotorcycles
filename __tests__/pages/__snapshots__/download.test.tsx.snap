@@ -92,3 +92,96 @@ exports[`DownloadPage should render page in English 1`] = `
   </main>
 </div>
 `;
+
+exports[`DownloadPage should render page in Japanese 1`] = `
+<div>
+  <main
+    class="space-y-6"
+  >
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+        <p>
+          placeholder
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          download="mock-form-one"
+          href="/documents/mock-form-one.pdf"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              placeholder
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+        <p>
+          placeholder
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          download="mock-form-two"
+          href="/documents/mock-form-two.pdf"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              placeholder
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+`;

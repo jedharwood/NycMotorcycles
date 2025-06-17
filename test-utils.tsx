@@ -5,15 +5,20 @@ import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import { IntlProvider } from 'react-intl';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-import en from './languages/en.json';
+import { langs, messages } from './types/languages';
 
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
+type ProviderProps = {
+    children: React.ReactNode;
+    locale: string;
+};
+
+const AllTheProviders = ({ children, locale }: ProviderProps): JSX.Element => {
     const queryClient = new QueryClient();
 
     return (
         <MemoryRouterProvider>
             <QueryClientProvider client={queryClient}>
-                <IntlProvider locale='en' messages={en}>
+                <IntlProvider locale={locale} messages={messages[locale]}>
                     {children}
                 </IntlProvider>
             </QueryClientProvider>
@@ -21,10 +26,20 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
     );
 };
 
+type RenderWithProvidersOptions = RenderOptions & {
+    locale?: string;
+};
+
 const renderWithProviders = (
     ui: ReactElement,
-    options?: Omit<RenderOptions, 'wrapper'>
-) => render(ui, { wrapper: AllTheProviders, ...options });
+    { locale = langs.en, ...renderOptions }: RenderWithProvidersOptions = {}
+) =>
+    render(ui, {
+        wrapper: ({ children }) => (
+            <AllTheProviders locale={locale}>{children}</AllTheProviders>
+        ),
+        ...renderOptions,
+    });
 
 export * from '@testing-library/react';
 export { renderWithProviders as render };

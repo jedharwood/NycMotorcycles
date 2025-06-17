@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders Layout and matches snapshot 1`] = `
+exports[`App renders Layout in English and matches snapshot 1`] = `
 <div>
   <div
     class="w-full bg-hero bg-cover bg-fixed bg-center bg-no-repeat md:px-6"
@@ -14,21 +14,60 @@ exports[`App renders Layout and matches snapshot 1`] = `
         class="text-stone-50"
       >
         <div
+          class="mr-6 flex justify-end sm:mr-0"
+        >
+          <button>
+            <svg
+              class="rounded-sm h-6 w-9 shadow-lg card-hover"
+              viewBox="0 0 513 342"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                English
+              </title>
+              <path
+                d="M0 0h513v342H0z"
+                fill="#FFF"
+              />
+              <path
+                d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z"
+                fill="#D80027"
+              />
+              <path
+                d="M0 0h256.5v184.1H0z"
+                fill="#2E52B2"
+              />
+              <path
+                d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z"
+                fill="#FFF"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
           class="flex justify-center pb-6"
         >
-          <img
-            alt="New york city motorcycles logo"
-            src="[object Object]"
-          />
+          <a
+            href="/"
+          >
+            <img
+              alt="New york city motorcycles logo"
+              src="[object Object]"
+            />
+          </a>
         </div>
         <div
           class="flex justify-center"
         >
-          <h1
-            class="text-lg tracking-widest md:text-xl"
+          <a
+            href="/"
           >
-            NEW YORK CITY MOTORCYCLES
-          </h1>
+            <h1
+              class="text-lg tracking-widest md:text-xl"
+            >
+              NEW YORK CITY MOTORCYCLES
+            </h1>
+          </a>
         </div>
         <nav
           class="mt-2 mb-6 rounded-md bg-stone-600 bg-opacity-90 py-2 px-6 shadow-lg"
@@ -301,6 +340,353 @@ exports[`App renders Layout and matches snapshot 1`] = `
           class="flex justify-center px-1 text-xs md:text-sm"
         >
           Vintage Motorcycles, Inc | All Rights Reserved
+        </h4>
+      </footer>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App renders Layout in Japanese and matches snapshot 1`] = `
+<div>
+  <div
+    class="w-full bg-hero bg-cover bg-fixed bg-center bg-no-repeat md:px-6"
+    id="layout-outer"
+  >
+    <div
+      class="mx-auto max-w-6xl bg-stone-600 bg-opacity-60 py-6 sm:p-6"
+      id="layout-inner"
+    >
+      <header
+        class="text-stone-50"
+      >
+        <div
+          class="mr-6 flex justify-end sm:mr-0"
+        >
+          <button>
+            <svg
+              class="rounded-sm h-6 w-9 shadow-lg card-hover"
+              viewBox="0 0 513 342"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                English
+              </title>
+              <path
+                d="M0 0h513v342H0z"
+                fill="#FFF"
+              />
+              <path
+                d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z"
+                fill="#D80027"
+              />
+              <path
+                d="M0 0h256.5v184.1H0z"
+                fill="#2E52B2"
+              />
+              <path
+                d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z"
+                fill="#FFF"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex justify-center pb-6"
+        >
+          <a
+            href="/"
+          >
+            <img
+              alt="placeholder"
+              src="[object Object]"
+            />
+          </a>
+        </div>
+        <div
+          class="flex justify-center"
+        >
+          <a
+            href="/"
+          >
+            <h1
+              class="text-lg tracking-widest md:text-xl"
+            >
+              NEW YORK CITY MOTORCYCLES
+            </h1>
+          </a>
+        </div>
+        <nav
+          class="mt-2 mb-6 rounded-md bg-stone-600 bg-opacity-90 py-2 px-6 shadow-lg"
+        >
+          <div
+            class="container mx-auto flex flex-wrap justify-center"
+          >
+            <button
+              aria-controls="navbar-default"
+              aria-expanded="false"
+              class="inline-flex items-center rounded-lg opacity-80 hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-stone-50 md:hidden"
+              type="button"
+            >
+              <span
+                class="sr-only"
+              >
+                placeholder
+              </span>
+              <img
+                alt="placeholder"
+                src="[object Object]"
+              />
+            </button>
+            <div
+              class="hidden w-full md:block md:w-auto"
+            >
+              <ul
+                class="flex flex-wrap justify-center md:space-x-6 md:font-medium"
+              >
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/"
+                  >
+                    placeholder
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/active-auctions"
+                  >
+                    placeholder
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/sold-archive"
+                  >
+                    placeholder
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/history"
+                  >
+                    placeholder
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/racing"
+                  >
+                    placeholder
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/contact"
+                  >
+                    placeholder
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/consign"
+                  >
+                    placeholder
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/invest"
+                  >
+                    placeholder
+                  </a>
+                </li>
+                <li
+                  class="flex justify-center uppercase"
+                >
+                  <a
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    href="/download"
+                  >
+                    placeholder
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="invisible h-0 transition[height] overflow-hidden duration-300 ease-in-out md:hidden"
+          >
+            <ul
+              class="mt-4 mb-2 grid space-y-2"
+            >
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/"
+                >
+                  placeholder
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/active-auctions"
+                >
+                  placeholder
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/sold-archive"
+                >
+                  placeholder
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/history"
+                >
+                  placeholder
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/racing"
+                >
+                  placeholder
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/contact"
+                >
+                  placeholder
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/consign"
+                >
+                  placeholder
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/invest"
+                >
+                  placeholder
+                </a>
+              </li>
+              <li
+                class="flex justify-center uppercase"
+              >
+                <a
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  href="/download"
+                >
+                  placeholder
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div>
+        Test Page
+      </div>
+      <footer
+        class="mt-6 grid space-y-4 font-light tracking-widest text-stone-50"
+      >
+        <div
+          class="flex justify-center"
+        >
+          <button
+            class="opacity-80 hover:underline hover:opacity-100"
+            data-testid="scroll-to-top-button"
+            type="button"
+          >
+            <div
+              class="flex justify-center"
+            >
+              <img
+                alt="placeholder"
+                src="[object Object]"
+              />
+            </div>
+            placeholder
+          </button>
+        </div>
+        <div
+          class="flex justify-center"
+        >
+          <a
+            class="opacity-80 hover:opacity-100"
+            data-testid="instagram-button-footer"
+            href="https://www.instagram.com/newyorkcitymotorcycles/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="placeholder"
+              src="[object Object]"
+            />
+          </a>
+        </div>
+        <h3
+          class="md:text-md flex justify-center text-sm"
+        >
+          placeholder
+        </h3>
+        <h4
+          class="flex justify-center px-1 text-xs md:text-sm"
+        >
+          placeholder
         </h4>
       </footer>
     </div>

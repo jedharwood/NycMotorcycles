@@ -2,6 +2,7 @@ import userEvent from '@testing-library/user-event';
 
 import ContactPage from '@/pages/contact';
 import { render, screen, waitFor, act } from '@/test-utils';
+import { langs } from '@/types/languages';
 
 const emailValidationMessage: string = 'Please enter a valid email address';
 const requiredFieldValidationMessage: string = 'This is a required field';
@@ -33,6 +34,12 @@ describe('ContactPage', () => {
 
     it('should render page in English', () => {
         const { container } = render(<ContactPage />);
+
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render page in Japanese', () => {
+        const { container } = render(<ContactPage />, { locale: langs.ja });
 
         expect(container).toMatchSnapshot();
     });

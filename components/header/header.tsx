@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import burgerIcon from 'public/svgs/burger-icon.svg';
 import nycmcLogo from 'public/svgs/nycmc-logo.svg';
 
+import routes from '@/utilities/routes';
+
+import LanguageSwitcher from '../language-switcher/language-switcher';
 import NavLink from '../nav-link/nav-link';
 
 type HeaderProps = {
@@ -73,17 +77,22 @@ const Header = ({
 
     return (
         <header className='text-stone-50'>
+            <LanguageSwitcher />
             <div className='flex justify-center pb-6'>
-                <Image
-                    src={nycmcLogo}
-                    alt={altTextNycmcLogo}
-                    width={111}
-                    height={111}
-                    priority
-                />
+                <Link href={routes.home} onClick={() => setActiveIdx(0)}>
+                    <Image
+                        src={nycmcLogo}
+                        alt={altTextNycmcLogo}
+                        width={111}
+                        height={111}
+                        priority
+                    />
+                </Link>
             </div>
             <div className='flex justify-center'>
-                <h1 className='text-lg tracking-widest md:text-xl'>{title}</h1>
+                <Link href={routes.home} onClick={() => setActiveIdx(0)}>
+                    <h1 className='text-lg tracking-widest md:text-xl'>{title}</h1>
+                </Link>
             </div>
             <nav className='mt-2 mb-6 rounded-md bg-stone-600 bg-opacity-90 py-2 px-6 shadow-lg'>
                 <div className='container mx-auto flex flex-wrap justify-center'>

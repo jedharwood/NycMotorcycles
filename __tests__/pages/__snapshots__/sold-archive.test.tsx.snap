@@ -1123,3 +1123,1127 @@ exports[`SoldArchivePage should render page in English 1`] = `
   </main>
 </div>
 `;
+
+exports[`SoldArchivePage should render page in Japanese 1`] = `
+<div>
+  <main
+    class="space-y-6"
+  >
+    <section
+      class="w-full space-y-2 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-xl font-medium text-stone-50 shadow-lg md:text-2xl"
+    >
+      <h2
+        class="flex justify-center opacity-80"
+      >
+        placeholder
+      </h2>
+      <h2
+        class="flex justify-center opacity-80"
+      >
+        placeholder
+      </h2>
+    </section>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/harley-xr750"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/harley-xr750"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/honda-rc30"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/honda-rc30"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/suzuki-rg400"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/suzuki-rg400"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/shovelhead-chopper"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/shovelhead-chopper"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/laverda-750-sfc"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/laverda-750-sfc"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/kawasaki-h2"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/kawasaki-h2"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/suzuki-stinger"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/suzuki-stinger"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/bsa-starfire"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/bsa-starfire"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/kawasaki-h1"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/kawasaki-h1"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/harley-xr750-replica"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/contact"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  placeholder
+                </button>
+              </div>
+            </a>
+          </div>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/harley-xr750-replica"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/kawasaki-s3"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/kawasaki-s3"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/kawasaki-g7s"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/kawasaki-g7s"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/norton-commando"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/norton-commando"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/honda-dream"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/honda-dream"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/honda-ss"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/honda-ss"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/laverda-500"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/laverda-500"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <img
+        alt="placeholder"
+      />
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/matchless-61"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/matchless-61"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/matchless-59"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/matchless-59"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/ducati-250"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/ducati-250"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/harley-xr750-75"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/harley-xr750-75"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <img
+        alt="placeholder"
+      />
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <img
+        alt="placeholder"
+      />
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+        </div>
+      </div>
+    </article>
+    <article
+      class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-2"
+    >
+      <a
+        class="relative h-fit rounded-md bg-gray-500"
+        href="/sold-archive/gallery/kawasaki-h1ra"
+      >
+        <img
+          alt="placeholder"
+        />
+      </a>
+      <div
+        class="flex items-center justify-center text-xl font-medium sm:opacity-80"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h3
+            class="flex justify-center text-center"
+          >
+            placeholder
+          </h3>
+          <h4
+            class="flex justify-center"
+          >
+            placeholder
+          </h4>
+          <div
+            class="flex justify-center"
+          >
+            <a
+              href="/sold-archive/gallery/kawasaki-h1ra"
+            >
+              <div
+                class="flex justify-center"
+              >
+                <button
+                  class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+                  type="button"
+                >
+                  pla
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</div>
+`;

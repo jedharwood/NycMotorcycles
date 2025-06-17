@@ -3,12 +3,19 @@ import mockRouter from 'next-router-mock';
 
 import InvestPage from '@/pages/invest';
 import { render, screen, waitFor, act } from '@/test-utils';
+import { langs } from '@/types/languages';
 
 jest.mock('next/router', () => jest.requireActual('next-router-mock'));
 
 describe('InvestPage', () => {
     it('should render page in English', () => {
         const { container } = render(<InvestPage />);
+
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render page in Japanese', () => {
+        const { container } = render(<InvestPage />, { locale: langs.ja });
 
         expect(container).toMatchSnapshot();
     });

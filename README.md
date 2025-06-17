@@ -8,12 +8,9 @@ Accessibility audit and refactor semantic structure/styling
 Remove mswWorker if unused
 Address code style inconsistences and overlapping css rules
 Add Translations, refactor out undnecessary resx
-Ensure language routing working properly
-Tests to language display
-Find a solution for server side image fetching to bypass 403 issue
 Resolve img/Image issue with auction-card component
 Possible Grid layout for Sold Archive page
-Focus trapping
+Focus trapping for email modal
 Image priority
 GH run lint on push
 Image modal proportions weird on larger images (HondaRc30 gallery)
