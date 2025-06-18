@@ -12,7 +12,10 @@ const Spinner = ({
     if (!isLoading) return null;
 
     return (
-        <div className={`text-center ${verticalPadding && 'py-12'}`}>
+        <div 
+            className={`text-center ${verticalPadding && 'py-12'}`}
+            data-testid='loading-spinner'
+        >
             <div role='status'>
                 <svg
                     aria-hidden='true'
