@@ -10,7 +10,7 @@ type Messages = {
     [key: string]: {
         [key: string]: string;
     };
-}; 
+};
 
 export const messages: Messages = {
     en,

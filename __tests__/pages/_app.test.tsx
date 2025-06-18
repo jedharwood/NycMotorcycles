@@ -31,7 +31,7 @@ describe('App', () => {
     it('renders Layout in Japanese and matches snapshot', () => {
         const router = require('next-router-mock');
         router.useRouter = jest.fn(() => ({
-            locale: langs.ja
+            locale: langs.ja,
         }));
 
         const { container } = renderApp(TestPage);

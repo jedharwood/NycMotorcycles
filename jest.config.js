@@ -8,13 +8,11 @@ const customJestConfig = {
     setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
     testEnvironment: 'jest-environment-jsdom',
     collectCoverage: true,
-    // collectCoverageFrom: ['./**'],
     collectCoverageFrom: [
         './components/**',
         './context/**',
         './helpers/**',
-        './languages/**', // Can probably delete this but set up lang testing first to be sure
-        './mocks/**',
+        './languages/**',
         './modules/**',
         './pages/**',
         './public/**',

@@ -11,18 +11,18 @@ jest.mock('fs', () => ({
     })),
 }));
 
-describe('proxyImageFetcher', () => {
-    let req = {} as any;
-    const res = {
-        setHeader: jest.fn(),
-        end: jest.fn(),
-    } as any;
-    const imageUrl = 'http://www.trashbat.co.ck';
-    const mockStream = {
-        pipe: jest.fn(),
-    };
-    const fakeStreamBody = Readable.from(['mock-image-data']);
+let req = {} as any;
+const res = {
+    setHeader: jest.fn(),
+    end: jest.fn(),
+} as any;
+const imageUrl = 'http://www.trashbat.co.ck';
+const mockStream = {
+    pipe: jest.fn(),
+};
+const fakeStreamBody = Readable.from(['mock-image-data']);
 
+describe('proxyImageFetcher', () => {
     beforeEach(() => {
         req = {
             query: {

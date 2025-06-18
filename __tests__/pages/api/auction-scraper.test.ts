@@ -17,7 +17,7 @@ const mockEnv = {
 const req = {} as any;
 const res = {
     status: jest.fn().mockReturnThis(),
-    json: jest.fn()
+    json: jest.fn(),
 } as any;
 
 describe('yahooAuctionScraper', () => {
@@ -41,75 +41,73 @@ describe('yahooAuctionScraper', () => {
         await yahooAuctionScraper(req, res);
 
         expect(fetch).toHaveBeenCalledWith(mockEnv.YAHOO_AUCTION_PROFILE_PAGE_URL, {
-            mode: 'no-cors'
+            mode: 'no-cors',
         });
         expect(res.status).toHaveBeenCalledWith(200);
-        expect(res.json).toHaveBeenCalledWith(
-            {
-                activeAuctions: [
-                    {
-                        bidders: '0',
-                        currentPrice: '30,000,000円',
-                        image: {
-                            imageAlt: 'Auction 1',
-                            imageSrc: 'https://images.auctions.yahoo.co.jp/image/1'
-                        },
-                        promptDecisionPrice: '33,000,000円',
-                        title: 'Auction 1',
-                        url: 'https://page.auctions.yahoo.co.jp/jp/auction/1',
-                        timeRemaining: {
-                            time: 7,
-                            unit: 'days'
-                        }
+        expect(res.json).toHaveBeenCalledWith({
+            activeAuctions: [
+                {
+                    bidders: '0',
+                    currentPrice: '30,000,000円',
+                    image: {
+                        imageAlt: 'Auction 1',
+                        imageSrc: 'https://images.auctions.yahoo.co.jp/image/1',
                     },
-                    {
-                        bidders: '0',
-                        currentPrice: undefined,
-                        image: {
-                            imageAlt: 'Auction 2',
-                            imageSrc: 'https://images.auctions.yahoo.co.jp/image/2'
-                        },
-                        promptDecisionPrice: '25,000円',
-                        title: 'Auction 2',
-                        url: 'https://page.auctions.yahoo.co.jp/jp/auction/2',
-                        timeRemaining: {
-                            time: 4,
-                            unit: 'hours'
-                        }
+                    promptDecisionPrice: '33,000,000円',
+                    title: 'Auction 1',
+                    url: 'https://page.auctions.yahoo.co.jp/jp/auction/1',
+                    timeRemaining: {
+                        time: 7,
+                        unit: 'days',
                     },
-                    {
-                        bidders: undefined,
-                        currentPrice: undefined,
-                        image: {
-                            imageAlt: '',
-                            imageSrc: ''
-                        },
-                        promptDecisionPrice: undefined,
-                        title: undefined,
-                        url: undefined,
-                        timeRemaining: {
-                            time: 4,
-                            unit: 'minutes'
-                        }
+                },
+                {
+                    bidders: '0',
+                    currentPrice: undefined,
+                    image: {
+                        imageAlt: 'Auction 2',
+                        imageSrc: 'https://images.auctions.yahoo.co.jp/image/2',
                     },
-                    {
-                        bidders: undefined,
-                        currentPrice: undefined,
-                        image: {
-                            imageAlt: '',
-                            imageSrc: ''
-                        },
-                        promptDecisionPrice: undefined,
-                        title: undefined,
-                        url: undefined,
-                        timeRemaining: {
-                            time: undefined,
-                            unit: 'days'
-                        }
-                    }
-                ]
-            }
-        );
+                    promptDecisionPrice: '25,000円',
+                    title: 'Auction 2',
+                    url: 'https://page.auctions.yahoo.co.jp/jp/auction/2',
+                    timeRemaining: {
+                        time: 4,
+                        unit: 'hours',
+                    },
+                },
+                {
+                    bidders: undefined,
+                    currentPrice: undefined,
+                    image: {
+                        imageAlt: '',
+                        imageSrc: '',
+                    },
+                    promptDecisionPrice: undefined,
+                    title: undefined,
+                    url: undefined,
+                    timeRemaining: {
+                        time: 4,
+                        unit: 'minutes',
+                    },
+                },
+                {
+                    bidders: undefined,
+                    currentPrice: undefined,
+                    image: {
+                        imageAlt: '',
+                        imageSrc: '',
+                    },
+                    promptDecisionPrice: undefined,
+                    title: undefined,
+                    url: undefined,
+                    timeRemaining: {
+                        time: undefined,
+                        unit: 'days',
+                    },
+                },
+            ],
+        });
     });
 
     it('should return 403 if fetch response status is 403', async () => {
@@ -120,7 +118,7 @@ describe('yahooAuctionScraper', () => {
         await yahooAuctionScraper(req, res);
 
         expect(fetch).toHaveBeenCalledWith(mockEnv.YAHOO_AUCTION_PROFILE_PAGE_URL, {
-            mode: 'no-cors'
+            mode: 'no-cors',
         });
         expect(res.status).toHaveBeenCalledWith(403);
         expect(res.json).toHaveBeenCalledWith({ activeAuctions: [] });
@@ -132,7 +130,7 @@ describe('yahooAuctionScraper', () => {
         await yahooAuctionScraper(req, res);
 
         expect(fetch).toHaveBeenCalledWith(mockEnv.YAHOO_AUCTION_PROFILE_PAGE_URL, {
-            mode: 'no-cors'
+            mode: 'no-cors',
         });
         expect(res.status).toHaveBeenCalledWith(500);
         expect(res.json).toHaveBeenCalledWith({ activeAuctions: [] });
