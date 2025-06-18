@@ -12,7 +12,7 @@ const Spinner = ({
     if (!isLoading) return null;
 
     return (
-        <div 
+        <div
             className={`text-center ${verticalPadding && 'py-12'}`}
             data-testid='loading-spinner'
         >

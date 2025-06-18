@@ -1,22 +1,40 @@
-import { setupServer } from 'msw/node';
+import { useQuery } from 'react-query';
 
-import { handlers } from '@/mocks/handlers'
 import ActiveAuctionsPage from '@/pages/active-auctions';
-import { screen } from '@/test-utils';
-import { render } from '@/test-utils';
+import { render, screen } from '@/test-utils';
 
-const server = setupServer(...handlers);
+jest.mock('react-query', () => ({
+    ...jest.requireActual('react-query'),
+    useQuery: jest.fn(),
+}))
+
+afterEach(() => {
+    jest.clearAllMocks();
+})
 
 describe('ActiveAuctionsPage', () => {
-    beforeAll(() => server.listen());
-    afterEach(() => server.resetHandlers);
-    afterAll(() => server.close);
-
     it('should render spinner when data is loading', async () => {
+        (useQuery as jest.Mock).mockReturnValue({
+            isLoading: true,
+        });
         render(<ActiveAuctionsPage />);
 
-        const spinner = await screen.findByTestId('loading-spinner', {}, { timeout: 2000 });
-        
+        const spinner: HTMLElement = await screen.findByTestId('loading-spinner', {}, { timeout: 2000 });
         expect(spinner).toBeInTheDocument();
+    });
+
+    it('should render no active auctions display when status is 403', async () => {
+        (useQuery as jest.Mock).mockReturnValue({
+            isLoading: false,
+            data: {
+                data: {
+                    status: 403
+                }
+            },
+        });
+        render(<ActiveAuctionsPage />);
+
+        const noAuctionItemDisplayText = await screen.findByText('There are currently no active auctions');
+        expect(noAuctionItemDisplayText).toBeInTheDocument();
     });
 });
