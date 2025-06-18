@@ -6,11 +6,11 @@ import { render, screen } from '@/test-utils';
 jest.mock('react-query', () => ({
     ...jest.requireActual('react-query'),
     useQuery: jest.fn(),
-}))
+}));
 
 afterEach(() => {
     jest.clearAllMocks();
-})
+});
 
 describe('ActiveAuctionsPage', () => {
     it('should render spinner when data is loading', async () => {
@@ -19,22 +19,43 @@ describe('ActiveAuctionsPage', () => {
         });
         render(<ActiveAuctionsPage />);
 
-        const spinner: HTMLElement = await screen.findByTestId('loading-spinner', {}, { timeout: 2000 });
+        const spinner: HTMLElement = await screen.findByTestId(
+            'loading-spinner',
+            {},
+            { timeout: 2000 }
+        );
         expect(spinner).toBeInTheDocument();
     });
 
-    it('should render no active auctions display when status is 403', async () => {
+    it('should render access denied display when status is 403', async () => {
         (useQuery as jest.Mock).mockReturnValue({
             isLoading: false,
             data: {
-                data: {
-                    status: 403
-                }
+                status: 403,
+                data: {},
             },
         });
         render(<ActiveAuctionsPage />);
 
-        const noAuctionItemDisplayText = await screen.findByText('There are currently no active auctions');
-        expect(noAuctionItemDisplayText).toBeInTheDocument();
+        const accessDeniedDisplayText = await screen.findByText(
+            'If you are accessing the site from the UK/EU try connecting through a VPN.'
+        );
+        expect(accessDeniedDisplayText).toBeInTheDocument();
+    });
+
+    it('should render there has been a problem display when status is 500', async () => {
+        (useQuery as jest.Mock).mockReturnValue({
+            isLoading: false,
+            data: {
+                status: 500,
+                data: {},
+            },
+        });
+        render(<ActiveAuctionsPage />);
+
+        const problemDisplayText = await screen.findByText(
+            'There has been a problem connecting you to Yahoo auctions'
+        );
+        expect(problemDisplayText).toBeInTheDocument();
     });
 });
