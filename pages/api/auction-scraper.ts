@@ -50,7 +50,7 @@ const mapAuctionListing = (listing: Element): ActiveAuction => {
     );
 
     return {
-        title: listing.querySelector(pE.SELECTOR_PRODUCT_TITLE)?.textContent ?? undefined,
+        title: listing.querySelector(pE.SELECTOR_PRODUCT_TITLE)?.textContent?.trim() ?? undefined,
         url:
             listing
                 .querySelector(`${pE.SELECTOR_PRODUCT_TITLE} > a`)
