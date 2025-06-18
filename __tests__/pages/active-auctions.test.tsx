@@ -58,4 +58,22 @@ describe('ActiveAuctionsPage', () => {
         );
         expect(problemDisplayText).toBeInTheDocument();
     });
+
+    it('should render no active auctions display when activeAuctions is empty array', async () => {
+        (useQuery as jest.Mock).mockReturnValue({
+            isLoading: false,
+            data: {
+                status: 200,
+                data: {
+                    activeAuctions: []
+                },
+            },
+        });
+        render(<ActiveAuctionsPage />);
+
+        const noActiveAuctionsDisplay = await screen.findByText(
+            'There are currently no active auctions'
+        );
+        expect(noActiveAuctionsDisplay).toBeInTheDocument();
+    });
 });
