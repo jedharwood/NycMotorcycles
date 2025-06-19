@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GalleryPage should render the ducati-250 gallery page 1`] = `
+exports[`GalleryPage when router is ready should render the ducati-250 gallery page 1`] = `
 <div>
   <main>
     <div
@@ -147,7 +147,7 @@ exports[`GalleryPage should render the ducati-250 gallery page 1`] = `
 </div>
 `;
 
-exports[`GalleryPage should render the harley-xr750 gallery page 1`] = `
+exports[`GalleryPage when router is ready should render the harley-xr750 gallery page 1`] = `
 <div>
   <main>
     <div
@@ -297,7 +297,7 @@ exports[`GalleryPage should render the harley-xr750 gallery page 1`] = `
 </div>
 `;
 
-exports[`GalleryPage should render the harley-xr750-75 gallery page 1`] = `
+exports[`GalleryPage when router is ready should render the harley-xr750-75 gallery page 1`] = `
 <div>
   <main>
     <div
@@ -410,7 +410,7 @@ exports[`GalleryPage should render the harley-xr750-75 gallery page 1`] = `
 </div>
 `;
 
-exports[`GalleryPage should render the harley-xr750-replica gallery page 1`] = `
+exports[`GalleryPage when router is ready should render the harley-xr750-replica gallery page 1`] = `
 <div>
   <main>
     <div
@@ -558,7 +558,7 @@ exports[`GalleryPage should render the harley-xr750-replica gallery page 1`] = `
 </div>
 `;
 
-exports[`GalleryPage should render the honda-dream gallery page 1`] = `
+exports[`GalleryPage when router is ready should render the honda-dream gallery page 1`] = `
 <div>
   <main>
     <div
@@ -692,7 +692,7 @@ exports[`GalleryPage should render the honda-dream gallery page 1`] = `
 </div>
 `;
 
-exports[`GalleryPage should render the kawasaki-h1ra gallery page 1`] = `
+exports[`GalleryPage when router is ready should render the kawasaki-h1ra gallery page 1`] = `
 <div>
   <main>
     <div
