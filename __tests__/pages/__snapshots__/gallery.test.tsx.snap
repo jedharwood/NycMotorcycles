@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GalleryPage should render the kawasaki-h1ra gallery page 1`] = `
+<div>
+  <main>
+    <div
+      class="space-y-6"
+    >
+      <div
+        class="relative"
+      >
+        <img
+          alt="pg.sold-archive.alt.kawasaki-h1ra"
+        />
+        <div
+          class="absolute top-1/2 left-1/2 w-max max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 rounded-md bg-stone-600 opacity-90 shadow-lg md:max-w-[calc(100%-3rem)]"
+        >
+          <h2
+            class="inline-block px-2 py-2 text-center text-2xl text-stone-50 sm:px-8 sm:text-4xl md:text-5xl lg:text-6xl"
+          >
+            pg.gallery.kawasaki-h1ra.name
+          </h2>
+        </div>
+      </div>
+      <div
+        class="grid gap-4 md:grid-cols-2"
+      >
+        <section
+          class="space-y-4"
+        >
+          <div
+            class="rounded-md
+            card-hover cursor-pointer 
+            h-fit"
+          >
+            <img
+              alt="pg.gallery.kawasaki-h1ra.alt.left-side"
+            />
+          </div>
+          <div
+            class="rounded-md
+            card-hover cursor-pointer 
+            h-fit"
+          >
+            <img
+              alt="pg.gallery.kawasaki-h1ra.alt.fairing"
+            />
+          </div>
+          <div
+            class="rounded-md
+            card-hover cursor-pointer 
+            h-fit"
+          >
+            <img
+              alt="pg.gallery.kawasaki-h1ra.alt.bars"
+            />
+          </div>
+          <div
+            class="rounded-md
+            card-hover cursor-pointer 
+            h-fit"
+          >
+            <img
+              alt="pg.gallery.kawasaki-h1ra.alt.tank"
+            />
+          </div>
+        </section>
+        <div
+          class="space-y-4"
+        >
+          <section
+            class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+          >
+            <div
+              class="space-y-4 undefined"
+            >
+              <p>
+                pg.gallery.kawasaki-h1ra.para-1
+              </p>
+              <p>
+                pg.gallery.kawasaki-h1ra.para-2
+              </p>
+              <p>
+                pg.gallery.kawasaki-h1ra.para-3
+              </p>
+              <p>
+                pg.gallery.kawasaki-h1ra.para-4
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;
