@@ -112,6 +112,18 @@ describe('GalleryPage', () => {
         })
         expect(container).toMatchSnapshot();
     });
-});
 
-// harley-xr750
+    it('should render the harley-xr750 gallery page', async () => {
+        (useRouter as jest.Mock).mockReturnValue({
+            isReady: true,
+            query: { bike: 'harley-xr750'}
+        });
+        const { container } = render(<GalleryPage />);
+
+        await waitFor(() => {
+            const legend: HTMLElement = screen.getByText('pg.gallery.harley-xr750.name');
+            expect(legend).toBeInTheDocument();
+        })
+        expect(container).toMatchSnapshot();
+    });
+});
