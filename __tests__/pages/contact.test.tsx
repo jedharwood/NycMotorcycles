@@ -10,6 +10,9 @@ const validInput: string = 'valid input';
 const invalidEmailAddress: string = 'invalid email address';
 const validEmailAddress: string = 'valid.email@address.co.ck';
 
+const contactFormSubmitButtonTestId: string = 'contact-form-submit-button';
+const confirmationModalCloseButtonTestId: string = 'confirmation-modal-close-button';
+
 const findAndPopulateInputAsync = async (
     screen: any,
     testId: string,
@@ -19,15 +22,16 @@ const findAndPopulateInputAsync = async (
     await userEvent.type(input, value);
 };
 
-const clickSubmitButtonAsync = async (screen: any): Promise<void> => {
-    const submitButton: HTMLElement = screen.getByTestId('contact-form-submit-button');
-    await userEvent.click(submitButton);
+const clickButtonAsync = async (screen: any, testId: string): Promise<void> => {
+    const button: HTMLElement = screen.getByTestId(testId);
+    await userEvent.click(button);
 };
 
-const fetchMock = jest.fn();
-(global as any).fetch = fetchMock;
-
 describe('ContactPage', () => {
+    beforeEach(() => {
+        global.fetch = jest.fn();
+    });
+
     afterEach(() => {
         jest.clearAllMocks();
     });
@@ -52,7 +56,7 @@ describe('ContactPage', () => {
         await findAndPopulateInputAsync(screen, 'message', validInput);
 
         await act(() => {
-            clickSubmitButtonAsync(screen);
+            clickButtonAsync(screen, contactFormSubmitButtonTestId);
         });
 
         await waitFor(() => {
@@ -60,7 +64,7 @@ describe('ContactPage', () => {
             expect(
                 screen.queryByText(requiredFieldValidationMessage)
             ).not.toBeInTheDocument();
-            expect(fetchMock).toHaveBeenCalledTimes(0);
+            expect(fetch).toHaveBeenCalledTimes(0);
         });
     });
 
@@ -71,7 +75,7 @@ describe('ContactPage', () => {
         await findAndPopulateInputAsync(screen, 'message', validInput);
 
         await act(() => {
-            clickSubmitButtonAsync(screen);
+            clickButtonAsync(screen, contactFormSubmitButtonTestId);
         });
 
         await waitFor(() => {
@@ -79,7 +83,7 @@ describe('ContactPage', () => {
             expect(
                 screen.queryByText(requiredFieldValidationMessage)
             ).not.toBeInTheDocument();
-            expect(fetchMock).toHaveBeenCalledTimes(0);
+            expect(fetch).toHaveBeenCalledTimes(0);
         });
     });
 
@@ -90,7 +94,7 @@ describe('ContactPage', () => {
         await findAndPopulateInputAsync(screen, 'message', validInput);
 
         await act(() => {
-            clickSubmitButtonAsync(screen);
+            clickButtonAsync(screen, contactFormSubmitButtonTestId);
         });
 
         await waitFor(() => {
@@ -98,7 +102,7 @@ describe('ContactPage', () => {
             expect(screen.queryAllByText(requiredFieldValidationMessage).length).toEqual(
                 1
             );
-            expect(fetchMock).toHaveBeenCalledTimes(0);
+            expect(fetch).toHaveBeenCalledTimes(0);
         });
     });
 
@@ -109,7 +113,7 @@ describe('ContactPage', () => {
         await findAndPopulateInputAsync(screen, 'message', validInput);
 
         await act(() => {
-            clickSubmitButtonAsync(screen);
+            clickButtonAsync(screen, contactFormSubmitButtonTestId);
         });
 
         await waitFor(() => {
@@ -117,7 +121,7 @@ describe('ContactPage', () => {
             expect(screen.queryAllByText(requiredFieldValidationMessage).length).toEqual(
                 1
             );
-            expect(fetchMock).toHaveBeenCalledTimes(0);
+            expect(fetch).toHaveBeenCalledTimes(0);
         });
     });
 
@@ -128,7 +132,7 @@ describe('ContactPage', () => {
         await findAndPopulateInputAsync(screen, 'subject', validInput);
 
         await act(() => {
-            clickSubmitButtonAsync(screen);
+            clickButtonAsync(screen, contactFormSubmitButtonTestId);
         });
 
         await waitFor(() => {
@@ -136,7 +140,7 @@ describe('ContactPage', () => {
             expect(screen.queryAllByText(requiredFieldValidationMessage).length).toEqual(
                 1
             );
-            expect(fetchMock).toHaveBeenCalledTimes(0);
+            expect(fetch).toHaveBeenCalledTimes(0);
         });
     });
 
@@ -144,7 +148,7 @@ describe('ContactPage', () => {
         render(<ContactPage />);
 
         await act(() => {
-            clickSubmitButtonAsync(screen);
+            clickButtonAsync(screen, contactFormSubmitButtonTestId);
         });
 
         await waitFor(() => {
@@ -152,7 +156,7 @@ describe('ContactPage', () => {
             expect(screen.queryAllByText(requiredFieldValidationMessage).length).toEqual(
                 3
             );
-            expect(fetchMock).toHaveBeenCalledTimes(0);
+            expect(fetch).toHaveBeenCalledTimes(0);
         });
     });
 
@@ -164,7 +168,7 @@ describe('ContactPage', () => {
         await findAndPopulateInputAsync(screen, 'message', validInput);
 
         await act(() => {
-            clickSubmitButtonAsync(screen);
+            clickButtonAsync(screen, contactFormSubmitButtonTestId);
         });
 
         await waitFor(() => {
@@ -172,8 +176,8 @@ describe('ContactPage', () => {
             expect(
                 screen.queryByText(requiredFieldValidationMessage)
             ).not.toBeInTheDocument();
-            expect(fetchMock).toHaveBeenCalledTimes(1);
-            expect(fetchMock).toHaveBeenCalledWith('/api/mailer', {
+            expect(fetch).toHaveBeenCalledTimes(1);
+            expect(fetch).toHaveBeenCalledWith('/api/mailer', {
                 method: 'post',
                 headers: {
                     'Content-Type': 'application/json',
@@ -185,6 +189,47 @@ describe('ContactPage', () => {
                     message: validInput,
                 }),
             });
+        });
+    });
+
+    it('should display success confirmation modal on successful submission', async () => {
+        const confirmationModalSuccessMessage: string =
+            'Your message has been sent. We will reply as soon as we can.';
+        (global.fetch as jest.Mock).mockResolvedValue({
+            ok: true,
+            json: jest.fn().mockResolvedValue({}),
+        });
+        render(<ContactPage />);
+        await findAndPopulateInputAsync(screen, 'email', validEmailAddress);
+        await findAndPopulateInputAsync(screen, 'senderName', validInput);
+        await findAndPopulateInputAsync(screen, 'subject', validInput);
+        await findAndPopulateInputAsync(screen, 'message', validInput);
+
+        await act(() => {
+            clickButtonAsync(screen, contactFormSubmitButtonTestId);
+        });
+
+        await waitFor(() => {
+            expect(
+                screen.queryByText(confirmationModalSuccessMessage)
+            ).toBeInTheDocument();
+            const closeButton: HTMLElement = screen.getByTestId(
+                'confirmation-modal-close-button'
+            );
+            expect(closeButton).toBeInTheDocument();
+        });
+
+        await act(() => {
+            clickButtonAsync(screen, confirmationModalCloseButtonTestId);
+        });
+
+        await waitFor(() => {
+            expect(
+                screen.queryByText(confirmationModalSuccessMessage)
+            ).not.toBeInTheDocument();
+            // can I assert that the button is not present by test id?
+            expect(screen.queryByText('Close')).not.toBeInTheDocument();
+            // can I give the modal an Id and assert on that?
         });
     });
 });

@@ -73,6 +73,7 @@ const ConfirmationModal = ({
                 })}
                 type='button'
                 onClick={closeButtonClick}
+                id='confirmation-modal-close-button'
             />
         );
 
@@ -101,6 +102,7 @@ const ConfirmationModal = ({
                     type='button'
                     onClick={retryButtonClick}
                     buttonColour='red'
+                    id='confirmation-modal-retry-button'
                 />
             </div>
         );
