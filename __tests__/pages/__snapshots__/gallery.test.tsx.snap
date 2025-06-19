@@ -260,6 +260,140 @@ exports[`GalleryPage should render the harley-xr750-75 gallery page 1`] = `
 </div>
 `;
 
+exports[`GalleryPage should render the honda-dream gallery page 1`] = `
+<div>
+  <main>
+    <div
+      class="space-y-6"
+    >
+      <div
+        class="relative"
+      >
+        <img
+          alt="pg.sold-archive.alt.honda-dream"
+        />
+        <div
+          class="absolute top-1/2 left-1/2 w-max max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 rounded-md bg-stone-600 opacity-90 shadow-lg md:max-w-[calc(100%-3rem)]"
+        >
+          <h2
+            class="inline-block px-2 py-2 text-center text-2xl text-stone-50 sm:px-8 sm:text-4xl md:text-5xl lg:text-6xl"
+          >
+            pg.gallery.honda-dream.name
+          </h2>
+        </div>
+      </div>
+      <div
+        class="grid gap-4 md:grid-cols-2"
+      >
+        <section
+          class="space-y-4"
+        >
+          <div
+            class="rounded-md
+            card-hover cursor-pointer 
+            h-fit"
+          >
+            <img
+              alt="pg.gallery.honda-dream.alt.showroom"
+            />
+          </div>
+          <div
+            class="rounded-md
+            card-hover cursor-pointer 
+            h-fit"
+          >
+            <img
+              alt="pg.gallery.honda-dream.alt.harbour"
+            />
+          </div>
+          <div
+            class="rounded-md
+            card-hover cursor-pointer 
+            h-fit"
+          >
+            <img
+              alt="pg.gallery.honda-dream.alt.rear-centre"
+            />
+          </div>
+          <div
+            class="rounded-md
+            card-hover cursor-pointer 
+            h-fit"
+          >
+            <img
+              alt="pg.gallery.honda-dream.alt.right-side"
+            />
+          </div>
+          <div
+            class="rounded-md
+            card-hover cursor-pointer 
+            h-fit"
+          >
+            <img
+              alt="pg.gallery.honda-dream.alt.rear"
+            />
+          </div>
+        </section>
+        <div
+          class="space-y-4"
+        >
+          <section
+            class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+          >
+            <div
+              class="text-center "
+            >
+              <h2
+                class="text-xl font-medium opacity-80 md:text-2xl"
+              >
+                pg.gallery.honda-dream.title
+              </h2>
+              <p>
+                pg.gallery.honda-dream.subtitle
+              </p>
+            </div>
+            <ul
+              class="space-y-2"
+            >
+              <li>
+                pg.gallery.honda-dream.list-1
+              </li>
+              <li>
+                pg.gallery.honda-dream.list-2
+              </li>
+              <li>
+                pg.gallery.honda-dream.list-3
+              </li>
+              <li>
+                pg.gallery.honda-dream.list-4
+              </li>
+              <li>
+                pg.gallery.honda-dream.list-5
+              </li>
+            </ul>
+            <div
+              class="space-y-4 undefined"
+            >
+              <p>
+                pg.gallery.honda-dream.para-1
+              </p>
+              <p>
+                pg.gallery.honda-dream.para-2
+              </p>
+            </div>
+            <h3
+              class="text-center text-xl font-medium opacity-80 md:text-2xl"
+            >
+              pg.gallery.honda-dream.footer
+            </h3>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
 exports[`GalleryPage should render the kawasaki-h1ra gallery page 1`] = `
 <div>
   <main>

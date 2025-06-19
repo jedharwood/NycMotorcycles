@@ -84,5 +84,21 @@ describe('GalleryPage', () => {
         })
         expect(container).toMatchSnapshot();
     });
+
+    it('should render the honda-dream gallery page', async () => {
+        (useRouter as jest.Mock).mockReturnValue({
+            isReady: true,
+            query: { bike: 'honda-dream'}
+        });
+        const { container } = render(<GalleryPage />);
+
+        await waitFor(() => {
+            const legend: HTMLElement = screen.getByText('pg.gallery.honda-dream.name');
+            expect(legend).toBeInTheDocument();
+        })
+        expect(container).toMatchSnapshot();
+    });
 });
 
+// harley-xr750-replica
+// harley-xr750
