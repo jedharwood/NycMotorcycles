@@ -22,7 +22,6 @@ describe('GalleryPage', () => {
         }));
         (useRouter as jest.Mock).mockReturnValue({
             isReady: false,
-            query: {} // maybe lose this?
         });
         (useIntl as jest.Mock).mockReturnValue({
             formatMessage: ({ id }: { id: string }) => id
@@ -57,4 +56,33 @@ describe('GalleryPage', () => {
         })
         expect(container).toMatchSnapshot();
     });
+
+    it('should render the harley-xr750-75 gallery page', async () => {
+        (useRouter as jest.Mock).mockReturnValue({
+            isReady: true,
+            query: { bike: 'harley-xr750-75'}
+        });
+        const { container } = render(<GalleryPage />);
+
+        await waitFor(() => {
+            const legend: HTMLElement = screen.getByText('pg.gallery.harley-xr750-75.name');
+            expect(legend).toBeInTheDocument();
+        })
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render the ducati-250 gallery page', async () => {
+        (useRouter as jest.Mock).mockReturnValue({
+            isReady: true,
+            query: { bike: 'ducati-250'}
+        });
+        const { container } = render(<GalleryPage />);
+
+        await waitFor(() => {
+            const legend: HTMLElement = screen.getByText('pg.gallery.ducati-250.name');
+            expect(legend).toBeInTheDocument();
+        })
+        expect(container).toMatchSnapshot();
+    });
 });
+
