@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActiveAuctionsPage should render access denied display in English when status is 403 1`] = `
+exports[`ActiveAuctionsPage should render access denied display when status is 403 in English 1`] = `
 <div>
   <main>
     <section
@@ -47,7 +47,7 @@ exports[`ActiveAuctionsPage should render access denied display in English when 
 </div>
 `;
 
-exports[`ActiveAuctionsPage should render access denied display in Japanese when status is 403 1`] = `
+exports[`ActiveAuctionsPage should render access denied display when status is 403 in Japanese 1`] = `
 <div>
   <main>
     <section
@@ -724,7 +724,7 @@ exports[`ActiveAuctionsPage should render active auctions in Japanese 1`] = `
 </div>
 `;
 
-exports[`ActiveAuctionsPage should render no active auctions display in English when activeAuctions is empty array 1`] = `
+exports[`ActiveAuctionsPage should render no active auctions display when activeAuctions is empty array in English 1`] = `
 <div>
   <main>
     <section
@@ -771,7 +771,7 @@ exports[`ActiveAuctionsPage should render no active auctions display in English 
 </div>
 `;
 
-exports[`ActiveAuctionsPage should render no active auctions display in Japanese when activeAuctions is empty array 1`] = `
+exports[`ActiveAuctionsPage should render no active auctions display when activeAuctions is empty array in Japanese 1`] = `
 <div>
   <main>
     <section
@@ -818,7 +818,7 @@ exports[`ActiveAuctionsPage should render no active auctions display in Japanese
 </div>
 `;
 
-exports[`ActiveAuctionsPage should render there has been a problem display in English when status is 500 1`] = `
+exports[`ActiveAuctionsPage should render there has been a problem display when status is 500 in English 1`] = `
 <div>
   <main>
     <section
@@ -863,7 +863,7 @@ exports[`ActiveAuctionsPage should render there has been a problem display in En
 </div>
 `;
 
-exports[`ActiveAuctionsPage should render there has been a problem display in Japanese when status is 500 1`] = `
+exports[`ActiveAuctionsPage should render there has been a problem display when status is 500 in Japanese 1`] = `
 <div>
   <main>
     <section

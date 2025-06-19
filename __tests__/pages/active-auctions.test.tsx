@@ -30,115 +30,103 @@ describe('ActiveAuctionsPage', () => {
         expect(spinner).toBeInTheDocument();
     });
 
-    it('should render access denied display in English when status is 403', async () => {
-        (useQuery as jest.Mock).mockReturnValue({
-            isLoading: false,
-            data: {
-                status: 403,
-                data: {},
-            },
-        });
-        const { container } = render(<ActiveAuctionsPage />);
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render access denied display in Japanese when status is 403', async () => {
-        (useQuery as jest.Mock).mockReturnValue({
-            isLoading: false,
-            data: {
-                status: 403,
-                data: {},
-            },
-        });
-        const { container } = render(<ActiveAuctionsPage />, { locale: langs.ja });
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render there has been a problem display in English when status is 500', async () => {
-        (useQuery as jest.Mock).mockReturnValue({
-            isLoading: false,
-            data: {
-                status: 500,
-                data: {},
-            },
-        });
-        const { container } = render(<ActiveAuctionsPage />);
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render there has been a problem display in Japanese when status is 500', async () => {
-        (useQuery as jest.Mock).mockReturnValue({
-            isLoading: false,
-            data: {
-                status: 500,
-                data: {},
-            },
-        });
-        const { container } = render(<ActiveAuctionsPage />, { locale: langs.ja });
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render no active auctions display in English when activeAuctions is empty array', async () => {
-        (useQuery as jest.Mock).mockReturnValue({
-            isLoading: false,
-            data: {
-                status: 200,
+    describe('should render access denied display when status is 403', () => {
+        beforeEach(() => {
+            (useQuery as jest.Mock).mockReturnValue({
+                isLoading: false,
                 data: {
-                    activeAuctions: []
+                    status: 403,
+                    data: {},
                 },
-            },
+            });
         });
-        const { container } = render(<ActiveAuctionsPage />);
 
-        expect(container).toMatchSnapshot();
+        it('in English', async () => {
+            const { container } = render(<ActiveAuctionsPage />);
+    
+            expect(container).toMatchSnapshot();
+        });
+    
+        it('in Japanese', async () => {
+            const { container } = render(<ActiveAuctionsPage />, { locale: langs.ja });
+    
+            expect(container).toMatchSnapshot();
+        });
     });
 
-    it('should render no active auctions display in Japanese when activeAuctions is empty array', async () => {
-        (useQuery as jest.Mock).mockReturnValue({
-            isLoading: false,
-            data: {
-                status: 200,
+    describe('should render there has been a problem display when status is 500', () => {
+        beforeEach(() => {
+            (useQuery as jest.Mock).mockReturnValue({
+                isLoading: false,
                 data: {
-                    activeAuctions: []
+                    status: 500,
+                    data: {},
                 },
-            },
+            });
         });
-        const { container } = render(<ActiveAuctionsPage />, { locale: langs.ja });
 
-        expect(container).toMatchSnapshot();
+        it('in English', async () => {
+            const { container } = render(<ActiveAuctionsPage />);
+    
+            expect(container).toMatchSnapshot();
+        });
+    
+        it('in Japanese', async () => {
+            const { container } = render(<ActiveAuctionsPage />, { locale: langs.ja });
+    
+            expect(container).toMatchSnapshot();
+        });
     });
 
-    it('should render active auctions in English', async () => {
-        (useQuery as jest.Mock).mockReturnValue({
-            isLoading: false,
-            data: {
-                status: 200,
+    describe('should render no active auctions display when activeAuctions is empty array', () => {
+        beforeEach(() => {
+            (useQuery as jest.Mock).mockReturnValue({
+                isLoading: false,
                 data: {
-                    activeAuctions
+                    status: 200,
+                    data: {
+                        activeAuctions: []
+                    },
                 },
-            },
+            });
         });
-        const { container } = render(<ActiveAuctionsPage />);
+        
+        it('in English', async () => {
+            const { container } = render(<ActiveAuctionsPage />);
+    
+            expect(container).toMatchSnapshot();
+        });
+    
+        it('in Japanese', async () => {
+            const { container } = render(<ActiveAuctionsPage />, { locale: langs.ja });
+    
+            expect(container).toMatchSnapshot();
+        });
+    });    
 
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render active auctions in Japanese', async () => {
-        (useQuery as jest.Mock).mockReturnValue({
-            isLoading: false,
-            data: {
-                status: 200,
+    describe('should render active auctions', () => {
+        beforeEach(() => {
+            (useQuery as jest.Mock).mockReturnValue({
+                isLoading: false,
                 data: {
-                    activeAuctions
+                    status: 200,
+                    data: {
+                        activeAuctions
+                    },
                 },
-            },
+            });
         });
-        const { container } = render(<ActiveAuctionsPage />, { locale: langs.ja });
-
-        expect(container).toMatchSnapshot();
+        
+        it('in English', async () => {
+            const { container } = render(<ActiveAuctionsPage />);
+    
+            expect(container).toMatchSnapshot();
+        });
+    
+        it('in Japanese', async () => {
+            const { container } = render(<ActiveAuctionsPage />, { locale: langs.ja });
+    
+            expect(container).toMatchSnapshot();
+        });
     });
 });
