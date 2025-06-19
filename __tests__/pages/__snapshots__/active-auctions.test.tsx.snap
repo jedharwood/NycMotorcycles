@@ -1,0 +1,1025 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActiveAuctionsPage should render access denied display when status is 403 in English 1`] = `
+<div>
+  <main>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          There has been a problem connecting you to Yahoo auctions
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          If you are accessing the site from the UK/EU try connecting through a VPN.
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          href="https://auctions.yahoo.co.jp/seller/lazzamoto?"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              Yahoo auction page
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+`;
+
+exports[`ActiveAuctionsPage should render access denied display when status is 403 in Japanese 1`] = `
+<div>
+  <main>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          href="https://auctions.yahoo.co.jp/seller/lazzamoto?"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              placeholder
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+`;
+
+exports[`ActiveAuctionsPage should render active auctions in English 1`] = `
+<div>
+  <main>
+    <div
+      class="grid gap-6 lg:grid-cols-2"
+    >
+      <article
+        class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-3"
+      >
+        <a
+          class="relative h-fit rounded-md bg-gray-500 sm:col-span-1"
+          href="https://www.google.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="An image of a cat"
+            class="w-full rounded-md hover:opacity-70"
+            src="/api/image-proxy?url=http%3A%2F%2Fplacekitten.com%2F200%2F300"
+          />
+        </a>
+        <div
+          class="sm:col-span-2"
+        >
+          <a
+            class="text-xl font-medium hover:underline hover:opacity-100 md:opacity-80"
+            href="https://www.google.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Vincent Black Shadow
+          </a>
+          <table
+            class="mt-4 w-full table-auto"
+          >
+            <tbody>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Current price
+                </td>
+                <td>
+                  10,000円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Prompt decision price
+                </td>
+                <td>
+                  15,000円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Time remaining
+                </td>
+                <td>
+                  56 minutes
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Bidders
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article
+        class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-3"
+      >
+        <a
+          class="relative h-fit rounded-md bg-gray-500 sm:col-span-1"
+          href="https://www.google.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Another image of a cat"
+            class="w-full rounded-md hover:opacity-70"
+            src="/api/image-proxy?url=http%3A%2F%2Fplacekitten.com%2F200%2F300"
+          />
+        </a>
+        <div
+          class="sm:col-span-2"
+        >
+          <a
+            class="text-xl font-medium hover:underline hover:opacity-100 md:opacity-80"
+            href="https://www.google.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Another Vincent Black Shadow
+          </a>
+          <table
+            class="mt-4 w-full table-auto"
+          >
+            <tbody>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Current price
+                </td>
+                <td>
+                  98,560円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Time remaining
+                </td>
+                <td>
+                  9 hours
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Bidders
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article
+        class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-3"
+      >
+        <a
+          class="relative h-fit rounded-md bg-gray-500 sm:col-span-1"
+          href="https://www.google.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Are you starting to see a pattern forming, yet?"
+            class="w-full rounded-md hover:opacity-70"
+            src="/api/image-proxy?url=http%3A%2F%2Fplacekitten.com%2F200%2F300"
+          />
+        </a>
+        <div
+          class="sm:col-span-2"
+        >
+          <a
+            class="text-xl font-medium hover:underline hover:opacity-100 md:opacity-80"
+            href="https://www.google.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Yet Another Vincent Black Shadow
+          </a>
+          <table
+            class="mt-4 w-full table-auto"
+          >
+            <tbody>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Current price
+                </td>
+                <td>
+                  33,000円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Prompt decision price
+                </td>
+                <td>
+                  35,000円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Time remaining
+                </td>
+                <td>
+                  3 days
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Bidders
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article
+        class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-3"
+      >
+        <a
+          class="relative h-fit rounded-md bg-gray-500 sm:col-span-1"
+          href="https://www.google.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Another image of a cat"
+            class="w-full rounded-md hover:opacity-70"
+            src="/api/image-proxy?url=http%3A%2F%2Fplacekitten.com%2F200%2F300"
+          />
+        </a>
+        <div
+          class="sm:col-span-2"
+        >
+          <a
+            class="text-xl font-medium hover:underline hover:opacity-100 md:opacity-80"
+            href="https://www.google.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Another Vincent Black Shadow with a much longer title, this time
+          </a>
+          <table
+            class="mt-4 w-full table-auto"
+          >
+            <tbody>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Current price
+                </td>
+                <td>
+                  98,560円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Time remaining
+                </td>
+                <td>
+                  9 hours
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Bidders
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article
+        class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-3"
+      >
+        <a
+          class="relative h-fit rounded-md bg-gray-500 sm:col-span-1"
+          href="https://www.google.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Another image of a cat"
+            class="w-full rounded-md hover:opacity-70"
+            src="/api/image-proxy?url=http%3A%2F%2Fplacekitten.com%2F200%2F300"
+          />
+        </a>
+        <div
+          class="sm:col-span-2"
+        >
+          <a
+            class="text-xl font-medium hover:underline hover:opacity-100 md:opacity-80"
+            href="https://www.google.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            test card with no otimeRemaining
+          </a>
+          <table
+            class="mt-4 w-full table-auto"
+          >
+            <tbody>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Current price
+                </td>
+                <td>
+                  98,560円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Bidders
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`ActiveAuctionsPage should render active auctions in Japanese 1`] = `
+<div>
+  <main>
+    <div
+      class="grid gap-6 lg:grid-cols-2"
+    >
+      <article
+        class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-3"
+      >
+        <a
+          class="relative h-fit rounded-md bg-gray-500 sm:col-span-1"
+          href="https://www.google.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="An image of a cat"
+            class="w-full rounded-md hover:opacity-70"
+            src="/api/image-proxy?url=http%3A%2F%2Fplacekitten.com%2F200%2F300"
+          />
+        </a>
+        <div
+          class="sm:col-span-2"
+        >
+          <a
+            class="text-xl font-medium hover:underline hover:opacity-100 md:opacity-80"
+            href="https://www.google.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Vincent Black Shadow
+          </a>
+          <table
+            class="mt-4 w-full table-auto"
+          >
+            <tbody>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  10,000円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  15,000円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  56 分
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article
+        class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-3"
+      >
+        <a
+          class="relative h-fit rounded-md bg-gray-500 sm:col-span-1"
+          href="https://www.google.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Another image of a cat"
+            class="w-full rounded-md hover:opacity-70"
+            src="/api/image-proxy?url=http%3A%2F%2Fplacekitten.com%2F200%2F300"
+          />
+        </a>
+        <div
+          class="sm:col-span-2"
+        >
+          <a
+            class="text-xl font-medium hover:underline hover:opacity-100 md:opacity-80"
+            href="https://www.google.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Another Vincent Black Shadow
+          </a>
+          <table
+            class="mt-4 w-full table-auto"
+          >
+            <tbody>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  98,560円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  9 時間
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article
+        class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-3"
+      >
+        <a
+          class="relative h-fit rounded-md bg-gray-500 sm:col-span-1"
+          href="https://www.google.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Are you starting to see a pattern forming, yet?"
+            class="w-full rounded-md hover:opacity-70"
+            src="/api/image-proxy?url=http%3A%2F%2Fplacekitten.com%2F200%2F300"
+          />
+        </a>
+        <div
+          class="sm:col-span-2"
+        >
+          <a
+            class="text-xl font-medium hover:underline hover:opacity-100 md:opacity-80"
+            href="https://www.google.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Yet Another Vincent Black Shadow
+          </a>
+          <table
+            class="mt-4 w-full table-auto"
+          >
+            <tbody>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  33,000円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  35,000円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  3 日
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article
+        class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-3"
+      >
+        <a
+          class="relative h-fit rounded-md bg-gray-500 sm:col-span-1"
+          href="https://www.google.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Another image of a cat"
+            class="w-full rounded-md hover:opacity-70"
+            src="/api/image-proxy?url=http%3A%2F%2Fplacekitten.com%2F200%2F300"
+          />
+        </a>
+        <div
+          class="sm:col-span-2"
+        >
+          <a
+            class="text-xl font-medium hover:underline hover:opacity-100 md:opacity-80"
+            href="https://www.google.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Another Vincent Black Shadow with a much longer title, this time
+          </a>
+          <table
+            class="mt-4 w-full table-auto"
+          >
+            <tbody>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  98,560円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  9 時間
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article
+        class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-3"
+      >
+        <a
+          class="relative h-fit rounded-md bg-gray-500 sm:col-span-1"
+          href="https://www.google.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Another image of a cat"
+            class="w-full rounded-md hover:opacity-70"
+            src="/api/image-proxy?url=http%3A%2F%2Fplacekitten.com%2F200%2F300"
+          />
+        </a>
+        <div
+          class="sm:col-span-2"
+        >
+          <a
+            class="text-xl font-medium hover:underline hover:opacity-100 md:opacity-80"
+            href="https://www.google.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            test card with no otimeRemaining
+          </a>
+          <table
+            class="mt-4 w-full table-auto"
+          >
+            <tbody>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  98,560円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`ActiveAuctionsPage should render no active auctions display when activeAuctions is empty array in English 1`] = `
+<div>
+  <main>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          There are currently no active auctions
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          Click the button below to visit out Yahoo auction page. Follow the Yahoo auction account for updates when new items are listed.
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          href="https://auctions.yahoo.co.jp/seller/lazzamoto?"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              Yahoo auction page
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+`;
+
+exports[`ActiveAuctionsPage should render no active auctions display when activeAuctions is empty array in Japanese 1`] = `
+<div>
+  <main>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          href="https://auctions.yahoo.co.jp/seller/lazzamoto?"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              placeholder
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+`;
+
+exports[`ActiveAuctionsPage should render there has been a problem display when status is 500 in English 1`] = `
+<div>
+  <main>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          There has been a problem connecting you to Yahoo auctions
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          Please contact the site for support.
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          href="/contact"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              Contact
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+`;
+
+exports[`ActiveAuctionsPage should render there has been a problem display when status is 500 in Japanese 1`] = `
+<div>
+  <main>
+    <section
+      class="bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 bg-opacity-90 undefined"
+    >
+      <div
+        class="text-center "
+      >
+        <h2
+          class="text-xl font-medium opacity-80 md:text-2xl"
+        >
+          placeholder
+        </h2>
+      </div>
+      <div
+        class="space-y-4 undefined"
+      >
+        <p>
+          placeholder
+        </p>
+      </div>
+      <div
+        class="flex justify-center"
+      >
+        <a
+          href="/contact"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <button
+              class="rounded-md px-6 py-2 text-lg bg-teal-700 hover:bg-teal-500"
+              type="button"
+            >
+              placeholder
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+`;
