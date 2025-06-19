@@ -57,4 +57,18 @@ export const activeAuctions: ActiveAuction[] = [
         bidders: '3',
         currentPrice: '98,560円',
     },
+    {
+        title: 'test card with no otimeRemaining',
+        url: 'https://www.google.com/',
+        image: {
+            imageSrc: 'http://placekitten.com/200/300',
+            imageAlt: 'Another image of a cat',
+        },
+        timeRemaining: {
+            time: undefined,
+            unit: 'hours',
+        },
+        bidders: '3',
+        currentPrice: '98,560円',
+    },
 ];

@@ -15,7 +15,7 @@ const customJestConfig = {
         './languages/**',
         './modules/**',
         './pages/**',
-        './public/**',
+        // './public/**',
         './types/**',
         './utilities/**',
     ],

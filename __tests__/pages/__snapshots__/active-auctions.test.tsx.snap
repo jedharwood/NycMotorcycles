@@ -404,6 +404,64 @@ exports[`ActiveAuctionsPage should render active auctions in English 1`] = `
           </table>
         </div>
       </article>
+      <article
+        class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-3"
+      >
+        <a
+          class="relative h-fit rounded-md bg-gray-500 sm:col-span-1"
+          href="https://www.google.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Another image of a cat"
+            class="w-full rounded-md hover:opacity-70"
+            src="/api/image-proxy?url=http%3A%2F%2Fplacekitten.com%2F200%2F300"
+          />
+        </a>
+        <div
+          class="sm:col-span-2"
+        >
+          <a
+            class="text-xl font-medium hover:underline hover:opacity-100 md:opacity-80"
+            href="https://www.google.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            test card with no otimeRemaining
+          </a>
+          <table
+            class="mt-4 w-full table-auto"
+          >
+            <tbody>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Current price
+                </td>
+                <td>
+                  98,560円
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  Bidders
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
     </div>
   </main>
 </div>
@@ -701,6 +759,64 @@ exports[`ActiveAuctionsPage should render active auctions in Japanese 1`] = `
                 </td>
                 <td>
                   9 時間
+                </td>
+              </tr>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article
+        class="card-hover grid w-full gap-4 rounded-md bg-stone-600 bg-opacity-90 py-4 px-6 text-stone-50 hover:bg-opacity-100 sm:grid-cols-3"
+      >
+        <a
+          class="relative h-fit rounded-md bg-gray-500 sm:col-span-1"
+          href="https://www.google.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Another image of a cat"
+            class="w-full rounded-md hover:opacity-70"
+            src="/api/image-proxy?url=http%3A%2F%2Fplacekitten.com%2F200%2F300"
+          />
+        </a>
+        <div
+          class="sm:col-span-2"
+        >
+          <a
+            class="text-xl font-medium hover:underline hover:opacity-100 md:opacity-80"
+            href="https://www.google.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            test card with no otimeRemaining
+          </a>
+          <table
+            class="mt-4 w-full table-auto"
+          >
+            <tbody>
+              <tr
+                class="text-sm hover:underline sm:text-lg"
+              >
+                <td
+                  class="pr-4 sm:opacity-80"
+                >
+                  placeholder
+                </td>
+                <td>
+                  98,560円
                 </td>
               </tr>
               <tr

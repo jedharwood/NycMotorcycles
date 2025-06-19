@@ -14,7 +14,6 @@ afterEach(() => {
     jest.clearAllMocks();
 });
 
-// mock fetch as well as useQuery/instead of...
 describe('ActiveAuctionsPage', () => {
     it('should render spinner when data is loading', async () => {
         (useQuery as jest.Mock).mockReturnValue({
