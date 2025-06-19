@@ -42,13 +42,13 @@ describe('ActiveAuctionsPage', () => {
 
         it('in English', async () => {
             const { container } = render(<ActiveAuctionsPage />);
-    
+
             expect(container).toMatchSnapshot();
         });
-    
+
         it('in Japanese', async () => {
             const { container } = render(<ActiveAuctionsPage />, { locale: langs.ja });
-    
+
             expect(container).toMatchSnapshot();
         });
     });
@@ -66,13 +66,13 @@ describe('ActiveAuctionsPage', () => {
 
         it('in English', async () => {
             const { container } = render(<ActiveAuctionsPage />);
-    
+
             expect(container).toMatchSnapshot();
         });
-    
+
         it('in Japanese', async () => {
             const { container } = render(<ActiveAuctionsPage />, { locale: langs.ja });
-    
+
             expect(container).toMatchSnapshot();
         });
     });
@@ -84,24 +84,24 @@ describe('ActiveAuctionsPage', () => {
                 data: {
                     status: 200,
                     data: {
-                        activeAuctions: []
+                        activeAuctions: [],
                     },
                 },
             });
         });
-        
+
         it('in English', async () => {
             const { container } = render(<ActiveAuctionsPage />);
-    
+
             expect(container).toMatchSnapshot();
         });
-    
+
         it('in Japanese', async () => {
             const { container } = render(<ActiveAuctionsPage />, { locale: langs.ja });
-    
+
             expect(container).toMatchSnapshot();
         });
-    });    
+    });
 
     describe('should render active auctions', () => {
         beforeEach(() => {
@@ -110,21 +110,21 @@ describe('ActiveAuctionsPage', () => {
                 data: {
                     status: 200,
                     data: {
-                        activeAuctions
+                        activeAuctions,
                     },
                 },
             });
         });
-        
+
         it('in English', async () => {
             const { container } = render(<ActiveAuctionsPage />);
-    
+
             expect(container).toMatchSnapshot();
         });
-    
+
         it('in Japanese', async () => {
             const { container } = render(<ActiveAuctionsPage />, { locale: langs.ja });
-    
+
             expect(container).toMatchSnapshot();
         });
     });
