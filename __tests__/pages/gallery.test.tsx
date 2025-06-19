@@ -98,7 +98,20 @@ describe('GalleryPage', () => {
         })
         expect(container).toMatchSnapshot();
     });
+
+    it('should render the harley-xr750-replica gallery page', async () => {
+        (useRouter as jest.Mock).mockReturnValue({
+            isReady: true,
+            query: { bike: 'harley-xr750-replica'}
+        });
+        const { container } = render(<GalleryPage />);
+
+        await waitFor(() => {
+            const legend: HTMLElement = screen.getByText('pg.gallery.harley-xr750-replica.name');
+            expect(legend).toBeInTheDocument();
+        })
+        expect(container).toMatchSnapshot();
+    });
 });
 
-// harley-xr750-replica
 // harley-xr750
