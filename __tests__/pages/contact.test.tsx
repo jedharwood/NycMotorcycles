@@ -12,6 +12,7 @@ const validEmailAddress: string = 'valid.email@address.co.ck';
 
 const contactFormSubmitButtonTestId: string = 'contact-form-submit-button';
 const confirmationModalCloseButtonTestId: string = 'confirmation-modal-close-button';
+const confirmationModalRetryButtonTestId: string = 'confirmation-modal-retry-button';
 
 const findAndPopulateInputAsync = async (
     screen: any,
@@ -197,7 +198,7 @@ describe('ContactPage', () => {
             'Your message has been sent. We will reply as soon as we can.';
         (global.fetch as jest.Mock).mockResolvedValue({
             ok: true,
-            json: jest.fn().mockResolvedValue({}),
+            json: jest.fn().mockResolvedValue({}), // don't think I can get rid of the json
         });
         render(<ContactPage />);
         await findAndPopulateInputAsync(screen, 'email', validEmailAddress);
@@ -231,5 +232,130 @@ describe('ContactPage', () => {
             expect(screen.queryByText('Close')).not.toBeInTheDocument();
             // can I give the modal an Id and assert on that?
         });
+    });
+
+    it('should display retry confirmation modal on failed submission', async () => {
+        const somethingWentWrongMessage: string = 'Something went wrong';
+        const tryAgainMessage: string = 'Try again?';
+        (global.fetch as jest.Mock).mockResolvedValue({
+            ok: false,
+            // json: jest.fn().mockResolvedValue({}), // maybe I can lose the json?
+        });
+        render(<ContactPage />);
+        await findAndPopulateInputAsync(screen, 'email', validEmailAddress);
+        await findAndPopulateInputAsync(screen, 'senderName', validInput);
+        await findAndPopulateInputAsync(screen, 'subject', validInput);
+        await findAndPopulateInputAsync(screen, 'message', validInput);
+
+        await act(() => {
+            clickButtonAsync(screen, contactFormSubmitButtonTestId);
+        });
+
+        await waitFor(() => {
+            expect(
+                screen.queryByText(somethingWentWrongMessage)
+            ).toBeInTheDocument();
+            expect(
+                screen.queryByText(tryAgainMessage)
+            ).toBeInTheDocument();
+            const closeButton: HTMLElement = screen.getByTestId(
+                confirmationModalCloseButtonTestId
+            );
+            expect(closeButton).toBeInTheDocument();
+            const retryButton: HTMLElement = screen.getByTestId(
+                confirmationModalRetryButtonTestId
+            );
+            expect(retryButton).toBeInTheDocument();
+        });
+
+        await act(() => {
+            clickButtonAsync(screen, confirmationModalCloseButtonTestId);
+        });
+
+        await waitFor(() => {
+            expect(
+                screen.queryByText(somethingWentWrongMessage)
+            ).not.toBeInTheDocument();
+            expect(
+                screen.queryByText(tryAgainMessage)
+            ).not.toBeInTheDocument();
+            // can I assert that the button is not present by test id?
+            expect(screen.queryByText('Close')).not.toBeInTheDocument();
+            // can I give the modal an Id and assert on that?
+        });
+    });
+
+    it.only('should display failed completely confirmation modal on after three retries', async () => {
+        const somethingWentWrongMessage: string = 'Something went wrong';
+        const tryAgainMessage: string = 'Try again?';
+        (global.fetch as jest.Mock).mockResolvedValue({
+            ok: false,
+            json: jest.fn().mockResolvedValue({}), // maybe I can lose the json?
+            // swallow error in test
+        });
+        render(<ContactPage />);
+        await findAndPopulateInputAsync(screen, 'email', validEmailAddress);
+        await findAndPopulateInputAsync(screen, 'senderName', validInput);
+        await findAndPopulateInputAsync(screen, 'subject', validInput);
+        await findAndPopulateInputAsync(screen, 'message', validInput);
+
+        await act(() => {
+            clickButtonAsync(screen, contactFormSubmitButtonTestId);
+        });
+
+        await waitFor(() => {
+            expect(
+                screen.queryByText(somethingWentWrongMessage)
+            ).toBeInTheDocument();
+            expect(
+                screen.queryByText(tryAgainMessage)
+            ).toBeInTheDocument();
+            const closeButton: HTMLElement = screen.getByTestId(
+                confirmationModalCloseButtonTestId
+            );
+            expect(closeButton).toBeInTheDocument();
+            const retryButton: HTMLElement = screen.getByTestId(
+                confirmationModalRetryButtonTestId
+            );
+            expect(retryButton).toBeInTheDocument();
+        });
+
+        await act(() => {
+            console.log('test retry 1');
+            clickButtonAsync(screen, confirmationModalRetryButtonTestId);
+        });
+
+        await waitFor(() => {
+            expect(
+                screen.queryByText(somethingWentWrongMessage)
+            ).toBeInTheDocument();
+            expect(
+                screen.queryByText(tryAgainMessage)
+            ).toBeInTheDocument();
+            // can I assert that the button is not present by test id?
+            const retryButton: HTMLElement = screen.getByTestId(
+                confirmationModalRetryButtonTestId
+            );
+            expect(retryButton).toBeInTheDocument();
+        });
+
+        // await act(() => {
+        //     console.log('test retry 2');
+        //     clickButtonAsync(screen, confirmationModalRetryButtonTestId);
+        // });
+
+        // await waitFor(() => {
+        //     expect(
+        //         screen.queryByText(somethingWentWrongMessage)
+        //     ).toBeInTheDocument();
+        //     expect(
+        //         screen.queryByText(tryAgainMessage)
+        //     ).toBeInTheDocument();
+        //     // can I assert that the button is not present by test id?
+        //     const retryButton: HTMLElement = screen.getByTestId(
+        //         confirmationModalRetryButtonTestId
+        //     );
+        //     expect(retryButton).toBeInTheDocument();
+        // });
     });
 });

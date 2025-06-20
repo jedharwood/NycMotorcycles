@@ -70,6 +70,7 @@ const ContactPage: FC = (): JSX.Element => {
     };
 
     const onRetryButtonClick = (): void => {
+        console.log('retry click', { retries })
         handleSubmit(onSubmit)();
         setRetries(retries + 1);
     };
