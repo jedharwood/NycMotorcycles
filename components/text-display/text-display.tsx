@@ -9,6 +9,7 @@ const TextDisplay = ({
     borderColour,
     subTitle,
     footer,
+    id,
 }: TextDisplayProps): JSX.Element => {
     const titleStyle: string = 'text-xl font-medium opacity-80 md:text-2xl';
 
@@ -62,7 +63,7 @@ const TextDisplay = ({
     const bgClasses: string = `bg-stone-600 w-full py-4 px-6 rounded-md text-stone-50 shadow-lg space-y-4 ${!isOpaque && 'bg-opacity-90'} ${hasBorder && borderClasses}`;
 
     return (
-        <section className={bgClasses}>
+        <section className={bgClasses} data-testid={id}>
             {renderTitle()}
             {renderChildElement('under-title')}
             {mapTextContent()}

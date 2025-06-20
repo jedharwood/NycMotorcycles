@@ -20,7 +20,7 @@ Check styling on larger screen
 Get real download docs from Larry
 Sticky footer
 Should link buttons be buttons?
-Investigate and swallow console error in contact.test.tsx
+Handle submission errors on ContactPage 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

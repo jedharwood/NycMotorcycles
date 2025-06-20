@@ -49,7 +49,7 @@ describe('GalleryPage', () => {
         { bikeName: 'ducati-250' },
         { bikeName: 'honda-dream' },
         { bikeName: 'harley-xr750-replica' },
-        { bikeName: 'harley-xr750' }
+        { bikeName: 'harley-xr750' },
     ])('when router is ready', ({ bikeName }) => {
         it(`should render the ${bikeName} gallery page`, async () => {
             (useRouter as jest.Mock).mockReturnValue({
@@ -59,7 +59,9 @@ describe('GalleryPage', () => {
             const { container } = render(<GalleryPage />);
 
             await waitFor(() => {
-                const legend: HTMLElement = screen.getByText(`pg.gallery.${bikeName}.name`);
+                const legend: HTMLElement = screen.getByText(
+                    `pg.gallery.${bikeName}.name`
+                );
                 expect(legend).toBeInTheDocument();
             });
             expect(container).toMatchSnapshot();
