@@ -131,6 +131,7 @@ const ConfirmationModal = ({
                 isOpaque={true}
                 hasBorder={true}
                 borderColour={isSuccess || isLoading ? 'green' : 'red'}
+                id='confirmation-modal'
             />
         </ModalWrapper>
     );

@@ -70,4 +70,5 @@ type TextDisplayProps = {
     borderColour?: ComponentColour;
     subTitle?: string;
     footer?: string;
+    id?: string;
 };

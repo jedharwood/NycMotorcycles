@@ -10,9 +10,16 @@ const validInput: string = 'valid input';
 const invalidEmailAddress: string = 'invalid email address';
 const validEmailAddress: string = 'valid.email@address.co.ck';
 
-const contactFormSubmitButtonTestId: string = 'contact-form-submit-button';
-const confirmationModalCloseButtonTestId: string = 'confirmation-modal-close-button';
-const confirmationModalRetryButtonTestId: string = 'confirmation-modal-retry-button';
+const completeFormAndSubmit = async (screen: any): Promise<void> => {
+    await findAndPopulateInputAsync(screen, 'email', validEmailAddress);
+    await findAndPopulateInputAsync(screen, 'senderName', validInput);
+    await findAndPopulateInputAsync(screen, 'subject', validInput);
+    await findAndPopulateInputAsync(screen, 'message', validInput);
+
+    await act(() => {
+        clickButtonAsync('submit', screen);
+    });
+}; 
 
 const findAndPopulateInputAsync = async (
     screen: any,
@@ -23,9 +30,48 @@ const findAndPopulateInputAsync = async (
     await userEvent.type(input, value);
 };
 
-const clickButtonAsync = async (screen: any, testId: string): Promise<void> => {
+const clickButtonAsync = async (
+    buttonType: 'submit' | 'close' | 'retry',
+    screen: any
+): Promise<void> => {
+    let testId: string;
+    switch (buttonType) {
+        case 'submit':
+            testId = 'contact-form-submit-button';
+            break;
+        case 'close':
+            testId = 'confirmation-modal-close-button';
+            break;
+        case 'retry':
+            testId = 'confirmation-modal-retry-button';
+            break;
+    }
+
     const button: HTMLElement = screen.getByTestId(testId);
     await userEvent.click(button);
+};
+
+const checkDocumentContainsConfirmationModal = (
+    messageType: 'success' | 'went-wrong' | 'completely-failed',
+    screen: any
+): void => {
+    const confirmationModal: HTMLElement = screen.getByTestId('confirmation-modal');
+    expect(confirmationModal).toBeInTheDocument();
+
+    let message: string;
+    switch (messageType) {
+        case 'success':
+            message = 'Your message has been sent. We will reply as soon as we can.';
+            break;
+        case 'went-wrong':
+            message = 'Something went wrong';
+            break;
+        case 'completely-failed':
+            message = "Sorry, we're unable to send your email at this time";
+            break;
+    }
+
+    expect(screen.queryByText(message)).toBeInTheDocument();
 };
 
 describe('ContactPage', () => {
@@ -57,7 +103,7 @@ describe('ContactPage', () => {
         await findAndPopulateInputAsync(screen, 'message', validInput);
 
         await act(() => {
-            clickButtonAsync(screen, contactFormSubmitButtonTestId);
+            clickButtonAsync('submit', screen);
         });
 
         await waitFor(() => {
@@ -76,7 +122,7 @@ describe('ContactPage', () => {
         await findAndPopulateInputAsync(screen, 'message', validInput);
 
         await act(() => {
-            clickButtonAsync(screen, contactFormSubmitButtonTestId);
+            clickButtonAsync('submit', screen);
         });
 
         await waitFor(() => {
@@ -95,7 +141,7 @@ describe('ContactPage', () => {
         await findAndPopulateInputAsync(screen, 'message', validInput);
 
         await act(() => {
-            clickButtonAsync(screen, contactFormSubmitButtonTestId);
+            clickButtonAsync('submit', screen);
         });
 
         await waitFor(() => {
@@ -114,7 +160,7 @@ describe('ContactPage', () => {
         await findAndPopulateInputAsync(screen, 'message', validInput);
 
         await act(() => {
-            clickButtonAsync(screen, contactFormSubmitButtonTestId);
+            clickButtonAsync('submit', screen);
         });
 
         await waitFor(() => {
@@ -133,7 +179,7 @@ describe('ContactPage', () => {
         await findAndPopulateInputAsync(screen, 'subject', validInput);
 
         await act(() => {
-            clickButtonAsync(screen, contactFormSubmitButtonTestId);
+            clickButtonAsync('submit', screen);
         });
 
         await waitFor(() => {
@@ -149,7 +195,7 @@ describe('ContactPage', () => {
         render(<ContactPage />);
 
         await act(() => {
-            clickButtonAsync(screen, contactFormSubmitButtonTestId);
+            clickButtonAsync('submit', screen);
         });
 
         await waitFor(() => {
@@ -163,14 +209,8 @@ describe('ContactPage', () => {
 
     it('validator should display no validation messages if all inputs valid and submit on click', async () => {
         render(<ContactPage />);
-        await findAndPopulateInputAsync(screen, 'email', validEmailAddress);
-        await findAndPopulateInputAsync(screen, 'senderName', validInput);
-        await findAndPopulateInputAsync(screen, 'subject', validInput);
-        await findAndPopulateInputAsync(screen, 'message', validInput);
-
-        await act(() => {
-            clickButtonAsync(screen, contactFormSubmitButtonTestId);
-        });
+        
+        await completeFormAndSubmit(screen);
 
         await waitFor(() => {
             expect(screen.queryByText(emailValidationMessage)).not.toBeInTheDocument();
@@ -194,168 +234,85 @@ describe('ContactPage', () => {
     });
 
     it('should display success confirmation modal on successful submission', async () => {
-        const confirmationModalSuccessMessage: string =
-            'Your message has been sent. We will reply as soon as we can.';
         (global.fetch as jest.Mock).mockResolvedValue({
             ok: true,
             json: jest.fn().mockResolvedValue({}), // don't think I can get rid of the json
         });
         render(<ContactPage />);
-        await findAndPopulateInputAsync(screen, 'email', validEmailAddress);
-        await findAndPopulateInputAsync(screen, 'senderName', validInput);
-        await findAndPopulateInputAsync(screen, 'subject', validInput);
-        await findAndPopulateInputAsync(screen, 'message', validInput);
-
-        await act(() => {
-            clickButtonAsync(screen, contactFormSubmitButtonTestId);
-        });
+        
+        await completeFormAndSubmit(screen);
 
         await waitFor(() => {
-            expect(
-                screen.queryByText(confirmationModalSuccessMessage)
-            ).toBeInTheDocument();
-            const closeButton: HTMLElement = screen.getByTestId(
-                'confirmation-modal-close-button'
-            );
-            expect(closeButton).toBeInTheDocument();
+            checkDocumentContainsConfirmationModal('success', screen);
         });
 
         await act(() => {
-            clickButtonAsync(screen, confirmationModalCloseButtonTestId);
+            clickButtonAsync('close', screen);
         });
 
         await waitFor(() => {
-            expect(
-                screen.queryByText(confirmationModalSuccessMessage)
-            ).not.toBeInTheDocument();
-            // can I assert that the button is not present by test id?
+            // assert modal not in document
             expect(screen.queryByText('Close')).not.toBeInTheDocument();
-            // can I give the modal an Id and assert on that?
         });
     });
 
     it('should display retry confirmation modal on failed submission', async () => {
-        const somethingWentWrongMessage: string = 'Something went wrong';
-        const tryAgainMessage: string = 'Try again?';
         (global.fetch as jest.Mock).mockResolvedValue({
             ok: false,
             // json: jest.fn().mockResolvedValue({}), // maybe I can lose the json?
         });
         render(<ContactPage />);
-        await findAndPopulateInputAsync(screen, 'email', validEmailAddress);
-        await findAndPopulateInputAsync(screen, 'senderName', validInput);
-        await findAndPopulateInputAsync(screen, 'subject', validInput);
-        await findAndPopulateInputAsync(screen, 'message', validInput);
-
-        await act(() => {
-            clickButtonAsync(screen, contactFormSubmitButtonTestId);
-        });
+        
+        await completeFormAndSubmit(screen);
 
         await waitFor(() => {
-            expect(
-                screen.queryByText(somethingWentWrongMessage)
-            ).toBeInTheDocument();
-            expect(
-                screen.queryByText(tryAgainMessage)
-            ).toBeInTheDocument();
-            const closeButton: HTMLElement = screen.getByTestId(
-                confirmationModalCloseButtonTestId
-            );
-            expect(closeButton).toBeInTheDocument();
-            const retryButton: HTMLElement = screen.getByTestId(
-                confirmationModalRetryButtonTestId
-            );
-            expect(retryButton).toBeInTheDocument();
+            checkDocumentContainsConfirmationModal('went-wrong', screen);
         });
 
         await act(() => {
-            clickButtonAsync(screen, confirmationModalCloseButtonTestId);
+            clickButtonAsync('close', screen);
         });
 
         await waitFor(() => {
-            expect(
-                screen.queryByText(somethingWentWrongMessage)
-            ).not.toBeInTheDocument();
-            expect(
-                screen.queryByText(tryAgainMessage)
-            ).not.toBeInTheDocument();
-            // can I assert that the button is not present by test id?
+            // assert modal not in document
             expect(screen.queryByText('Close')).not.toBeInTheDocument();
-            // can I give the modal an Id and assert on that?
         });
     });
 
-    it.only('should display failed completely confirmation modal on after three retries', async () => {
-        const somethingWentWrongMessage: string = 'Something went wrong';
-        const tryAgainMessage: string = 'Try again?';
+    it('should display failed completely confirmation modal on after two retries', async () => {
         (global.fetch as jest.Mock).mockResolvedValue({
             ok: false,
             json: jest.fn().mockResolvedValue({}), // maybe I can lose the json?
             // swallow error in test
         });
         render(<ContactPage />);
-        await findAndPopulateInputAsync(screen, 'email', validEmailAddress);
-        await findAndPopulateInputAsync(screen, 'senderName', validInput);
-        await findAndPopulateInputAsync(screen, 'subject', validInput);
-        await findAndPopulateInputAsync(screen, 'message', validInput);
-
-        await act(() => {
-            clickButtonAsync(screen, contactFormSubmitButtonTestId);
-        });
+        
+        await completeFormAndSubmit(screen);
 
         await waitFor(() => {
-            expect(
-                screen.queryByText(somethingWentWrongMessage)
-            ).toBeInTheDocument();
-            expect(
-                screen.queryByText(tryAgainMessage)
-            ).toBeInTheDocument();
-            const closeButton: HTMLElement = screen.getByTestId(
-                confirmationModalCloseButtonTestId
-            );
-            expect(closeButton).toBeInTheDocument();
-            const retryButton: HTMLElement = screen.getByTestId(
-                confirmationModalRetryButtonTestId
-            );
-            expect(retryButton).toBeInTheDocument();
+            checkDocumentContainsConfirmationModal('went-wrong', screen);
         });
 
         await act(() => {
-            console.log('test retry 1');
-            clickButtonAsync(screen, confirmationModalRetryButtonTestId);
+            clickButtonAsync('retry', screen);
         });
 
         await waitFor(() => {
-            expect(
-                screen.queryByText(somethingWentWrongMessage)
-            ).toBeInTheDocument();
-            expect(
-                screen.queryByText(tryAgainMessage)
-            ).toBeInTheDocument();
-            // can I assert that the button is not present by test id?
-            const retryButton: HTMLElement = screen.getByTestId(
-                confirmationModalRetryButtonTestId
-            );
-            expect(retryButton).toBeInTheDocument();
+            checkDocumentContainsConfirmationModal('went-wrong', screen);
         });
 
-        // await act(() => {
-        //     console.log('test retry 2');
-        //     clickButtonAsync(screen, confirmationModalRetryButtonTestId);
-        // });
+        await act(() => {
+            clickButtonAsync('retry', screen);
+        });
 
-        // await waitFor(() => {
-        //     expect(
-        //         screen.queryByText(somethingWentWrongMessage)
-        //     ).toBeInTheDocument();
-        //     expect(
-        //         screen.queryByText(tryAgainMessage)
-        //     ).toBeInTheDocument();
-        //     // can I assert that the button is not present by test id?
-        //     const retryButton: HTMLElement = screen.getByTestId(
-        //         confirmationModalRetryButtonTestId
-        //     );
-        //     expect(retryButton).toBeInTheDocument();
-        // });
+        await waitFor(() => {
+            checkDocumentContainsConfirmationModal('completely-failed', screen);
+        });
+
+        await act(() => {
+            clickButtonAsync('close', screen);
+        });
+        // click close
+        // confirm modal noo longer present
     });
 });
