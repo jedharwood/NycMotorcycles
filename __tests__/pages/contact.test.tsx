@@ -10,6 +10,8 @@ const validInput: string = 'valid input';
 const invalidEmailAddress: string = 'invalid email address';
 const validEmailAddress: string = 'valid.email@address.co.ck';
 
+const confirmationModalTestId: string = 'confirmation-modal';
+
 const completeFormAndSubmit = async (screen: any): Promise<void> => {
     await findAndPopulateInputAsync(screen, 'email', validEmailAddress);
     await findAndPopulateInputAsync(screen, 'senderName', validInput);
@@ -55,7 +57,7 @@ const checkDocumentContainsConfirmationModal = (
     messageType: 'success' | 'went-wrong' | 'completely-failed',
     screen: any
 ): void => {
-    const confirmationModal: HTMLElement = screen.getByTestId('confirmation-modal');
+    const confirmationModal: HTMLElement = screen.getByTestId(confirmationModalTestId);
     expect(confirmationModal).toBeInTheDocument();
 
     let message: string;
@@ -72,6 +74,30 @@ const checkDocumentContainsConfirmationModal = (
     }
 
     expect(screen.queryByText(message)).toBeInTheDocument();
+};
+
+const checkDocumentDoesNotContainConfirmationModal = (screen: any): void => {
+    expect(screen.queryByTestId(confirmationModalTestId)).not.toBeInTheDocument();
+};
+
+const closeConfirmationModalAsync = async (screen: any) => {
+    await act(() => {
+        clickButtonAsync('close', screen);
+    });
+
+    await waitFor(() => {
+        checkDocumentDoesNotContainConfirmationModal(screen);
+    });
+};
+
+const failSubmissionAndClickRetryAsync = async (screen: any) => {
+    await waitFor(() => {
+        checkDocumentContainsConfirmationModal('went-wrong', screen);
+    });
+
+    await act(() => {
+        clickButtonAsync('retry', screen);
+    });
 };
 
 describe('ContactPage', () => {
@@ -236,7 +262,7 @@ describe('ContactPage', () => {
     it('should display success confirmation modal on successful submission', async () => {
         (global.fetch as jest.Mock).mockResolvedValue({
             ok: true,
-            json: jest.fn().mockResolvedValue({}), // don't think I can get rid of the json
+            json: jest.fn().mockResolvedValue({}),
         });
         render(<ContactPage />);
         
@@ -246,20 +272,12 @@ describe('ContactPage', () => {
             checkDocumentContainsConfirmationModal('success', screen);
         });
 
-        await act(() => {
-            clickButtonAsync('close', screen);
-        });
-
-        await waitFor(() => {
-            // assert modal not in document
-            expect(screen.queryByText('Close')).not.toBeInTheDocument();
-        });
+        await closeConfirmationModalAsync(screen);
     });
 
     it('should display retry confirmation modal on failed submission', async () => {
         (global.fetch as jest.Mock).mockResolvedValue({
             ok: false,
-            // json: jest.fn().mockResolvedValue({}), // maybe I can lose the json?
         });
         render(<ContactPage />);
         
@@ -269,50 +287,25 @@ describe('ContactPage', () => {
             checkDocumentContainsConfirmationModal('went-wrong', screen);
         });
 
-        await act(() => {
-            clickButtonAsync('close', screen);
-        });
-
-        await waitFor(() => {
-            // assert modal not in document
-            expect(screen.queryByText('Close')).not.toBeInTheDocument();
-        });
+        await closeConfirmationModalAsync(screen);
     });
 
     it('should display failed completely confirmation modal on after two retries', async () => {
         (global.fetch as jest.Mock).mockResolvedValue({
             ok: false,
-            json: jest.fn().mockResolvedValue({}), // maybe I can lose the json?
-            // swallow error in test
         });
         render(<ContactPage />);
         
         await completeFormAndSubmit(screen);
 
-        await waitFor(() => {
-            checkDocumentContainsConfirmationModal('went-wrong', screen);
-        });
+        await failSubmissionAndClickRetryAsync(screen);
 
-        await act(() => {
-            clickButtonAsync('retry', screen);
-        });
-
-        await waitFor(() => {
-            checkDocumentContainsConfirmationModal('went-wrong', screen);
-        });
-
-        await act(() => {
-            clickButtonAsync('retry', screen);
-        });
+        await failSubmissionAndClickRetryAsync(screen);
 
         await waitFor(() => {
             checkDocumentContainsConfirmationModal('completely-failed', screen);
         });
 
-        await act(() => {
-            clickButtonAsync('close', screen);
-        });
-        // click close
-        // confirm modal noo longer present
+        await closeConfirmationModalAsync(screen);
     });
 });
