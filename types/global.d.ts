@@ -72,3 +72,12 @@ type TextDisplayProps = {
     footer?: string;
     id?: string;
 };
+
+type ConfirmationModalProps = {
+    isVisible: boolean;
+    closeButtonClick: () => void;
+    isLoading: boolean;
+    isSuccess: boolean;
+    retryButtonClick: () => void;
+    failedCompletely: boolean;
+};

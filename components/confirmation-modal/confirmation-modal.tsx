@@ -8,15 +8,6 @@ import ModalWrapper from '../modal-wrapper/modal-wrapper';
 import Spinner from '../spinner/spinner';
 import TextDisplay from '../text-display/text-display';
 
-type InfoModalProps = {
-    isVisible: boolean;
-    closeButtonClick: () => void;
-    isLoading: boolean;
-    isSuccess: boolean;
-    retryButtonClick: () => void;
-    failedCompletely: boolean;
-};
-
 const ConfirmationModal = ({
     isVisible,
     closeButtonClick,
@@ -24,7 +15,7 @@ const ConfirmationModal = ({
     isSuccess,
     retryButtonClick,
     failedCompletely,
-}: InfoModalProps): JSX.Element | null => {
+}: ConfirmationModalProps): JSX.Element | null => {
     const intl = useIntl();
     if (!isVisible) return null;
 
