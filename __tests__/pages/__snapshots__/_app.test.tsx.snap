@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders Layout in English and matches snapshot 1`] = `
+exports[`App when locale: en should render Layout in English and matches snapshot 1`] = `
 <div>
   <div
     class="w-full bg-hero bg-cover bg-fixed bg-center bg-no-repeat md:px-6"
@@ -16,7 +16,9 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
         <div
           class="mr-6 flex justify-end sm:mr-0"
         >
-          <button>
+          <button
+            data-testid="language-switcher"
+          >
             <svg
               class="rounded-sm h-6 w-9 shadow-lg card-hover"
               viewBox="0 0 513 342"
@@ -359,7 +361,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
 </div>
 `;
 
-exports[`App renders Layout in Japanese and matches snapshot 1`] = `
+exports[`App when locale: ja renders Layout in Japanese and matches snapshot 1`] = `
 <div>
   <div
     class="w-full bg-hero bg-cover bg-fixed bg-center bg-no-repeat md:px-6"
@@ -375,7 +377,9 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
         <div
           class="mr-6 flex justify-end sm:mr-0"
         >
-          <button>
+          <button
+            data-testid="language-switcher"
+          >
             <svg
               class="rounded-sm h-6 w-9 shadow-lg card-hover"
               viewBox="0 0 513 342"

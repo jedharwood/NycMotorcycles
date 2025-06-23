@@ -2,12 +2,13 @@ import userEvent from '@testing-library/user-event';
 import { AppProps } from 'next/app';
 import mockRouter from 'next-router-mock';
 
-import { render, act, screen, waitFor } from '@/test-utils';
+import { render, act, screen, waitFor, within } from '@/test-utils';
 import { langs } from '@/types/languages';
 
 import App from '../../pages/_app';
 
 jest.mock('next/router', () => jest.requireActual('next-router-mock'));
+const mockPush = jest.spyOn(mockRouter, 'push');
 
 const renderApp = (Component: React.ComponentType, pageProps: any = {}) => {
     const props: AppProps = {
@@ -21,16 +22,17 @@ const renderApp = (Component: React.ComponentType, pageProps: any = {}) => {
 
 const activeNavLinkClasses: string = 'underline opacity-100';
 const navLinkRacingDesktopTestId: string = 'nav-link-racing-desktop';
+const languageSwitcherTestId: string = 'language-switcher';
 
-const checkHomePageNavLinkIsActive = async (): Promise<void> => {
+const checkHomePageNavLinkIsActiveAsync = async (): Promise<void> => {
     await waitFor(() => {
         const homeNavLink: HTMLElement = screen.getByTestId('nav-link-home-desktop');
         expect(homeNavLink).toHaveClass(activeNavLinkClasses);
     });
-    await checkRacingPageNavLinkIsActive(false);
+    await checkRacingPageNavLinkIsActiveAsync(false);
 };
 
-const checkRacingPageNavLinkIsActive = async (
+const checkRacingPageNavLinkIsActiveAsync = async (
     shouldBeActive: boolean = true
 ): Promise<void> => {
     await waitFor(() => {
@@ -41,14 +43,23 @@ const checkRacingPageNavLinkIsActive = async (
     });
 };
 
-const navigateToRacingPage = async () => {
+const navigateToRacingPageAsync = async () => {
     await act(() => {
         const racingNavLink: HTMLElement = screen.getByTestId(
             navLinkRacingDesktopTestId
         );
         userEvent.click(racingNavLink);
     });
-    await checkRacingPageNavLinkIsActive();
+    await checkRacingPageNavLinkIsActiveAsync();
+};
+
+const checkLanguageSwitcherRendersWithExpectedTitleAsync = async (expectedTitle: string) => {
+    await waitFor(() => {
+        const languageSwitcher = screen.getByTestId(languageSwitcherTestId);
+        const languageSwitcherFlagTitle = within(languageSwitcher).getByTitle(expectedTitle);
+
+        expect(languageSwitcherFlagTitle).toBeInTheDocument();
+    });
 };
 
 describe('App', () => {
@@ -58,23 +69,80 @@ describe('App', () => {
     });
 
     afterEach(() => {
+        mockPush.mockClear();
         jest.clearAllMocks();
     });
 
     const TestPage = (): JSX.Element => <div>Test Page</div>;
 
-    it('renders Layout in English and matches snapshot', () => {
-        const { container } = renderApp(TestPage);
+    describe('when locale: en', () => {
+        it('should render Layout in English and matches snapshot', () => {
+            const { container } = renderApp(TestPage);
+    
+            expect(container).toMatchSnapshot();
+        });
+    
+        it('should render language switcher with title 日本語', async () => {
+            renderApp(TestPage);
 
-        expect(container).toMatchSnapshot();
+            await checkLanguageSwitcherRendersWithExpectedTitleAsync('日本語');
+        });
+
+        it('should switch locale to ja when language switcher clicked', async () => {
+            renderApp(TestPage);
+            await checkLanguageSwitcherRendersWithExpectedTitleAsync('日本語');
+
+            await act(() => {
+                const languageSwitcher = screen.getByTestId(languageSwitcherTestId);
+                userEvent.click(languageSwitcher);
+            });
+
+            await waitFor(() => {
+                expect(mockPush).toHaveBeenCalledWith(
+                    { pathname: '/', query: {} },
+                    '/',
+                    { locale: langs.ja }
+                );
+            });
+        });
     });
 
-    it('renders Layout in Japanese and matches snapshot', () => {
-        mockRouter.locale = langs.ja;
-        const { container } = renderApp(TestPage);
+    describe('when locale: ja', () => {
+        beforeEach(() => {
+            mockRouter.locale = langs.ja;
+        });
 
-        expect(container).toMatchSnapshot();
+        it('renders Layout in Japanese and matches snapshot', () => {
+            const { container } = renderApp(TestPage);
+    
+            expect(container).toMatchSnapshot();
+        });
+
+        it('renders language switcher with title English', async () => {
+            renderApp(TestPage);
+
+            await checkLanguageSwitcherRendersWithExpectedTitleAsync('English');
+        });
+
+        it('should switch locale to en when language switcher clicked', async () => {
+            renderApp(TestPage);
+            await checkLanguageSwitcherRendersWithExpectedTitleAsync('English');
+
+            await act(() => {
+                const languageSwitcher = screen.getByTestId(languageSwitcherTestId);
+                userEvent.click(languageSwitcher);
+            });
+
+            await waitFor(() => {
+                expect(mockPush).toHaveBeenCalledWith(
+                    { pathname: '/', query: {} },
+                    '/',
+                    { locale: langs.en }
+                );
+            });
+        });
     });
+    
 
     describe('Header component', () => {
         it('should set active style on clicked nav link', async () => {
@@ -87,12 +155,12 @@ describe('App', () => {
                 userEvent.click(racingNavLink);
             });
 
-            await checkRacingPageNavLinkIsActive();
+            await checkRacingPageNavLinkIsActiveAsync();
         });
 
         it('should set active style on home link when logo image is clicked', async () => {
             renderApp(TestPage);
-            await navigateToRacingPage();
+            await navigateToRacingPageAsync();
 
             await act(() => {
                 const nycmcLogo: HTMLElement = screen.getByAltText(
@@ -101,12 +169,12 @@ describe('App', () => {
                 userEvent.click(nycmcLogo);
             });
 
-            await checkHomePageNavLinkIsActive();
+            await checkHomePageNavLinkIsActiveAsync();
         });
 
         it('should set active style on home link when header h1 page name is clicked', async () => {
             renderApp(TestPage);
-            await navigateToRacingPage();
+            await navigateToRacingPageAsync();
 
             await act(() => {
                 const homepageLinks = screen.getAllByRole('link', {
@@ -116,9 +184,7 @@ describe('App', () => {
                 userEvent.click(textLink!);
             });
 
-            await checkHomePageNavLinkIsActive();
+            await checkHomePageNavLinkIsActiveAsync();
         });
-
-        // can maybe click test the flag lang switcher...
     });
 });
