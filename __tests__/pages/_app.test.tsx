@@ -27,7 +27,6 @@ const checkHomePageNavLinkIsActive = async (): Promise<void> => {
         const homeNavLink: HTMLElement = screen.getByTestId('nav-link-home-desktop');
         expect(homeNavLink).toHaveClass(activeNavLinkClasses);
     });
-
     await checkRacingPageNavLinkIsActive(false);
 };
 
@@ -40,6 +39,16 @@ const checkRacingPageNavLinkIsActive = async (
             ? expect(racingNavLink).toHaveClass(activeNavLinkClasses)
             : expect(racingNavLink).not.toHaveClass(activeNavLinkClasses);
     });
+};
+
+const navigateToRacingPage = async () => {
+    await act(() => {
+        const racingNavLink: HTMLElement = screen.getByTestId(
+            navLinkRacingDesktopTestId
+        );
+        userEvent.click(racingNavLink);
+    });
+    await checkRacingPageNavLinkIsActive();
 };
 
 describe('App', () => {
@@ -82,10 +91,8 @@ describe('App', () => {
         });
 
         it('should set active style on home link when logo image is clicked', async () => {
-            mockRouter.setCurrentUrl('/racing');
             renderApp(TestPage);
-
-            await checkRacingPageNavLinkIsActive();
+            await navigateToRacingPage();
 
             await act(() => {
                 const nycmcLogo: HTMLElement = screen.getByAltText(
@@ -98,10 +105,8 @@ describe('App', () => {
         });
 
         it('should set active style on home link when header h1 page name is clicked', async () => {
-            mockRouter.setCurrentUrl('/racing');
             renderApp(TestPage);
-
-            await checkRacingPageNavLinkIsActive();
+            await navigateToRacingPage();
 
             await act(() => {
                 const homepageLinks = screen.getAllByRole('link', {
@@ -115,6 +120,5 @@ describe('App', () => {
         });
 
         // can maybe click test the flag lang switcher...
-        // test click mibile menu
     });
 });
