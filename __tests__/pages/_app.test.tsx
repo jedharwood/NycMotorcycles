@@ -62,6 +62,13 @@ const checkLanguageSwitcherRendersWithExpectedTitleAsync = async (expectedTitle:
     });
 };
 
+const clickLanguageSwitcherAsync = async () => {
+    await act(() => {
+        const languageSwitcher = screen.getByTestId(languageSwitcherTestId);
+        userEvent.click(languageSwitcher);
+    });
+};
+
 describe('App', () => {
     beforeEach(() => {
         mockRouter.setCurrentUrl('/');
@@ -92,10 +99,7 @@ describe('App', () => {
             renderApp(TestPage);
             await checkLanguageSwitcherRendersWithExpectedTitleAsync('日本語');
 
-            await act(() => {
-                const languageSwitcher = screen.getByTestId(languageSwitcherTestId);
-                userEvent.click(languageSwitcher);
-            });
+            await clickLanguageSwitcherAsync();
 
             await waitFor(() => {
                 expect(mockPush).toHaveBeenCalledWith(
@@ -108,8 +112,10 @@ describe('App', () => {
     });
 
     describe('when locale: ja', () => {
-        beforeEach(() => {
-            mockRouter.locale = langs.ja;
+        beforeEach(async () => {
+            await act(() => {
+                mockRouter.locale = langs.ja;
+            });
         });
 
         it('renders Layout in Japanese and matches snapshot', () => {
@@ -128,10 +134,7 @@ describe('App', () => {
             renderApp(TestPage);
             await checkLanguageSwitcherRendersWithExpectedTitleAsync('English');
 
-            await act(() => {
-                const languageSwitcher = screen.getByTestId(languageSwitcherTestId);
-                userEvent.click(languageSwitcher);
-            });
+            await clickLanguageSwitcherAsync();
 
             await waitFor(() => {
                 expect(mockPush).toHaveBeenCalledWith(
