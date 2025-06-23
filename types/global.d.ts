@@ -81,3 +81,5 @@ type ConfirmationModalProps = {
     retryButtonClick: () => void;
     failedCompletely: boolean;
 };
+
+type DeviceType = 'desktop' | 'mobile';

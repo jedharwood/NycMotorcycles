@@ -11,9 +11,9 @@ describe('ConfirmationModal', () => {
             isLoading: true,
             isSuccess: false,
             retryButtonClick: () => {},
-            failedCompletely: false
+            failedCompletely: false,
         };
-        const { container } =render(<ConfirmationModal { ...confirmationModalProps } />);
+        const { container } = render(<ConfirmationModal {...confirmationModalProps} />);
 
         expect(container).toMatchSnapshot();
     });

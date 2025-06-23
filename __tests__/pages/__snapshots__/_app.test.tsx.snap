@@ -23,23 +23,17 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>
-                English
+                日本語
               </title>
               <path
-                d="M0 0h513v342H0z"
+                d="M0 0h512v342H0z"
                 fill="#FFF"
               />
-              <path
-                d="M0 0h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513v26.3H0zm0 52.7h513v26.3H0zm0 52.6h513v26.3H0zm0 52.6h513V342H0z"
+              <circle
+                cx="256.5"
+                cy="171"
                 fill="#D80027"
-              />
-              <path
-                d="M0 0h256.5v184.1H0z"
-                fill="#2E52B2"
-              />
-              <path
-                d="m47.8 138.9-4-12.8-4.4 12.8H26.2l10.7 7.7-4 12.8 10.9-7.9 10.6 7.9-4.1-12.8 10.9-7.7zm56.3 0-4.1-12.8-4.2 12.8H82.6l10.7 7.7-4 12.8 10.7-7.9 10.8 7.9-4-12.8 10.7-7.7zm56.5 0-4.3-12.8-4 12.8h-13.5l11 7.7-4.2 12.8 10.7-7.9 11 7.9-4.2-12.8 10.7-7.7zm56.2 0-4-12.8-4.2 12.8h-13.3l10.8 7.7-4 12.8 10.7-7.9 10.8 7.9-4.3-12.8 11-7.7zM100 75.3l-4.2 12.8H82.6L93.3 96l-4 12.6 10.7-7.8 10.8 7.8-4-12.6 10.7-7.9h-13.4zm-56.2 0-4.4 12.8H26.2L36.9 96l-4 12.6 10.9-7.8 10.6 7.8L50.3 96l10.9-7.9H47.8zm112.5 0-4 12.8h-13.5l11 7.9-4.2 12.6 10.7-7.8 11 7.8-4.2-12.6 10.7-7.9h-13.2zm56.5 0-4.2 12.8h-13.3l10.8 7.9-4 12.6 10.7-7.8 10.8 7.8-4.3-12.6 11-7.9h-13.5zm-169-50.6-4.4 12.6H26.2l10.7 7.9-4 12.7L43.8 50l10.6 7.9-4.1-12.7 10.9-7.9H47.8zm56.2 0-4.2 12.6H82.6l10.7 7.9-4 12.7L100 50l10.8 7.9-4-12.7 10.7-7.9h-13.4zm56.3 0-4 12.6h-13.5l11 7.9-4.2 12.7 10.7-7.9 11 7.9-4.2-12.7 10.7-7.9h-13.2zm56.5 0-4.2 12.6h-13.3l10.8 7.9-4 12.7 10.7-7.9 10.8 7.9-4.3-12.7 11-7.9h-13.5z"
-                fill="#FFF"
+                r="96"
               />
             </svg>
           </button>
@@ -102,6 +96,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap underline opacity-100"
+                    data-testid="nav-link-home-desktop"
                     href="/"
                   >
                     Home
@@ -112,6 +107,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-active-auctions-desktop"
                     href="/active-auctions"
                   >
                     Active Auctions
@@ -122,6 +118,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-sold-archive-desktop"
                     href="/sold-archive"
                   >
                     Sold Archive
@@ -132,6 +129,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-history-desktop"
                     href="/history"
                   >
                     History
@@ -142,6 +140,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-racing-desktop"
                     href="/racing"
                   >
                     Racing
@@ -152,6 +151,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-contact-desktop"
                     href="/contact"
                   >
                     Contact
@@ -162,6 +162,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-consign-desktop"
                     href="/consign"
                   >
                     Consign
@@ -172,6 +173,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-invest-desktop"
                     href="/invest"
                   >
                     Invest
@@ -182,6 +184,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-download-desktop"
                     href="/download"
                   >
                     Download
@@ -201,6 +204,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap underline opacity-100"
+                  data-testid="nav-link-home-mobile"
                   href="/"
                 >
                   Home
@@ -211,6 +215,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-active-auctions-mobile"
                   href="/active-auctions"
                 >
                   Active Auctions
@@ -221,6 +226,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-sold-archive-mobile"
                   href="/sold-archive"
                 >
                   Sold Archive
@@ -231,6 +237,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-history-mobile"
                   href="/history"
                 >
                   History
@@ -241,6 +248,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-racing-mobile"
                   href="/racing"
                 >
                   Racing
@@ -251,6 +259,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-contact-mobile"
                   href="/contact"
                 >
                   Contact
@@ -261,6 +270,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-consign-mobile"
                   href="/consign"
                 >
                   Consign
@@ -271,6 +281,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-invest-mobile"
                   href="/invest"
                 >
                   Invest
@@ -281,6 +292,7 @@ exports[`App renders Layout in English and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-download-mobile"
                   href="/download"
                 >
                   Download
@@ -448,7 +460,8 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
                   class="flex justify-center uppercase"
                 >
                   <a
-                    class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    class="block md:hover:underline md:hover:opacity-100 text-nowrap underline opacity-100"
+                    data-testid="nav-link-home-desktop"
                     href="/"
                   >
                     placeholder
@@ -459,6 +472,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-active-auctions-desktop"
                     href="/active-auctions"
                   >
                     placeholder
@@ -469,6 +483,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-sold-archive-desktop"
                     href="/sold-archive"
                   >
                     placeholder
@@ -479,6 +494,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-history-desktop"
                     href="/history"
                   >
                     placeholder
@@ -489,6 +505,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-racing-desktop"
                     href="/racing"
                   >
                     placeholder
@@ -499,6 +516,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-contact-desktop"
                     href="/contact"
                   >
                     placeholder
@@ -509,6 +527,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-consign-desktop"
                     href="/consign"
                   >
                     placeholder
@@ -519,6 +538,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-invest-desktop"
                     href="/invest"
                   >
                     placeholder
@@ -529,6 +549,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
                 >
                   <a
                     class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                    data-testid="nav-link-download-desktop"
                     href="/download"
                   >
                     placeholder
@@ -547,7 +568,8 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
                 class="flex justify-center uppercase"
               >
                 <a
-                  class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  class="block md:hover:underline md:hover:opacity-100 text-nowrap underline opacity-100"
+                  data-testid="nav-link-home-mobile"
                   href="/"
                 >
                   placeholder
@@ -558,6 +580,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-active-auctions-mobile"
                   href="/active-auctions"
                 >
                   placeholder
@@ -568,6 +591,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-sold-archive-mobile"
                   href="/sold-archive"
                 >
                   placeholder
@@ -578,6 +602,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-history-mobile"
                   href="/history"
                 >
                   placeholder
@@ -588,6 +613,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-racing-mobile"
                   href="/racing"
                 >
                   placeholder
@@ -598,6 +624,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-contact-mobile"
                   href="/contact"
                 >
                   placeholder
@@ -608,6 +635,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-consign-mobile"
                   href="/consign"
                 >
                   placeholder
@@ -618,6 +646,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-invest-mobile"
                   href="/invest"
                 >
                   placeholder
@@ -628,6 +657,7 @@ exports[`App renders Layout in Japanese and matches snapshot 1`] = `
               >
                 <a
                   class="block md:hover:underline md:hover:opacity-100 text-nowrap opacity-80"
+                  data-testid="nav-link-download-mobile"
                   href="/download"
                 >
                   placeholder
