@@ -21,7 +21,7 @@ const completeFormAndSubmit = async (screen: any): Promise<void> => {
     await act(() => {
         clickButtonAsync('submit', screen);
     });
-}; 
+};
 
 const findAndPopulateInputAsync = async (
     screen: any,
@@ -234,8 +234,12 @@ describe('ContactPage', () => {
     });
 
     it('validator should display no validation messages if all inputs valid and submit on click', async () => {
+        (global.fetch as jest.Mock).mockResolvedValue({
+            ok: true,
+            json: jest.fn().mockResolvedValue({}),
+        });
         render(<ContactPage />);
-        
+
         await completeFormAndSubmit(screen);
 
         await waitFor(() => {
@@ -265,7 +269,7 @@ describe('ContactPage', () => {
             json: jest.fn().mockResolvedValue({}),
         });
         render(<ContactPage />);
-        
+
         await completeFormAndSubmit(screen);
 
         await waitFor(() => {
@@ -280,7 +284,7 @@ describe('ContactPage', () => {
             ok: false,
         });
         render(<ContactPage />);
-        
+
         await completeFormAndSubmit(screen);
 
         await waitFor(() => {
@@ -295,7 +299,7 @@ describe('ContactPage', () => {
             ok: false,
         });
         render(<ContactPage />);
-        
+
         await completeFormAndSubmit(screen);
 
         await failSubmissionAndClickRetryAsync(screen);

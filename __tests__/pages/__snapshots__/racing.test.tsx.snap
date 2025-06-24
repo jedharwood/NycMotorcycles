@@ -38,11 +38,13 @@ exports[`RacingPage should render page in English 1`] = `
       </section>
       <section
         class="grid gap-4 sm:grid-cols-2 md:grid-cols-3"
+        data-testid="image-grid"
       >
         <div
           class="rounded-md
             card-hover cursor-pointer 
             "
+          role="button"
         >
           <img
             alt="An image of a cool looking vintage Harley Davidson motorcycle with an orange colour fairing and the number seven on the front."
@@ -52,6 +54,7 @@ exports[`RacingPage should render page in English 1`] = `
           class="rounded-md
             card-hover cursor-pointer 
             "
+          role="button"
         >
           <img
             alt="An image of Larry from New York City Motorcycles racing on a white coloured vintage motorcycle with the race number 667 on the front. He's leaning low into a corner."
@@ -61,6 +64,7 @@ exports[`RacingPage should render page in English 1`] = `
           class="rounded-md
             card-hover cursor-pointer 
             "
+          role="button"
         >
           <img
             alt="A black and white image a rider in full leathers on a vintage motorcycle. The leathers have the words 'Roper' and 'Vanson' on the back."
@@ -70,6 +74,7 @@ exports[`RacingPage should render page in English 1`] = `
           class="rounded-md
             card-hover cursor-pointer 
             "
+          role="button"
         >
           <img
             alt="An image of Larry from New York City Motorcycles racing on a vintage Laverda motorcycle. He's leaning low into a corner."
@@ -79,6 +84,7 @@ exports[`RacingPage should render page in English 1`] = `
           class="rounded-md
             card-hover cursor-pointer 
             "
+          role="button"
         >
           <img
             alt="An image of two riders on vintage motorcycles lining up for the start of a race wearing full leathers and orange helmets under a dramatic sky."
@@ -88,6 +94,7 @@ exports[`RacingPage should render page in English 1`] = `
           class="rounded-md
             card-hover cursor-pointer 
             "
+          role="button"
         >
           <img
             alt="An image of Larry from New York City Motorcycles racing a vintage Honda motorbike. He's riding at Willow Springs - the fastest road in the west."
@@ -137,11 +144,13 @@ exports[`RacingPage should render page in Japanese 1`] = `
       </section>
       <section
         class="grid gap-4 sm:grid-cols-2 md:grid-cols-3"
+        data-testid="image-grid"
       >
         <div
           class="rounded-md
             card-hover cursor-pointer 
             "
+          role="button"
         >
           <img
             alt="placeholder"
@@ -151,6 +160,7 @@ exports[`RacingPage should render page in Japanese 1`] = `
           class="rounded-md
             card-hover cursor-pointer 
             "
+          role="button"
         >
           <img
             alt="placeholder"
@@ -160,6 +170,7 @@ exports[`RacingPage should render page in Japanese 1`] = `
           class="rounded-md
             card-hover cursor-pointer 
             "
+          role="button"
         >
           <img
             alt="placeholder"
@@ -169,6 +180,7 @@ exports[`RacingPage should render page in Japanese 1`] = `
           class="rounded-md
             card-hover cursor-pointer 
             "
+          role="button"
         >
           <img
             alt="placeholder"
@@ -178,6 +190,7 @@ exports[`RacingPage should render page in Japanese 1`] = `
           class="rounded-md
             card-hover cursor-pointer 
             "
+          role="button"
         >
           <img
             alt="placeholder"
@@ -187,6 +200,7 @@ exports[`RacingPage should render page in Japanese 1`] = `
           class="rounded-md
             card-hover cursor-pointer 
             "
+          role="button"
         >
           <img
             alt="placeholder"

@@ -27,11 +27,13 @@ exports[`GalleryPage when router is ready should render the ducati-250 gallery p
       >
         <section
           class="space-y-4"
+          data-testid="image-grid"
         >
           <div
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.ducati-250.alt.pitstop"
@@ -41,6 +43,7 @@ exports[`GalleryPage when router is ready should render the ducati-250 gallery p
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.ducati-250.alt.graf"
@@ -50,6 +53,7 @@ exports[`GalleryPage when router is ready should render the ducati-250 gallery p
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.ducati-250.alt.garden"
@@ -59,6 +63,7 @@ exports[`GalleryPage when router is ready should render the ducati-250 gallery p
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.ducati-250.alt.tank"
@@ -182,11 +187,13 @@ exports[`GalleryPage when router is ready should render the harley-xr750 gallery
       >
         <section
           class="space-y-4"
+          data-testid="image-grid"
         >
           <div
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.harley-xr750.alt.ridden"
@@ -196,6 +203,7 @@ exports[`GalleryPage when router is ready should render the harley-xr750 gallery
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.harley-xr750.alt.right-side"
@@ -205,6 +213,7 @@ exports[`GalleryPage when router is ready should render the harley-xr750 gallery
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.harley-xr750.alt.engine-close"
@@ -214,6 +223,7 @@ exports[`GalleryPage when router is ready should render the harley-xr750 gallery
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.harley-xr750.alt.racing"
@@ -223,6 +233,7 @@ exports[`GalleryPage when router is ready should render the harley-xr750 gallery
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.harley-xr750.alt.tyre"
@@ -324,11 +335,13 @@ exports[`GalleryPage when router is ready should render the harley-xr750-75 gall
       >
         <section
           class="space-y-4"
+          data-testid="image-grid"
         >
           <div
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.harley-xr750-75.alt.showroom"
@@ -338,6 +351,7 @@ exports[`GalleryPage when router is ready should render the harley-xr750-75 gall
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.harley-xr750-75.alt.pier"
@@ -347,6 +361,7 @@ exports[`GalleryPage when router is ready should render the harley-xr750-75 gall
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.harley-xr750-75.alt.beach"
@@ -437,11 +452,13 @@ exports[`GalleryPage when router is ready should render the harley-xr750-replica
       >
         <section
           class="space-y-4"
+          data-testid="image-grid"
         >
           <div
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.harley-xr750-replica.alt.right-side"
@@ -451,6 +468,7 @@ exports[`GalleryPage when router is ready should render the harley-xr750-replica
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.harley-xr750-replica.alt.graf"
@@ -460,6 +478,7 @@ exports[`GalleryPage when router is ready should render the harley-xr750-replica
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.harley-xr750-replica.alt.rider"
@@ -469,6 +488,7 @@ exports[`GalleryPage when router is ready should render the harley-xr750-replica
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.harley-xr750-replica.alt.larry"
@@ -585,11 +605,13 @@ exports[`GalleryPage when router is ready should render the honda-dream gallery 
       >
         <section
           class="space-y-4"
+          data-testid="image-grid"
         >
           <div
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.honda-dream.alt.showroom"
@@ -599,6 +621,7 @@ exports[`GalleryPage when router is ready should render the honda-dream gallery 
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.honda-dream.alt.harbour"
@@ -608,6 +631,7 @@ exports[`GalleryPage when router is ready should render the honda-dream gallery 
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.honda-dream.alt.rear-centre"
@@ -617,6 +641,7 @@ exports[`GalleryPage when router is ready should render the honda-dream gallery 
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.honda-dream.alt.right-side"
@@ -626,6 +651,7 @@ exports[`GalleryPage when router is ready should render the honda-dream gallery 
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.honda-dream.alt.rear"
@@ -719,11 +745,13 @@ exports[`GalleryPage when router is ready should render the kawasaki-h1ra galler
       >
         <section
           class="space-y-4"
+          data-testid="image-grid"
         >
           <div
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.kawasaki-h1ra.alt.left-side"
@@ -733,6 +761,7 @@ exports[`GalleryPage when router is ready should render the kawasaki-h1ra galler
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.kawasaki-h1ra.alt.fairing"
@@ -742,6 +771,7 @@ exports[`GalleryPage when router is ready should render the kawasaki-h1ra galler
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.kawasaki-h1ra.alt.bars"
@@ -751,6 +781,7 @@ exports[`GalleryPage when router is ready should render the kawasaki-h1ra galler
             class="rounded-md
             card-hover cursor-pointer 
             h-fit"
+            role="button"
           >
             <img
               alt="pg.gallery.kawasaki-h1ra.alt.tank"

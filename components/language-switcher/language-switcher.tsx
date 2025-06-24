@@ -15,7 +15,7 @@ const LanguageSwitcher = (): JSX.Element => {
 
     return (
         <div className='mr-6 flex justify-end sm:mr-0'>
-            <button onClick={() => switchLanguage()}>
+            <button onClick={() => switchLanguage()} data-testid='language-switcher'>
                 {locale === langs.en ? (
                     <JP title='日本語' className={flagClasses} />
                 ) : (

@@ -41,39 +41,39 @@ const Header = ({
         setShowMobileNav(!showMobileNav);
     };
 
-    const mapNavLinks = (): JSX.Element[] => {
-        return navLinks.map((link, idx) => (
+    const mapNavLinks = (deviceType: DeviceType): JSX.Element[] =>
+        navLinks.map((link, idx) => (
             <li
                 className='flex justify-center uppercase'
                 onClick={() => setActiveIdx(idx)}
                 key={idx}
             >
-                <NavLink href={link.href} text={link.text} active={activeIdx === idx} />
+                <NavLink
+                    href={link.href}
+                    text={link.text}
+                    active={activeIdx === idx}
+                    deviceType={deviceType}
+                />
             </li>
         ));
-    };
 
-    const navMenu = (): JSX.Element => {
-        return (
-            <div className='hidden w-full md:block md:w-auto'>
-                <ul className='flex flex-wrap justify-center md:space-x-6 md:font-medium'>
-                    {mapNavLinks()}
-                </ul>
-            </div>
-        );
-    };
+    const navMenu: JSX.Element = (
+        <div className='hidden w-full md:block md:w-auto'>
+            <ul className='flex flex-wrap justify-center md:space-x-6 md:font-medium'>
+                {mapNavLinks('desktop')}
+            </ul>
+        </div>
+    );
 
-    const mobileNavMenu = (): JSX.Element => {
-        return (
-            <div
-                className={`${showMobileNav ? 'h-75' : 'invisible h-0'} transition[height] overflow-hidden duration-300 ease-in-out md:hidden`}
-            >
-                <ul className='mt-4 mb-2 grid space-y-2' onClick={toggleMobilenav}>
-                    {mapNavLinks()}
-                </ul>
-            </div>
-        );
-    };
+    const mobileNavMenu: JSX.Element = (
+        <div
+            className={`${showMobileNav ? 'h-75' : 'invisible h-0'} transition[height] overflow-hidden duration-300 ease-in-out md:hidden`}
+        >
+            <ul className='mt-4 mb-2 grid space-y-2' onClick={toggleMobilenav}>
+                {mapNavLinks('mobile')}
+            </ul>
+        </div>
+    );
 
     return (
         <header className='text-stone-50'>
@@ -111,9 +111,9 @@ const Header = ({
                             height={40}
                         />
                     </button>
-                    {navMenu()}
+                    {navMenu}
                 </div>
-                {mobileNavMenu()}
+                {mobileNavMenu}
             </nav>
         </header>
     );
