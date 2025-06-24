@@ -15,11 +15,12 @@ const ImageModal = (): JSX.Element | null => {
 
     return (
         <ModalWrapper>
-            <div className='absolute flex w-full flex-row-reverse p-2 md:right-8'>
+            <div className='absolute flex w-full flex-row-reverse p-2 md:right-8' data-testid='image-modal'>
                 <button
                     type='button'
                     className=' z-60 hover:opacity-80'
                     onClick={closeImageModal}
+                    data-testid='image-modal-close-button'
                 >
                     <Image
                         src={closeIcon}

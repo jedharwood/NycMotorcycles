@@ -24,7 +24,7 @@ const ImageGrid = ({
     };
 
     return (
-        <section className={getClasses()}>
+        <section className={getClasses()} data-testid='image-grid'>
             {images.map((image, idx) => (
                 <div
                     className={`rounded-md
@@ -32,6 +32,7 @@ const ImageGrid = ({
             ${maxColumns === 1 ? 'h-fit' : ''}`}
                     key={idx}
                     onClick={image.onImageClick}
+                    role='button'
                 >
                     <Image
                         src={image.image}
