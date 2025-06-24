@@ -3,7 +3,6 @@ TO DO
 General refactor page content logic
 Tidy up mocks for scraper (add server side mock)
 Investigate 3rd party api solutions for Yahoo
-Tests
 Accessibility audit and refactor semantic structure/styling
 Remove mswWorker if unused
 Address code style inconsistences and overlapping css rules
@@ -20,7 +19,7 @@ Check styling on larger screen
 Get real download docs from Larry
 Sticky footer
 Should link buttons be buttons?
-Handle submission errors on ContactPage
+Handle submission errors on ContactPage and intermittent async test errors
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
