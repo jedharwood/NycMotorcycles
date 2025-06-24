@@ -30,11 +30,13 @@ exports[`HistoryPage should render page in English 1`] = `
         >
           <section
             class="grid gap-4 sm:grid-cols-2 md:grid-cols-2"
+            data-testid="image-grid"
           >
             <div
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="A crowd of vintage motorbike enthusiasts gathered outside the New York City Motorcycles showroom to watch a band that is playing inside."
@@ -44,6 +46,7 @@ exports[`HistoryPage should render page in English 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="An image of a David Karp, the founder of Tumblr leaning on an orange coloured Laverda motorbike outside the New York City Motorcycles showroom."
@@ -53,6 +56,7 @@ exports[`HistoryPage should render page in English 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="An image of Larry from New York City Motorcycles performing a last minute tune-up on his bike wearing full race leathers."
@@ -62,6 +66,7 @@ exports[`HistoryPage should render page in English 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="An orange Laverda and a red Ducati vintage motorbikes basking in the sunlight in the pit on race day."
@@ -71,6 +76,7 @@ exports[`HistoryPage should render page in English 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="An image of Larry from New York City Motorcycles leaning deep into a turn on the race track riding an orange coloured Laverda motorbike."
@@ -80,6 +86,7 @@ exports[`HistoryPage should render page in English 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="A black and white image of a motorbike being lifted by a forklift truck outside the New York City Motorcycles showroom."
@@ -89,6 +96,7 @@ exports[`HistoryPage should render page in English 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="An image of the New York City Motorcycles garage in Venice, California. There are a lot of vintage motorbikes crowded in there; most notably a lovely old BSA motorcycle."
@@ -98,6 +106,7 @@ exports[`HistoryPage should render page in English 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="The New York City Motorcycles garage viewed from outside."
@@ -107,6 +116,7 @@ exports[`HistoryPage should render page in English 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="A satisfied customer riding his new motorbike away from New York City Motorcycles HQ in Zushi, Kanagawa, Japan."
@@ -116,6 +126,7 @@ exports[`HistoryPage should render page in English 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="An image of a shipping container full of vintage cars and motorcycles on their way to Japan."
@@ -314,11 +325,13 @@ exports[`HistoryPage should render page in English 1`] = `
         >
           <section
             class="grid gap-4 sm:grid-cols-2 md:grid-cols-2"
+            data-testid="image-grid"
           >
             <div
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="An image of a motorbike passing customs checks at a Japanese port."
@@ -328,6 +341,7 @@ exports[`HistoryPage should render page in English 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="An exterior shot of a vintage motorcycle being loaded onto the back of a small flatbed truck. There's a large ferris wheel in the background so it might be in Yokohama."
@@ -371,11 +385,13 @@ exports[`HistoryPage should render page in Japanese 1`] = `
         >
           <section
             class="grid gap-4 sm:grid-cols-2 md:grid-cols-2"
+            data-testid="image-grid"
           >
             <div
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="placeholder"
@@ -385,6 +401,7 @@ exports[`HistoryPage should render page in Japanese 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="placeholder"
@@ -394,6 +411,7 @@ exports[`HistoryPage should render page in Japanese 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="placeholder"
@@ -403,6 +421,7 @@ exports[`HistoryPage should render page in Japanese 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="placeholder"
@@ -412,6 +431,7 @@ exports[`HistoryPage should render page in Japanese 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="placeholder"
@@ -421,6 +441,7 @@ exports[`HistoryPage should render page in Japanese 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="placeholder"
@@ -430,6 +451,7 @@ exports[`HistoryPage should render page in Japanese 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="placeholder"
@@ -439,6 +461,7 @@ exports[`HistoryPage should render page in Japanese 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="placeholder"
@@ -448,6 +471,7 @@ exports[`HistoryPage should render page in Japanese 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="placeholder"
@@ -457,6 +481,7 @@ exports[`HistoryPage should render page in Japanese 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="placeholder"
@@ -655,11 +680,13 @@ exports[`HistoryPage should render page in Japanese 1`] = `
         >
           <section
             class="grid gap-4 sm:grid-cols-2 md:grid-cols-2"
+            data-testid="image-grid"
           >
             <div
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="placeholder"
@@ -669,6 +696,7 @@ exports[`HistoryPage should render page in Japanese 1`] = `
               class="rounded-md
             card-hover cursor-pointer 
             "
+              role="button"
             >
               <img
                 alt="placeholder"

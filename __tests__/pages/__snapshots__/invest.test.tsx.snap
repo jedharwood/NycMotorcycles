@@ -8,11 +8,13 @@ exports[`InvestPage should render page in English 1`] = `
     >
       <section
         class="space-y-4"
+        data-testid="image-grid"
       >
         <div
           class="rounded-md
             cursor-default shadow-lg 
             h-fit"
+          role="button"
         >
           <img
             alt="A photograph of a silver coloured vintage motorcycle being displayed in Sotheby's auction house."
@@ -87,11 +89,13 @@ exports[`InvestPage should render page in Japanese 1`] = `
     >
       <section
         class="space-y-4"
+        data-testid="image-grid"
       >
         <div
           class="rounded-md
             cursor-default shadow-lg 
             h-fit"
+          role="button"
         >
           <img
             alt="placeholder"
